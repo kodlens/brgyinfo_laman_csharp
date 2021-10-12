@@ -13,7 +13,7 @@ namespace BarangayInformation
 
         public static MySqlConnection con()
         {
-            return new MySqlConnection("server=localhost; database=brgy_info;user=root;password=''");
+            return new MySqlConnection("server=localhost; database=brgyinfo_laman;user=root;password=''");
         }
     }
 }

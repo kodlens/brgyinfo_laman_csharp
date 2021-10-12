@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace BarangayInformation
 {
     public partial class Mainform : Form
     {
+        MySqlConnection con;
+        MySqlCommand cmd;
+
+
         public Mainform()
         {
             InitializeComponent();
