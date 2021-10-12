@@ -27,5 +27,15 @@ namespace BarangayInformation
             ResidentAddEditForm frm = new ResidentAddEditForm();
             frm.Show();
         }
+
+        private void Mainform_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

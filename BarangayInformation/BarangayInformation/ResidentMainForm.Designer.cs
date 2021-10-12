@@ -40,6 +40,7 @@ namespace BarangayInformation
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(771, 262);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ResidentMainForm
             // 
@@ -49,6 +50,7 @@ namespace BarangayInformation
             this.Controls.Add(this.dataGridView1);
             this.Name = "ResidentMainForm";
             this.Text = "ResidentMainForm";
+            this.Load += new System.EventHandler(this.ResidentMainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

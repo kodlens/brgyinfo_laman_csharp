@@ -67,6 +67,7 @@ namespace BarangayInformation
             this.toolStripButton2.Size = new System.Drawing.Size(55, 35);
             this.toolStripButton2.Text = "SAMPLE";
             this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // Mainform
             // 
@@ -77,6 +78,7 @@ namespace BarangayInformation
             this.Name = "Mainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Mainform_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

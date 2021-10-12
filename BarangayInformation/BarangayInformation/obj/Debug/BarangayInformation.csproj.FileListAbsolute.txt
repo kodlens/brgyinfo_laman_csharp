@@ -11,3 +11,16 @@ C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\Barangay
 C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.exe
 C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.pdb
 C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.ResidentMainForm.resources
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\BarangayInformation.exe.config
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\BarangayInformation.exe
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\BarangayInformation.pdb
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.Mainform.resources
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.Properties.Resources.resources
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.ResidentAddEditForm.resources
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.ResidentMainForm.resources
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.csproj.GenerateResource.cache
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.csproj.CopyComplete
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.exe
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.pdb
