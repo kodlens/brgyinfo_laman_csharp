@@ -16,10 +16,12 @@ namespace BarangayInformation
         MySqlConnection con;
         MySqlCommand cmd;
 
-
-        public Mainform()
+        LoginForm _frm;
+        public Mainform(LoginForm _frm)
         {
             InitializeComponent();
+
+            this._frm = _frm;
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

@@ -54,14 +54,7 @@ namespace BarangayInformation
             // 
             // gridResidents
             // 
-<<<<<<< HEAD
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 66);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(771, 262);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-=======
+
             this.gridResidents.AllowUserToAddRows = false;
             this.gridResidents.AllowUserToDeleteRows = false;
             this.gridResidents.AllowUserToResizeColumns = false;
@@ -248,7 +241,7 @@ namespace BarangayInformation
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(546, 38);
             this.txtSearch.TabIndex = 64;
->>>>>>> 4f7cc468fe1c5433701e5bd1870d9c642bd85904
+
             // 
             // ResidentMainForm
             // 
@@ -263,13 +256,6 @@ namespace BarangayInformation
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ResidentMainForm";
             this.Load += new System.EventHandler(this.ResidentMainForm_Load);
-<<<<<<< HEAD
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-=======
-            ((System.ComponentModel.ISupportInitialize)(this.gridResidents)).EndInit();
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
->>>>>>> 4f7cc468fe1c5433701e5bd1870d9c642bd85904
             this.ResumeLayout(false);
             this.PerformLayout();
 

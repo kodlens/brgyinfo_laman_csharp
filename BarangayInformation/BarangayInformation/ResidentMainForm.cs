@@ -27,10 +27,6 @@ namespace BarangayInformation
             resident.all(gridResidents);
         }
 
-        private void ResidentMainForm_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
