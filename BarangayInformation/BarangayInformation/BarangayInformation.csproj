@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Class1.cs" />
     <Compile Include="Class\Connection.cs" />
     <Compile Include="login.cs">
@@ -80,6 +81,11 @@
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs" />
+=======
+    <Compile Include="Class\Box.cs" />
+    <Compile Include="Class\Connection.cs" />
+    <Compile Include="Class\Resident.cs" />
+>>>>>>> 4f7cc468fe1c5433701e5bd1870d9c642bd85904
     <Compile Include="Mainform.cs">
       <SubType>Form</SubType>
     </Compile>

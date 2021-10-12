@@ -24,7 +24,7 @@ namespace BarangayInformation
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            ResidentAddEditForm frm = new ResidentAddEditForm();
+            ResidentMainForm frm = new ResidentMainForm();
             frm.Show();
         }
 
