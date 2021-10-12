@@ -45,7 +45,6 @@ namespace BarangayInformation
             DialogResult diagresult = MessageBox.Show("Are you sure you want to logout?", "LOGOUT?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(diagresult == DialogResult.Yes)
             {
-               
                 this.Close();
             }
            
