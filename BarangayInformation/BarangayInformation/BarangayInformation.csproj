@@ -71,7 +71,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Box.cs" />
     <Compile Include="Class\Connection.cs" />
+    <Compile Include="Class\Resident.cs" />
     <Compile Include="Mainform.cs">
       <SubType>Form</SubType>
     </Compile>

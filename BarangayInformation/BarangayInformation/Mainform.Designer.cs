@@ -43,7 +43,7 @@ namespace BarangayInformation
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(804, 86);
+            this.toolStrip1.Size = new System.Drawing.Size(981, 86);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -72,7 +72,7 @@ namespace BarangayInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 408);
+            this.ClientSize = new System.Drawing.Size(981, 555);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Mainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
