@@ -22,7 +22,7 @@ namespace BarangayInformation.Class
             {
                 con = Connection.con();
                 con.Open();
-                query = "SELECT * FROM users WHERE username=?user AND password=?pass";
+                query = "SELECT * FROM users WHERE username=?user AND password=sha1(?pass)";
                 cmd = new MySqlCommand(query, con);
                 cmd.Parameters.AddWithValue("?user", username);
                 cmd.Parameters.AddWithValue("?pass", password);

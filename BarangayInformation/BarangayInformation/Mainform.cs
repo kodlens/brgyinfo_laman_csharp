@@ -39,5 +39,11 @@ namespace BarangayInformation
         {
 
         }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            _frm.Show();
+            this.Close();
+        }
     }
 }

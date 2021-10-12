@@ -47,6 +47,8 @@ namespace BarangayInformation
             if (login.auth(this.txtUsername.Text, this.txtPassword.Text))
             {
                 Mainform frm = new Mainform(this); //using this class so that we can hide the form and recall during logout
+                this.txtUsername.Text = "";
+                this.txtPassword.Text = "";
                 frm.Show();
                 this.Hide();
             }
