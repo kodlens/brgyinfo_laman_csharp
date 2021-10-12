@@ -191,6 +191,7 @@ namespace BarangayInformation
             this.Label16 = new System.Windows.Forms.Label();
             this.Label13 = new System.Windows.Forms.Label();
             this.Label18 = new System.Windows.Forms.Label();
+            this.btnNext1 = new System.Windows.Forms.Button();
             this.GroupBox12.SuspendLayout();
             this.tabFamilyMembers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGridSibling)).BeginInit();
@@ -568,7 +569,7 @@ namespace BarangayInformation
             this.tabFamilyMembers.Controls.Add(this.GroupBox12);
             this.tabFamilyMembers.Location = new System.Drawing.Point(4, 44);
             this.tabFamilyMembers.Name = "tabFamilyMembers";
-            this.tabFamilyMembers.Size = new System.Drawing.Size(1128, 539);
+            this.tabFamilyMembers.Size = new System.Drawing.Size(1128, 595);
             this.tabFamilyMembers.TabIndex = 5;
             this.tabFamilyMembers.Text = "Family Members";
             this.tabFamilyMembers.UseVisualStyleBackColor = true;
@@ -916,6 +917,7 @@ namespace BarangayInformation
             this.btnDebug.TabIndex = 63;
             this.btnDebug.Text = "DEBUG";
             this.btnDebug.UseVisualStyleBackColor = true;
+            this.btnDebug.Click += new System.EventHandler(this.btnDebug_Click);
             // 
             // Label58
             // 
@@ -1029,7 +1031,7 @@ namespace BarangayInformation
             this.tabSurvey.Location = new System.Drawing.Point(4, 44);
             this.tabSurvey.Name = "tabSurvey";
             this.tabSurvey.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSurvey.Size = new System.Drawing.Size(1128, 539);
+            this.tabSurvey.Size = new System.Drawing.Size(1128, 595);
             this.tabSurvey.TabIndex = 7;
             this.tabSurvey.Text = "Survey";
             this.tabSurvey.UseVisualStyleBackColor = true;
@@ -1113,7 +1115,7 @@ namespace BarangayInformation
             this.tabAdditionalInformation.Controls.Add(this.GroupBox10);
             this.tabAdditionalInformation.Location = new System.Drawing.Point(4, 44);
             this.tabAdditionalInformation.Name = "tabAdditionalInformation";
-            this.tabAdditionalInformation.Size = new System.Drawing.Size(1128, 539);
+            this.tabAdditionalInformation.Size = new System.Drawing.Size(1128, 595);
             this.tabAdditionalInformation.TabIndex = 6;
             this.tabAdditionalInformation.Text = "Additional Information";
             this.tabAdditionalInformation.UseVisualStyleBackColor = true;
@@ -1580,6 +1582,7 @@ namespace BarangayInformation
             // 
             // tabProfile
             // 
+            this.tabProfile.Controls.Add(this.btnNext1);
             this.tabProfile.Controls.Add(this.Label51);
             this.tabProfile.Controls.Add(this.txtResidentId);
             this.tabProfile.Controls.Add(this.Label49);
@@ -1596,7 +1599,7 @@ namespace BarangayInformation
             this.tabProfile.Location = new System.Drawing.Point(4, 44);
             this.tabProfile.Name = "tabProfile";
             this.tabProfile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProfile.Size = new System.Drawing.Size(1128, 539);
+            this.tabProfile.Size = new System.Drawing.Size(1128, 595);
             this.tabProfile.TabIndex = 0;
             this.tabProfile.Text = "Profile";
             this.tabProfile.UseVisualStyleBackColor = true;
@@ -1640,7 +1643,7 @@ namespace BarangayInformation
             this.TabControl1.Location = new System.Drawing.Point(12, 50);
             this.TabControl1.Name = "TabControl1";
             this.TabControl1.SelectedIndex = 0;
-            this.TabControl1.Size = new System.Drawing.Size(1136, 587);
+            this.TabControl1.Size = new System.Drawing.Size(1136, 643);
             this.TabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TabControl1.TabIndex = 61;
             // 
@@ -1654,7 +1657,7 @@ namespace BarangayInformation
             this.tabContactAddress.Location = new System.Drawing.Point(4, 44);
             this.tabContactAddress.Name = "tabContactAddress";
             this.tabContactAddress.Padding = new System.Windows.Forms.Padding(3);
-            this.tabContactAddress.Size = new System.Drawing.Size(1128, 539);
+            this.tabContactAddress.Size = new System.Drawing.Size(1128, 595);
             this.tabContactAddress.TabIndex = 1;
             this.tabContactAddress.Text = "Contact & Address";
             this.tabContactAddress.UseVisualStyleBackColor = true;
@@ -2056,16 +2059,38 @@ namespace BarangayInformation
             this.Label18.TabIndex = 37;
             this.Label18.Text = "Present Address";
             // 
-            // ResidentMainForm
+            // btnNext1
+            // 
+            this.btnNext1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNext1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNext1.FlatAppearance.BorderSize = 0;
+            this.btnNext1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnNext1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnNext1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNext1.Image = ((System.Drawing.Image)(resources.GetObject("btnNext1.Image")));
+            this.btnNext1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNext1.Location = new System.Drawing.Point(981, 526);
+            this.btnNext1.Name = "btnNext1";
+            this.btnNext1.Size = new System.Drawing.Size(120, 41);
+            this.btnNext1.TabIndex = 59;
+            this.btnNext1.Text = "Next";
+            this.btnNext1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnNext1.UseVisualStyleBackColor = false;
+            this.btnNext1.Click += new System.EventHandler(this.btnNext1_Click);
+            // 
+            // ResidentAddEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1161, 650);
+            this.ClientSize = new System.Drawing.Size(1161, 705);
             this.Controls.Add(this.btnDebug);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.TabControl1);
-            this.Name = "ResidentMainForm";
+            this.Name = "ResidentAddEditForm";
             this.Text = "ResidentMainForm";
+            this.Load += new System.EventHandler(this.ResidentAddEditForm_Load);
             this.GroupBox12.ResumeLayout(false);
             this.GroupBox12.PerformLayout();
             this.tabFamilyMembers.ResumeLayout(false);
@@ -2260,5 +2285,6 @@ namespace BarangayInformation
         internal System.Windows.Forms.Label Label16;
         internal System.Windows.Forms.Label Label13;
         internal System.Windows.Forms.Label Label18;
+        internal System.Windows.Forms.Button btnNext1;
     }
 }

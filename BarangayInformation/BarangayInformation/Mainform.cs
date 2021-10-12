@@ -42,8 +42,18 @@ namespace BarangayInformation
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
+            DialogResult diagresult = MessageBox.Show("Are you sure you want to logout?", "LOGOUT?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(diagresult == DialogResult.Yes)
+            {
+               
+                this.Close();
+            }
+           
+        }
+
+        private void Mainform_FormClosing(object sender, FormClosingEventArgs e)
+        {
             _frm.Show();
-            this.Close();
         }
     }
 }

@@ -32,5 +32,12 @@ namespace BarangayInformation
         {
 
         }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ResidentAddEditForm frm = new ResidentAddEditForm();
+            frm.resident_id = 0;
+            frm.ShowDialog();
+        }
     }
 }

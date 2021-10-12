@@ -136,5 +136,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map64x64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
