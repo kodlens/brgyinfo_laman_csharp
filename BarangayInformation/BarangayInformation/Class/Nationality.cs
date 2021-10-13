@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 //add also the System.windows.forms so we can use DataGridView Object
 using System.Windows.Forms;
-
+using System.Data;
 
 namespace BarangayInformation.Class
 {
@@ -41,8 +41,6 @@ namespace BarangayInformation.Class
             con.Close(); //close the connection , detached the connection from database to free connections
             con.Dispose(); //usually garbage collector of the language will auto dispose objects but i prefer disposing manually to avoid any future problem
             return i;
-
-
             //KLARO EMJEEEH!!!
         }
 
@@ -82,7 +80,21 @@ namespace BarangayInformation.Class
         //by calling the System.Windows.Form, we can use the DataGridView Object here
         public void all(DataGridView grid)
         {
+            con = Connection.con();
+            con.Open();
+            query = "SELECT * FROM nationalities";
+            cmd = new MySqlCommand(query, con);
+            DataTable dt = new DataTable();
+            MySqlDataAdapter adptr = new MySqlDataAdapter(cmd);
+            adptr.Fill(dt);
 
+            cmd.Dispose();
+            con.Close();
+            con.Dispose();
+
+            //assign data to grid
+            grid.AutoGenerateColumns = false;
+            grid.DataSource = dt;
         }
 
         //subject for changes, depends on how we implement the searching
