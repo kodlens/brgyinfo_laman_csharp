@@ -46,15 +46,37 @@ namespace BarangayInformation.Class
             //KLARO EMJEEEH!!!
         }
 
-        public void update(int id)
+        public int update(int id)
         {
+            int i = 0;
             //we will change this void into int like save() method
+            con = Connection.con();
+            con.Open();
+            query = "UPDATE nationalities SET nationality=?n WHERE nationality_id = ?id";
+            cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("?n", this.nationality);
+            cmd.Parameters.AddWithValue("?id", id);
+            i = cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+            con.Dispose();
+            return i;
         }
 
-        public void delete(int id)
+        public int delete(int id)
         {
+            int i = 0;
             //we will change this void into int like save() method
-
+            con = Connection.con();
+            con.Open();
+            query = "DELETE FROM nationalities WHERE nationality_id = ?id";
+            cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("?id", id);
+            i = cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+            con.Dispose();
+            return i;
         }
 
         //by calling the System.Windows.Form, we can use the DataGridView Object here
