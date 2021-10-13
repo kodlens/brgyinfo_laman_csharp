@@ -152,6 +152,7 @@ namespace BarangayInformation
             this.cmbEmploymentStatus = new System.Windows.Forms.ComboBox();
             this.Label32 = new System.Windows.Forms.Label();
             this.tabProfile = new System.Windows.Forms.TabPage();
+            this.btnNext1 = new System.Windows.Forms.Button();
             this.Button2 = new System.Windows.Forms.Button();
             this.Button1 = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
@@ -191,7 +192,6 @@ namespace BarangayInformation
             this.Label16 = new System.Windows.Forms.Label();
             this.Label13 = new System.Windows.Forms.Label();
             this.Label18 = new System.Windows.Forms.Label();
-            this.btnNext1 = new System.Windows.Forms.Button();
             this.GroupBox12.SuspendLayout();
             this.tabFamilyMembers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGridSibling)).BeginInit();
@@ -911,9 +911,9 @@ namespace BarangayInformation
             // 
             // btnDebug
             // 
-            this.btnDebug.Location = new System.Drawing.Point(956, 9);
+            this.btnDebug.Location = new System.Drawing.Point(951, 5);
             this.btnDebug.Name = "btnDebug";
-            this.btnDebug.Size = new System.Drawing.Size(95, 31);
+            this.btnDebug.Size = new System.Drawing.Size(100, 39);
             this.btnDebug.TabIndex = 63;
             this.btnDebug.Text = "DEBUG";
             this.btnDebug.UseVisualStyleBackColor = true;
@@ -1604,6 +1604,27 @@ namespace BarangayInformation
             this.tabProfile.Text = "Profile";
             this.tabProfile.UseVisualStyleBackColor = true;
             // 
+            // btnNext1
+            // 
+            this.btnNext1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNext1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNext1.FlatAppearance.BorderSize = 0;
+            this.btnNext1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnNext1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnNext1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNext1.Image = ((System.Drawing.Image)(resources.GetObject("btnNext1.Image")));
+            this.btnNext1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNext1.Location = new System.Drawing.Point(981, 526);
+            this.btnNext1.Name = "btnNext1";
+            this.btnNext1.Size = new System.Drawing.Size(120, 41);
+            this.btnNext1.TabIndex = 59;
+            this.btnNext1.Text = "Next";
+            this.btnNext1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnNext1.UseVisualStyleBackColor = false;
+            this.btnNext1.Click += new System.EventHandler(this.btnNext1_Click);
+            // 
             // Button2
             // 
             this.Button2.Location = new System.Drawing.Point(36, 441);
@@ -2059,31 +2080,11 @@ namespace BarangayInformation
             this.Label18.TabIndex = 37;
             this.Label18.Text = "Present Address";
             // 
-            // btnNext1
-            // 
-            this.btnNext1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnNext1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNext1.FlatAppearance.BorderSize = 0;
-            this.btnNext1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnNext1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnNext1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnNext1.Image = ((System.Drawing.Image)(resources.GetObject("btnNext1.Image")));
-            this.btnNext1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNext1.Location = new System.Drawing.Point(981, 526);
-            this.btnNext1.Name = "btnNext1";
-            this.btnNext1.Size = new System.Drawing.Size(120, 41);
-            this.btnNext1.TabIndex = 59;
-            this.btnNext1.Text = "Next";
-            this.btnNext1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnNext1.UseVisualStyleBackColor = false;
-            this.btnNext1.Click += new System.EventHandler(this.btnNext1_Click);
-            // 
             // ResidentAddEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1161, 705);
             this.Controls.Add(this.btnDebug);
             this.Controls.Add(this.btnNew);
