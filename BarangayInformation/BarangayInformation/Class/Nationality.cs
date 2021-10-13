@@ -29,7 +29,7 @@ namespace BarangayInformation.Class
         {
             int i = 0; //instead void, i use int to add some remarks when inserting to database, default 0, means failed.
 
-            //instantitation of class will use the new keyword
+            //instantation of class will use the new keyword
             con = Connection.con(); //another type of insantiation of object, the new keyword can be found in Connection.cs
             con.Open(); //open the connection
             query = "INSERT INTO nationalities SET nationality=?n"; //query for database
