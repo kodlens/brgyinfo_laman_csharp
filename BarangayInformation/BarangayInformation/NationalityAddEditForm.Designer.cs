@@ -53,7 +53,7 @@ namespace BarangayInformation
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(254, 83);
+            this.btnSave.Location = new System.Drawing.Point(107, 67);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(87, 33);
             this.btnSave.TabIndex = 2;
@@ -65,7 +65,7 @@ namespace BarangayInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 158);
+            this.ClientSize = new System.Drawing.Size(379, 139);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtNationality);
             this.Controls.Add(this.label1);
@@ -76,6 +76,7 @@ namespace BarangayInformation
             this.Name = "NationalityAddEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add/Edit Form";
+            this.Load += new System.EventHandler(this.NationalityAddEditForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

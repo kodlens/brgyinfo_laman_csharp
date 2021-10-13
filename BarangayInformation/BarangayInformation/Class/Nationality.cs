@@ -78,16 +78,18 @@ namespace BarangayInformation.Class
         }
 
         //by calling the System.Windows.Form, we can use the DataGridView Object here
-        public void all(DataGridView grid)
+        public void find(DataGridView grid, string key)
         {
             con = Connection.con();
             con.Open();
-            query = "SELECT * FROM nationalities";
+            query = "SELECT * FROM nationalities WHERE nationality LIKE ?key";
             cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("?key", key + "%");
             DataTable dt = new DataTable();
             MySqlDataAdapter adptr = new MySqlDataAdapter(cmd);
             adptr.Fill(dt);
 
+            adptr.Dispose();
             cmd.Dispose();
             con.Close();
             con.Dispose();
@@ -98,9 +100,26 @@ namespace BarangayInformation.Class
         }
 
         //subject for changes, depends on how we implement the searching
-        public void find(string key)
+        public void getData(int id)
         {
+            con = Connection.con();
+            con.Open();
+            query = "SELECT * FROM nationalities WHERE nationality_id = ?id";
+            cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("?id", id);
+            DataTable dt = new DataTable();
+            MySqlDataAdapter adptr = new MySqlDataAdapter(cmd);
+            adptr.Fill(dt);
 
+            adptr.Dispose();
+            cmd.Dispose();
+            con.Close();
+            con.Dispose();
+
+            if(dt.Rows.Count > 0)
+            {
+                this.nationality = Convert.ToString(dt.Rows[0]["nationality"]);
+            }
         }
     }
 }

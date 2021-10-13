@@ -63,6 +63,26 @@ namespace BarangayInformation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete16x16 {
+            get {
+                object obj = ResourceManager.GetObject("delete16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eidt16x16 {
+            get {
+                object obj = ResourceManager.GetObject("eidt16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logout64x64 {
             get {
                 object obj = ResourceManager.GetObject("logout64x64", resourceCulture);
@@ -86,6 +106,26 @@ namespace BarangayInformation.Properties {
         internal static System.Drawing.Bitmap people64x64 {
             get {
                 object obj = ResourceManager.GetObject("people64x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_icon16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Save-icon16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search16x16 {
+            get {
+                object obj = ResourceManager.GetObject("search16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

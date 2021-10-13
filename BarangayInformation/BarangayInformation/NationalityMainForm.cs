@@ -25,7 +25,8 @@ namespace BarangayInformation
 
         public void loadData()
         {
-            n.all(this.gridNationality);
+            n.find(this.gridNationality, txtSearch.Text);
+            //2 param, 1 for grid, 1 for the key for search
         }
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -62,7 +63,7 @@ namespace BarangayInformation
             {
                 Box.WarnBox("No data selected.");
             }
-           
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -73,6 +74,31 @@ namespace BarangayInformation
         private void btnDelete_Click(object sender, EventArgs e)
         {
             deleteToolStripMenuItem_Click(sender, e);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            loadData();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (gridNationality.Rows.Count > 0)
+            {
+                int id = Convert.ToInt32(gridNationality.SelectedRows[0].Cells["nationality_id"].Value);
+                NationalityAddEditForm frm = new NationalityAddEditForm();
+                frm.id = id;
+                frm.ShowDialog();
+            }
+            else
+            {
+                Box.WarnBox("No data selected.");
+            }
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnEdit_Click(sender, e);
         }
     }
 }

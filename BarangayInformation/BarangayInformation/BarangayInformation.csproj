@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\DAddress.cs" />
     <Compile Include="Class\Box.cs" />
     <Compile Include="Class\Connection.cs" />
     <Compile Include="Class\Login.cs" />
@@ -166,6 +167,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\map64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-icon16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eidt16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

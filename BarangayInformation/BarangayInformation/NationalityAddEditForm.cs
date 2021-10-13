@@ -36,12 +36,52 @@ namespace BarangayInformation
             }
 
             nationality.nationality = this.txtNationality.Text; //input data from textbox pass to the properties of the class
+            if (id > 0)
+            {
+                //update
+                update();
+            }
+            else
+            {
+                //insert or save
+                save();
+            }
+        }
+
+        void save()
+        {
             if (nationality.save() > 0) //check if save is greater than 0, it also execute the save() method
             {
                 //if greater than 1, show success message
                 Box.InfoBox("Data successfully saved.");
                 this.Close();
             }
+        }
+
+        void update()
+        {
+            if (nationality.update(id) > 0) //check if save is greater than 0, it also execute the update() method
+            {
+                //if greater than 1, show success message
+                Box.InfoBox("Data successfully updated.");
+                this.Close();
+            }
+        }
+
+        private void NationalityAddEditForm_Load(object sender, EventArgs e)
+        {
+            //if edit mode
+            if(id > 0)
+            {
+                //edit mode
+                getData();
+            }
+        }
+
+        void getData()
+        {
+            nationality.getData(id);
+            this.txtNationality.Text = nationality.nationality;
         }
     }
 }
