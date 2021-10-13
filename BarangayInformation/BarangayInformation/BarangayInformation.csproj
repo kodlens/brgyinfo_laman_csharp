@@ -74,6 +74,7 @@
     <Compile Include="Class\Box.cs" />
     <Compile Include="Class\Connection.cs" />
     <Compile Include="Class\Login.cs" />
+    <Compile Include="Class\Nationality.cs" />
     <Compile Include="Class\Resident.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
