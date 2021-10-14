@@ -60,5 +60,14 @@ namespace BarangayInformation
             NationalityMainForm frm = new NationalityMainForm();
             frm.ShowDialog();
         }
+
+        private void waterSourceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            {
+                NationalityMainForm frm = new NationalityMainForm(); // alisdan pa
+
+                frm.ShowDialog();
+            }
+        }
     }
 }

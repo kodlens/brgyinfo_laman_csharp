@@ -1,5 +1,4 @@
-﻿
-namespace BarangayInformation
+﻿namespace BarangayInformation
 {
     partial class LoginForm
     {
@@ -57,7 +56,7 @@ namespace BarangayInformation
             this.label1.Size = new System.Drawing.Size(110, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Username";
-        
+
             // 
             // label2
             // 
@@ -80,7 +79,7 @@ namespace BarangayInformation
             this.txtUsername.Size = new System.Drawing.Size(275, 29);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-         
+
             // 
             // txtPassword
             // 
@@ -160,7 +159,7 @@ namespace BarangayInformation
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

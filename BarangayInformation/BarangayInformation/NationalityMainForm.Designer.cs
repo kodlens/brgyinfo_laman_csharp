@@ -66,6 +66,7 @@ namespace BarangayInformation
             this.gridNationality.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridNationality.Size = new System.Drawing.Size(436, 455);
             this.gridNationality.TabIndex = 0;
+            this.gridNationality.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridNationality_CellContentClick);
             // 
             // nationality_id
             // 
