@@ -64,8 +64,7 @@ namespace BarangayInformation
         private void waterSourceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             {
-                NationalityMainForm frm = new NationalityMainForm(); // alisdan pa
-
+                WaterSourceMainForm frm = new WaterSourceMainForm();  
                 frm.ShowDialog();
             }
         }

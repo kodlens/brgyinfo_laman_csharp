@@ -67,3 +67,5 @@ C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\Baran
 >>>>>>> e421c54f134d88ffb80fd890adbd571bf098e16c
 C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.WaterSourceAddEditForm.resources
 C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.WaterSourceMainForm.resources
+C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.WaterSourceAddEditForm.resources
+C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.WaterSourceMainForm.resources

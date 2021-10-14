@@ -25,5 +25,18 @@ namespace BarangayInformation.Class
         {
             MessageBox.Show(msg, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        public static bool QBox(string msg)
+        {
+            DialogResult emjeeMaot = MessageBox.Show(msg, "ARE YOU SURE?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(emjeeMaot == DialogResult.Yes)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

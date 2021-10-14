@@ -48,7 +48,7 @@ namespace BarangayInformation
             //we will change this void into int like save() method
             con = Connection.con();
             con.Open();
-            query = "UPDATE water_sources SET water_source=?n WHERE id = ?id";
+            query = "UPDATE water_sources SET water_source=?n WHERE water_source_id = ?id";
             cmd = new MySqlCommand(query, con);
             cmd.Parameters.AddWithValue("?n", this.water_source);
             cmd.Parameters.AddWithValue("?id", id);
@@ -65,7 +65,7 @@ namespace BarangayInformation
             //we will change this void into int like save() method
             con = Connection.con();
             con.Open();
-            query = "DELETE FROM water_source WHERE water_source_id = ?id";
+            query = "DELETE FROM water_sources WHERE water_source_id = ?id";
             cmd = new MySqlCommand(query, con);
             cmd.Parameters.AddWithValue("?id", id);
             i = cmd.ExecuteNonQuery();
@@ -76,7 +76,7 @@ namespace BarangayInformation
         }
 
         //by calling the System.Windows.Form, we can use the DataGridView Object here
-        public void find(DataGridView grid, string key)
+        public void tableData(DataGridView grid, string key)
         {
             con = Connection.con();
             con.Open();
