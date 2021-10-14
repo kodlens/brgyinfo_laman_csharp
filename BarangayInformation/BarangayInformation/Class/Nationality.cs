@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 //add also the System.windows.forms so we can use DataGridView Object
 using System.Windows.Forms;
-
+using System.Data;
 
 namespace BarangayInformation.Class
 {
@@ -29,7 +29,7 @@ namespace BarangayInformation.Class
         {
             int i = 0; //instead void, i use int to add some remarks when inserting to database, default 0, means failed.
 
-            //instantitation of class will use the new keyword
+            //instantation of class will use the new keyword
             con = Connection.con(); //another type of insantiation of object, the new keyword can be found in Connection.cs
             con.Open(); //open the connection
             query = "INSERT INTO nationalities SET nationality=?n"; //query for database
@@ -41,8 +41,6 @@ namespace BarangayInformation.Class
             con.Close(); //close the connection , detached the connection from database to free connections
             con.Dispose(); //usually garbage collector of the language will auto dispose objects but i prefer disposing manually to avoid any future problem
             return i;
-
-
             //KLARO EMJEEEH!!!
         }
 
@@ -80,15 +78,48 @@ namespace BarangayInformation.Class
         }
 
         //by calling the System.Windows.Form, we can use the DataGridView Object here
-        public void all(DataGridView grid)
+        public void find(DataGridView grid, string key)
         {
+            con = Connection.con();
+            con.Open();
+            query = "SELECT * FROM nationalities WHERE nationality LIKE ?key";
+            cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("?key", key + "%");
+            DataTable dt = new DataTable();
+            MySqlDataAdapter adptr = new MySqlDataAdapter(cmd);
+            adptr.Fill(dt);
 
+            adptr.Dispose();
+            cmd.Dispose();
+            con.Close();
+            con.Dispose();
+
+            //assign data to grid
+            grid.AutoGenerateColumns = false;
+            grid.DataSource = dt;
         }
 
         //subject for changes, depends on how we implement the searching
-        public void find(string key)
+        public void getData(int id)
         {
+            con = Connection.con();
+            con.Open();
+            query = "SELECT * FROM nationalities WHERE nationality_id = ?id";
+            cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("?id", id);
+            DataTable dt = new DataTable();
+            MySqlDataAdapter adptr = new MySqlDataAdapter(cmd);
+            adptr.Fill(dt);
 
+            adptr.Dispose();
+            cmd.Dispose();
+            con.Close();
+            con.Dispose();
+
+            if(dt.Rows.Count > 0)
+            {
+                this.nationality = Convert.ToString(dt.Rows[0]["nationality"]);
+            }
         }
     }
 }

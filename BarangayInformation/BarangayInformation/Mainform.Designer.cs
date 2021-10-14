@@ -35,6 +35,10 @@ namespace BarangayInformation
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSetting = new System.Windows.Forms.ToolStripSplitButton();
             this.waterSourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cREATEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toiletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.nationalitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -105,9 +109,38 @@ namespace BarangayInformation
             // 
             // waterSourceToolStripMenuItem
             // 
+            this.waterSourceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cREATEToolStripMenuItem,
+            this.refreshToolStripMenuItem,
+            this.updateToolStripMenuItem,
+            this.deleteToolStripMenuItem});
             this.waterSourceToolStripMenuItem.Name = "waterSourceToolStripMenuItem";
             this.waterSourceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.waterSourceToolStripMenuItem.Text = "Water Source";
+            // 
+            // cREATEToolStripMenuItem
+            // 
+            this.cREATEToolStripMenuItem.Name = "cREATEToolStripMenuItem";
+            this.cREATEToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.cREATEToolStripMenuItem.Text = "Create";
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.updateToolStripMenuItem.Text = "Update";
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // toiletToolStripMenuItem
             // 
@@ -125,6 +158,7 @@ namespace BarangayInformation
             this.nationalitiesToolStripMenuItem.Name = "nationalitiesToolStripMenuItem";
             this.nationalitiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nationalitiesToolStripMenuItem.Text = "Nationalities";
+            this.nationalitiesToolStripMenuItem.Click += new System.EventHandler(this.nationalitiesToolStripMenuItem_Click);
             // 
             // religionsToolStripMenuItem
             // 
@@ -151,25 +185,25 @@ namespace BarangayInformation
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
             this.toolStripMenuItem1.Text = "Countries";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(128, 22);
             this.toolStripMenuItem2.Text = "Provinces";
             // 
             // citiesToolStripMenuItem
             // 
             this.citiesToolStripMenuItem.Name = "citiesToolStripMenuItem";
-            this.citiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.citiesToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.citiesToolStripMenuItem.Text = "Cities";
             // 
             // barangaysToolStripMenuItem
             // 
             this.barangaysToolStripMenuItem.Name = "barangaysToolStripMenuItem";
-            this.barangaysToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.barangaysToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.barangaysToolStripMenuItem.Text = "Barangays";
             // 
             // toolStripButton2
@@ -216,6 +250,10 @@ namespace BarangayInformation
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripMenuItem citiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem barangaysToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cREATEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }
 

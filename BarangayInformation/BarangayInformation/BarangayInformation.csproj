@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\DAddress.cs" />
     <Compile Include="Class\Box.cs" />
     <Compile Include="Class\Connection.cs" />
     <Compile Include="Class\Login.cs" />
@@ -87,6 +88,18 @@
     </Compile>
     <Compile Include="Mainform.Designer.cs">
       <DependentUpon>Mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NationalityAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NationalityAddEditForm.Designer.cs">
+      <DependentUpon>NationalityAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NationalityMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NationalityMainForm.Designer.cs">
+      <DependentUpon>NationalityMainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +120,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mainform.resx">
       <DependentUpon>Mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NationalityAddEditForm.resx">
+      <DependentUpon>NationalityAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NationalityMainForm.resx">
+      <DependentUpon>NationalityMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -148,6 +167,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\map64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-icon16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eidt16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

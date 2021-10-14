@@ -54,5 +54,11 @@ namespace BarangayInformation
         {
             _frm.Show();
         }
+
+        private void nationalitiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NationalityMainForm frm = new NationalityMainForm();
+            frm.ShowDialog();
+        }
     }
 }
