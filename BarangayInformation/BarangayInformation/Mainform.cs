@@ -68,5 +68,20 @@ namespace BarangayInformation
                 frm.ShowDialog();
             }
         }
+
+       
+        private void toolStripSetting_ButtonClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void religionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+                {
+                    ReligionMainForm frm = new ReligionMainForm();
+                    frm.ShowDialog();
+                }
+            }        
     }
 }

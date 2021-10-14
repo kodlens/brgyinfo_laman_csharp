@@ -102,6 +102,7 @@ namespace BarangayInformation
             this.toolStripSetting.Size = new System.Drawing.Size(84, 83);
             this.toolStripSetting.Text = "SETUP";
             this.toolStripSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripSetting.ButtonClick += new System.EventHandler(this.toolStripSetting_ButtonClick);
             // 
             // waterSourceToolStripMenuItem
             // 
@@ -133,6 +134,7 @@ namespace BarangayInformation
             this.religionsToolStripMenuItem.Name = "religionsToolStripMenuItem";
             this.religionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.religionsToolStripMenuItem.Text = "Religions";
+            this.religionsToolStripMenuItem.Click += new System.EventHandler(this.religionsToolStripMenuItem_Click);
             // 
             // toolStripSplitButton1
             // 
