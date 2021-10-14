@@ -103,7 +103,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Religion.cs" />
+    <Compile Include="Class\Religion.cs" />
     <Compile Include="ReligionAddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>

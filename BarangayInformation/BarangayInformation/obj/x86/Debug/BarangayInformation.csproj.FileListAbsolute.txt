@@ -1,6 +1,0 @@
-C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\x86\Debug\BarangayInformation.Mainform.resources
-C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\x86\Debug\BarangayInformation.Properties.Resources.resources
-C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\x86\Debug\BarangayInformation.ResidentAddEditForm.resources
-C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\x86\Debug\BarangayInformation.csproj.GenerateResource.cache
-C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\x86\Debug\BarangayInformation.csproj.CoreCompileInputs.cache
-C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\x86\Debug\BarangayInformation.csproj.AssemblyReference.cache
