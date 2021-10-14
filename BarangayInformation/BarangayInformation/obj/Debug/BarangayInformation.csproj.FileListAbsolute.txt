@@ -56,3 +56,7 @@ C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayI
 C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.pdb
 C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.NationalityAddEditForm.resources
 C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.NationalityMainForm.resources
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.NationalityAddEditForm.resources
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.NationalityMainForm.resources
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.WaterSourceAddEditForm.resources
+C:\Users\USER\Desktop\myprojects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.WaterSourceMainForm.resources

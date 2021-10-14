@@ -100,5 +100,10 @@ namespace BarangayInformation
         {
             btnEdit_Click(sender, e);
         }
+
+        private void gridNationality_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
