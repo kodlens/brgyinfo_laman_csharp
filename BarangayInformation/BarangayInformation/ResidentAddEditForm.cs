@@ -21,6 +21,8 @@ namespace BarangayInformation
         MySqlConnection con;
         DAddress address;
 
+        Resident res;
+
         public int resident_id;
         int returnId = 0;
 
@@ -30,6 +32,7 @@ namespace BarangayInformation
 
             //instantiate DAddress
             address = new DAddress();
+            res = new Resident();
         }
 
         private void btnDebug_Click(object sender, EventArgs e)
@@ -129,7 +132,151 @@ namespace BarangayInformation
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            //if (String.IsNullOrEmpty(txtLastname.Text))
+            //{
+            //    Box.WarnBox("Please input lastname.");
+            //    txtLastname.Focus();
+            //    return;
+            //}
+            //if (String.IsNullOrEmpty(txtFirstname.Text))
+            //{
+            //    Box.WarnBox("Please input lastname.");
+            //    txtFirstname.Focus();
+            //    return;
+            //}
+            //if (String.IsNullOrEmpty(cmbSex.Text))
+            //{
+            //    Box.WarnBox("Please select sex.");
+            //    cmbSex.Focus();
+            //    return;
+            //}
+            ////filter address
+            ////present address
+            //if (String.IsNullOrEmpty(cmbPresentCountry.Text))
+            //{
+            //    Box.WarnBox("Please select present country.");
+            //    cmbPresentCountry.Focus();
+            //    return;
+            //}
+            //if (String.IsNullOrEmpty(cmbPresentProvince.Text))
+            //{
+            //    Box.WarnBox("Please select present province.");
+            //    cmbPresentProvince.Focus();
+            //    return;
+            //}
+            //if (String.IsNullOrEmpty(cmbPresentCity.Text))
+            //{
+            //    Box.WarnBox("Please select present city.");
+            //    cmbPresentCity.Focus();
+            //    return;
+            //}
+            //if (String.IsNullOrEmpty(cmbPresentBarangay.Text))
+            //{
+            //    Box.WarnBox("Please select present barangay.");
+            //    cmbPresentBarangay.Focus();
+            //    return;
+            //}
+            ////permanent address
+            //if (String.IsNullOrEmpty(cmbPermanentCountry.Text))
+            //{
+            //    Box.WarnBox("Please select permanent country.");
+            //    cmbPermanentCountry.Focus();
+            //    return;
+            //}
+            //if (String.IsNullOrEmpty(cmbPermanentProvince.Text))
+            //{
+            //    Box.WarnBox("Please select permanent province.");
+            //    cmbPermanentProvince.Focus();
+            //    return;
+            //}
+            //if (String.IsNullOrEmpty(cmbPermanentCity.Text))
+            //{
+            //    Box.WarnBox("Please select permanent city.");
+            //    cmbPermanentCity.Focus();
+            //    return;
+            //}
+            //if (String.IsNullOrEmpty(cmbPermanentBarangay.Text))
+            //{
+            //    Box.WarnBox("Please select permanent barangay.");
+            //    cmbPermanentBarangay.Focus();
+            //    return;
+            //}
 
+            if(returnId > 0)
+            {
+               //UPDATE
+            }
+            else
+            {
+                //INSERT
+                insertResident();
+            }
+
+        }
+
+        void insertResident()
+        {
+
+            res.is_head = rbHead.Checked ? (short)1 : (short)0;
+
+            res.fname = this.txtFirstname.Text.Trim();
+            res.mname = this.txtMiddlename.Text.Trim();
+            res.suffix = this.txtSuffix.Text.Trim();
+            res.sex = this.cmbSex.Text;
+            res.civil_status = this.cmbCivilStatus.Text;
+            res.religion = this.cmbReligion.Text;
+            res.nationality = this.cmbNationality.Text;
+            res.employment_status = this.cmbEmploymentStatus.Text;
+            res.occupation = this.txtOccupation.Text;
+            res.annual_income = Convert.ToDouble(this.txtAnnualIncome.Text);
+            res.year_residence = this.txtYearResidency.Text;
+            res.bdate = this.dtBdate.Value.ToString("yyyy-MM-dd");
+            res.place_of_birth = this.txtPlaceBirth.Text;
+
+            //'CONTACT INFO
+            res.contact_no = txtContactNumber.Text;
+            res.email = txtEmailAddress.Text;
+            res.type_valid_id = txtValidID.Text;
+            res.id_no = txtIDNumber.Text;
+
+            //'PRESENT ADDRESS
+            res.present_country = this.cmbPresentCountry.Text;
+            res.present_province = this.cmbPresentProvince.Text;
+            res.present_city = this.cmbPresentCity.Text;
+            res.present_barangay = this.cmbPresentBarangay.Text;
+            res.present_street = this.txtPresentStreet.Text;
+
+            //'PERMANENT ADDRESS
+            res.present_country = this.cmbPermanentCountry.Text;
+            res.permanent_province = this.cmbPermanentProvince.Text;
+            res.permanent_city = this.cmbPermanentCity.Text;
+            res.permanent_barangay = this.cmbPermanentBarangay.Text;
+            res.permanent_street = this.txtPermanentStreet.Text;
+
+            res.is_voter = cmbIsVoter.Text == "YES" ? (short)1 : (short)0;
+            res.voter_type = this.cmbVoterType.Text;
+            res.is_sk = cmbIsSK.Text == "YES" ? (short)1 : (short)0;
+            res.place_registration = this.txtPlaceReg.Text;
+
+            //'additional Info
+            res.water_source = cmbWaterSource.Text;
+            res.toilet = cmbToilet.Text;
+            res.garden = cmbGarden.Text;
+            res.contraceptive = cmbContraceptive.Text;
+
+            //survey info
+            res.have_complain = this.cmbHaveComplain.Text == "YES" ? (short)1 : (short)0;
+            res.against_whom = this.txtAgainstWhom.Text;
+            res.is_settled = this.cmbIsSettled.Text == "YES" ? (short)1 : (short)0;
+            res.date_settled = dtComplainWhen.Value.ToString("yyyy-MM-dd");
+            res.if_not_why = txtIfNotWhy.Text;
+
+            res.is_death_aid = this.cmbIsDeathMember.Text == "YES" ? (short)1 : (short)0;
+
+           
+            returnId = res.save();
+            txtResidentId.Text = "RES-" + returnId.ToString("000000");
+            Box.InfoBox("Successfully saved!");
         }
 
         private void clear()
@@ -193,7 +340,7 @@ namespace BarangayInformation
             txtAgainstWhom.Text = "";
             cmbIsSettled.SelectedIndex = -1;
             txtIfNotWhy.Text = "";
-        cmbIsDeathMember.SelectedIndex = -1;
+            cmbIsDeathMember.SelectedIndex = -1;
         }
 
         private void cmbPresentCountry_SelectedIndexChanged(object sender, EventArgs e)

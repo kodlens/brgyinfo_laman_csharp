@@ -18,7 +18,7 @@ namespace BarangayInformation.Class
 
         public string household_no { set; get; }
         public string family_no { set; get; }
-        public bool is_head { set; get; }
+        public short is_head { set; get; }
         public string lname { set; get; }
         public string fname { set; get; }
         public string mname { set; get; }
@@ -73,7 +73,7 @@ namespace BarangayInformation.Class
 
         public string if_not_why { set; get; }
 
-        public string is_death_aid { set; get; }
+        public short is_death_aid { set; get; }
 
 
 
@@ -85,7 +85,7 @@ namespace BarangayInformation.Class
         ArrayList res_pets_ids_database = new ArrayList();
 
 
-        public void save()
+        public int save()
         {
             try
             {
@@ -137,11 +137,11 @@ namespace BarangayInformation.Class
                 cmd.Parameters.AddWithValue("?pre_street", this.present_street);
 
                 //permament address
-                cmd.Parameters.AddWithValue("?pre_country", this.permanent_country);
-                cmd.Parameters.AddWithValue("?pre_province", this.permanent_province);
-                cmd.Parameters.AddWithValue("?pre_city", this.permanent_city);
-                cmd.Parameters.AddWithValue("?pre_brgy", this.permanent_barangay);
-                cmd.Parameters.AddWithValue("?pre_street", this.permanent_street);
+                cmd.Parameters.AddWithValue("?per_country", this.permanent_country);
+                cmd.Parameters.AddWithValue("?per_province", this.permanent_province);
+                cmd.Parameters.AddWithValue("?per_city", this.permanent_city);
+                cmd.Parameters.AddWithValue("?per_brgy", this.permanent_barangay);
+                cmd.Parameters.AddWithValue("?per_street", this.permanent_street);
 
                 //voters info
                 cmd.Parameters.AddWithValue("?isvoter", this.is_voter);
@@ -170,10 +170,14 @@ namespace BarangayInformation.Class
                 int i = Convert.ToInt32(cmd.ExecuteScalar());
                 cmd.Dispose();
 
+                return i;
+
             }
             catch (Exception er)
             {
+                
                 Box.ErrBox(er.Message);
+                return 0;
             }
         }
 
