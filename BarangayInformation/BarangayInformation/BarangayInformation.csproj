@@ -78,6 +78,19 @@
     <Compile Include="Class\Login.cs" />
     <Compile Include="Class\Nationality.cs" />
     <Compile Include="Class\Resident.cs" />
+    <Compile Include="Class\Country.cs" />
+    <Compile Include="CountryAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountryAddEditForm.Designer.cs">
+      <DependentUpon>CountryAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountryMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountryMainForm.Designer.cs">
+      <DependentUpon>CountryMainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GardenAddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +167,12 @@
     <Compile Include="WaterSourceMainForm.Designer.cs">
       <DependentUpon>WaterSourceMainForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CountryAddEditForm.resx">
+      <DependentUpon>CountryAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CountryMainForm.resx">
+      <DependentUpon>CountryMainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GardenAddEditForm.resx">
       <DependentUpon>GardenAddEditForm.cs</DependentUpon>
     </EmbeddedResource>
