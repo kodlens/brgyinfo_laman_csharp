@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v12.14 (64 bit)
-MySQL - 10.4.13-MariaDB : Database - brgyinfo_laman
+MySQL - 10.4.17-MariaDB : Database - brgyinfo_laman
 *********************************************************************
 */
 
@@ -43805,7 +43805,7 @@ CREATE TABLE `nationalities` (
   `nationality_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nationality` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`nationality_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `nationalities` */
 
@@ -43980,7 +43980,7 @@ CREATE TABLE `religions` (
   `religion_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `religion` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`religion_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `religions` */
 
@@ -43998,7 +43998,8 @@ insert  into `religions`(`religion_id`,`religion`) values
 (11,'Seventh Day Adventist'),
 (12,'United Methodists Church'),
 (13,'United Church of Christ in the Philippines'),
-(14,'Other Religion');
+(14,'Other Religion'),
+(15,'adsa');
 
 /*Table structure for table `resident_pets` */
 
@@ -44012,7 +44013,7 @@ CREATE TABLE `resident_pets` (
   PRIMARY KEY (`resident_pet_id`),
   KEY `resident_id` (`resident_id`),
   CONSTRAINT `resident_pets_ibfk_1` FOREIGN KEY (`resident_id`) REFERENCES `residents` (`resident_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `resident_pets` */
 
@@ -44038,10 +44039,10 @@ CREATE TABLE `resident_siblings` (
 /*Data for the table `resident_siblings` */
 
 insert  into `resident_siblings`(`resident_sibling_id`,`resident_id`,`lname`,`fname`,`mname`,`sex`,`civil_status`,`bdate`,`is_living_with_you`) values 
-(112,52,'DOCOY','JAY AR','B','MALE','MARRIED','04/08/2020',1),
-(113,52,'SANTARITA','JUNREY','M','MALE','MARRIED','24/05/1995',0),
-(114,52,'ALIA','ALBERT','B','MALE','SINGLE','11/10/2021',1),
-(117,52,'ADS','ASD','','MALE','SINGLE','11/10/2021',1);
+(114,53,'DOCOY','JAY AR','B','MALE','MARRIED','04/08/2020',1),
+(115,53,'SANTARITA','JUNREY','M','MALE','MARRIED','24/05/1995',0),
+(116,53,'ALIA','ALBERT','B','MALE','SINGLE','20/08/1990',1),
+(117,53,'FLORIZA','JADE ANN','C','FEMALE','SINGLE','16/10/1993',1);
 
 /*Table structure for table `residents` */
 
@@ -44095,12 +44096,12 @@ CREATE TABLE `residents` (
   `if_not_why` text DEFAULT NULL,
   `is_death_aid` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`resident_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `residents` */
 
 insert  into `residents`(`resident_id`,`household_no`,`family_no`,`is_head`,`lname`,`fname`,`mname`,`suffix`,`sex`,`civil_status`,`religion`,`nationality`,`employment_status`,`occupation`,`annual_income`,`year_residence`,`bdate`,`place_of_birth`,`contact_no`,`email`,`type_valid_id`,`id_no`,`present_country`,`present_province`,`present_city`,`present_barangay`,`present_street`,`permanent_country`,`permanent_province`,`permanent_city`,`permanent_barangay`,`permanent_street`,`is_voter`,`voter_type`,`is_sk`,`place_registration`,`water_source`,`toilet`,`garden`,`contraceptive`,`have_complain`,`against_whom`,`is_settled`,`date_settled`,`if_not_why`,`is_death_aid`) values 
-(52,'','',1,'AMPARADO','ETIENNE WAYNE','NAMOCATCAT','TEST','MALE','SINGLE','Bible Baptist Church','FILIPINO','EMPLOYED','IT PROGRAMMER','11000','1 YEAR','2021-10-11','BAROY, LANAO DEL NORTE','09167789585','et@yahoo.com','DRIVER LICENSE','K09-1234-214','PHILIPPINES','MISAMIS OCCIDENTAL','TANGUB CITY','Garang','P-SAMPLE LANG','PHILIPPINES','MISAMIS OCCIDENTAL','TANGUB CITY','Garang','P-SAMPLE LANG',1,'OLD',0,'MALORO, TANGUB CITY','','','','',0,'',0,'','',0);
+(53,NULL,NULL,1,'AMPARADO','ETIENNE WAYNE','NAMOCATCAT','TEST','MALE','SINGLE','Bible Baptist Church','FILIPINO','EMPLOYED','IT PROGRAMMER','11000','1 YEAR','2021-10-10','BAROY, LANAO DEL NORTE','09167789585','et@yahoo.com','DRIVER LICENSE','K09-1234-214','PHILIPPINES','MISAMIS OCCIDENTAL','TANGUB CITY','Garang','P-SAMPLE LANG','PHILIPPINES','MISAMIS OCCIDENTAL','TANGUB CITY','Garang','P-SAMPLE LANG',1,'OLD',0,'MALORO, TANGUB CITY','POSIT','OWNED','GARDEN 1','CONTRA 1',1,'',0,'','',1);
 
 /*Table structure for table `toilets` */
 
@@ -44148,14 +44149,14 @@ insert  into `users`(`user_id`,`username`,`password`,`lname`,`fname`,`mname`,`se
 DROP TABLE IF EXISTS `water_sources`;
 
 CREATE TABLE `water_sources` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `water_source_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `water_source` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+  PRIMARY KEY (`water_source_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `water_sources` */
 
-insert  into `water_sources`(`id`,`water_source`) values 
+insert  into `water_sources`(`water_source_id`,`water_source`) values 
 (1,'POSIT'),
 (2,'PUSO');
 

@@ -59,3 +59,7 @@ C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayI
 C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.exe
 C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.pdb
 C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.CountryMainForm.resources
+C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.CountryAddEditForm.resources
+C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.CountryMainForm.resources
+C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.GardenAddEditForm.resources
+C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.GardenMainForm.resources

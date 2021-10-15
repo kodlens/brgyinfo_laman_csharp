@@ -12,6 +12,8 @@ namespace BarangayInformation
 {
     public partial class CountryAddEditForm : Form
     {
+        public int id;
+
         public CountryAddEditForm()
         {
             InitializeComponent();
