@@ -64,13 +64,15 @@ namespace BarangayInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(318, 107);
             this.Controls.Add(this.buttonwatersave);
             this.Controls.Add(this.textreligion);
             this.Controls.Add(this.labelwatersource);
             this.Name = "ReligionAddEditForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReligionAddEditForm";
-           
+            this.Load += new System.EventHandler(this.ReligionAddEditForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

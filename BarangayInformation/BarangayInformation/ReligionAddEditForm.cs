@@ -64,6 +64,24 @@ namespace BarangayInformation
                     this.Close();
                 }
             }
+
+           
+        }
+
+        private void ReligionAddEditForm_Load(object sender, EventArgs e)
+        {
+
+            //if edit mode
+            if (id > 0)
+            {
+                //edit mode
+                getData();
+            }
+        }
+        void getData()
+        {
+            religion.getData(id);
+            textreligion.Text = religion.religion;
         }
     }
 }

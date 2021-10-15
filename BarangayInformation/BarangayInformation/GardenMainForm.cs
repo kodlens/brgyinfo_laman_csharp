@@ -12,26 +12,27 @@ using BarangayInformation.Class;
 
 namespace BarangayInformation
 {
-    public partial class ReligionMainForm : Form
+    public partial class GardenMainForm : Form
     {
-        Religion r;
+        Garden g;
 
-        public ReligionMainForm()
+        public GardenMainForm()
         {
             InitializeComponent();
-            r = new Religion();
+            g = new Garden();
         }
 
         public void loadData()
         {
-            r.TD(gridreligion, txtSearch.Text);
+            g.find(this.gridgarden, txtSearch.Text);
         }
 
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadData();
         }
-       private void ReligionMainForm_Load(object sender, EventArgs e)
+
+        private void GardenMainForm_Load(object sender, EventArgs e)
         {
             loadData();
         }
@@ -39,34 +40,31 @@ namespace BarangayInformation
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //call and show AddEdit Form
-            ReligionAddEditForm frm = new ReligionAddEditForm();
+            GardenAddEditForm frm = new GardenAddEditForm();
             frm.id = 0;
             frm.ShowDialog();
         }
+
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (gridreligion.Rows.Count > 0)//if no rows or data in datagrid
+            if (gridgarden.Rows.Count > 0) //if no rows or data in datagrid
             {
-              
+                DialogResult dg = MessageBox.Show("Are you sure you want to delete this row?", "DELETE?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dg == DialogResult.Yes)
                 {
-                    DialogResult dg = MessageBox.Show("Are you sure you want to delete this row?", "DELETE?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dg == DialogResult.Yes)
-                    {
-                        int id = Convert.ToInt32(gridreligion.SelectedRows[0].Cells["religion_id"].Value);
-                        r.delete(id);
-                        Box.InfoBox("Successfully deleted.");
-                        loadData();
-                    }
-
-                    else
-                    {
-                        Box.WarnBox("No data selected.");
-                    }
+                    int id = Convert.ToInt32(gridgarden.SelectedRows[0].Cells["nationality_id"].Value);
+                    g.delete(id);
+                    Box.InfoBox("Successfully deleted.");
+                    loadData();
                 }
-
             }
-        }
+            else
+            {
+                Box.WarnBox("No data selected.");
+            }
 
+
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             newToolStripMenuItem_Click(sender, e);
@@ -84,10 +82,10 @@ namespace BarangayInformation
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (gridreligion.Rows.Count > 0)
+            if (gridgarden.Rows.Count > 0)
             {
-                int id = Convert.ToInt32(gridreligion.SelectedRows[0].Cells["religion_id"].Value);
-                ReligionAddEditForm frm = new ReligionAddEditForm();
+                int id = Convert.ToInt32(gridgarden.SelectedRows[0].Cells["garden_id"].Value);
+                GardenAddEditForm frm = new GardenAddEditForm();
                 frm.id = id;
                 frm.ShowDialog();
             }
@@ -96,13 +94,16 @@ namespace BarangayInformation
                 Box.WarnBox("No data selected.");
             }
 
+
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            btnEdit_Click(sender, e);
-
+            editToolStripMenuItem_Click(sender, e);
         }
+
+
     }
-}
+    }
+
 

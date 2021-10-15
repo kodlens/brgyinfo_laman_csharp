@@ -74,9 +74,22 @@
     <Compile Include="Class\DAddress.cs" />
     <Compile Include="Class\Box.cs" />
     <Compile Include="Class\Connection.cs" />
+    <Compile Include="Class\Garden.cs" />
     <Compile Include="Class\Login.cs" />
     <Compile Include="Class\Nationality.cs" />
     <Compile Include="Class\Resident.cs" />
+    <Compile Include="GardenAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GardenAddEditForm.Designer.cs">
+      <DependentUpon>GardenAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GardenMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GardenMainForm.Designer.cs">
+      <DependentUpon>GardenMainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +154,12 @@
     <Compile Include="WaterSourceMainForm.Designer.cs">
       <DependentUpon>WaterSourceMainForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GardenAddEditForm.resx">
+      <DependentUpon>GardenAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GardenMainForm.resx">
+      <DependentUpon>GardenMainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

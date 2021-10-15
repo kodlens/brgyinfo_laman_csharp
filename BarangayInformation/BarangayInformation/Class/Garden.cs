@@ -4,35 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//using mysql.dll
+//use mysql dll
 using MySql.Data.MySqlClient;
-
 //add also the System.windows.forms so we can use DataGridView Object
 using System.Windows.Forms;
 using System.Data;
 
-
-
 namespace BarangayInformation.Class
 {
-    class Religion
+    class Garden
     {
         //declare always this 3 var
         MySqlConnection con;
         MySqlCommand cmd;
         string query;
 
-        public string religion { set; get; }
+        //property of Garden Class
+        //usually your properties are the column name from database
+
+        public string garden { set; get; }
 
         public int save()
         {
-            int i = 0;
-
+            int i = 0; //instead void, i use int to add some remarks when inserting to database, default 0, means failed.
+                       
+            //instantation of class will use the new keyword
             con = Connection.con(); //another type of insantiation of object, the new keyword can be found in Connection.cs
             con.Open(); //open the connection
-            query = "INSERT INTO religions SET religion=?n"; //query for database // INSERT INTO tablename SET columname = 'value'
+            query = "INSERT INTO gardens SET garden=?n"; //query for database
             cmd = new MySqlCommand(query, con);
-            cmd.Parameters.AddWithValue("?n", this.religion); //you can use this keyword, or remove the this keyword
+            cmd.Parameters.AddWithValue("?n", this.garden); //you can use this keyword, or remove the this keyword
             i = cmd.ExecuteNonQuery(); //cmd.executenonquery since the query is not a select statement, it is an insert statement
             //assign variable i. if insert is successfull, it will return 1, else 0.
             cmd.Dispose(); //dispose the cmd object variable to free memory
@@ -40,16 +41,16 @@ namespace BarangayInformation.Class
             con.Dispose(); //usually garbage collector of the language will auto dispose objects but i prefer disposing manually to avoid any future problem
             return i;
         }
-
-        public int update(int id)
+        
+        public int update( int id)
         {
             int i = 0;
             //we will change this void into int like save() method
             con = Connection.con();
             con.Open();
-            query = "UPDATE religions SET religion=?n WHERE religion_id = ?id";
+            query = "UPDATE gardens SET garden=?n WHERE garden_id = ?id";
             cmd = new MySqlCommand(query, con);
-            cmd.Parameters.AddWithValue("?n", this.religion);
+            cmd.Parameters.AddWithValue("?n", this.garden);
             cmd.Parameters.AddWithValue("?id", id);
             i = cmd.ExecuteNonQuery();
             cmd.Dispose();
@@ -64,8 +65,9 @@ namespace BarangayInformation.Class
             //we will change this void into int like save() method
             con = Connection.con();
             con.Open();
-            query = "DELETE FROM religions WHERE religion_id = ?id";
+            query = "DELETE FROM gardens WHERE garden_id = ?id";
             cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("?n", this.garden);
             cmd.Parameters.AddWithValue("?id", id);
             i = cmd.ExecuteNonQuery();
             cmd.Dispose();
@@ -73,16 +75,14 @@ namespace BarangayInformation.Class
             con.Dispose();
             return i;
         }
-
         //by calling the System.Windows.Form, we can use the DataGridView Object here
-        public void TD(DataGridView grid, string key)
+        public void find(DataGridView grid, string key)
         {
             con = Connection.con();
             con.Open();
-            query = "SELECT * FROM religions WHERE religion LIKE ?key";
+            query = "SELECT * FROM gardens WHERE garden LIKE ?key";
             cmd = new MySqlCommand(query, con);
             cmd.Parameters.AddWithValue("?key", key + "%");
-
             DataTable dt = new DataTable();
             MySqlDataAdapter adptr = new MySqlDataAdapter(cmd);
             adptr.Fill(dt);
@@ -102,7 +102,7 @@ namespace BarangayInformation.Class
         {
             con = Connection.con();
             con.Open();
-            query = "SELECT * FROM religions WHERE religion_id = ?id";
+            query = "SELECT * FROM gardens WHERE garden_id = ?id";
             cmd = new MySqlCommand(query, con);
             cmd.Parameters.AddWithValue("?id", id);
             DataTable dt = new DataTable();
@@ -116,7 +116,7 @@ namespace BarangayInformation.Class
 
             if (dt.Rows.Count > 0)
             {
-                this.religion = Convert.ToString(dt.Rows[0]["religion"]);
+                this.garden = Convert.ToString(dt.Rows[0]["garden"]);
             }
         }
     }

@@ -30,15 +30,7 @@ namespace BarangayInformation
             frm.Show();
         }
 
-        private void Mainform_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
