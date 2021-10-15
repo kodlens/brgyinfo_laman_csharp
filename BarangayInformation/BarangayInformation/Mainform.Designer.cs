@@ -45,6 +45,10 @@ namespace BarangayInformation
             this.citiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barangaysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.gardenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.petToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,7 +98,11 @@ namespace BarangayInformation
             this.toiletToolStripMenuItem,
             this.toolStripSeparator1,
             this.nationalitiesToolStripMenuItem,
-            this.religionsToolStripMenuItem});
+            this.religionsToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.gardenToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.petToolStripMenuItem});
             this.toolStripSetting.Image = global::BarangayInformation.Properties.Resources.setting64x64;
             this.toolStripSetting.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripSetting.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -155,25 +163,25 @@ namespace BarangayInformation
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem1.Text = "Countries";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(128, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem2.Text = "Provinces";
             // 
             // citiesToolStripMenuItem
             // 
             this.citiesToolStripMenuItem.Name = "citiesToolStripMenuItem";
-            this.citiesToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.citiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.citiesToolStripMenuItem.Text = "Cities";
             // 
             // barangaysToolStripMenuItem
             // 
             this.barangaysToolStripMenuItem.Name = "barangaysToolStripMenuItem";
-            this.barangaysToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.barangaysToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.barangaysToolStripMenuItem.Text = "Barangays";
             // 
             // toolStripButton2
@@ -185,6 +193,28 @@ namespace BarangayInformation
             this.toolStripButton2.Size = new System.Drawing.Size(23, 83);
             this.toolStripButton2.Text = "toolStripButton2";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // gardenToolStripMenuItem
+            // 
+            this.gardenToolStripMenuItem.Name = "gardenToolStripMenuItem";
+            this.gardenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gardenToolStripMenuItem.Text = "Garden";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+            // 
+            // petToolStripMenuItem
+            // 
+            this.petToolStripMenuItem.Name = "petToolStripMenuItem";
+            this.petToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.petToolStripMenuItem.Text = "Pet";
+            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,7 +225,6 @@ namespace BarangayInformation
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Mainform_FormClosing);
-      
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -220,6 +249,10 @@ namespace BarangayInformation
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripMenuItem citiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem barangaysToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem gardenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem petToolStripMenuItem;
     }
 }
 
