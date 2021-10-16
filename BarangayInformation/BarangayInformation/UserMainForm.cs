@@ -12,49 +12,46 @@ using BarangayInformation.Class;
 
 namespace BarangayInformation
 {
-    public partial class NationalityMainForm : Form
+    public partial class UserMainForm : Form
     {
-        Nationality n;
-
-        public NationalityMainForm()
+        User u;
+        public UserMainForm()
         {
             InitializeComponent();
-
-            n = new Nationality();
+            u = new User();
         }
-
         public void loadData()
         {
-            n.find(this.gridNationality, txtSearch.Text);
+            u.find(this.gridUser, txtSearch.Text);
             //2 param, 1 for grid, 1 for the key for search
         }
+
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadData();
         }
 
-        private void NationalityMainForm_Load(object sender, EventArgs e)
+        private void UserMainForm_Load(object sender, EventArgs e)
         {
             loadData();
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //call and show AddEdit Form
-            NationalityAddEditForm frm = new NationalityAddEditForm();
+            UserAddEditForm frm = new UserAddEditForm();
             frm.id = 0;
             frm.ShowDialog();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (gridNationality.Rows.Count > 0) //if no rows or data in datagrid
+            if (gridUser.Rows.Count > 0) //if no rows or data in datagrid
             {
                 DialogResult dg = MessageBox.Show("Are you sure you want to delete this row?", "DELETE?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dg == DialogResult.Yes)
                 {
-                    int id = Convert.ToInt32(gridNationality.SelectedRows[0].Cells["nationality_id"].Value);
-                    n.delete(id);
+                    int id = Convert.ToInt32(gridUser.SelectedRows[0].Cells["user_id"].Value);
+                    u.delete(id);
                     Box.InfoBox("Successfully deleted.");
                     loadData();
                 }
@@ -63,7 +60,6 @@ namespace BarangayInformation
             {
                 Box.WarnBox("No data selected.");
             }
-
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -83,10 +79,10 @@ namespace BarangayInformation
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (gridNationality.Rows.Count > 0)
+            if (gridUser.Rows.Count > 0)
             {
-                int id = Convert.ToInt32(gridNationality.SelectedRows[0].Cells["nationality_id"].Value);
-                NationalityAddEditForm frm = new NationalityAddEditForm();
+                int id = Convert.ToInt32(gridUser.SelectedRows[0].Cells["user_id"].Value);
+               UserAddEditForm frm = new UserAddEditForm();
                 frm.id = id;
                 frm.ShowDialog();
             }
@@ -101,34 +97,6 @@ namespace BarangayInformation
             btnEdit_Click(sender, e);
         }
 
-        private void gridNationality_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
-
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void toolStripSeparator1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

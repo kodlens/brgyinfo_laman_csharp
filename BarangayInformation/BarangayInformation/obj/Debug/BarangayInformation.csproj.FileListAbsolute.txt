@@ -67,3 +67,5 @@ C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayI
 C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\BarangayInformation.exe
 C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\BarangayInformation.pdb
 C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.csproj.CopyComplete
+C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.UserAddEditForm.resources
+C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.UserMainForm.resources

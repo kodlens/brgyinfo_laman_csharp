@@ -94,6 +94,7 @@ namespace BarangayInformation
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(114, 98);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // newToolStripMenuItem
             // 
@@ -120,6 +121,7 @@ namespace BarangayInformation
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(110, 6);
+            this.toolStripSeparator1.Click += new System.EventHandler(this.toolStripSeparator1_Click);
             // 
             // deleteToolStripMenuItem
             // 
@@ -139,6 +141,7 @@ namespace BarangayInformation
             this.label1.TabIndex = 2;
             this.label1.Text = "CONTROLS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -153,6 +156,7 @@ namespace BarangayInformation
             this.label2.TabIndex = 3;
             this.label2.Text = "LIST OF NATIONALITY";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtSearch
             // 
@@ -160,6 +164,7 @@ namespace BarangayInformation
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(214, 20);
             this.txtSearch.TabIndex = 6;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnSearch
             // 

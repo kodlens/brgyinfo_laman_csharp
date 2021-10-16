@@ -81,5 +81,11 @@ namespace BarangayInformation
             CountryMainForm frm = new CountryMainForm();
             frm.ShowDialog();
         }
+
+        private void userToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserMainForm frm = new UserMainForm();
+            frm.ShowDialog();
+        }
     }
 }
