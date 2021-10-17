@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace BarangayInformation.Class
@@ -36,6 +37,26 @@ namespace BarangayInformation.Class
             cmd.Dispose();
             // con.Close();
             return flag;
+        }
+
+        public void loadToComboBox(ComboBox cmb)
+        {
+            con = Connection.con();
+            con.Open();
+
+            cmb.Items.Clear();
+            query = @"SELECT * FROM roles ORDER BY role ASC"; //query for database
+            cmd = new MySqlCommand(query, con);
+            MySqlDataReader dr;
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cmb.Items.Add(Convert.ToString(dr["role"]));
+            }
+            dr.Close();
+            cmd.Dispose();
+            con.Close();
+            con.Dispose();
         }
 
     }

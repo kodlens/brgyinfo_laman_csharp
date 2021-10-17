@@ -22,7 +22,7 @@ namespace BarangayInformation
         }
         public void loadData()
         {
-            u.find(this.gridUser, txtSearch.Text);
+            u.find(this.flx, txtSearchUsername.Text, txtSearchLastname.Text);
             //2 param, 1 for grid, 1 for the key for search
         }
 
@@ -38,19 +38,19 @@ namespace BarangayInformation
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UserAddEditForm frm = new UserAddEditForm();
+            UserAddEditForm frm = new UserAddEditForm(this);
             frm.id = 0;
             frm.ShowDialog();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (gridUser.Rows.Count > 0) //if no rows or data in datagrid
+            if (flx.Rows.Count > 1) //if no rows or data in datagrid
             {
                 DialogResult dg = MessageBox.Show("Are you sure you want to delete this row?", "DELETE?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dg == DialogResult.Yes)
                 {
-                    int id = Convert.ToInt32(gridUser.SelectedRows[0].Cells["user_id"].Value);
+                    int id = Convert.ToInt32(flx[flx.RowSel,"user_id"]);
                     u.delete(id);
                     Box.InfoBox("Successfully deleted.");
                     loadData();
@@ -79,10 +79,10 @@ namespace BarangayInformation
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (gridUser.Rows.Count > 0)
+            if (flx.Rows.Count > 1)
             {
-                int id = Convert.ToInt32(gridUser.SelectedRows[0].Cells["user_id"].Value);
-               UserAddEditForm frm = new UserAddEditForm();
+                int id = Convert.ToInt32(flx[flx.RowSel, "user_id"]);
+                UserAddEditForm frm = new UserAddEditForm(this);
                 frm.id = id;
                 frm.ShowDialog();
             }

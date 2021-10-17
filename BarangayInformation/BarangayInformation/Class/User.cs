@@ -9,11 +9,15 @@ using MySql.Data.MySqlClient;
 //add also the System.windows.forms so we can use DataGridView Object
 using System.Windows.Forms;
 using System.Data;
+using C1.Win.C1FlexGrid;
+
+
 
 namespace BarangayInformation.Class
 {
-    class User
+    class User : Role
     {
+ 
         MySqlConnection con;
         MySqlCommand cmd;
         string query;
@@ -21,34 +25,57 @@ namespace BarangayInformation.Class
         //property of Nationality Class
         //usually your properties are the column name from database
         public string username { set; get; }
+        public string password { set; get; }
+        public string lname { set; get; }
+        public string fname { set; get; }
+        public string mname { set; get; }
+        public string sex { set; get; }
+        public string role { set; get; }
+
 
         public int save()
         {
-            int i = 0; //instead void, i use int to add some remarks when inserting to database, default 0, means failed.
+            int i = 0;
+            con = Connection.con();
+            con.Open(); 
 
-            //instantation of class will use the new keyword
-            con = Connection.con(); //another type of insantiation of object, the new keyword can be found in Connection.cs
-            con.Open(); //open the connection
-            query = "INSERT INTO users SET username=?n"; //query for database
+            int role_id = getRoleIdByRoleName(con, this.role); //get role id by role name;
+
+            query = @"INSERT INTO users SET username=?user, password=sha1(?pwd), lname=?lname, fname=?fname, mname=?mname,
+                    sex=?sex, role_id=?roleid"; //query for database
             cmd = new MySqlCommand(query, con);
-            cmd.Parameters.AddWithValue("?n", this.username); //you can use this keyword, or remove the this keyword
-            i = cmd.ExecuteNonQuery(); //cmd.executenonquery since the query is not a select statement, it is an insert statement
-            //assign variable i. if insert is successfull, it will return 1, else 0.
-            cmd.Dispose(); //dispose the cmd object variable to free memory
-            con.Close(); //close the connection , detached the connection from database to free connections
-            con.Dispose(); //usually garbage collector of the language will auto dispose objects but i prefer disposing manually to avoid any future problem
+            cmd.Parameters.AddWithValue("?user", this.username);
+            cmd.Parameters.AddWithValue("?pwd", this.password);
+            cmd.Parameters.AddWithValue("?lname", this.lname);
+            cmd.Parameters.AddWithValue("?fname", this.fname);
+            cmd.Parameters.AddWithValue("?mname", this.mname);
+            cmd.Parameters.AddWithValue("?sex", this.sex);
+            cmd.Parameters.AddWithValue("?roleid", role_id);
+            i = cmd.ExecuteNonQuery(); 
+            cmd.Dispose(); 
+            con.Close();
+            con.Dispose();
             return i;
         }
 
         public int update(int id)
         {
             int i = 0;
-            //we will change this void into int like save() method
             con = Connection.con();
             con.Open();
-            query = "UPDATE users SET username=?n WHERE user_id = ?id";
+
+            int role_id = getRoleIdByRoleName(con, this.role); //get role id by role name;
+
+            query = @"UPDATE users SET username=?user, password=sha1(?pwd), lname=?lname, fname=?fname, mname=?mname,
+                    sex=?sex, role_id=?roleid WHERE user_id = ?id"; //query for database
             cmd = new MySqlCommand(query, con);
-            cmd.Parameters.AddWithValue("?n", this.username);
+            cmd.Parameters.AddWithValue("?user", this.username);
+            cmd.Parameters.AddWithValue("?pwd", this.password);
+            cmd.Parameters.AddWithValue("?lname", this.lname);
+            cmd.Parameters.AddWithValue("?fname", this.fname);
+            cmd.Parameters.AddWithValue("?mname", this.mname);
+            cmd.Parameters.AddWithValue("?sex", this.sex);
+            cmd.Parameters.AddWithValue("?roroleidle", role_id);
             cmd.Parameters.AddWithValue("?id", id);
             i = cmd.ExecuteNonQuery();
             cmd.Dispose();
@@ -72,13 +99,14 @@ namespace BarangayInformation.Class
             con.Dispose();
             return i;
         }
-        public void find(DataGridView grid, string key)
+        public void find(C1FlexGrid grid, string username, string search_lname)
         {
             con = Connection.con();
             con.Open();
-            query = "SELECT * FROM users WHERE username LIKE ?key";
+            query = "SELECT * FROM users WHERE username LIKE ?user AND lname LIKE ?lname";
             cmd = new MySqlCommand(query, con);
-            cmd.Parameters.AddWithValue("?key", key + "%");
+            cmd.Parameters.AddWithValue("?user", username + "%");
+            cmd.Parameters.AddWithValue("?lname", search_lname + "%");
             DataTable dt = new DataTable();
             MySqlDataAdapter adptr = new MySqlDataAdapter(cmd);
             adptr.Fill(dt);
@@ -96,7 +124,7 @@ namespace BarangayInformation.Class
         {
             con = Connection.con();
             con.Open();
-            query = "SELECT * FROM users WHERE user_id = ?id";
+            query = "SELECT a.*, b.role FROM users a join roles b on a.role_id = b.role_id WHERE user_id = ?id";
             cmd = new MySqlCommand(query, con);
             cmd.Parameters.AddWithValue("?id", id);
             DataTable dt = new DataTable();
@@ -111,6 +139,11 @@ namespace BarangayInformation.Class
             if (dt.Rows.Count > 0)
             {
                 this.username = Convert.ToString(dt.Rows[0]["username"]);
+                this.lname = Convert.ToString(dt.Rows[0]["lname"]);
+                this.fname = Convert.ToString(dt.Rows[0]["fname"]);
+                this.mname = Convert.ToString(dt.Rows[0]["mname"]);
+                this.sex = Convert.ToString(dt.Rows[0]["sex"]);
+                this.role = Convert.ToString(dt.Rows[0]["role"]);
             }
         }
 
