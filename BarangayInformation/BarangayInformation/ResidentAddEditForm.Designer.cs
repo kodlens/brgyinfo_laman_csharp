@@ -29,27 +29,7 @@ namespace BarangayInformation
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResidentAddEditForm));
-            this.is_living_with_you = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.GroupBox12 = new System.Windows.Forms.GroupBox();
-            this.Label46 = new System.Windows.Forms.Label();
-            this.cmbSiblingIsLiving = new System.Windows.Forms.ComboBox();
-            this.cmbSiblingCivilStatus = new System.Windows.Forms.ComboBox();
-            this.dtSiblingBdate = new System.Windows.Forms.DateTimePicker();
-            this.Label79 = new System.Windows.Forms.Label();
-            this.txtFAge = new System.Windows.Forms.TextBox();
-            this.Label81 = new System.Windows.Forms.Label();
-            this.cmbSiblingSex = new System.Windows.Forms.ComboBox();
-            this.Label82 = new System.Windows.Forms.Label();
-            this.txtSiblingFname = new System.Windows.Forms.TextBox();
-            this.Label83 = new System.Windows.Forms.Label();
-            this.txtSiblingMname = new System.Windows.Forms.TextBox();
-            this.Label84 = new System.Windows.Forms.Label();
-            this.Label85 = new System.Windows.Forms.Label();
-            this.txtSiblingLname = new System.Windows.Forms.TextBox();
-            this.bdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbPermanentBarangay = new System.Windows.Forms.ComboBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.cmbPresentBarangay = new System.Windows.Forms.ComboBox();
@@ -60,28 +40,16 @@ namespace BarangayInformation
             this.Label34 = new System.Windows.Forms.Label();
             this.Label35 = new System.Windows.Forms.Label();
             this.tabFamilyMembers = new System.Windows.Forms.TabPage();
-            this.gridSibling = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.middlename = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sex = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.civil_status = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.btnBack3 = new System.Windows.Forms.Button();
+            this.btnNext3 = new System.Windows.Forms.Button();
             this.txtIfNotWhy = new System.Windows.Forms.TextBox();
             this.cmbIsSettled = new System.Windows.Forms.ComboBox();
             this.txtAgainstWhom = new System.Windows.Forms.TextBox();
             this.cmbHaveComplain = new System.Windows.Forms.ComboBox();
-            this.btnAddPet = new System.Windows.Forms.Button();
-            this.txtNumericNoOfPet = new System.Windows.Forms.NumericUpDown();
-            this.dgridPets = new System.Windows.Forms.DataGridView();
-            this.resident_pet_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.resident_pet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.no_of_pet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtComplainWhen = new System.Windows.Forms.DateTimePicker();
             this.Label63 = new System.Windows.Forms.Label();
             this.cmbContraceptive = new System.Windows.Forms.ComboBox();
             this.Label62 = new System.Windows.Forms.Label();
-            this.cmbPet = new System.Windows.Forms.ComboBox();
             this.Label57 = new System.Windows.Forms.Label();
             this.Label61 = new System.Windows.Forms.Label();
             this.cmbGarden = new System.Windows.Forms.ComboBox();
@@ -99,9 +67,13 @@ namespace BarangayInformation
             this.GroupBox9 = new System.Windows.Forms.GroupBox();
             this.cmbIsDeathMember = new System.Windows.Forms.ComboBox();
             this.tabSurvey = new System.Windows.Forms.TabPage();
+            this.btnBack5 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.cmbPermanentProvince = new System.Windows.Forms.ComboBox();
             this.GroupBox10 = new System.Windows.Forms.GroupBox();
             this.tabAdditionalInformation = new System.Windows.Forms.TabPage();
+            this.btnNext4 = new System.Windows.Forms.Button();
+            this.btnBack4 = new System.Windows.Forms.Button();
             this.Label36 = new System.Windows.Forms.Label();
             this.txtAnnualIncome = new System.Windows.Forms.TextBox();
             this.Label50 = new System.Windows.Forms.Label();
@@ -145,10 +117,14 @@ namespace BarangayInformation
             this.cmbEmploymentStatus = new System.Windows.Forms.ComboBox();
             this.Label32 = new System.Windows.Forms.Label();
             this.tabProfile = new System.Windows.Forms.TabPage();
+            this.btnNext1 = new System.Windows.Forms.Button();
             this.Button2 = new System.Windows.Forms.Button();
             this.Button1 = new System.Windows.Forms.Button();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.TabControl1 = new System.Windows.Forms.TabControl();
             this.tabContactAddress = new System.Windows.Forms.TabPage();
+            this.btnBack1 = new System.Windows.Forms.Button();
+            this.tbnNext2 = new System.Windows.Forms.Button();
             this.GroupBox3 = new System.Windows.Forms.GroupBox();
             this.Label44 = new System.Windows.Forms.Label();
             this.txtIDNumber = new System.Windows.Forms.TextBox();
@@ -181,22 +157,9 @@ namespace BarangayInformation
             this.Label16 = new System.Windows.Forms.Label();
             this.Label13 = new System.Windows.Forms.Label();
             this.Label18 = new System.Windows.Forms.Label();
-            this.btnNext1 = new System.Windows.Forms.Button();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnBack1 = new System.Windows.Forms.Button();
-            this.tbnNext2 = new System.Windows.Forms.Button();
-            this.btnBack3 = new System.Windows.Forms.Button();
-            this.btnNext3 = new System.Windows.Forms.Button();
-            this.btnAddFamlyMember = new System.Windows.Forms.Button();
-            this.btnNext4 = new System.Windows.Forms.Button();
-            this.btnBack4 = new System.Windows.Forms.Button();
-            this.btnBack5 = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.GroupBox12.SuspendLayout();
+            this.flxSibling = new C1.Win.C1FlexGrid.C1FlexGrid();
+            this.flxPet = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.tabFamilyMembers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridSibling)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumericNoOfPet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgridPets)).BeginInit();
             this.GroupBox9.SuspendLayout();
             this.tabSurvey.SuspendLayout();
             this.GroupBox10.SuspendLayout();
@@ -205,222 +168,22 @@ namespace BarangayInformation
             this.GroupBox4.SuspendLayout();
             this.GroupBox6.SuspendLayout();
             this.tabProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.TabControl1.SuspendLayout();
             this.tabContactAddress.SuspendLayout();
             this.GroupBox3.SuspendLayout();
             this.GroupBox2.SuspendLayout();
             this.GroupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flxSibling)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flxPet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // is_living_with_you
-            // 
-            this.is_living_with_you.DataPropertyName = "is_living_with_you";
-            this.is_living_with_you.FillWeight = 22.92252F;
-            this.is_living_with_you.HeaderText = "Is Living With You";
-            this.is_living_with_you.Name = "is_living_with_you";
-            // 
-            // GroupBox12
-            // 
-            this.GroupBox12.Controls.Add(this.Label46);
-            this.GroupBox12.Controls.Add(this.cmbSiblingIsLiving);
-            this.GroupBox12.Controls.Add(this.btnAddFamlyMember);
-            this.GroupBox12.Controls.Add(this.cmbSiblingCivilStatus);
-            this.GroupBox12.Controls.Add(this.dtSiblingBdate);
-            this.GroupBox12.Controls.Add(this.Label79);
-            this.GroupBox12.Controls.Add(this.txtFAge);
-            this.GroupBox12.Controls.Add(this.Label81);
-            this.GroupBox12.Controls.Add(this.cmbSiblingSex);
-            this.GroupBox12.Controls.Add(this.Label82);
-            this.GroupBox12.Controls.Add(this.txtSiblingFname);
-            this.GroupBox12.Controls.Add(this.Label83);
-            this.GroupBox12.Controls.Add(this.txtSiblingMname);
-            this.GroupBox12.Controls.Add(this.Label84);
-            this.GroupBox12.Controls.Add(this.Label85);
-            this.GroupBox12.Controls.Add(this.txtSiblingLname);
-            this.GroupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox12.Location = new System.Drawing.Point(14, 3);
-            this.GroupBox12.Name = "GroupBox12";
-            this.GroupBox12.Size = new System.Drawing.Size(1104, 198);
-            this.GroupBox12.TabIndex = 0;
-            this.GroupBox12.TabStop = false;
-            this.GroupBox12.Text = "Personal Information";
-            // 
-            // Label46
-            // 
-            this.Label46.AutoSize = true;
-            this.Label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label46.Location = new System.Drawing.Point(423, 106);
-            this.Label46.Name = "Label46";
-            this.Label46.Size = new System.Drawing.Size(100, 16);
-            this.Label46.TabIndex = 76;
-            this.Label46.Text = "Living with you?";
-            // 
-            // cmbSiblingIsLiving
-            // 
-            this.cmbSiblingIsLiving.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSiblingIsLiving.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSiblingIsLiving.FormattingEnabled = true;
-            this.cmbSiblingIsLiving.Items.AddRange(new object[] {
-            "YES",
-            "NO"});
-            this.cmbSiblingIsLiving.Location = new System.Drawing.Point(529, 106);
-            this.cmbSiblingIsLiving.Name = "cmbSiblingIsLiving";
-            this.cmbSiblingIsLiving.Size = new System.Drawing.Size(239, 26);
-            this.cmbSiblingIsLiving.TabIndex = 6;
-            // 
-            // cmbSiblingCivilStatus
-            // 
-            this.cmbSiblingCivilStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSiblingCivilStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSiblingCivilStatus.FormattingEnabled = true;
-            this.cmbSiblingCivilStatus.Items.AddRange(new object[] {
-            "SINGLE",
-            "MARRIED",
-            "WIDOW",
-            "SEPARATED"});
-            this.cmbSiblingCivilStatus.Location = new System.Drawing.Point(529, 35);
-            this.cmbSiblingCivilStatus.Name = "cmbSiblingCivilStatus";
-            this.cmbSiblingCivilStatus.Size = new System.Drawing.Size(239, 26);
-            this.cmbSiblingCivilStatus.TabIndex = 4;
-            // 
-            // dtSiblingBdate
-            // 
-            this.dtSiblingBdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtSiblingBdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtSiblingBdate.Location = new System.Drawing.Point(529, 70);
-            this.dtSiblingBdate.Name = "dtSiblingBdate";
-            this.dtSiblingBdate.Size = new System.Drawing.Size(173, 24);
-            this.dtSiblingBdate.TabIndex = 5;
-            // 
-            // Label79
-            // 
-            this.Label79.AutoSize = true;
-            this.Label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label79.Location = new System.Drawing.Point(429, 74);
-            this.Label79.Name = "Label79";
-            this.Label79.Size = new System.Drawing.Size(66, 16);
-            this.Label79.TabIndex = 65;
-            this.Label79.Text = "Birth Date";
-            // 
-            // txtFAge
-            // 
-            this.txtFAge.Enabled = false;
-            this.txtFAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFAge.Location = new System.Drawing.Point(708, 70);
-            this.txtFAge.Name = "txtFAge";
-            this.txtFAge.Size = new System.Drawing.Size(60, 24);
-            this.txtFAge.TabIndex = 62;
-            this.txtFAge.TabStop = false;
-            // 
-            // Label81
-            // 
-            this.Label81.AutoSize = true;
-            this.Label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label81.Location = new System.Drawing.Point(93, 138);
-            this.Label81.Name = "Label81";
-            this.Label81.Size = new System.Drawing.Size(31, 16);
-            this.Label81.TabIndex = 61;
-            this.Label81.Text = "Sex";
-            // 
-            // cmbSiblingSex
-            // 
-            this.cmbSiblingSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSiblingSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSiblingSex.FormattingEnabled = true;
-            this.cmbSiblingSex.Items.AddRange(new object[] {
-            "MALE",
-            "FEMALE"});
-            this.cmbSiblingSex.Location = new System.Drawing.Point(144, 133);
-            this.cmbSiblingSex.Name = "cmbSiblingSex";
-            this.cmbSiblingSex.Size = new System.Drawing.Size(239, 26);
-            this.cmbSiblingSex.TabIndex = 3;
-            // 
-            // Label82
-            // 
-            this.Label82.AutoSize = true;
-            this.Label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label82.Location = new System.Drawing.Point(431, 40);
-            this.Label82.Name = "Label82";
-            this.Label82.Size = new System.Drawing.Size(73, 16);
-            this.Label82.TabIndex = 60;
-            this.Label82.Text = "Civil Status";
-            // 
-            // txtSiblingFname
-            // 
-            this.txtSiblingFname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSiblingFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSiblingFname.Location = new System.Drawing.Point(144, 35);
-            this.txtSiblingFname.Name = "txtSiblingFname";
-            this.txtSiblingFname.Size = new System.Drawing.Size(239, 24);
-            this.txtSiblingFname.TabIndex = 0;
-            // 
-            // Label83
-            // 
-            this.Label83.AutoSize = true;
-            this.Label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label83.Location = new System.Drawing.Point(51, 40);
-            this.Label83.Name = "Label83";
-            this.Label83.Size = new System.Drawing.Size(73, 16);
-            this.Label83.TabIndex = 52;
-            this.Label83.Text = "First Name";
-            // 
-            // txtSiblingMname
-            // 
-            this.txtSiblingMname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSiblingMname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSiblingMname.Location = new System.Drawing.Point(144, 69);
-            this.txtSiblingMname.Name = "txtSiblingMname";
-            this.txtSiblingMname.Size = new System.Drawing.Size(239, 24);
-            this.txtSiblingMname.TabIndex = 1;
-            // 
-            // Label84
-            // 
-            this.Label84.AutoSize = true;
-            this.Label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label84.Location = new System.Drawing.Point(51, 106);
-            this.Label84.Name = "Label84";
-            this.Label84.Size = new System.Drawing.Size(73, 16);
-            this.Label84.TabIndex = 56;
-            this.Label84.Text = "Last Name";
-            // 
-            // Label85
-            // 
-            this.Label85.AutoSize = true;
-            this.Label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label85.Location = new System.Drawing.Point(35, 72);
-            this.Label85.Name = "Label85";
-            this.Label85.Size = new System.Drawing.Size(89, 16);
-            this.Label85.TabIndex = 54;
-            this.Label85.Text = "Middle Name";
-            // 
-            // txtSiblingLname
-            // 
-            this.txtSiblingLname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSiblingLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSiblingLname.Location = new System.Drawing.Point(144, 103);
-            this.txtSiblingLname.Name = "txtSiblingLname";
-            this.txtSiblingLname.Size = new System.Drawing.Size(239, 24);
-            this.txtSiblingLname.TabIndex = 2;
-            // 
-            // bdate
-            // 
-            this.bdate.DataPropertyName = "bdate";
-            dataGridViewCellStyle5.Format = "d";
-            dataGridViewCellStyle5.NullValue = null;
-            this.bdate.DefaultCellStyle = dataGridViewCellStyle5;
-            this.bdate.FillWeight = 22.92252F;
-            this.bdate.HeaderText = "Birthdate";
-            this.bdate.Name = "bdate";
-            this.bdate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.bdate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // cmbPermanentBarangay
             // 
             this.cmbPermanentBarangay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPermanentBarangay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPermanentBarangay.FormattingEnabled = true;
-            this.cmbPermanentBarangay.Location = new System.Drawing.Point(489, 156);
+            this.cmbPermanentBarangay.Location = new System.Drawing.Point(551, 156);
             this.cmbPermanentBarangay.Name = "cmbPermanentBarangay";
             this.cmbPermanentBarangay.Size = new System.Drawing.Size(220, 26);
             this.cmbPermanentBarangay.TabIndex = 9;
@@ -429,7 +192,7 @@ namespace BarangayInformation
             // 
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(406, 156);
+            this.Label2.Location = new System.Drawing.Point(468, 156);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(70, 16);
             this.Label2.TabIndex = 91;
@@ -458,7 +221,7 @@ namespace BarangayInformation
             // txtPermanentStreet
             // 
             this.txtPermanentStreet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPermanentStreet.Location = new System.Drawing.Point(489, 188);
+            this.txtPermanentStreet.Location = new System.Drawing.Point(551, 188);
             this.txtPermanentStreet.Name = "txtPermanentStreet";
             this.txtPermanentStreet.Size = new System.Drawing.Size(220, 24);
             this.txtPermanentStreet.TabIndex = 10;
@@ -468,26 +231,28 @@ namespace BarangayInformation
             this.cmbPermanentCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPermanentCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPermanentCity.FormattingEnabled = true;
-            this.cmbPermanentCity.Location = new System.Drawing.Point(489, 124);
+            this.cmbPermanentCity.Location = new System.Drawing.Point(551, 124);
             this.cmbPermanentCity.Name = "cmbPermanentCity";
             this.cmbPermanentCity.Size = new System.Drawing.Size(220, 26);
             this.cmbPermanentCity.TabIndex = 8;
+            this.cmbPermanentCity.SelectedIndexChanged += new System.EventHandler(this.cmbPermanentCity_SelectedIndexChanged);
             // 
             // cmbPermanentCountry
             // 
             this.cmbPermanentCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPermanentCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPermanentCountry.FormattingEnabled = true;
-            this.cmbPermanentCountry.Location = new System.Drawing.Point(489, 60);
+            this.cmbPermanentCountry.Location = new System.Drawing.Point(551, 60);
             this.cmbPermanentCountry.Name = "cmbPermanentCountry";
             this.cmbPermanentCountry.Size = new System.Drawing.Size(220, 26);
             this.cmbPermanentCountry.TabIndex = 6;
+            this.cmbPermanentCountry.SelectedIndexChanged += new System.EventHandler(this.cmbPermanentCountry_SelectedIndexChanged);
             // 
             // Label34
             // 
             this.Label34.AutoSize = true;
             this.Label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label34.Location = new System.Drawing.Point(422, 60);
+            this.Label34.Location = new System.Drawing.Point(484, 60);
             this.Label34.Name = "Label34";
             this.Label34.Size = new System.Drawing.Size(53, 16);
             this.Label34.TabIndex = 84;
@@ -497,7 +262,7 @@ namespace BarangayInformation
             // 
             this.Label35.AutoSize = true;
             this.Label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label35.Location = new System.Drawing.Point(414, 90);
+            this.Label35.Location = new System.Drawing.Point(476, 90);
             this.Label35.Name = "Label35";
             this.Label35.Size = new System.Drawing.Size(61, 16);
             this.Label35.TabIndex = 83;
@@ -505,10 +270,9 @@ namespace BarangayInformation
             // 
             // tabFamilyMembers
             // 
-            this.tabFamilyMembers.Controls.Add(this.gridSibling);
+            this.tabFamilyMembers.Controls.Add(this.flxSibling);
             this.tabFamilyMembers.Controls.Add(this.btnBack3);
             this.tabFamilyMembers.Controls.Add(this.btnNext3);
-            this.tabFamilyMembers.Controls.Add(this.GroupBox12);
             this.tabFamilyMembers.Location = new System.Drawing.Point(4, 44);
             this.tabFamilyMembers.Name = "tabFamilyMembers";
             this.tabFamilyMembers.Size = new System.Drawing.Size(1128, 595);
@@ -516,88 +280,46 @@ namespace BarangayInformation
             this.tabFamilyMembers.Text = "Family Members";
             this.tabFamilyMembers.UseVisualStyleBackColor = true;
             // 
-            // gridSibling
+            // btnBack3
             // 
-            this.gridSibling.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridSibling.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridSibling.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.firstname,
-            this.middlename,
-            this.lastname,
-            this.sex,
-            this.civil_status,
-            this.bdate,
-            this.is_living_with_you});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.Format = "d";
-            dataGridViewCellStyle6.NullValue = null;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridSibling.DefaultCellStyle = dataGridViewCellStyle6;
-            this.gridSibling.Location = new System.Drawing.Point(14, 207);
-            this.gridSibling.MultiSelect = false;
-            this.gridSibling.Name = "gridSibling";
-            this.gridSibling.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSibling.Size = new System.Drawing.Size(1104, 325);
-            this.gridSibling.TabIndex = 90;
+            this.btnBack3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBack3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack3.FlatAppearance.BorderSize = 0;
+            this.btnBack3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnBack3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnBack3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack3.Image = ((System.Drawing.Image)(resources.GetObject("btnBack3.Image")));
+            this.btnBack3.Location = new System.Drawing.Point(14, 548);
+            this.btnBack3.Name = "btnBack3";
+            this.btnBack3.Size = new System.Drawing.Size(111, 42);
+            this.btnBack3.TabIndex = 89;
+            this.btnBack3.Text = "    Back";
+            this.btnBack3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBack3.UseVisualStyleBackColor = false;
+            this.btnBack3.Click += new System.EventHandler(this.btnBack3_Click);
             // 
-            // id
+            // btnNext3
             // 
-            this.id.DataPropertyName = "resident_sibling_id";
-            this.id.FillWeight = 15F;
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // firstname
-            // 
-            this.firstname.DataPropertyName = "fname";
-            this.firstname.FillWeight = 22.92252F;
-            this.firstname.HeaderText = "Firstname";
-            this.firstname.Name = "firstname";
-            // 
-            // middlename
-            // 
-            this.middlename.DataPropertyName = "mname";
-            this.middlename.FillWeight = 22.92252F;
-            this.middlename.HeaderText = "Middlename";
-            this.middlename.Name = "middlename";
-            // 
-            // lastname
-            // 
-            this.lastname.DataPropertyName = "lname";
-            this.lastname.FillWeight = 22.92252F;
-            this.lastname.HeaderText = "Lastname";
-            this.lastname.Name = "lastname";
-            // 
-            // sex
-            // 
-            this.sex.DataPropertyName = "sex";
-            this.sex.FillWeight = 22.92252F;
-            this.sex.HeaderText = "Sex";
-            this.sex.Items.AddRange(new object[] {
-            "MALE",
-            "FEMALE"});
-            this.sex.Name = "sex";
-            this.sex.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // civil_status
-            // 
-            this.civil_status.DataPropertyName = "civil_status";
-            this.civil_status.FillWeight = 22.92252F;
-            this.civil_status.HeaderText = "Civil Status";
-            this.civil_status.Items.AddRange(new object[] {
-            "SINGLE",
-            "MARRIED",
-            "WIDOWED",
-            "SEPARATED"});
-            this.civil_status.Name = "civil_status";
-            this.civil_status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnNext3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNext3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNext3.FlatAppearance.BorderSize = 0;
+            this.btnNext3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnNext3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnNext3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNext3.Image = ((System.Drawing.Image)(resources.GetObject("btnNext3.Image")));
+            this.btnNext3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNext3.Location = new System.Drawing.Point(998, 548);
+            this.btnNext3.Name = "btnNext3";
+            this.btnNext3.Size = new System.Drawing.Size(120, 41);
+            this.btnNext3.TabIndex = 75;
+            this.btnNext3.Text = "Next";
+            this.btnNext3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnNext3.UseVisualStyleBackColor = false;
+            this.btnNext3.Click += new System.EventHandler(this.btnNext3_Click);
             // 
             // txtIfNotWhy
             // 
@@ -643,65 +365,6 @@ namespace BarangayInformation
             this.cmbHaveComplain.Size = new System.Drawing.Size(116, 26);
             this.cmbHaveComplain.TabIndex = 41;
             // 
-            // btnAddPet
-            // 
-            this.btnAddPet.Location = new System.Drawing.Point(349, 165);
-            this.btnAddPet.Name = "btnAddPet";
-            this.btnAddPet.Size = new System.Drawing.Size(106, 40);
-            this.btnAddPet.TabIndex = 37;
-            this.btnAddPet.Text = "Add";
-            this.btnAddPet.UseVisualStyleBackColor = true;
-            // 
-            // txtNumericNoOfPet
-            // 
-            this.txtNumericNoOfPet.Location = new System.Drawing.Point(344, 132);
-            this.txtNumericNoOfPet.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.txtNumericNoOfPet.Name = "txtNumericNoOfPet";
-            this.txtNumericNoOfPet.Size = new System.Drawing.Size(111, 27);
-            this.txtNumericNoOfPet.TabIndex = 36;
-            // 
-            // dgridPets
-            // 
-            this.dgridPets.AllowUserToAddRows = false;
-            this.dgridPets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgridPets.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.resident_pet_id,
-            this.resident_pet,
-            this.no_of_pet});
-            this.dgridPets.Location = new System.Drawing.Point(112, 212);
-            this.dgridPets.Name = "dgridPets";
-            this.dgridPets.ReadOnly = true;
-            this.dgridPets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgridPets.Size = new System.Drawing.Size(343, 246);
-            this.dgridPets.TabIndex = 35;
-            // 
-            // resident_pet_id
-            // 
-            this.resident_pet_id.DataPropertyName = "resident_pet_id";
-            this.resident_pet_id.HeaderText = "ID";
-            this.resident_pet_id.Name = "resident_pet_id";
-            this.resident_pet_id.ReadOnly = true;
-            this.resident_pet_id.Width = 50;
-            // 
-            // resident_pet
-            // 
-            this.resident_pet.DataPropertyName = "resident_pet";
-            this.resident_pet.HeaderText = "Pet Type";
-            this.resident_pet.Name = "resident_pet";
-            this.resident_pet.ReadOnly = true;
-            this.resident_pet.Width = 150;
-            // 
-            // no_of_pet
-            // 
-            this.no_of_pet.DataPropertyName = "no_of_pet";
-            this.no_of_pet.HeaderText = "# Pet";
-            this.no_of_pet.Name = "no_of_pet";
-            this.no_of_pet.ReadOnly = true;
-            // 
             // dtComplainWhen
             // 
             this.dtComplainWhen.CustomFormat = "yyyy-MM-dd";
@@ -740,16 +403,6 @@ namespace BarangayInformation
             this.Label62.Size = new System.Drawing.Size(143, 16);
             this.Label62.TabIndex = 34;
             this.Label62.Text = "Contraceptives: (If any)";
-            // 
-            // cmbPet
-            // 
-            this.cmbPet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPet.FormattingEnabled = true;
-            this.cmbPet.Location = new System.Drawing.Point(112, 132);
-            this.cmbPet.Name = "cmbPet";
-            this.cmbPet.Size = new System.Drawing.Size(226, 26);
-            this.cmbPet.TabIndex = 31;
             // 
             // Label57
             // 
@@ -880,6 +533,7 @@ namespace BarangayInformation
             this.btnNew.TabIndex = 64;
             this.btnNew.Text = "(F5) NEW";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // Label22
             // 
@@ -939,24 +593,63 @@ namespace BarangayInformation
             this.tabSurvey.Text = "Survey";
             this.tabSurvey.UseVisualStyleBackColor = true;
             // 
+            // btnBack5
+            // 
+            this.btnBack5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBack5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack5.FlatAppearance.BorderSize = 0;
+            this.btnBack5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnBack5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnBack5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack5.Image = ((System.Drawing.Image)(resources.GetObject("btnBack5.Image")));
+            this.btnBack5.Location = new System.Drawing.Point(13, 544);
+            this.btnBack5.Name = "btnBack5";
+            this.btnBack5.Size = new System.Drawing.Size(111, 42);
+            this.btnBack5.TabIndex = 91;
+            this.btnBack5.Text = "    Back";
+            this.btnBack5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBack5.UseVisualStyleBackColor = false;
+            this.btnBack5.Click += new System.EventHandler(this.btnBack5_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(166)))), ((int)(((byte)(83)))));
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.Location = new System.Drawing.Point(900, 539);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(218, 47);
+            this.btnSave.TabIndex = 61;
+            this.btnSave.Text = "Save Household";
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // cmbPermanentProvince
             // 
             this.cmbPermanentProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPermanentProvince.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPermanentProvince.FormattingEnabled = true;
-            this.cmbPermanentProvince.Location = new System.Drawing.Point(489, 92);
+            this.cmbPermanentProvince.Location = new System.Drawing.Point(551, 92);
             this.cmbPermanentProvince.Name = "cmbPermanentProvince";
             this.cmbPermanentProvince.Size = new System.Drawing.Size(220, 26);
             this.cmbPermanentProvince.TabIndex = 7;
+            this.cmbPermanentProvince.SelectedIndexChanged += new System.EventHandler(this.cmbPermanentProvince_SelectedIndexChanged);
             // 
             // GroupBox10
             // 
-            this.GroupBox10.Controls.Add(this.btnAddPet);
-            this.GroupBox10.Controls.Add(this.txtNumericNoOfPet);
-            this.GroupBox10.Controls.Add(this.dgridPets);
+            this.GroupBox10.Controls.Add(this.flxPet);
             this.GroupBox10.Controls.Add(this.cmbContraceptive);
             this.GroupBox10.Controls.Add(this.Label62);
-            this.GroupBox10.Controls.Add(this.cmbPet);
             this.GroupBox10.Controls.Add(this.Label61);
             this.GroupBox10.Controls.Add(this.cmbGarden);
             this.GroupBox10.Controls.Add(this.Label60);
@@ -964,7 +657,7 @@ namespace BarangayInformation
             this.GroupBox10.Controls.Add(this.Label59);
             this.GroupBox10.Controls.Add(this.cmbWaterSource);
             this.GroupBox10.Controls.Add(this.Label22);
-            this.GroupBox10.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox10.Location = new System.Drawing.Point(3, 3);
             this.GroupBox10.Name = "GroupBox10";
             this.GroupBox10.Size = new System.Drawing.Size(1128, 480);
@@ -984,11 +677,52 @@ namespace BarangayInformation
             this.tabAdditionalInformation.Text = "Additional Information";
             this.tabAdditionalInformation.UseVisualStyleBackColor = true;
             // 
+            // btnNext4
+            // 
+            this.btnNext4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNext4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNext4.FlatAppearance.BorderSize = 0;
+            this.btnNext4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnNext4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnNext4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNext4.Image = ((System.Drawing.Image)(resources.GetObject("btnNext4.Image")));
+            this.btnNext4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNext4.Location = new System.Drawing.Point(1000, 546);
+            this.btnNext4.Name = "btnNext4";
+            this.btnNext4.Size = new System.Drawing.Size(120, 41);
+            this.btnNext4.TabIndex = 91;
+            this.btnNext4.Text = "Next";
+            this.btnNext4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnNext4.UseVisualStyleBackColor = false;
+            this.btnNext4.Click += new System.EventHandler(this.btnNext4_Click);
+            // 
+            // btnBack4
+            // 
+            this.btnBack4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBack4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack4.FlatAppearance.BorderSize = 0;
+            this.btnBack4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnBack4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnBack4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack4.Image = ((System.Drawing.Image)(resources.GetObject("btnBack4.Image")));
+            this.btnBack4.Location = new System.Drawing.Point(10, 546);
+            this.btnBack4.Name = "btnBack4";
+            this.btnBack4.Size = new System.Drawing.Size(111, 42);
+            this.btnBack4.TabIndex = 90;
+            this.btnBack4.Text = "    Back";
+            this.btnBack4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBack4.UseVisualStyleBackColor = false;
+            this.btnBack4.Click += new System.EventHandler(this.btnBack4_Click);
+            // 
             // Label36
             // 
             this.Label36.AutoSize = true;
             this.Label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label36.Location = new System.Drawing.Point(371, 125);
+            this.Label36.Location = new System.Drawing.Point(433, 125);
             this.Label36.Name = "Label36";
             this.Label36.Size = new System.Drawing.Size(104, 16);
             this.Label36.TabIndex = 82;
@@ -1468,6 +1202,27 @@ namespace BarangayInformation
             this.tabProfile.Text = "Profile";
             this.tabProfile.UseVisualStyleBackColor = true;
             // 
+            // btnNext1
+            // 
+            this.btnNext1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNext1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNext1.FlatAppearance.BorderSize = 0;
+            this.btnNext1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnNext1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnNext1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNext1.Image = ((System.Drawing.Image)(resources.GetObject("btnNext1.Image")));
+            this.btnNext1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNext1.Location = new System.Drawing.Point(1002, 548);
+            this.btnNext1.Name = "btnNext1";
+            this.btnNext1.Size = new System.Drawing.Size(120, 41);
+            this.btnNext1.TabIndex = 59;
+            this.btnNext1.Text = "Next";
+            this.btnNext1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnNext1.UseVisualStyleBackColor = false;
+            this.btnNext1.Click += new System.EventHandler(this.btnNext1_Click);
+            // 
             // Button2
             // 
             this.Button2.Location = new System.Drawing.Point(36, 441);
@@ -1486,6 +1241,15 @@ namespace BarangayInformation
             this.Button1.Text = "Camera";
             this.Button1.UseVisualStyleBackColor = true;
             // 
+            // PictureBox1
+            // 
+            this.PictureBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.PictureBox1.Location = new System.Drawing.Point(36, 217);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(217, 214);
+            this.PictureBox1.TabIndex = 50;
+            this.PictureBox1.TabStop = false;
+            // 
             // TabControl1
             // 
             this.TabControl1.Controls.Add(this.tabProfile);
@@ -1493,7 +1257,7 @@ namespace BarangayInformation
             this.TabControl1.Controls.Add(this.tabFamilyMembers);
             this.TabControl1.Controls.Add(this.tabAdditionalInformation);
             this.TabControl1.Controls.Add(this.tabSurvey);
-            this.TabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TabControl1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabControl1.ItemSize = new System.Drawing.Size(160, 40);
             this.TabControl1.Location = new System.Drawing.Point(12, 50);
             this.TabControl1.Name = "TabControl1";
@@ -1516,6 +1280,47 @@ namespace BarangayInformation
             this.tabContactAddress.TabIndex = 1;
             this.tabContactAddress.Text = "Contact & Address";
             this.tabContactAddress.UseVisualStyleBackColor = true;
+            // 
+            // btnBack1
+            // 
+            this.btnBack1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBack1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack1.FlatAppearance.BorderSize = 0;
+            this.btnBack1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnBack1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnBack1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack1.Image = ((System.Drawing.Image)(resources.GetObject("btnBack1.Image")));
+            this.btnBack1.Location = new System.Drawing.Point(12, 546);
+            this.btnBack1.Name = "btnBack1";
+            this.btnBack1.Size = new System.Drawing.Size(111, 42);
+            this.btnBack1.TabIndex = 88;
+            this.btnBack1.Text = "    Back";
+            this.btnBack1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBack1.UseVisualStyleBackColor = false;
+            this.btnBack1.Click += new System.EventHandler(this.btnBack1_Click);
+            // 
+            // tbnNext2
+            // 
+            this.tbnNext2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.tbnNext2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tbnNext2.FlatAppearance.BorderSize = 0;
+            this.tbnNext2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.tbnNext2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.tbnNext2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tbnNext2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnNext2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tbnNext2.Image = ((System.Drawing.Image)(resources.GetObject("tbnNext2.Image")));
+            this.tbnNext2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbnNext2.Location = new System.Drawing.Point(1002, 546);
+            this.tbnNext2.Name = "tbnNext2";
+            this.tbnNext2.Size = new System.Drawing.Size(120, 42);
+            this.tbnNext2.TabIndex = 87;
+            this.tbnNext2.Text = "Next";
+            this.tbnNext2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tbnNext2.UseVisualStyleBackColor = false;
+            this.tbnNext2.Click += new System.EventHandler(this.tbnNext2_Click);
             // 
             // GroupBox3
             // 
@@ -1760,7 +1565,7 @@ namespace BarangayInformation
             // 
             this.Label37.AutoSize = true;
             this.Label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label37.Location = new System.Drawing.Point(393, 191);
+            this.Label37.Location = new System.Drawing.Point(455, 191);
             this.Label37.Name = "Label37";
             this.Label37.Size = new System.Drawing.Size(82, 16);
             this.Label37.TabIndex = 81;
@@ -1827,6 +1632,7 @@ namespace BarangayInformation
             this.checkIsSameWithPresentAddress.TabIndex = 5;
             this.checkIsSameWithPresentAddress.Text = "Same as Present Address";
             this.checkIsSameWithPresentAddress.UseVisualStyleBackColor = true;
+            this.checkIsSameWithPresentAddress.CheckedChanged += new System.EventHandler(this.checkIsSameWithPresentAddress_CheckedChanged);
             // 
             // Label33
             // 
@@ -1878,223 +1684,50 @@ namespace BarangayInformation
             this.Label18.TabIndex = 37;
             this.Label18.Text = "Present Address";
             // 
-            // btnNext1
+            // flxSibling
             // 
-            this.btnNext1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnNext1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNext1.FlatAppearance.BorderSize = 0;
-            this.btnNext1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnNext1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnNext1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnNext1.Image = ((System.Drawing.Image)(resources.GetObject("btnNext1.Image")));
-            this.btnNext1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNext1.Location = new System.Drawing.Point(1002, 548);
-            this.btnNext1.Name = "btnNext1";
-            this.btnNext1.Size = new System.Drawing.Size(120, 41);
-            this.btnNext1.TabIndex = 59;
-            this.btnNext1.Text = "Next";
-            this.btnNext1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnNext1.UseVisualStyleBackColor = false;
-            this.btnNext1.Click += new System.EventHandler(this.btnNext1_Click);
+            this.flxSibling.AllowAddNew = true;
+            this.flxSibling.AllowDelete = true;
+            this.flxSibling.AllowDragging = C1.Win.C1FlexGrid.AllowDraggingEnum.None;
+            this.flxSibling.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.FixedSingle;
+            this.flxSibling.ColumnInfo = resources.GetString("flxSibling.ColumnInfo");
+            this.flxSibling.ExtendLastCol = true;
+            this.flxSibling.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
+            this.flxSibling.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
+            this.flxSibling.Location = new System.Drawing.Point(11, 16);
+            this.flxSibling.Name = "flxSibling";
+            this.flxSibling.Rows.Count = 1;
+            this.flxSibling.Rows.DefaultSize = 24;
+            this.flxSibling.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
+            this.flxSibling.Size = new System.Drawing.Size(1103, 383);
+            this.flxSibling.StyleInfo = resources.GetString("flxSibling.StyleInfo");
+            this.flxSibling.TabIndex = 91;
+            this.flxSibling.SetupEditor += new C1.Win.C1FlexGrid.RowColEventHandler(this.flxSibling_SetupEditor);
             // 
-            // PictureBox1
+            // flxPet
             // 
-            this.PictureBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.PictureBox1.Location = new System.Drawing.Point(36, 217);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(217, 214);
-            this.PictureBox1.TabIndex = 50;
-            this.PictureBox1.TabStop = false;
-            // 
-            // btnBack1
-            // 
-            this.btnBack1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBack1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack1.FlatAppearance.BorderSize = 0;
-            this.btnBack1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnBack1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnBack1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack1.Image = ((System.Drawing.Image)(resources.GetObject("btnBack1.Image")));
-            this.btnBack1.Location = new System.Drawing.Point(12, 546);
-            this.btnBack1.Name = "btnBack1";
-            this.btnBack1.Size = new System.Drawing.Size(111, 42);
-            this.btnBack1.TabIndex = 88;
-            this.btnBack1.Text = "    Back";
-            this.btnBack1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBack1.UseVisualStyleBackColor = false;
-            this.btnBack1.Click += new System.EventHandler(this.btnBack1_Click);
-            // 
-            // tbnNext2
-            // 
-            this.tbnNext2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.tbnNext2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tbnNext2.FlatAppearance.BorderSize = 0;
-            this.tbnNext2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.tbnNext2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.tbnNext2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tbnNext2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbnNext2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tbnNext2.Image = ((System.Drawing.Image)(resources.GetObject("tbnNext2.Image")));
-            this.tbnNext2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbnNext2.Location = new System.Drawing.Point(1002, 546);
-            this.tbnNext2.Name = "tbnNext2";
-            this.tbnNext2.Size = new System.Drawing.Size(120, 42);
-            this.tbnNext2.TabIndex = 87;
-            this.tbnNext2.Text = "Next";
-            this.tbnNext2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.tbnNext2.UseVisualStyleBackColor = false;
-            this.tbnNext2.Click += new System.EventHandler(this.tbnNext2_Click);
-            // 
-            // btnBack3
-            // 
-            this.btnBack3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBack3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack3.FlatAppearance.BorderSize = 0;
-            this.btnBack3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnBack3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnBack3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack3.Image = ((System.Drawing.Image)(resources.GetObject("btnBack3.Image")));
-            this.btnBack3.Location = new System.Drawing.Point(14, 548);
-            this.btnBack3.Name = "btnBack3";
-            this.btnBack3.Size = new System.Drawing.Size(111, 42);
-            this.btnBack3.TabIndex = 89;
-            this.btnBack3.Text = "    Back";
-            this.btnBack3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBack3.UseVisualStyleBackColor = false;
-            this.btnBack3.Click += new System.EventHandler(this.btnBack3_Click);
-            // 
-            // btnNext3
-            // 
-            this.btnNext3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnNext3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNext3.FlatAppearance.BorderSize = 0;
-            this.btnNext3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnNext3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnNext3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnNext3.Image = ((System.Drawing.Image)(resources.GetObject("btnNext3.Image")));
-            this.btnNext3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNext3.Location = new System.Drawing.Point(998, 548);
-            this.btnNext3.Name = "btnNext3";
-            this.btnNext3.Size = new System.Drawing.Size(120, 41);
-            this.btnNext3.TabIndex = 75;
-            this.btnNext3.Text = "Next";
-            this.btnNext3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnNext3.UseVisualStyleBackColor = false;
-            this.btnNext3.Click += new System.EventHandler(this.btnNext3_Click);
-            // 
-            // btnAddFamlyMember
-            // 
-            this.btnAddFamlyMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(166)))), ((int)(((byte)(83)))));
-            this.btnAddFamlyMember.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddFamlyMember.FlatAppearance.BorderSize = 0;
-            this.btnAddFamlyMember.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnAddFamlyMember.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnAddFamlyMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddFamlyMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFamlyMember.Image = ((System.Drawing.Image)(resources.GetObject("btnAddFamlyMember.Image")));
-            this.btnAddFamlyMember.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddFamlyMember.Location = new System.Drawing.Point(647, 138);
-            this.btnAddFamlyMember.Name = "btnAddFamlyMember";
-            this.btnAddFamlyMember.Size = new System.Drawing.Size(121, 40);
-            this.btnAddFamlyMember.TabIndex = 7;
-            this.btnAddFamlyMember.Text = "ADD";
-            this.btnAddFamlyMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddFamlyMember.UseVisualStyleBackColor = false;
-            // 
-            // btnNext4
-            // 
-            this.btnNext4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnNext4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNext4.FlatAppearance.BorderSize = 0;
-            this.btnNext4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnNext4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnNext4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnNext4.Image = ((System.Drawing.Image)(resources.GetObject("btnNext4.Image")));
-            this.btnNext4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNext4.Location = new System.Drawing.Point(1000, 546);
-            this.btnNext4.Name = "btnNext4";
-            this.btnNext4.Size = new System.Drawing.Size(120, 41);
-            this.btnNext4.TabIndex = 91;
-            this.btnNext4.Text = "Next";
-            this.btnNext4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnNext4.UseVisualStyleBackColor = false;
-            // 
-            // btnBack4
-            // 
-            this.btnBack4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBack4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack4.FlatAppearance.BorderSize = 0;
-            this.btnBack4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnBack4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnBack4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack4.Image = ((System.Drawing.Image)(resources.GetObject("btnBack4.Image")));
-            this.btnBack4.Location = new System.Drawing.Point(10, 546);
-            this.btnBack4.Name = "btnBack4";
-            this.btnBack4.Size = new System.Drawing.Size(111, 42);
-            this.btnBack4.TabIndex = 90;
-            this.btnBack4.Text = "    Back";
-            this.btnBack4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBack4.UseVisualStyleBackColor = false;
-            this.btnBack4.Click += new System.EventHandler(this.btnBack4_Click);
-            // 
-            // btnBack5
-            // 
-            this.btnBack5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBack5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack5.FlatAppearance.BorderSize = 0;
-            this.btnBack5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnBack5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnBack5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack5.Image = ((System.Drawing.Image)(resources.GetObject("btnBack5.Image")));
-            this.btnBack5.Location = new System.Drawing.Point(13, 544);
-            this.btnBack5.Name = "btnBack5";
-            this.btnBack5.Size = new System.Drawing.Size(111, 42);
-            this.btnBack5.TabIndex = 91;
-            this.btnBack5.Text = "    Back";
-            this.btnBack5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBack5.UseVisualStyleBackColor = false;
-            this.btnBack5.Click += new System.EventHandler(this.btnBack5_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(166)))), ((int)(((byte)(83)))));
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Location = new System.Drawing.Point(900, 539);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(218, 47);
-            this.btnSave.TabIndex = 61;
-            this.btnSave.Text = "Save Household";
-            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.flxPet.AllowAddNew = true;
+            this.flxPet.AllowDelete = true;
+            this.flxPet.AllowDragging = C1.Win.C1FlexGrid.AllowDraggingEnum.None;
+            this.flxPet.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.FixedSingle;
+            this.flxPet.ColumnInfo = resources.GetString("flxPet.ColumnInfo");
+            this.flxPet.ExtendLastCol = true;
+            this.flxPet.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
+            this.flxPet.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
+            this.flxPet.Location = new System.Drawing.Point(32, 175);
+            this.flxPet.Name = "flxPet";
+            this.flxPet.Rows.Count = 1;
+            this.flxPet.Rows.DefaultSize = 26;
+            this.flxPet.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
+            this.flxPet.Size = new System.Drawing.Size(423, 188);
+            this.flxPet.StyleInfo = resources.GetString("flxPet.StyleInfo");
+            this.flxPet.TabIndex = 92;
             // 
             // ResidentAddEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1161, 705);
             this.Controls.Add(this.btnDebug);
             this.Controls.Add(this.btnNew);
@@ -2106,12 +1739,7 @@ namespace BarangayInformation
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ResidentMainForm";
             this.Load += new System.EventHandler(this.ResidentAddEditForm_Load);
-            this.GroupBox12.ResumeLayout(false);
-            this.GroupBox12.PerformLayout();
             this.tabFamilyMembers.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridSibling)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumericNoOfPet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgridPets)).EndInit();
             this.GroupBox9.ResumeLayout(false);
             this.GroupBox9.PerformLayout();
             this.tabSurvey.ResumeLayout(false);
@@ -2126,6 +1754,7 @@ namespace BarangayInformation
             this.GroupBox6.PerformLayout();
             this.tabProfile.ResumeLayout(false);
             this.tabProfile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.TabControl1.ResumeLayout(false);
             this.tabContactAddress.ResumeLayout(false);
             this.GroupBox3.ResumeLayout(false);
@@ -2134,34 +1763,15 @@ namespace BarangayInformation
             this.GroupBox2.PerformLayout();
             this.GroupBox8.ResumeLayout(false);
             this.GroupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flxSibling)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flxPet)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        internal System.Windows.Forms.DataGridViewCheckBoxColumn is_living_with_you;
         internal System.Windows.Forms.Button btnNext3;
-        internal System.Windows.Forms.GroupBox GroupBox12;
-        internal System.Windows.Forms.Label Label46;
-        internal System.Windows.Forms.ComboBox cmbSiblingIsLiving;
-        internal System.Windows.Forms.Button btnAddFamlyMember;
-        internal System.Windows.Forms.ComboBox cmbSiblingCivilStatus;
-        internal System.Windows.Forms.DateTimePicker dtSiblingBdate;
-        internal System.Windows.Forms.Label Label79;
-        internal System.Windows.Forms.TextBox txtFAge;
-        internal System.Windows.Forms.Label Label81;
-        internal System.Windows.Forms.ComboBox cmbSiblingSex;
-        internal System.Windows.Forms.Label Label82;
-        internal System.Windows.Forms.TextBox txtSiblingFname;
-        internal System.Windows.Forms.Label Label83;
-        internal System.Windows.Forms.TextBox txtSiblingMname;
-        internal System.Windows.Forms.Label Label84;
-        internal System.Windows.Forms.Label Label85;
-        internal System.Windows.Forms.TextBox txtSiblingLname;
         internal System.Windows.Forms.Button btnBack3;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn bdate;
         internal System.Windows.Forms.ComboBox cmbPermanentBarangay;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.ComboBox cmbPresentBarangay;
@@ -2172,28 +1782,14 @@ namespace BarangayInformation
         internal System.Windows.Forms.Label Label34;
         internal System.Windows.Forms.Label Label35;
         internal System.Windows.Forms.TabPage tabFamilyMembers;
-        internal System.Windows.Forms.DataGridView gridSibling;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn id;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn firstname;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn middlename;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn lastname;
-        internal System.Windows.Forms.DataGridViewComboBoxColumn sex;
-        internal System.Windows.Forms.DataGridViewComboBoxColumn civil_status;
         internal System.Windows.Forms.TextBox txtIfNotWhy;
         internal System.Windows.Forms.ComboBox cmbIsSettled;
         internal System.Windows.Forms.TextBox txtAgainstWhom;
         internal System.Windows.Forms.ComboBox cmbHaveComplain;
-        internal System.Windows.Forms.Button btnAddPet;
-        internal System.Windows.Forms.NumericUpDown txtNumericNoOfPet;
-        internal System.Windows.Forms.DataGridView dgridPets;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn resident_pet_id;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn resident_pet;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn no_of_pet;
         internal System.Windows.Forms.DateTimePicker dtComplainWhen;
         internal System.Windows.Forms.Label Label63;
         internal System.Windows.Forms.ComboBox cmbContraceptive;
         internal System.Windows.Forms.Label Label62;
-        internal System.Windows.Forms.ComboBox cmbPet;
         internal System.Windows.Forms.Label Label57;
         internal System.Windows.Forms.Label Label61;
         internal System.Windows.Forms.ComboBox cmbGarden;
@@ -2301,5 +1897,7 @@ namespace BarangayInformation
         internal System.Windows.Forms.Label Label13;
         internal System.Windows.Forms.Label Label18;
         internal System.Windows.Forms.Button btnNext1;
+        private C1.Win.C1FlexGrid.C1FlexGrid flxSibling;
+        private C1.Win.C1FlexGrid.C1FlexGrid flxPet;
     }
 }

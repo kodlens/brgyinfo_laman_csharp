@@ -117,37 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="resident_id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="is_head.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="first_name.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="middle_name.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="last_name.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="sex.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="civilstatus.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="voterstatus.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="employmentstatus.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="contextMenuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>172, 17</value>
+  <data name="flx.ColumnInfo" xml:space="preserve">
+    <value>10,1,0,0,0,110,Columns:1{Width:81;Name:"resident_id";Caption:"Resident No.";}	2{Width:81;Name:"is_head";Caption:"Is Head";Style:"DataType:System.Boolean;TextAlign:LeftCenter;ImageAlign:CenterCenter;";StyleFixed:"Font:Segoe UI, 9pt;Margins:1, 0, 0, 0;TextAlign:CenterCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";}	3{Width:161;Name:"lname";Caption:"Lastname";}	4{Width:191;Name:"fname";Caption:"Firstname";}	5{Width:178;Name:"mname";Caption:"Middlename";}	6{Width:77;Name:"suffix";Caption:"Suffix";}	7{Name:"sex";Caption:"Sex";}	8{Name:"civil_status";Caption:"Civil Status";}	9{AllowSorting:False;Name:"is_voter";Caption:"Voter";AllowDragging:False;AllowResizing:False;AllowEditing:False;Style:"DataType:System.Boolean;TextAlign:LeftCenter;ImageAlign:CenterCenter;";}	</value>
+  </data>
+  <data name="flx.StyleInfo" xml:space="preserve">
+    <value>Normal{Font:Segoe UI, 9pt;}	Alternate{}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;BackgroundImageLayout:Hide;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	FirstCustomStyle{}	</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>39</value>
   </metadata>
 </root>

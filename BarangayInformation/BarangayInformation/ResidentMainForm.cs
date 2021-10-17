@@ -22,22 +22,44 @@ namespace BarangayInformation
             resident = new Resident();
         }
 
+        public void loadData()
+        {
+            if (rbLastName.Checked)
+            {
+                resident.find(flx, this.txtSearch.Text, "", "");
+            }
+            if (rbFirstName.Checked)
+            {
+                resident.find(flx, "", txtSearch.Text, "");
+            }
+            if (rbResidentNumber.Checked)
+            {
+                resident.find(flx, "",  "", txtSearch.Text);
+            }
+
+        }
         private void ResidentMainForm_Load(object sender, EventArgs e)
         {
-            resident.all(gridResidents);
+            this.rbLastName.Checked = true;
+            loadData();
         }
 
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+ 
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ResidentAddEditForm frm = new ResidentAddEditForm();
             frm.resident_id = 0;
             frm.ShowDialog();
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                loadData();
+            }
         }
     }
 }
