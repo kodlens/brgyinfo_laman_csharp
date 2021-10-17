@@ -63,6 +63,26 @@ namespace BarangayInformation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Admin_icon64x64 {
+            get {
+                object obj = ResourceManager.GetObject("Admin-icon64x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Control_Panel_icon64x64 {
+            get {
+                object obj = ResourceManager.GetObject("Control-Panel-icon64x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete16x16 {
             get {
                 object obj = ResourceManager.GetObject("delete16x16", resourceCulture);

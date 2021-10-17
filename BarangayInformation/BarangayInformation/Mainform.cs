@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+using BarangayInformation.Access_Control;
+
 namespace BarangayInformation
 {
     public partial class Mainform : Form
@@ -86,6 +88,37 @@ namespace BarangayInformation
         {
             UserMainForm frm = new UserMainForm();
             frm.ShowDialog();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            UserMainForm frm = new UserMainForm();
+            frm.Show();
+        }
+
+        private void Mainform_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+            toolStripLabelUser.Text = Properties.Settings.Default.fname.ToUpper()  + " " + Properties.Settings.Default.lname.ToUpper();
+            toolStripLabelRole.Text = Properties.Settings.Default.role.ToUpper();
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripLabelSystemTime.Text = DateTime.Now.ToString();
+        }
+
+        private void toolStripMenuSetupControl_Click(object sender, EventArgs e)
+        {
+            ControlMainForm frm = new ControlMainForm();
+            frm.Show();
+        }
+
+        private void accessLevelsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AccessLevelMainForm frm = new AccessLevelMainForm();
+            frm.Show();
         }
     }
 }
