@@ -37,9 +37,11 @@ namespace BarangayInformation
             // labelwatersource
             // 
             this.labelwatersource.AutoSize = true;
+
             this.labelwatersource.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelwatersource.ForeColor = System.Drawing.Color.White;
             this.labelwatersource.Location = new System.Drawing.Point(26, 47);
+
             this.labelwatersource.Name = "labelwatersource";
             this.labelwatersource.Size = new System.Drawing.Size(106, 20);
             this.labelwatersource.TabIndex = 0;
@@ -47,6 +49,7 @@ namespace BarangayInformation
             // 
             // textBoxwatersource
             // 
+
             this.textBoxwatersource.Location = new System.Drawing.Point(134, 48);
             this.textBoxwatersource.Name = "textBoxwatersource";
             this.textBoxwatersource.Size = new System.Drawing.Size(197, 20);
@@ -54,8 +57,10 @@ namespace BarangayInformation
             // 
             // buttonwatersave
             // 
+
             this.buttonwatersave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonwatersave.Location = new System.Drawing.Point(134, 74);
+
             this.buttonwatersave.Name = "buttonwatersave";
             this.buttonwatersave.Size = new System.Drawing.Size(84, 33);
             this.buttonwatersave.TabIndex = 2;
@@ -67,8 +72,10 @@ namespace BarangayInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(371, 129);
+
             this.Controls.Add(this.buttonwatersave);
             this.Controls.Add(this.textBoxwatersource);
             this.Controls.Add(this.labelwatersource);

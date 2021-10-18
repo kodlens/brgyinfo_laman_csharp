@@ -46,9 +46,9 @@ namespace BarangayInformation
             this.btnAdd = new System.Windows.Forms.Button();
             this.flx = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSearchLastname = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flx)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -124,10 +124,10 @@ namespace BarangayInformation
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(-5, 549);
+            this.label1.Location = new System.Drawing.Point(3, 549);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(954, 40);
+            this.label1.Size = new System.Drawing.Size(946, 40);
             this.label1.TabIndex = 10;
             this.label1.Text = "CONTROLS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,6 +195,7 @@ namespace BarangayInformation
             this.flx.ColumnInfo = resources.GetString("flx.ColumnInfo");
             this.flx.ContextMenuStrip = this.contextMenuStrip1;
             this.flx.ExtendLastCol = true;
+            this.flx.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.flx.Location = new System.Drawing.Point(7, 149);
             this.flx.Name = "flx";
             this.flx.Rows.DefaultSize = 21;
@@ -217,15 +218,6 @@ namespace BarangayInformation
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Username:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -242,11 +234,20 @@ namespace BarangayInformation
             this.txtSearchLastname.Size = new System.Drawing.Size(254, 22);
             this.txtSearchLastname.TabIndex = 17;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(33, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Username:";
+            // 
             // UserMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 639);
+            this.ClientSize = new System.Drawing.Size(950, 644);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.flx);
             this.Controls.Add(this.label2);

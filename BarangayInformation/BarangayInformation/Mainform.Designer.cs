@@ -38,12 +38,9 @@ namespace BarangayInformation
             this.toolStripSetting = new System.Windows.Forms.ToolStripSplitButton();
             this.waterSourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toiletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.nationalitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.religionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.gardenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.petToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSplitButton2 = new System.Windows.Forms.ToolStripSplitButton();
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,8 +61,8 @@ namespace BarangayInformation
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabelSystemTime = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.contraceptivesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contraceptivesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.contraceptiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -124,16 +121,14 @@ namespace BarangayInformation
             // 
             this.toolStripSetting.DropDownButtonWidth = 15;
             this.toolStripSetting.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.waterSourceToolStripMenuItem,
+            this.contraceptiveToolStripMenuItem,
+            this.gardenToolStripMenuItem,
             this.toiletToolStripMenuItem,
+            this.waterSourceToolStripMenuItem,
             this.toolStripSeparator1,
             this.nationalitiesToolStripMenuItem,
             this.religionsToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.gardenToolStripMenuItem,
-            this.toolStripSeparator3,
-            this.petToolStripMenuItem,
-            this.contraceptivesToolStripMenuItem1});
+            this.petToolStripMenuItem});
             this.toolStripSetting.Image = global::BarangayInformation.Properties.Resources.setting64x64;
             this.toolStripSetting.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripSetting.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -146,56 +141,41 @@ namespace BarangayInformation
             // waterSourceToolStripMenuItem
             // 
             this.waterSourceToolStripMenuItem.Name = "waterSourceToolStripMenuItem";
-            this.waterSourceToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.waterSourceToolStripMenuItem.Text = "Water Source";
+            this.waterSourceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.waterSourceToolStripMenuItem.Text = "Water Sources";
             this.waterSourceToolStripMenuItem.Click += new System.EventHandler(this.waterSourceToolStripMenuItem_Click);
             // 
             // toiletToolStripMenuItem
             // 
             this.toiletToolStripMenuItem.Name = "toiletToolStripMenuItem";
-            this.toiletToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.toiletToolStripMenuItem.Text = "Toilet";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(141, 6);
+            this.toiletToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.toiletToolStripMenuItem.Text = "Toilets";
             // 
             // nationalitiesToolStripMenuItem
             // 
             this.nationalitiesToolStripMenuItem.Name = "nationalitiesToolStripMenuItem";
-            this.nationalitiesToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.nationalitiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nationalitiesToolStripMenuItem.Text = "Nationalities";
             this.nationalitiesToolStripMenuItem.Click += new System.EventHandler(this.nationalitiesToolStripMenuItem_Click);
             // 
             // religionsToolStripMenuItem
             // 
             this.religionsToolStripMenuItem.Name = "religionsToolStripMenuItem";
-            this.religionsToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.religionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.religionsToolStripMenuItem.Text = "Religions";
             this.religionsToolStripMenuItem.Click += new System.EventHandler(this.religionsToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(141, 6);
             // 
             // gardenToolStripMenuItem
             // 
             this.gardenToolStripMenuItem.Name = "gardenToolStripMenuItem";
-            this.gardenToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.gardenToolStripMenuItem.Text = "Garden";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(141, 6);
+            this.gardenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gardenToolStripMenuItem.Text = "Gardens";
             // 
             // petToolStripMenuItem
             // 
             this.petToolStripMenuItem.Name = "petToolStripMenuItem";
-            this.petToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.petToolStripMenuItem.Text = "Pet";
+            this.petToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.petToolStripMenuItem.Text = "Pets";
             // 
             // toolStripSplitButton2
             // 
@@ -203,8 +183,7 @@ namespace BarangayInformation
             this.toolStripSplitButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rolesToolStripMenuItem,
             this.toolStripMenuSetupControl,
-            this.accessLevelsToolStripMenuItem,
-            this.contraceptivesToolStripMenuItem});
+            this.accessLevelsToolStripMenuItem});
             this.toolStripSplitButton2.Image = global::BarangayInformation.Properties.Resources.Control_Panel_icon64x64;
             this.toolStripSplitButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripSplitButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -347,19 +326,17 @@ namespace BarangayInformation
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // contraceptivesToolStripMenuItem
+            // contraceptiveToolStripMenuItem
             // 
-            this.contraceptivesToolStripMenuItem.Name = "contraceptivesToolStripMenuItem";
-            this.contraceptivesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.contraceptivesToolStripMenuItem.Text = "Contraceptives";
-            this.contraceptivesToolStripMenuItem.Click += new System.EventHandler(this.contraceptivesToolStripMenuItem_Click);
+            this.contraceptiveToolStripMenuItem.Name = "contraceptiveToolStripMenuItem";
+            this.contraceptiveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contraceptiveToolStripMenuItem.Text = "Contraceptives";
+            this.contraceptiveToolStripMenuItem.Click += new System.EventHandler(this.contraceptiveToolStripMenuItem_Click);
             // 
-            // contraceptivesToolStripMenuItem1
+            // toolStripSeparator1
             // 
-            this.contraceptivesToolStripMenuItem1.Name = "contraceptivesToolStripMenuItem1";
-            this.contraceptivesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.contraceptivesToolStripMenuItem1.Text = "Contraceptives";
-            this.contraceptivesToolStripMenuItem1.Click += new System.EventHandler(this.contraceptivesToolStripMenuItem1_Click);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // Mainform
             // 
@@ -390,7 +367,6 @@ namespace BarangayInformation
         private System.Windows.Forms.ToolStripSplitButton toolStripSetting;
         private System.Windows.Forms.ToolStripMenuItem waterSourceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toiletToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem nationalitiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem religionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
@@ -398,9 +374,7 @@ namespace BarangayInformation
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem citiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem barangaysToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem gardenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem petToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStrip toolStrip2;
@@ -417,8 +391,8 @@ namespace BarangayInformation
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
         private System.Windows.Forms.ToolStripMenuItem accessLevelsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contraceptivesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contraceptivesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem contraceptiveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 

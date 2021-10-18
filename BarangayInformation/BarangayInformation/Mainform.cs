@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 using BarangayInformation.Access_Control;
+using BarangayInformation.Class;
 
 namespace BarangayInformation
 {
@@ -98,6 +99,8 @@ namespace BarangayInformation
 
         private void Mainform_Load(object sender, EventArgs e)
         {
+            int roleid = Properties.Settings.Default.role_id;
+            ControlHelper.SetupControlAccess(this, null, roleid);
             timer1.Start();
             toolStripLabelUser.Text = Properties.Settings.Default.fname.ToUpper()  + " " + Properties.Settings.Default.lname.ToUpper();
             toolStripLabelRole.Text = Properties.Settings.Default.role.ToUpper();
@@ -133,12 +136,7 @@ namespace BarangayInformation
             frm.Show();
         }
 
-        private void contraceptivesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void contraceptivesToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void contraceptiveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ContraceptiveMainForm frm = new ContraceptiveMainForm();
             frm.Show();

@@ -48,7 +48,7 @@ namespace BarangayInformation.Class
 
                         if (item.GetType() == typeof(ToolStripSplitButton))
                         {
-                            foreach (ToolStripMenuItem item2 in ((ToolStripSplitButton)item).DropDownItems)
+                            foreach (ToolStripMenuItem item2 in ((ToolStripSplitButton)item).DropDownItems.OfType<ToolStripMenuItem>())
                             {
                                 //Box.infoBox(item2.Name);
                                 if (!getAccessControlsList(frm.Name, position_id).Contains(item2.Name))
@@ -137,7 +137,7 @@ namespace BarangayInformation.Class
         //}
 
 
-        static List<string> getAccessControlsList(string className, int position_id)
+        static List<string> getAccessControlsList(string className, int roleId)
         {
             MySqlConnection con;
             MySqlCommand cmd;
@@ -147,14 +147,14 @@ namespace BarangayInformation.Class
 
             con = Connection.con();
             con.Open();
-            query = @"SELECT a.access_level_id, a.position_id, b.position,
+            query = @"SELECT a.access_level_id, a.role_id, b.role,
                         a.control_id, c.control_name, c.control_text, c.description, c.class_name
                         FROM
                         access_levels a
-                        JOIN positions b ON a.position_id = b.position_id
-                        JOIN controls c ON a.control_id = c.control_id WHERE a.posistion_id=?posid and c.class_name=?classname";
+                        JOIN roles b ON a.role_id = b.role_id
+                        JOIN controls c ON a.control_id = c.control_id WHERE a.role_id=?roleid and c.class_name=?classname";
             cmd = new MySqlCommand(query, con);
-            cmd.Parameters.AddWithValue("?posid", position_id);
+            cmd.Parameters.AddWithValue("?roleid", roleId);
             cmd.Parameters.AddWithValue("?classname", className);
             MySqlDataReader dr;
             dr = cmd.ExecuteReader();
