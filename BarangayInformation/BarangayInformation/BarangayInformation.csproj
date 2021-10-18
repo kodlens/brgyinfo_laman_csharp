@@ -108,6 +108,18 @@
       <DependentUpon>AccessLevelMainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Contraceptives.cs" />
+    <Compile Include="ContraceptiveAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContraceptiveAddEditForm.Designer.cs">
+      <DependentUpon>ContraceptiveAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContraceptiveMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContraceptiveMainForm.Designer.cs">
+      <DependentUpon>ContraceptiveMainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CountryAddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +249,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Access Control\ControlMainForm.resx">
       <DependentUpon>ControlMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContraceptiveAddEditForm.resx">
+      <DependentUpon>ContraceptiveAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContraceptiveMainForm.resx">
+      <DependentUpon>ContraceptiveMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CountryAddEditForm.resx">
       <DependentUpon>CountryAddEditForm.cs</DependentUpon>

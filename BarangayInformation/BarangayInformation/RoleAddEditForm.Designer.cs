@@ -36,8 +36,8 @@ namespace BarangayInformation
             // 
             // buttonwatersave
             // 
-            this.buttonwatersave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonwatersave.Location = new System.Drawing.Point(107, 77);
+            this.buttonwatersave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonwatersave.Location = new System.Drawing.Point(74, 69);
             this.buttonwatersave.Name = "buttonwatersave";
             this.buttonwatersave.Size = new System.Drawing.Size(84, 33);
             this.buttonwatersave.TabIndex = 5;
@@ -47,7 +47,7 @@ namespace BarangayInformation
             // 
             // textBoxrole
             // 
-            this.textBoxrole.Location = new System.Drawing.Point(107, 51);
+            this.textBoxrole.Location = new System.Drawing.Point(74, 43);
             this.textBoxrole.Name = "textBoxrole";
             this.textBoxrole.Size = new System.Drawing.Size(197, 20);
             this.textBoxrole.TabIndex = 4;
@@ -55,10 +55,11 @@ namespace BarangayInformation
             // labelwatersource
             // 
             this.labelwatersource.AutoSize = true;
-            this.labelwatersource.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelwatersource.Location = new System.Drawing.Point(65, 51);
+            this.labelwatersource.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelwatersource.ForeColor = System.Drawing.Color.White;
+            this.labelwatersource.Location = new System.Drawing.Point(27, 41);
             this.labelwatersource.Name = "labelwatersource";
-            this.labelwatersource.Size = new System.Drawing.Size(36, 15);
+            this.labelwatersource.Size = new System.Drawing.Size(44, 20);
             this.labelwatersource.TabIndex = 3;
             this.labelwatersource.Text = "Role:";
             // 
@@ -66,7 +67,8 @@ namespace BarangayInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 145);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(308, 121);
             this.Controls.Add(this.buttonwatersave);
             this.Controls.Add(this.textBoxrole);
             this.Controls.Add(this.labelwatersource);

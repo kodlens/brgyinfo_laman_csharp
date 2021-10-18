@@ -31,6 +31,8 @@ namespace BarangayInformation
         {
             this.label2 = new System.Windows.Forms.Label();
             this.GroupBox6 = new System.Windows.Forms.GroupBox();
+            this.txtPwdConfirm = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.cmbRole = new System.Windows.Forms.ComboBox();
             this.textUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -47,8 +49,6 @@ namespace BarangayInformation
             this.Label29 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.txtPwdConfirm = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.GroupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +56,7 @@ namespace BarangayInformation
             // 
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
@@ -91,6 +91,26 @@ namespace BarangayInformation
             this.GroupBox6.TabIndex = 7;
             this.GroupBox6.TabStop = false;
             this.GroupBox6.Text = "USER INFORMATION";
+            // 
+            // txtPwdConfirm
+            // 
+            this.txtPwdConfirm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPwdConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPwdConfirm.Location = new System.Drawing.Point(100, 108);
+            this.txtPwdConfirm.Name = "txtPwdConfirm";
+            this.txtPwdConfirm.PasswordChar = '*';
+            this.txtPwdConfirm.Size = new System.Drawing.Size(261, 24);
+            this.txtPwdConfirm.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(34, 113);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.TabIndex = 46;
+            this.label3.Text = "Confirm:";
             // 
             // cmbRole
             // 
@@ -258,26 +278,6 @@ namespace BarangayInformation
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // txtPwdConfirm
-            // 
-            this.txtPwdConfirm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPwdConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPwdConfirm.Location = new System.Drawing.Point(100, 108);
-            this.txtPwdConfirm.Name = "txtPwdConfirm";
-            this.txtPwdConfirm.PasswordChar = '*';
-            this.txtPwdConfirm.Size = new System.Drawing.Size(261, 24);
-            this.txtPwdConfirm.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(34, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
-            this.label3.TabIndex = 46;
-            this.label3.Text = "Confirm:";
             // 
             // UserAddEditForm
             // 

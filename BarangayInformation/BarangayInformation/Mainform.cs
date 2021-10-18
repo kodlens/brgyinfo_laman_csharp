@@ -126,5 +126,22 @@ namespace BarangayInformation
             RoleMainForm frm = new RoleMainForm();
             frm.Show();
         }
+
+        private void rolesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            RoleMainForm frm = new RoleMainForm();
+            frm.Show();
+        }
+
+        private void contraceptivesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contraceptivesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ContraceptiveMainForm frm = new ContraceptiveMainForm();
+            frm.Show();
+        }
     }
 }

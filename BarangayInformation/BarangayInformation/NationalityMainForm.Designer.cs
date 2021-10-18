@@ -30,6 +30,7 @@ namespace BarangayInformation
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridNationality = new System.Windows.Forms.DataGridView();
             this.nationality_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nationality = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +55,14 @@ namespace BarangayInformation
             // 
             this.gridNationality.AllowUserToAddRows = false;
             this.gridNationality.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridNationality.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridNationality.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridNationality.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nationality_id,
@@ -133,11 +142,12 @@ namespace BarangayInformation
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 542);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(436, 23);
+            this.label1.Size = new System.Drawing.Size(436, 27);
             this.label1.TabIndex = 2;
             this.label1.Text = "CONTROLS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -148,7 +158,8 @@ namespace BarangayInformation
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(-3, -1);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -160,14 +171,15 @@ namespace BarangayInformation
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(15, 52);
+            this.txtSearch.Location = new System.Drawing.Point(12, 52);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(214, 20);
+            this.txtSearch.Size = new System.Drawing.Size(217, 20);
             this.txtSearch.TabIndex = 6;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnSearch
             // 
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Image = global::BarangayInformation.Properties.Resources.search16x16;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearch.Location = new System.Drawing.Point(352, 43);
@@ -182,9 +194,10 @@ namespace BarangayInformation
             // 
             // btnDelete
             // 
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Image = global::BarangayInformation.Properties.Resources.delete16x16;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(203, 568);
+            this.btnDelete.Location = new System.Drawing.Point(200, 572);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnDelete.Size = new System.Drawing.Size(105, 34);
@@ -196,9 +209,10 @@ namespace BarangayInformation
             // 
             // btnEdit
             // 
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Image = global::BarangayInformation.Properties.Resources.eidt16x16;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(107, 568);
+            this.btnEdit.Location = new System.Drawing.Point(104, 572);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnEdit.Size = new System.Drawing.Size(90, 34);
@@ -210,9 +224,10 @@ namespace BarangayInformation
             // 
             // btnAdd
             // 
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Image = global::BarangayInformation.Properties.Resources.Save_icon16x16;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(15, 568);
+            this.btnAdd.Location = new System.Drawing.Point(12, 572);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnAdd.Size = new System.Drawing.Size(86, 34);
@@ -240,7 +255,7 @@ namespace BarangayInformation
             this.MinimizeBox = false;
             this.Name = "NationalityMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nationality";
+            this.Text = "LIST OF NATIONALITY";
             this.Load += new System.EventHandler(this.NationalityMainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridNationality)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

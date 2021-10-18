@@ -36,6 +36,7 @@ namespace BarangayInformation
             // 
             // buttonwatersave
             // 
+            this.buttonwatersave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonwatersave.Location = new System.Drawing.Point(97, 55);
             this.buttonwatersave.Name = "buttonwatersave";
             this.buttonwatersave.Size = new System.Drawing.Size(84, 33);
@@ -54,9 +55,11 @@ namespace BarangayInformation
             // labelwatersource
             // 
             this.labelwatersource.AutoSize = true;
-            this.labelwatersource.Location = new System.Drawing.Point(18, 32);
+            this.labelwatersource.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelwatersource.ForeColor = System.Drawing.Color.White;
+            this.labelwatersource.Location = new System.Drawing.Point(21, 26);
             this.labelwatersource.Name = "labelwatersource";
-            this.labelwatersource.Size = new System.Drawing.Size(48, 13);
+            this.labelwatersource.Size = new System.Drawing.Size(70, 20);
             this.labelwatersource.TabIndex = 3;
             this.labelwatersource.Text = "Religion:";
             // 
@@ -64,11 +67,14 @@ namespace BarangayInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(318, 107);
             this.Controls.Add(this.buttonwatersave);
             this.Controls.Add(this.textreligion);
             this.Controls.Add(this.labelwatersource);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ReligionAddEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReligionAddEditForm";
