@@ -31,8 +31,7 @@ namespace BarangayInformation
         {
             this.label2 = new System.Windows.Forms.Label();
             this.GroupBox6 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.cmbRole = new System.Windows.Forms.ComboBox();
             this.textUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.Label28 = new System.Windows.Forms.Label();
@@ -46,7 +45,10 @@ namespace BarangayInformation
             this.txtLastname = new System.Windows.Forms.TextBox();
             this.Label24 = new System.Windows.Forms.Label();
             this.Label29 = new System.Windows.Forms.Label();
-            this.cmbRole = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.txtPwdConfirm = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.GroupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +68,8 @@ namespace BarangayInformation
             // 
             // GroupBox6
             // 
+            this.GroupBox6.Controls.Add(this.txtPwdConfirm);
+            this.GroupBox6.Controls.Add(this.label3);
             this.GroupBox6.Controls.Add(this.cmbRole);
             this.GroupBox6.Controls.Add(this.textUsername);
             this.GroupBox6.Controls.Add(this.txtPassword);
@@ -87,6 +91,145 @@ namespace BarangayInformation
             this.GroupBox6.TabIndex = 7;
             this.GroupBox6.TabStop = false;
             this.GroupBox6.Text = "USER INFORMATION";
+            // 
+            // cmbRole
+            // 
+            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.Location = new System.Drawing.Point(98, 302);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(261, 26);
+            this.cmbRole.TabIndex = 7;
+            // 
+            // textUsername
+            // 
+            this.textUsername.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textUsername.Location = new System.Drawing.Point(100, 42);
+            this.textUsername.Name = "textUsername";
+            this.textUsername.Size = new System.Drawing.Size(261, 24);
+            this.textUsername.TabIndex = 0;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(100, 76);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(261, 24);
+            this.txtPassword.TabIndex = 1;
+            // 
+            // Label28
+            // 
+            this.Label28.AutoSize = true;
+            this.Label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label28.Location = new System.Drawing.Point(53, 307);
+            this.Label28.Name = "Label28";
+            this.Label28.Size = new System.Drawing.Size(37, 16);
+            this.Label28.TabIndex = 42;
+            this.Label28.Text = "Role";
+            // 
+            // Label50
+            // 
+            this.Label50.AutoSize = true;
+            this.Label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label50.Location = new System.Drawing.Point(19, 77);
+            this.Label50.Name = "Label50";
+            this.Label50.Size = new System.Drawing.Size(68, 16);
+            this.Label50.TabIndex = 38;
+            this.Label50.Text = "Password";
+            // 
+            // cmbSex
+            // 
+            this.cmbSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSex.FormattingEnabled = true;
+            this.cmbSex.Items.AddRange(new object[] {
+            "MALE",
+            "FEMAILE"});
+            this.cmbSex.Location = new System.Drawing.Point(100, 268);
+            this.cmbSex.Name = "cmbSex";
+            this.cmbSex.Size = new System.Drawing.Size(261, 26);
+            this.cmbSex.TabIndex = 6;
+            // 
+            // Label14
+            // 
+            this.Label14.AutoSize = true;
+            this.Label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label14.Location = new System.Drawing.Point(19, 204);
+            this.Label14.Name = "Label14";
+            this.Label14.Size = new System.Drawing.Size(73, 16);
+            this.Label14.TabIndex = 0;
+            this.Label14.Text = "First Name";
+            // 
+            // txtFirstname
+            // 
+            this.txtFirstname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstname.Location = new System.Drawing.Point(98, 200);
+            this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.Size = new System.Drawing.Size(261, 24);
+            this.txtFirstname.TabIndex = 4;
+            // 
+            // Label15
+            // 
+            this.Label15.AutoSize = true;
+            this.Label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label15.Location = new System.Drawing.Point(4, 235);
+            this.Label15.Name = "Label15";
+            this.Label15.Size = new System.Drawing.Size(89, 16);
+            this.Label15.TabIndex = 3;
+            this.Label15.Text = "Middle Name";
+            // 
+            // txtMiddlename
+            // 
+            this.txtMiddlename.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMiddlename.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMiddlename.Location = new System.Drawing.Point(98, 234);
+            this.txtMiddlename.Name = "txtMiddlename";
+            this.txtMiddlename.Size = new System.Drawing.Size(261, 24);
+            this.txtMiddlename.TabIndex = 5;
+            // 
+            // Label17
+            // 
+            this.Label17.AutoSize = true;
+            this.Label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label17.Location = new System.Drawing.Point(19, 169);
+            this.Label17.Name = "Label17";
+            this.Label17.Size = new System.Drawing.Size(73, 16);
+            this.Label17.TabIndex = 5;
+            this.Label17.Text = "Last Name";
+            // 
+            // txtLastname
+            // 
+            this.txtLastname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastname.Location = new System.Drawing.Point(98, 170);
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.Size = new System.Drawing.Size(261, 24);
+            this.txtLastname.TabIndex = 3;
+            // 
+            // Label24
+            // 
+            this.Label24.AutoSize = true;
+            this.Label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label24.Location = new System.Drawing.Point(59, 271);
+            this.Label24.Name = "Label24";
+            this.Label24.Size = new System.Drawing.Size(31, 16);
+            this.Label24.TabIndex = 24;
+            this.Label24.Text = "Sex";
+            // 
+            // Label29
+            // 
+            this.Label29.AutoSize = true;
+            this.Label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label29.Location = new System.Drawing.Point(22, 45);
+            this.Label29.Name = "Label29";
+            this.Label29.Size = new System.Drawing.Size(71, 16);
+            this.Label29.TabIndex = 9;
+            this.Label29.Text = "Username";
             // 
             // label1
             // 
@@ -110,150 +253,31 @@ namespace BarangayInformation
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnAdd.Size = new System.Drawing.Size(101, 34);
-            this.btnAdd.TabIndex = 45;
+            this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "SAVE";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // textUsername
+            // txtPwdConfirm
             // 
-            this.textUsername.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textUsername.Location = new System.Drawing.Point(100, 42);
-            this.textUsername.Name = "textUsername";
-            this.textUsername.Size = new System.Drawing.Size(261, 24);
-            this.textUsername.TabIndex = 43;
+            this.txtPwdConfirm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPwdConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPwdConfirm.Location = new System.Drawing.Point(100, 108);
+            this.txtPwdConfirm.Name = "txtPwdConfirm";
+            this.txtPwdConfirm.PasswordChar = '*';
+            this.txtPwdConfirm.Size = new System.Drawing.Size(261, 24);
+            this.txtPwdConfirm.TabIndex = 2;
             // 
-            // txtPassword
+            // label3
             // 
-            this.txtPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(100, 76);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(261, 24);
-            this.txtPassword.TabIndex = 44;
-            // 
-            // Label28
-            // 
-            this.Label28.AutoSize = true;
-            this.Label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label28.Location = new System.Drawing.Point(53, 252);
-            this.Label28.Name = "Label28";
-            this.Label28.Size = new System.Drawing.Size(37, 16);
-            this.Label28.TabIndex = 42;
-            this.Label28.Text = "Role";
-            // 
-            // Label50
-            // 
-            this.Label50.AutoSize = true;
-            this.Label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label50.Location = new System.Drawing.Point(23, 78);
-            this.Label50.Name = "Label50";
-            this.Label50.Size = new System.Drawing.Size(68, 16);
-            this.Label50.TabIndex = 38;
-            this.Label50.Text = "Password";
-            // 
-            // cmbSex
-            // 
-            this.cmbSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSex.FormattingEnabled = true;
-            this.cmbSex.Items.AddRange(new object[] {
-            "MALE",
-            "FEMAILE"});
-            this.cmbSex.Location = new System.Drawing.Point(100, 213);
-            this.cmbSex.Name = "cmbSex";
-            this.cmbSex.Size = new System.Drawing.Size(261, 26);
-            this.cmbSex.TabIndex = 4;
-            // 
-            // Label14
-            // 
-            this.Label14.AutoSize = true;
-            this.Label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label14.Location = new System.Drawing.Point(21, 119);
-            this.Label14.Name = "Label14";
-            this.Label14.Size = new System.Drawing.Size(73, 16);
-            this.Label14.TabIndex = 0;
-            this.Label14.Text = "First Name";
-            // 
-            // txtFirstname
-            // 
-            this.txtFirstname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstname.Location = new System.Drawing.Point(100, 115);
-            this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(261, 24);
-            this.txtFirstname.TabIndex = 0;
-            // 
-            // Label15
-            // 
-            this.Label15.AutoSize = true;
-            this.Label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label15.Location = new System.Drawing.Point(6, 150);
-            this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(89, 16);
-            this.Label15.TabIndex = 3;
-            this.Label15.Text = "Middle Name";
-            // 
-            // txtMiddlename
-            // 
-            this.txtMiddlename.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMiddlename.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMiddlename.Location = new System.Drawing.Point(100, 149);
-            this.txtMiddlename.Name = "txtMiddlename";
-            this.txtMiddlename.Size = new System.Drawing.Size(261, 24);
-            this.txtMiddlename.TabIndex = 1;
-            // 
-            // Label17
-            // 
-            this.Label17.AutoSize = true;
-            this.Label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label17.Location = new System.Drawing.Point(21, 182);
-            this.Label17.Name = "Label17";
-            this.Label17.Size = new System.Drawing.Size(73, 16);
-            this.Label17.TabIndex = 5;
-            this.Label17.Text = "Last Name";
-            // 
-            // txtLastname
-            // 
-            this.txtLastname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastname.Location = new System.Drawing.Point(100, 183);
-            this.txtLastname.Name = "txtLastname";
-            this.txtLastname.Size = new System.Drawing.Size(261, 24);
-            this.txtLastname.TabIndex = 2;
-            // 
-            // Label24
-            // 
-            this.Label24.AutoSize = true;
-            this.Label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label24.Location = new System.Drawing.Point(59, 216);
-            this.Label24.Name = "Label24";
-            this.Label24.Size = new System.Drawing.Size(31, 16);
-            this.Label24.TabIndex = 24;
-            this.Label24.Text = "Sex";
-            // 
-            // Label29
-            // 
-            this.Label29.AutoSize = true;
-            this.Label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label29.Location = new System.Drawing.Point(22, 47);
-            this.Label29.Name = "Label29";
-            this.Label29.Size = new System.Drawing.Size(71, 16);
-            this.Label29.TabIndex = 9;
-            this.Label29.Text = "Username";
-            // 
-            // cmbRole
-            // 
-            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbRole.FormattingEnabled = true;
-            this.cmbRole.Location = new System.Drawing.Point(98, 247);
-            this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(261, 26);
-            this.cmbRole.TabIndex = 45;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(34, 113);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.TabIndex = 46;
+            this.label3.Text = "Confirm:";
             // 
             // UserAddEditForm
             // 
@@ -297,5 +321,7 @@ namespace BarangayInformation
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAdd;
         internal System.Windows.Forms.ComboBox cmbRole;
+        internal System.Windows.Forms.TextBox txtPwdConfirm;
+        internal System.Windows.Forms.Label label3;
     }
 }

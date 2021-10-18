@@ -80,7 +80,7 @@ namespace BarangayInformation
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(2, 5, 5, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1102, 91);
+            this.toolStrip1.Size = new System.Drawing.Size(1217, 91);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -143,55 +143,55 @@ namespace BarangayInformation
             // waterSourceToolStripMenuItem
             // 
             this.waterSourceToolStripMenuItem.Name = "waterSourceToolStripMenuItem";
-            this.waterSourceToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.waterSourceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.waterSourceToolStripMenuItem.Text = "Water Source";
             this.waterSourceToolStripMenuItem.Click += new System.EventHandler(this.waterSourceToolStripMenuItem_Click);
             // 
             // toiletToolStripMenuItem
             // 
             this.toiletToolStripMenuItem.Name = "toiletToolStripMenuItem";
-            this.toiletToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.toiletToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.toiletToolStripMenuItem.Text = "Toilet";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(141, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // nationalitiesToolStripMenuItem
             // 
             this.nationalitiesToolStripMenuItem.Name = "nationalitiesToolStripMenuItem";
-            this.nationalitiesToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.nationalitiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nationalitiesToolStripMenuItem.Text = "Nationalities";
             this.nationalitiesToolStripMenuItem.Click += new System.EventHandler(this.nationalitiesToolStripMenuItem_Click);
             // 
             // religionsToolStripMenuItem
             // 
             this.religionsToolStripMenuItem.Name = "religionsToolStripMenuItem";
-            this.religionsToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.religionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.religionsToolStripMenuItem.Text = "Religions";
             this.religionsToolStripMenuItem.Click += new System.EventHandler(this.religionsToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(141, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // gardenToolStripMenuItem
             // 
             this.gardenToolStripMenuItem.Name = "gardenToolStripMenuItem";
-            this.gardenToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.gardenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gardenToolStripMenuItem.Text = "Garden";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(141, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
             // 
             // petToolStripMenuItem
             // 
             this.petToolStripMenuItem.Name = "petToolStripMenuItem";
-            this.petToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.petToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.petToolStripMenuItem.Text = "Pet";
             // 
             // toolStripSplitButton2
@@ -214,7 +214,7 @@ namespace BarangayInformation
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
             this.rolesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rolesToolStripMenuItem.Text = "Roles";
-            this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
+
             // 
             // toolStripMenuSetupControl
             // 
@@ -249,26 +249,26 @@ namespace BarangayInformation
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem1.Text = "Countries";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(128, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem2.Text = "Provinces";
             // 
             // citiesToolStripMenuItem
             // 
             this.citiesToolStripMenuItem.Name = "citiesToolStripMenuItem";
-            this.citiesToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.citiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.citiesToolStripMenuItem.Text = "Cities";
             // 
             // barangaysToolStripMenuItem
             // 
             this.barangaysToolStripMenuItem.Name = "barangaysToolStripMenuItem";
-            this.barangaysToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.barangaysToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.barangaysToolStripMenuItem.Text = "Barangays";
             // 
             // toolStrip2
@@ -285,7 +285,7 @@ namespace BarangayInformation
             this.toolStripLabelSystemTime});
             this.toolStrip2.Location = new System.Drawing.Point(0, 643);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1102, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(1217, 25);
             this.toolStrip2.TabIndex = 1;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -347,7 +347,7 @@ namespace BarangayInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 668);
+            this.ClientSize = new System.Drawing.Size(1217, 668);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Mainform";

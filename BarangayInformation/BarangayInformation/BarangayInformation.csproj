@@ -201,7 +201,7 @@
     <Compile Include="RoleMainForm.Designer.cs">
       <DependentUpon>RoleMainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class\Roles.cs" />
+    <Compile Include="Class\Role.cs" />
     <Compile Include="UserAddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>

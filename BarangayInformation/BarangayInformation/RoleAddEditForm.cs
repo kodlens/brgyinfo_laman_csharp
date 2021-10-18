@@ -14,13 +14,13 @@ namespace BarangayInformation
 {
     public partial class RoleAddEditForm : Form
     {
-        Roles role;
+        Role role;
         public int id;
 
         public RoleAddEditForm()
         {
             InitializeComponent();
-            role = new Roles();
+            role = new Role();
 
         }
 

@@ -15,7 +15,7 @@ using C1.Win.C1FlexGrid;
 
 namespace BarangayInformation.Class
 {
-    class User : Roles
+    class User : Role
     {
  
         MySqlConnection con;
@@ -66,16 +66,16 @@ namespace BarangayInformation.Class
 
             int role_id = getRoleIdByRoleName(con, this.role); //get role id by role name;
 
-            query = @"UPDATE users SET username=?user, password=sha1(?pwd), lname=?lname, fname=?fname, mname=?mname,
+            query = @"UPDATE users SET username=?user, lname=?lname, fname=?fname, mname=?mname,
                     sex=?sex, role_id=?roleid WHERE user_id = ?id"; //query for database
             cmd = new MySqlCommand(query, con);
             cmd.Parameters.AddWithValue("?user", this.username);
-            cmd.Parameters.AddWithValue("?pwd", this.password);
+          
             cmd.Parameters.AddWithValue("?lname", this.lname);
             cmd.Parameters.AddWithValue("?fname", this.fname);
             cmd.Parameters.AddWithValue("?mname", this.mname);
             cmd.Parameters.AddWithValue("?sex", this.sex);
-            cmd.Parameters.AddWithValue("?roroleidle", role_id);
+            cmd.Parameters.AddWithValue("?roleid", role_id);
             cmd.Parameters.AddWithValue("?id", id);
             i = cmd.ExecuteNonQuery();
             cmd.Dispose();
@@ -147,6 +147,36 @@ namespace BarangayInformation.Class
             }
         }
 
+
+
+        public bool isExistUsername(int id, string u)
+        {
+            bool flag = false;
+            con = Connection.con();
+            con.Open();
+            if(id > 0)
+            {
+                query = "select * from users where username = ?user and user_id != ?id";
+                cmd = new MySqlCommand(query, con);
+                cmd.Parameters.AddWithValue("?user", u);
+                cmd.Parameters.AddWithValue("?id", id);
+            }
+            else
+            {
+                query = "select * from users where username = ?user";
+                cmd = new MySqlCommand(query, con);
+                cmd.Parameters.AddWithValue("?user", u);
+            }
+
+            MySqlDataReader dr;
+            dr = cmd.ExecuteReader();
+            flag = dr.Read();
+            dr.Close();
+            cmd.Dispose();
+            con.Close();
+            con.Dispose();
+            return flag;
+        }
 
     }
 }

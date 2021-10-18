@@ -25,7 +25,7 @@ namespace BarangayInformation
             user = new User();
         }
 
- 
+
         void save()
         {
             if (user.save() > 0) //check if save is greater than 0, it also execute the save() method
@@ -58,12 +58,32 @@ namespace BarangayInformation
                 Box.WarnBox("Username is required.");
                 return;
             }
-            if (String.IsNullOrEmpty(this.txtPassword.Text))
+
+            if(user.isExistUsername(id, textUsername.Text))
             {
-                txtFirstname.Focus();
-                Box.WarnBox("Password is required.");
+                textUsername.Focus();
+                Box.WarnBox("Username already exist.");
                 return;
             }
+
+         
+            if(id < 1)
+            {
+                if(txtPassword.Text != txtPwdConfirm.Text)
+                {
+                    Box.WarnBox("Password not matched.");
+                    txtPassword.Focus();
+                    return;
+                }
+
+                if (String.IsNullOrEmpty(this.txtPassword.Text))
+                {
+                    txtFirstname.Focus();
+                    Box.WarnBox("Password is required.");
+                    return;
+                }
+            }
+           
             if (String.IsNullOrEmpty(this.txtFirstname.Text))
             {
                 txtFirstname.Focus();
@@ -119,6 +139,7 @@ namespace BarangayInformation
 
                 //disable password during edit mode
                 this.txtPassword.Enabled = false;
+                this.txtPwdConfirm.Enabled = false;
             }
         }
 

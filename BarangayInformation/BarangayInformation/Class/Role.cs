@@ -12,7 +12,7 @@ using System.Data;
 
 namespace BarangayInformation
 {
-    class Roles
+    class Role
     {
         MySqlConnection con;
         MySqlCommand cmd;
@@ -22,23 +22,23 @@ namespace BarangayInformation
         //usually your properties are the column name from database
         public string role { set; get; }
 
+
+
         public int save()
         {
             int i = 0; //instead void, i use int to add some remarks when inserting to database, default 0, means failed.
 
             //instantation of class will use the new keyword
-            con = Connection.con(); //another type of insantiation of object, the new keyword can be found in Connection.cs
-            con.Open(); //open the connection
-            query = "INSERT INTO roles SET role=?n"; //query for database // INSERT INTO tablename SET columname = 'value'
+            con = Connection.con(); 
+            con.Open(); 
+            query = "INSERT INTO roles SET role=?n"; 
             cmd = new MySqlCommand(query, con);
-            cmd.Parameters.AddWithValue("?n", this.role); //you can use this keyword, or remove the this keyword
-            i = cmd.ExecuteNonQuery(); //cmd.executenonquery since the query is not a select statement, it is an insert statement
-            //assign variable i. if insert is successfull, it will return 1, else 0.
-            cmd.Dispose(); //dispose the cmd object variable to free memory
-            con.Close(); //close the connection , detached the connection from database to free connections
-            con.Dispose(); //usually garbage collector of the language will auto dispose objects but i prefer disposing manually to avoid any future problem
+            cmd.Parameters.AddWithValue("?n", this.role); 
+            i = cmd.ExecuteNonQuery(); 
+            cmd.Dispose(); 
+            con.Close();
+            con.Dispose();
             return i;
-            //KLARO EMJEEEH!!!
         }
 
         public int update(int id)
@@ -117,6 +117,44 @@ namespace BarangayInformation
             {
                 this.role = Convert.ToString(dt.Rows[0]["role"]);
             }
+        }
+
+        public void loadToComboBox(ComboBox cmb)
+        {
+            cmb.Items.Clear();
+            con = Connection.con();
+            con.Open();
+            query = "select * from roles order by role asc";
+            cmd = new MySqlCommand(query, con);
+            MySqlDataReader dr;
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cmb.Items.Add(Convert.ToString(dr["role"]));
+            }
+            dr.Close();
+            cmd.Dispose();
+            con.Close();
+            con.Dispose();
+        }
+
+        public int getRoleIdByRoleName(MySqlConnection con, string nrole)
+        {
+            int i = 0;
+            query = "select * from roles where role = ?role";
+            cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("?role", nrole);
+            MySqlDataReader dr;
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                i = Convert.ToInt32(dr["role_id"]);
+            }
+            dr.Close();
+            cmd.Dispose();
+
+
+            return i;
         }
 
 

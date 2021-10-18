@@ -17,19 +17,18 @@ namespace BarangayInformation
     {
 
         //declaration
-        Roles R;
+        Role r;
         public RoleMainForm()
         {
             InitializeComponent();
-            R = new Roles();
+            r = new Role();
 
             //instantiate
-            R = new Roles();
         }
 
         public void loadData()
         {
-            R.tableData(grid, txtSearch.Text);
+            r.tableData(grid, txtSearch.Text);
         }
 
 
@@ -56,7 +55,7 @@ namespace BarangayInformation
                 if (Box.QBox("Are you sure you want to delete this data?"))
                 {
                     int id = Convert.ToInt32(grid.SelectedRows[0].Cells["role_id"].Value);
-                    R.delete(id);
+                    r.delete(id);
                     Box.InfoBox("Data successfully deleted.");
                     loadData();
                 }
@@ -113,7 +112,7 @@ namespace BarangayInformation
                 if (dg == DialogResult.Yes)
                 {
                     int id = Convert.ToInt32(grid.SelectedRows[0].Cells["role_id"].Value);
-                    R.delete(id);
+                    r.delete(id);
                     Box.InfoBox("Successfully deleted.");
                     loadData();
                 }
