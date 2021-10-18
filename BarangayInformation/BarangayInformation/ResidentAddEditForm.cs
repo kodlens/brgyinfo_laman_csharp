@@ -130,6 +130,11 @@ namespace BarangayInformation
             address.country(con, this.cmbPermanentCountry);
             con.Close();
             con.Dispose();
+
+            if(resident_id > 0)
+            {
+                res.getData(resident_id, flxSibling, flxPet);
+            }
         }
 
         private void tbnNext2_Click(object sender, EventArgs e)

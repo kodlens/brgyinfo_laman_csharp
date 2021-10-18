@@ -231,6 +231,9 @@ namespace BarangayInformation.Class
 
         public int update(int id, C1FlexGrid flxSibling, C1FlexGrid flxPet)
         {
+
+            res_sibling_ids_database.Clear();
+            res_sibling_ids.Clear();
             try
             {
 
@@ -455,6 +458,56 @@ namespace BarangayInformation.Class
             {
                 Box.ErrBox(er.Message);
             }
+        }
+
+        public void getData(int id, C1FlexGrid flxSibling, C1FlexGrid flxPet)
+        {
+            con = Connection.con();
+            con.Open();
+
+            query = "SELECT * FROM residents WHERE resident_id = ?id";
+            cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("?id", id);
+            DataTable dt= new DataTable();
+            MySqlDataAdapter adprtr = new MySqlDataAdapter(cmd);
+            adprtr.Fill(dt);
+            adprtr.Dispose();
+            cmd.Dispose();
+
+            query = "SELECT * FROM resident_siblings WHERE resident_id = ?id";
+            cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("?id", id);
+            DataTable dtSIblings = new DataTable();
+            adprtr = new MySqlDataAdapter(cmd);
+            adprtr.Fill(dtSIblings);
+            //'Siblings = New DataGridView
+            //'Box.InfoBox(dtSIblings.Rows.Count)
+            flxSibling.AutoGenerateColumns = false;
+            //flxSibling.DataSource = dtSIblings;
+            for(int row = 1; row <= flxSibling.Rows.Count - 2; row++)
+            {
+                flxSibling[row, "resident_sibling_id"] = Convert.ToInt32(dt.Rows[row - 1]["resident_sibling_id"]);
+                flxSibling[row, "lname"] = Convert.ToString(dt.Rows[row - 1]["lname"]);
+                flxSibling[row, "fname"] = Convert.ToString(dt.Rows[row - 1]["fname"]);
+                flxSibling[row, "mname"] = Convert.ToString(dt.Rows[row - 1]["mname"]);
+                flxSibling[row, "suffix"] = Convert.ToString(dt.Rows[row - 1]["suffix"]);
+                flxSibling[row, "sex"] = Convert.ToString(dt.Rows[row - 1]["sex"]);
+
+            }
+
+            adprtr.Dispose();
+            cmd.Dispose();
+
+            query = "SELECT * FROM resident_pets WHERE resident_id = ?id";
+            cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("?id", id);
+            MySqlDataReader dr;
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                flxPet.Rows.Add();
+            }
+            dr.Close();
         }
 
 

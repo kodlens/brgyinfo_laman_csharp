@@ -61,5 +61,20 @@ namespace BarangayInformation
                 loadData();
             }
         }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(this.flx.Rows.Count > 1)
+            {
+                int id = Convert.ToInt32(flx[flx.RowSel, "resident_id"]);
+                ResidentAddEditForm frm = new ResidentAddEditForm();
+                frm.resident_id = id;
+                frm.ShowDialog();
+            }
+            else
+            {
+                Box.ErrBox("No data found.");
+            }
+        }
     }
 }
