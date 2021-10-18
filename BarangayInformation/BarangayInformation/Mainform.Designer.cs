@@ -46,9 +46,9 @@ namespace BarangayInformation
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.petToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSplitButton2 = new System.Windows.Forms.ToolStripSplitButton();
+            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuSetupControl = new System.Windows.Forms.ToolStripMenuItem();
             this.accessLevelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -209,6 +209,13 @@ namespace BarangayInformation
             this.toolStripSplitButton2.Text = "ACCESS CONTROL";
             this.toolStripSplitButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // rolesToolStripMenuItem
+            // 
+            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rolesToolStripMenuItem.Text = "Roles";
+            this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
+            // 
             // toolStripMenuSetupControl
             // 
             this.toolStripMenuSetupControl.Name = "toolStripMenuSetupControl";
@@ -222,12 +229,6 @@ namespace BarangayInformation
             this.accessLevelsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.accessLevelsToolStripMenuItem.Text = "Access Levels";
             this.accessLevelsToolStripMenuItem.Click += new System.EventHandler(this.accessLevelsToolStripMenuItem_Click);
-            // 
-            // rolesToolStripMenuItem
-            // 
-            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.rolesToolStripMenuItem.Text = "Roles";
             // 
             // toolStripSplitButton1
             // 

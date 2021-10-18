@@ -92,7 +92,7 @@ namespace BarangayInformation.Access_Control
                 con = Connection.con();
                 con.Open();
 
-                int role_id = Role.getRoleIdByRoleName(con, role);
+                int role_id = Roles.getRoleIdByRoleName(con, role);
 
                 foreach (C1.Win.C1FlexGrid.RowCol row in flxControls.Rows)
                 {

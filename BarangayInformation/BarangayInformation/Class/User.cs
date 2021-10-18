@@ -15,7 +15,7 @@ using C1.Win.C1FlexGrid;
 
 namespace BarangayInformation.Class
 {
-    class User : Role
+    class User : Roles
     {
  
         MySqlConnection con;

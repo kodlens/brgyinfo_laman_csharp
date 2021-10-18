@@ -107,7 +107,7 @@
     <Compile Include="Access Control\AccessLevelMainForm.Designer.cs">
       <DependentUpon>AccessLevelMainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class\Role.cs" />
+    <Compile Include="Class\Contraceptives.cs" />
     <Compile Include="CountryAddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +189,19 @@
     </Compile>
     <Compile Include="Class\WaterSource.cs" />
     <Compile Include="Class\User.cs" />
+    <Compile Include="RoleAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoleAddEditForm.Designer.cs">
+      <DependentUpon>RoleAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoleMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoleMainForm.Designer.cs">
+      <DependentUpon>RoleMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Roles.cs" />
     <Compile Include="UserAddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +284,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ResidentMainForm.resx">
       <DependentUpon>ResidentMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoleAddEditForm.resx">
+      <DependentUpon>RoleAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoleMainForm.resx">
+      <DependentUpon>RoleMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserAddEditForm.resx">
       <DependentUpon>UserAddEditForm.cs</DependentUpon>

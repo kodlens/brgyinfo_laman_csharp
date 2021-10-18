@@ -120,5 +120,11 @@ namespace BarangayInformation
             AccessLevelMainForm frm = new AccessLevelMainForm();
             frm.Show();
         }
+
+        private void rolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RoleMainForm frm = new RoleMainForm();
+            frm.Show();
+        }
     }
 }
