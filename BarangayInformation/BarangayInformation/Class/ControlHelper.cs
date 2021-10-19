@@ -37,8 +37,7 @@ namespace BarangayInformation.Class
                 }
             }
 
-
-
+            //for Menu toolstrip and dropdown
             foreach (Control ctrl in frm.Controls)
             {
                 if (ctrl.GetType() == typeof(ToolStrip))
@@ -68,9 +67,18 @@ namespace BarangayInformation.Class
 
                     }
                 }
-
-
             }
+
+            //for buttons
+            foreach (var button in frm.Controls.OfType<Button>())
+            {
+                if (!getAccessControlsList(frm.Name, position_id).Contains(button.Name))
+                {
+                    button.Enabled = false;
+                    //item2.Visible = false;
+                }
+            }
+
         }
 
 

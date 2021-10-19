@@ -32,6 +32,8 @@ namespace BarangayInformation
             this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.grid = new System.Windows.Forms.DataGridView();
+            this.country_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.country = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,8 +46,6 @@ namespace BarangayInformation
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.country_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.country = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +80,22 @@ namespace BarangayInformation
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid.Size = new System.Drawing.Size(436, 455);
             this.grid.TabIndex = 8;
+            // 
+            // country_id
+            // 
+            this.country_id.DataPropertyName = "country_id";
+            this.country_id.HeaderText = "ID";
+            this.country_id.Name = "country_id";
+            this.country_id.ReadOnly = true;
+            this.country_id.Width = 80;
+            // 
+            // country
+            // 
+            this.country.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.country.DataPropertyName = "country";
+            this.country.HeaderText = "Country";
+            this.country.Name = "country";
+            this.country.ReadOnly = true;
             // 
             // contextMenuStrip1
             // 
@@ -200,22 +216,6 @@ namespace BarangayInformation
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // country_id
-            // 
-            this.country_id.DataPropertyName = "country_id";
-            this.country_id.HeaderText = "ID";
-            this.country_id.Name = "country_id";
-            this.country_id.ReadOnly = true;
-            this.country_id.Width = 80;
-            // 
-            // country
-            // 
-            this.country.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.country.DataPropertyName = "country";
-            this.country.HeaderText = "Country";
-            this.country.Name = "country";
-            this.country.ReadOnly = true;
-            // 
             // CountryMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,7 +229,11 @@ namespace BarangayInformation
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAdd);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CountryMainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CountryMainForm";
             this.Load += new System.EventHandler(this.CountryMainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();

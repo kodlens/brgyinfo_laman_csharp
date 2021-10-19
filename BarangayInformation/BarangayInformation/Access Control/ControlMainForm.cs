@@ -76,5 +76,20 @@ namespace BarangayInformation.Access_Control
         {
             loadData();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            addToolStripMenuItem_Click(sender, e);
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            editControlToolStripMenuItem_Click(sender, e);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            deleteControlToolStripMenuItem_Click(sender, e);
+        }
     }
 }

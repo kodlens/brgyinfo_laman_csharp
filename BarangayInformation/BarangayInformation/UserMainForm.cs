@@ -37,6 +37,9 @@ namespace BarangayInformation
 
         private void UserMainForm_Load(object sender, EventArgs e)
         {
+            int roleid = Properties.Settings.Default.role_id;
+            ControlHelper.SetupControlAccess(this, null, roleid);
+
             loadData();
         }
 

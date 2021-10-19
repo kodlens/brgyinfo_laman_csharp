@@ -35,6 +35,7 @@ namespace BarangayInformation.Access_Control
             this.txtText = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtDesc = new System.Windows.Forms.TextBox();
@@ -42,11 +43,14 @@ namespace BarangayInformation.Access_Control
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.flx = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.deleteControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.deleteControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.flx = new C1.Win.C1FlexGrid.C1FlexGrid();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flx)).BeginInit();
@@ -63,9 +67,9 @@ namespace BarangayInformation.Access_Control
             this.groupBox1.Controls.Add(this.txtDesc);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(3, 46);
+            this.groupBox1.Location = new System.Drawing.Point(12, 46);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(872, 83);
+            this.groupBox1.Size = new System.Drawing.Size(863, 83);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
@@ -95,6 +99,23 @@ namespace BarangayInformation.Access_Control
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(198, 22);
             this.txtName.TabIndex = 29;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSearch.Image = global::BarangayInformation.Properties.Resources.search16x16;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(771, 19);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnSearch.Size = new System.Drawing.Size(86, 44);
+            this.btnSearch.TabIndex = 31;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label5
             // 
@@ -164,10 +185,24 @@ namespace BarangayInformation.Access_Control
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(151, 98);
             // 
+            // editControlToolStripMenuItem
+            // 
+            this.editControlToolStripMenuItem.Name = "editControlToolStripMenuItem";
+            this.editControlToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.editControlToolStripMenuItem.Text = "Edit Control";
+            this.editControlToolStripMenuItem.Click += new System.EventHandler(this.editControlToolStripMenuItem_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(147, 6);
+            // 
+            // deleteControlToolStripMenuItem
+            // 
+            this.deleteControlToolStripMenuItem.Name = "deleteControlToolStripMenuItem";
+            this.deleteControlToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.deleteControlToolStripMenuItem.Text = "Delete Control";
+            this.deleteControlToolStripMenuItem.Click += new System.EventHandler(this.deleteControlToolStripMenuItem_Click);
             // 
             // flx
             // 
@@ -178,50 +213,84 @@ namespace BarangayInformation.Access_Control
             this.flx.ContextMenuStrip = this.contextMenuStrip1;
             this.flx.ExtendLastCol = true;
             this.flx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.flx.Location = new System.Drawing.Point(3, 135);
+            this.flx.Location = new System.Drawing.Point(12, 135);
             this.flx.Name = "flx";
             this.flx.Rows.DefaultSize = 20;
             this.flx.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
-            this.flx.Size = new System.Drawing.Size(872, 364);
+            this.flx.Size = new System.Drawing.Size(863, 364);
             this.flx.StyleInfo = resources.GetString("flx.StyleInfo");
             this.flx.TabIndex = 41;
             // 
-            // btnSearch
+            // btnDelete
             // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSearch.Image = global::BarangayInformation.Properties.Resources.search16x16;
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(791, 19);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 50);
-            this.btnSearch.TabIndex = 31;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDelete.Image = global::BarangayInformation.Properties.Resources.delete16x16;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(201, 528);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnDelete.Size = new System.Drawing.Size(100, 43);
+            this.btnDelete.TabIndex = 47;
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // deleteControlToolStripMenuItem
+            // btnEdit
             // 
-            this.deleteControlToolStripMenuItem.Name = "deleteControlToolStripMenuItem";
-            this.deleteControlToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.deleteControlToolStripMenuItem.Text = "Delete Control";
-            this.deleteControlToolStripMenuItem.Click += new System.EventHandler(this.deleteControlToolStripMenuItem_Click);
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEdit.Image = global::BarangayInformation.Properties.Resources.eidt16x16;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(103, 528);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnEdit.Size = new System.Drawing.Size(92, 43);
+            this.btnEdit.TabIndex = 46;
+            this.btnEdit.Text = "EDIT";
+            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // editControlToolStripMenuItem
+            // label1
             // 
-            this.editControlToolStripMenuItem.Name = "editControlToolStripMenuItem";
-            this.editControlToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.editControlToolStripMenuItem.Text = "Edit Control";
-            this.editControlToolStripMenuItem.Click += new System.EventHandler(this.editControlToolStripMenuItem_Click);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 502);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label1.Size = new System.Drawing.Size(863, 23);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "CONTROLS";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAdd.Image = global::BarangayInformation.Properties.Resources.Save_icon16x16;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(12, 528);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnAdd.Size = new System.Drawing.Size(85, 43);
+            this.btnAdd.TabIndex = 44;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // ControlMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 514);
+            this.ClientSize = new System.Drawing.Size(884, 583);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.flx);
@@ -260,5 +329,9 @@ namespace BarangayInformation.Access_Control
         private C1.Win.C1FlexGrid.C1FlexGrid flx;
         private System.Windows.Forms.ToolStripMenuItem editControlToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteControlToolStripMenuItem;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

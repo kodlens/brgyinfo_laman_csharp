@@ -201,16 +201,16 @@
     </Compile>
     <Compile Include="Class\WaterSource.cs" />
     <Compile Include="Class\User.cs" />
-    <Compile Include="RoleAddEditForm.cs">
+    <Compile Include="Access Control\RoleAddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RoleAddEditForm.Designer.cs">
+    <Compile Include="Access Control\RoleAddEditForm.Designer.cs">
       <DependentUpon>RoleAddEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RoleMainForm.cs">
+    <Compile Include="Access Control\RoleMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RoleMainForm.Designer.cs">
+    <Compile Include="Access Control\RoleMainForm.Designer.cs">
       <DependentUpon>RoleMainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Role.cs" />
@@ -303,10 +303,10 @@
     <EmbeddedResource Include="ResidentMainForm.resx">
       <DependentUpon>ResidentMainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RoleAddEditForm.resx">
+    <EmbeddedResource Include="Access Control\RoleAddEditForm.resx">
       <DependentUpon>RoleAddEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RoleMainForm.resx">
+    <EmbeddedResource Include="Access Control\RoleMainForm.resx">
       <DependentUpon>RoleMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserAddEditForm.resx">

@@ -40,6 +40,11 @@ namespace BarangayInformation
         }
         private void ResidentMainForm_Load(object sender, EventArgs e)
         {
+
+            int roleid = Properties.Settings.Default.role_id;
+            ControlHelper.SetupControlAccess(this, contextMenuStrip1, roleid);
+
+
             this.rbLastName.Checked = true;
             loadData();
         }

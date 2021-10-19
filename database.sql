@@ -29,12 +29,30 @@ CREATE TABLE `access_levels` (
   KEY `controlsID` (`control_id`),
   CONSTRAINT `access_levels_ibfk_1` FOREIGN KEY (`control_id`) REFERENCES `controls` (`control_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `access_levels_ibfk_2` FOREIGN KEY (`role_id`) REFERENCES `roles` (`role_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=373 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=391 DEFAULT CHARSET=latin1;
 
 /*Data for the table `access_levels` */
 
 insert  into `access_levels`(`access_level_id`,`role_id`,`control_id`) values 
-(372,1,177);
+(372,1,177),
+(373,1,178),
+(374,1,179),
+(375,1,180),
+(376,1,181),
+(377,1,182),
+(378,1,183),
+(379,1,184),
+(380,1,185),
+(381,1,186),
+(382,1,187),
+(383,1,188),
+(384,1,189),
+(385,1,190),
+(386,1,191),
+(387,1,192),
+(388,1,193),
+(389,1,194),
+(390,1,195);
 
 /*Table structure for table `barangays` */
 
@@ -43797,15 +43815,33 @@ CREATE TABLE `controls` (
   `control_id` int(11) NOT NULL AUTO_INCREMENT,
   `control_name` varchar(255) DEFAULT '',
   `control_text` varchar(255) DEFAULT '',
-  `description` varchar(255) DEFAULT '',
+  `description` text DEFAULT NULL,
   `class_name` varchar(255) DEFAULT '',
   PRIMARY KEY (`control_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=178 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=196 DEFAULT CHARSET=latin1;
 
 /*Data for the table `controls` */
 
 insert  into `controls`(`control_id`,`control_name`,`control_text`,`description`,`class_name`) values 
-(177,'toolStripButton4','User','Mainform : User','Mainform');
+(177,'toolStripButton4','User','Mainform : User','Mainform'),
+(178,'toolStripSplitButtonAccessControl','ACCESS CONTROL','Mainform : ACCESS CONTROL','Mainform'),
+(179,'rolesToolStripMenuItem','Roles','Mainform : ACCESS CONTROL : Roles','Mainform'),
+(180,'toolStripMenuSetupControl','Controls','Mainform : ACCESS CONTROL : Controls','Mainform'),
+(181,'accessLevelsToolStripMenuItem','Access Levels','Mainform : ACCESS CONTROL : Access Levels','Mainform'),
+(182,'toolStripButtonResident','Resident','Mainform : Resident','Mainform'),
+(183,'toolStripSplitButtonAddress','Address','Mainform : ADDRESS','Mainform'),
+(184,'contraceptiveToolStripMenuItem','Contraceptives','Mainform : Setup : Contraceptives','Mainform'),
+(185,'gardenToolStripMenuItem','Gardens','Mainform : Seupt : Gardens','Mainform'),
+(186,'toiletToolStripMenuItem','Toilets','Mainform : Seupt : Toilets','Mainform'),
+(187,'waterSourceToolStripMenuItem','Water Sources','Mainform : Setup : Water Sourecs','Mainform'),
+(188,'nationalitiesToolStripMenuItem','Nationalities','Mainform : Setup : Nationalities','Mainform'),
+(189,'religionsToolStripMenuItem','Religions','Mainform : Setup : Religions','Mainform'),
+(190,'petToolStripMenuItem','Pets','Mainform : Setup : Pets','Mainform'),
+(191,'countriesStripMenuItem','Countries','Mainform : Address : Countries','Mainform'),
+(192,'provinceStripMenuItem','Provinces','Mainform : Address : Provinces','Mainform'),
+(193,'citiesToolStripMenuItem','Cities','Mainform : Address : Cities','Mainform'),
+(194,'barangaysToolStripMenuItem','Barangays','Mainform : Address : Barangays','Mainform'),
+(195,'toolStripButtonLogout','Logout','Mainform : Logout','Mainform');
 
 /*Table structure for table `countries` */
 
@@ -44156,23 +44192,7 @@ CREATE TABLE `roles` (
 insert  into `roles`(`role_id`,`role`) values 
 (1,'ADMINISTRATOR'),
 (5,'TREASURER'),
-(11,'CHEIF EXECUTIVE OFFICER'),
-(12,'VICE-CHEIF EXECUTIVE'),
-(13,'SECRETARY'),
-(16,'SOCIO CULTURAL OFFIC'),
-(17,'EXTERNAL AFFAIRS OFFICER'),
-(18,'SPORTS DEVELOPMENT OFFICER'),
-(22,'PRESIDENT'),
-(23,'VICE PRESIDENT'),
-(25,'AUDITOR'),
-(26,'PUBLIC INFORMATION OFFICER'),
-(27,'DEAN OF OSA'),
-(28,'ADVISER'),
-(29,'INSTITUTE DEAN'),
-(30,'PREFECT OF STUDENT ACTIVITIES'),
-(31,'SBO-ADMINISTRATOR'),
-(32,'CHAIRMAN'),
-(33,'VICE-CHAIRMAN');
+(13,'SECRETARY');
 
 /*Table structure for table `toilets` */
 
@@ -44215,10 +44235,7 @@ CREATE TABLE `users` (
 /*Data for the table `users` */
 
 insert  into `users`(`user_id`,`username`,`password`,`lname`,`fname`,`mname`,`sex`,`role_id`,`created_at`,`updated_at`) values 
-(2,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','AMPARADO','ETIENNE',NULL,'MALE',1,'2021-09-05 19:00:44','2021-10-17 06:36:59'),
-(4,'ASDA','5271593ca406362d7a2701e331408ab77d5b5b88','ASD','ASD','ASD','MALE',25,'2021-10-18 19:10:57',NULL),
-(5,'AA','5271593ca406362d7a2701e331408ab77d5b5b88','AMPARADO','ETIENNE','WAYNE','MALE',11,'2021-10-18 19:11:37','2021-10-18 19:16:25'),
-(6,'A','6dcd4ce23d88e2ee9568ba546c007c63d9131c1b','AA','AA','AA','MALE',28,'2021-10-18 19:23:31','2021-10-18 19:24:09');
+(2,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','AMPARADO','ETIENNE',NULL,'MALE',1,'2021-09-05 19:00:44','2021-10-17 06:36:59');
 
 /*Table structure for table `water_sources` */
 

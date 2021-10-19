@@ -101,6 +101,7 @@ namespace BarangayInformation
         {
             int roleid = Properties.Settings.Default.role_id;
             ControlHelper.SetupControlAccess(this, null, roleid);
+
             timer1.Start();
             toolStripLabelUser.Text = Properties.Settings.Default.fname.ToUpper()  + " " + Properties.Settings.Default.lname.ToUpper();
             toolStripLabelRole.Text = Properties.Settings.Default.role.ToUpper();
