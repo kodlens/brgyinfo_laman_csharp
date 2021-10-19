@@ -41,7 +41,7 @@ namespace BarangayInformation
             flx.DataSource = control.find(txtName.Text, txtText.Text, cmbRole.Text, txtDesc.Text);
         }
 
-        private void modifyToolStripMenuItem_Click(object sender, EventArgs e)
+        private void removeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (flx.Rows.Count > 1)
             {
@@ -104,5 +104,18 @@ namespace BarangayInformation
         {
             loadData();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            addToolStripMenuItem_Click(sender, e);
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            removeToolStripMenuItem_Click(sender, e);
+        }
+
+
     }
 }

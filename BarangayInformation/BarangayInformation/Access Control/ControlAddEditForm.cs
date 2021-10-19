@@ -36,6 +36,14 @@ namespace BarangayInformation.Access_Control
                 txtName.Focus();
                 return;
             }
+
+            if (control.isExist(this.txtName.Text, this.txtClass.Text, id))
+            {
+                Box.WarnBox("Duplicate control name.");
+                txtName.Focus();
+                return;
+            }
+
             if (string.IsNullOrEmpty(txtText.Text))
             {
                 Box.WarnBox("Please input control text.");
@@ -93,7 +101,7 @@ namespace BarangayInformation.Access_Control
 
         void getData()
         {
-            txtName.Text = control.text;
+            txtName.Text = control.name;
             txtText.Text = control.text;
             txtClass.Text = control.class_name;
             txtDesc.Text = control.desc;

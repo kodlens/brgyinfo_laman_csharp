@@ -45,6 +45,9 @@ namespace BarangayInformation
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.flx = new C1.Win.C1FlexGrid.C1FlexGrid();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flx)).BeginInit();
@@ -59,37 +62,37 @@ namespace BarangayInformation
             this.toolStripSeparator1,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 120);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(114, 98);
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(110, 6);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // GroupBox1
@@ -177,13 +180,53 @@ namespace BarangayInformation
             this.flx.ColumnInfo = resources.GetString("flx.ColumnInfo");
             this.flx.ContextMenuStrip = this.contextMenuStrip1;
             this.flx.ExtendLastCol = true;
+            this.flx.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.flx.Location = new System.Drawing.Point(15, 135);
             this.flx.Name = "flx";
             this.flx.Rows.DefaultSize = 22;
             this.flx.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
-            this.flx.Size = new System.Drawing.Size(1142, 568);
+            this.flx.Size = new System.Drawing.Size(1142, 523);
             this.flx.StyleInfo = resources.GetString("flx.StyleInfo");
             this.flx.TabIndex = 67;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Image = global::BarangayInformation.Properties.Resources.delete16x16;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(209, 664);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnDelete.Size = new System.Drawing.Size(105, 34);
+            this.btnDelete.TabIndex = 70;
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Image = global::BarangayInformation.Properties.Resources.eidt16x16;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(113, 664);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnEdit.Size = new System.Drawing.Size(90, 34);
+            this.btnEdit.TabIndex = 69;
+            this.btnEdit.Text = "EDIT";
+            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Image = global::BarangayInformation.Properties.Resources.Save_icon16x16;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(21, 664);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnAdd.Size = new System.Drawing.Size(86, 34);
+            this.btnAdd.TabIndex = 68;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // ResidentMainForm
             // 
@@ -191,6 +234,9 @@ namespace BarangayInformation
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1169, 715);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.flx);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.GroupBox1);
@@ -227,5 +273,8 @@ namespace BarangayInformation
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private C1.Win.C1FlexGrid.C1FlexGrid flx;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

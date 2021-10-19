@@ -128,7 +128,42 @@ namespace BarangayInformation.Class
                 this.desc = Convert.ToString(dt.Rows[0]["description"]);
                 this.class_name = Convert.ToString(dt.Rows[0]["class_name"]);
             }
+        }
 
+
+        public bool isExist(string n, string cname, int id)
+        {
+            bool flag = false;
+            con = Connection.con();
+            con.Open();
+
+            if(id> 0)
+            {
+                //editmode
+                query = @"SELECT * FROM controls
+                        WHERE control_name = ?n and class_name = ?cname AND control_id != ?id";
+                cmd = new MySqlCommand(query, con);
+                cmd.Parameters.AddWithValue("?n", n);
+                cmd.Parameters.AddWithValue("?cname", n);
+                cmd.Parameters.AddWithValue("?id", id);
+            }
+            else
+            {
+                //insert mode
+                query = @"SELECT * FROM controls
+                        WHERE control_name = ?n and class_name = ?cname";
+                cmd = new MySqlCommand(query, con);
+                cmd.Parameters.AddWithValue("?n", n);
+                cmd.Parameters.AddWithValue("?cname", n);
+            }
+
+            MySqlDataReader dr;
+            dr = cmd.ExecuteReader();
+            flag = dr.Read();
+            cmd.Dispose();
+            con.Close();
+            con.Dispose();
+            return flag;
         }
 
 

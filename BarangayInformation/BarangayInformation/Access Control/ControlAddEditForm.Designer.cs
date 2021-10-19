@@ -101,11 +101,12 @@ namespace BarangayInformation.Access_Control
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.Transparent;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Image = global::BarangayInformation.Properties.Resources.Save_icon16x16;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Location = new System.Drawing.Point(199, 188);
             this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnSave.Size = new System.Drawing.Size(75, 41);
             this.btnSave.TabIndex = 24;
             this.btnSave.Text = "Save";

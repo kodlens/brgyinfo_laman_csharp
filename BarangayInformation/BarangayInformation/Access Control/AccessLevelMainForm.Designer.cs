@@ -33,7 +33,7 @@ namespace BarangayInformation
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccessLevelMainForm));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.flx = new C1.Win.C1FlexGrid.C1FlexGrid();
@@ -48,6 +48,8 @@ namespace BarangayInformation
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flx)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -57,37 +59,37 @@ namespace BarangayInformation
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
-            this.modifyToolStripMenuItem,
+            this.removeToolStripMenuItem,
             this.refreshToolStripMenuItem,
             this.toolStripSeparator1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 98);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(166, 76);
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.addToolStripMenuItem.Text = "Add Controls";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
-            // modifyToolStripMenuItem
+            // removeToolStripMenuItem
             // 
-            this.modifyToolStripMenuItem.Name = "modifyToolStripMenuItem";
-            this.modifyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.modifyToolStripMenuItem.Text = "Remove Controls";
-            this.modifyToolStripMenuItem.Click += new System.EventHandler(this.modifyToolStripMenuItem_Click);
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.removeToolStripMenuItem.Text = "Remove Controls";
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(162, 6);
             // 
             // flx
             // 
@@ -105,9 +107,10 @@ namespace BarangayInformation
             this.flx.Name = "flx";
             this.flx.Rows.DefaultSize = 20;
             this.flx.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.ListBox;
-            this.flx.Size = new System.Drawing.Size(939, 458);
+            this.flx.Size = new System.Drawing.Size(1039, 451);
             this.flx.StyleInfo = resources.GetString("flx.StyleInfo");
             this.flx.TabIndex = 32;
+
             // 
             // label5
             // 
@@ -190,7 +193,7 @@ namespace BarangayInformation
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(963, 41);
+            this.label2.Size = new System.Drawing.Size(1063, 41);
             this.label2.TabIndex = 39;
             this.label2.Text = "LIST OF ACCESS CONTROL";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -209,7 +212,7 @@ namespace BarangayInformation
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(939, 83);
+            this.groupBox1.Size = new System.Drawing.Size(1039, 83);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
@@ -221,7 +224,7 @@ namespace BarangayInformation
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Image = global::BarangayInformation.Properties.Resources.search16x16;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(841, 21);
+            this.btnSearch.Location = new System.Drawing.Point(941, 21);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(80, 37);
             this.btnSearch.TabIndex = 31;
@@ -230,11 +233,43 @@ namespace BarangayInformation
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Image = global::BarangayInformation.Properties.Resources.delete16x16;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(104, 588);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnDelete.Size = new System.Drawing.Size(185, 34);
+            this.btnDelete.TabIndex = 43;
+            this.btnDelete.Text = "REMOVE CONTROL(S)";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Image = global::BarangayInformation.Properties.Resources.Save_icon16x16;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(12, 588);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnAdd.Size = new System.Drawing.Size(86, 34);
+            this.btnAdd.TabIndex = 41;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // AccessLevelMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 601);
+            this.ClientSize = new System.Drawing.Size(1063, 641);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.flx);
@@ -257,7 +292,7 @@ namespace BarangayInformation
 
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modifyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private C1.Win.C1FlexGrid.C1FlexGrid flx;
@@ -272,5 +307,7 @@ namespace BarangayInformation
         private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

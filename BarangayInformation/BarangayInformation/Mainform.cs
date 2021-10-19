@@ -27,13 +27,37 @@ namespace BarangayInformation
             this._frm = _frm;
         }
 
+        //private void openForm(Form frm)
+        //{
+        //    foreach (Form form in Application.OpenForms)
+        //    {
+        //        if (form.GetType() == typeof(Form))
+        //        {
+        //            form.Activate();
+        //            return;
+        //        }
+        //    }
+
+        //    Form frm = new ;
+        //    frm.Show();
+
+        //}
+
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            ResidentMainForm frm = new ResidentMainForm();
-            frm.Show();
-        }
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(ResidentMainForm))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
 
-      
+            Form frm = new ResidentMainForm();
+            frm.Show();
+
+        }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
@@ -52,48 +76,80 @@ namespace BarangayInformation
 
         private void nationalitiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NationalityMainForm frm = new NationalityMainForm();
-            frm.ShowDialog();
+      
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(NationalityMainForm))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            Form frm = new NationalityMainForm();
+            frm.Show();
         }
 
         private void waterSourceToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form form in Application.OpenForms)
             {
-                WaterSourceMainForm frm = new WaterSourceMainForm();  
-                frm.ShowDialog();
-            }
-        }
-
-       
-        private void toolStripSetting_ButtonClick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void religionsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
+                if (form.GetType() == typeof(WaterSourceMainForm))
                 {
-                    ReligionMainForm frm = new ReligionMainForm();
-                    frm.ShowDialog();
+                    form.Activate();
+                    return;
                 }
             }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            CountryMainForm frm = new CountryMainForm();
-            frm.ShowDialog();
+            Form frm = new WaterSourceMainForm();
+            frm.Show();
+
         }
 
-        private void userToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void religionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UserMainForm frm = new UserMainForm();
-            frm.ShowDialog();
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(ReligionMainForm))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            Form frm = new ReligionMainForm();
+            frm.Show();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(CountryMainForm))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            Form frm = new CountryMainForm();
+            frm.Show();
+        }
+
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            UserMainForm frm = new UserMainForm();
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(UserMainForm))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            Form frm = new UserMainForm();
             frm.Show();
         }
 
@@ -115,32 +171,99 @@ namespace BarangayInformation
 
         private void toolStripMenuSetupControl_Click(object sender, EventArgs e)
         {
-            ControlMainForm frm = new ControlMainForm();
+ 
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(ControlMainForm))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            Form frm = new ControlMainForm();
             frm.Show();
+
         }
 
         private void accessLevelsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AccessLevelMainForm frm = new AccessLevelMainForm();
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(AccessLevelMainForm))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            Form frm = new AccessLevelMainForm();
             frm.Show();
         }
 
         private void rolesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RoleMainForm frm = new RoleMainForm();
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(RoleMainForm))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            Form frm = new RoleMainForm();
             frm.Show();
         }
 
         private void rolesToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            RoleMainForm frm = new RoleMainForm();
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(RoleMainForm))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            Form frm = new RoleMainForm();
             frm.Show();
         }
 
         private void contraceptiveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ContraceptiveMainForm frm = new ContraceptiveMainForm();
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(ContraceptiveMainForm))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            Form frm = new ContraceptiveMainForm();
             frm.Show();
+        }
+
+        private void gardenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(GardenMainForm))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            Form frm = new GardenMainForm();
+            frm.Show();
+        }
+
+        private void toiletToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

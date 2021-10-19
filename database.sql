@@ -29,7 +29,7 @@ CREATE TABLE `access_levels` (
   KEY `controlsID` (`control_id`),
   CONSTRAINT `access_levels_ibfk_1` FOREIGN KEY (`control_id`) REFERENCES `controls` (`control_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `access_levels_ibfk_2` FOREIGN KEY (`role_id`) REFERENCES `roles` (`role_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=392 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=412 DEFAULT CHARSET=latin1;
 
 /*Data for the table `access_levels` */
 
@@ -53,7 +53,27 @@ insert  into `access_levels`(`access_level_id`,`role_id`,`control_id`) values
 (388,1,193),
 (389,1,194),
 (390,1,195),
-(391,1,196);
+(391,1,196),
+(392,1,197),
+(393,1,198),
+(394,1,199),
+(395,1,200),
+(396,1,201),
+(397,1,202),
+(398,1,203),
+(399,1,204),
+(400,1,205),
+(401,1,206),
+(402,1,207),
+(403,1,208),
+(404,1,209),
+(405,1,210),
+(406,1,211),
+(407,1,212),
+(408,1,213),
+(409,1,214),
+(410,1,215),
+(411,1,216);
 
 /*Table structure for table `barangays` */
 
@@ -43819,12 +43839,12 @@ CREATE TABLE `controls` (
   `description` text DEFAULT NULL,
   `class_name` varchar(255) DEFAULT '',
   PRIMARY KEY (`control_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=197 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=225 DEFAULT CHARSET=latin1;
 
 /*Data for the table `controls` */
 
 insert  into `controls`(`control_id`,`control_name`,`control_text`,`description`,`class_name`) values 
-(177,'toolStripButton4','User','Mainform : User','Mainform'),
+(177,'toolStripButtonUser','User','Mainform : User','Mainform'),
 (178,'toolStripSplitButtonAccessControl','ACCESS CONTROL','Mainform : ACCESS CONTROL','Mainform'),
 (179,'rolesToolStripMenuItem','Roles','Mainform : ACCESS CONTROL : Roles','Mainform'),
 (180,'toolStripMenuSetupControl','Controls','Mainform : ACCESS CONTROL : Controls','Mainform'),
@@ -43843,7 +43863,35 @@ insert  into `controls`(`control_id`,`control_name`,`control_text`,`description`
 (193,'citiesToolStripMenuItem','Cities','Mainform : Address : Cities','Mainform'),
 (194,'barangaysToolStripMenuItem','Barangays','Mainform : Address : Barangays','Mainform'),
 (195,'toolStripButtonLogout','Logout','Mainform : Logout','Mainform'),
-(196,'toolStripSetting','SETUP','Mainform : Setiup','Mainform');
+(196,'toolStripSetting','SETUP','Mainform : Setiup','Mainform'),
+(197,'newToolStripMenuItem','New','User : RightClick(New)','UserMainForm'),
+(198,'editToolStripMenuItem','Edit','User : RightClick(Edit)','UserMainForm'),
+(199,'refreshToolStripMenuItem','Refresh','User : RightClick(Refresh)','UserMainForm'),
+(200,'deleteToolStripMenuItem','Delete','User : RightClick(Delete)','UserMainForm'),
+(201,'btnAdd','ADD','User : Button ADD','UserMainForm'),
+(202,'btnEdit','EDIT','User : Button EDIT','UserMainForm'),
+(203,'btnDelete','DELETE','User : Button DELETE','UserMainForm'),
+(204,'newToolStripMenuItem','New','Resident : Right Click (NEW)','ResidentMainForm'),
+(205,'editToolStripMenuItem','Edit','Resident : Right Click (EDIT)','ResidentMainForm'),
+(206,'refreshToolStripMenuItem','Refresh','Resident : Right Click (REFRESH)','ResidentMainForm'),
+(207,'deleteToolStripMenuItem','Delete','Resident : Right Click (DELETE)','ResidentMainForm'),
+(208,'btnAdd','ADD','Resident : Button ADD','ResidentMainForm'),
+(209,'btnEdit','Edit','Resident : Button EDIT','ResidentMainForm'),
+(210,'btnDelete','Delete','Resident : Button DELETE','ResidentMainForm'),
+(211,'newToolStripMenuItem','New','Contraceptive : Right Click (NEW)','ContraceptiveMainForm'),
+(212,'editToolStripMenuItem','Edit','Contraceptive : Right Click (EDIT)','ContraceptiveMainForm'),
+(213,'refreshToolStripMenuItem','Refresh','Contraceptive : Right Click (REFRESH)','ContraceptiveMainForm'),
+(214,'deleteToolStripMenuItem','Delete','Contraceptive : Right Click (DELETE)','ContraceptiveMainForm'),
+(215,'btnAdd','Add','Contraceptive : Button ADD','ContraceptiveMainForm'),
+(216,'btnEdit','Edit','Contraceptive : Button EDIT','ContraceptiveMainform'),
+(217,'btnDelete','Delete','Contraceptive : Button DELETE','ContraceptiveMainForm'),
+(218,'newToolStripMenuItem','New','Garden : Right Click (NEW)','GardenMainForm'),
+(219,'editToolStripMenuItem','Edit','Garden : Right Click (EDIT)','GardenMainForm'),
+(220,'refreshToolStripMenuItem','Refresh','Garden : Right Click (REFRESH)','GardenMainForm'),
+(221,'deleteToolStripMenuItem','Delete','Garden : Right Click (DELETE)','GardenMainForm'),
+(222,'btnAdd','Add','Garden : Button ADD','GardenMainForm'),
+(223,'btnEdit','Edit','Garden : Button EDIT','GardenMainForm'),
+(224,'btnDelete','Delete','Garden : Button DELETE','GardenMainForm');
 
 /*Table structure for table `countries` */
 
