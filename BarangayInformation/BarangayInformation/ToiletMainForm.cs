@@ -28,7 +28,7 @@ namespace BarangayInformation
 
         public void loadData()
         {
-           T.tableData(grid, txtSearch.Text);
+           T.tableData(flx, txtSearch.Text);
         }
 
 
@@ -55,11 +55,11 @@ namespace BarangayInformation
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (grid.Rows.Count > 0)
+            if (flx.Rows.Count > 1)
             {
                 if (Box.QBox("Are you sure you want to delete this data?"))
                 {
-                    int id = Convert.ToInt32(grid.SelectedRows[0].Cells["toilet_id"].Value);
+                    int id = Convert.ToInt32(flx[flx.RowSel,"toilet_id"]);
                     T.delete(id);
                     Box.InfoBox("Data successfully deleted.");
                     loadData();
@@ -81,9 +81,9 @@ namespace BarangayInformation
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (grid.Rows.Count > 0)
+            if (flx.Rows.Count > 1)
             {
-                int id = Convert.ToInt32(grid.SelectedRows[0].Cells["toilet_id"].Value);
+                int id = Convert.ToInt32(flx[flx.RowSel, "toilet_id"]);
                 ToiletAddEditForm frm = new ToiletAddEditForm();
                 frm.id = id;
                 frm.ShowDialog();

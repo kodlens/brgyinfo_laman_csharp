@@ -8,6 +8,7 @@ using MySql.Data.MySqlClient;
 //add also the System.windows.forms so we can use DataGridView Object
 using System.Windows.Forms;
 using System.Data;
+using C1.Win.C1FlexGrid;
 
 namespace BarangayInformation
 {
@@ -72,7 +73,7 @@ namespace BarangayInformation
         }
 
         //by calling the System.Windows.Form, we can use the DataGridView Object here
-        public void tableData(DataGridView grid, string key)
+        public void tableData(C1FlexGrid grid, string key)
         {
             con = Connection.con();
             con.Open();

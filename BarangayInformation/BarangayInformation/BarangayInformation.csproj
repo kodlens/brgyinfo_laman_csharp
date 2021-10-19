@@ -402,5 +402,8 @@
   <ItemGroup>
     <None Include="Resources\Control-Panel-icon64x64.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brgy_laman.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

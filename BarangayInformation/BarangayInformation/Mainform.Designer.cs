@@ -79,7 +79,7 @@ namespace BarangayInformation
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(2, 5, 5, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1217, 91);
+            this.toolStrip1.Size = new System.Drawing.Size(1115, 91);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -267,6 +267,7 @@ namespace BarangayInformation
             this.barangaysToolStripMenuItem.Name = "barangaysToolStripMenuItem";
             this.barangaysToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.barangaysToolStripMenuItem.Text = "Barangays";
+            this.barangaysToolStripMenuItem.Click += new System.EventHandler(this.barangaysToolStripMenuItem_Click);
             // 
             // toolStrip2
             // 
@@ -280,9 +281,9 @@ namespace BarangayInformation
             this.toolStripSeparator5,
             this.toolStripLabel1,
             this.toolStripLabelSystemTime});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 643);
+            this.toolStrip2.Location = new System.Drawing.Point(0, 594);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1217, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(1115, 25);
             this.toolStrip2.TabIndex = 1;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -344,7 +345,7 @@ namespace BarangayInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1217, 668);
+            this.ClientSize = new System.Drawing.Size(1115, 619);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Mainform";

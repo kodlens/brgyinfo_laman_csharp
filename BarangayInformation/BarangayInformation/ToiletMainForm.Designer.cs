@@ -30,10 +30,7 @@ namespace BarangayInformation
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.grid = new System.Windows.Forms.DataGridView();
-            this.toilet_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toilet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToiletMainForm));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,53 +44,10 @@ namespace BarangayInformation
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
+            this.flx = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.flx)).BeginInit();
             this.SuspendLayout();
-            // 
-            // grid
-            // 
-            this.grid.AllowUserToAddRows = false;
-            this.grid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.toilet_id,
-            this.toilet});
-            this.grid.ContextMenuStrip = this.contextMenuStrip1;
-            this.grid.Location = new System.Drawing.Point(9, 96);
-            this.grid.MultiSelect = false;
-            this.grid.Name = "grid";
-            this.grid.ReadOnly = true;
-            this.grid.RowHeadersWidth = 51;
-            this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid.Size = new System.Drawing.Size(436, 452);
-            this.grid.TabIndex = 16;
-            // 
-            // toilet_id
-            // 
-            this.toilet_id.DataPropertyName = "toilet_id";
-            this.toilet_id.HeaderText = "ID";
-            this.toilet_id.MinimumWidth = 6;
-            this.toilet_id.Name = "toilet_id";
-            this.toilet_id.ReadOnly = true;
-            this.toilet_id.Width = 80;
-            // 
-            // toilet
-            // 
-            this.toilet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.toilet.DataPropertyName = "toilet";
-            this.toilet.HeaderText = "Toilet";
-            this.toilet.MinimumWidth = 6;
-            this.toilet.Name = "toilet";
-            this.toilet.ReadOnly = true;
             // 
             // contextMenuStrip1
             // 
@@ -155,7 +109,7 @@ namespace BarangayInformation
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(6, 61);
+            this.txtSearch.Location = new System.Drawing.Point(12, 61);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(220, 20);
             this.txtSearch.TabIndex = 22;
@@ -233,12 +187,29 @@ namespace BarangayInformation
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // flx
+            // 
+            this.flx.AllowDragging = C1.Win.C1FlexGrid.AllowDraggingEnum.None;
+            this.flx.AllowEditing = false;
+            this.flx.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.FixedSingle;
+            this.flx.ColumnInfo = "3,1,0,0,0,95,Columns:1{Name:\"toilet_id\";Caption:\"ID\";}\t2{Name:\"toilet\";Caption:\"T" +
+    "oilet\";Style:\"\";StyleFixed:\"\";}\t";
+            this.flx.ContextMenuStrip = this.contextMenuStrip1;
+            this.flx.ExtendLastCol = true;
+            this.flx.Location = new System.Drawing.Point(13, 103);
+            this.flx.Name = "flx";
+            this.flx.Rows.DefaultSize = 19;
+            this.flx.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
+            this.flx.Size = new System.Drawing.Size(431, 445);
+            this.flx.StyleInfo = resources.GetString("flx.StyleInfo");
+            this.flx.TabIndex = 24;
+            // 
             // ToiletMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(456, 619);
-            this.Controls.Add(this.grid);
+            this.Controls.Add(this.flx);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -253,16 +224,14 @@ namespace BarangayInformation
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ToiletMainForm";
             this.Load += new System.EventHandler(this.ToiletMainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.flx)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView grid;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
@@ -276,7 +245,6 @@ namespace BarangayInformation
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn toilet_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn toilet;
+        private C1.Win.C1FlexGrid.C1FlexGrid flx;
     }
 }

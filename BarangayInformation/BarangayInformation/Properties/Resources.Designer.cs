@@ -73,6 +73,16 @@ namespace BarangayInformation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap brgy_laman {
+            get {
+                object obj = ResourceManager.GetObject("brgy_laman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Control_Panel_icon64x64 {
             get {
                 object obj = ResourceManager.GetObject("Control-Panel-icon64x64", resourceCulture);

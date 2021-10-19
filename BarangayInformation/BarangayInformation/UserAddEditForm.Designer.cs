@@ -94,7 +94,6 @@ namespace BarangayInformation
             // 
             // txtPwdConfirm
             // 
-            this.txtPwdConfirm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPwdConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPwdConfirm.Location = new System.Drawing.Point(100, 108);
             this.txtPwdConfirm.Name = "txtPwdConfirm";
@@ -124,7 +123,6 @@ namespace BarangayInformation
             // 
             // textUsername
             // 
-            this.textUsername.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textUsername.Location = new System.Drawing.Point(100, 42);
             this.textUsername.Name = "textUsername";
@@ -133,7 +131,6 @@ namespace BarangayInformation
             // 
             // txtPassword
             // 
-            this.txtPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(100, 76);
             this.txtPassword.Name = "txtPassword";

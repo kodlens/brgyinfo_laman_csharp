@@ -263,14 +263,49 @@ namespace BarangayInformation
 
         private void toiletToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(ToiletMainForm))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
             Form frm = new ToiletMainForm();
             frm.Show();
+
         }
 
         private void petToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(PetMainForm))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
             Form frm = new PetMainForm();
             frm.Show();
+        }
+
+        private void barangaysToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //foreach (Form form in Application.OpenForms)
+            //{
+            //    if (form.GetType() == typeof(BarangayInformation))
+            //    {
+            //        form.Activate();
+            //        return;
+            //    }
+            //}
+
+            //Form frm = new BarangayInformation();
+            //frm.Show();
         }
     }
 }
