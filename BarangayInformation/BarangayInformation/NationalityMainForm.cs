@@ -21,6 +21,10 @@ namespace BarangayInformation
             InitializeComponent();
 
             n = new Nationality();
+
+            int roleid = Properties.Settings.Default.role_id;
+            ControlHelper.SetupControlAccess(this, contextMenuStrip1, roleid);
+
         }
 
         public void loadData()

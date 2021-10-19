@@ -20,6 +20,9 @@ namespace BarangayInformation
         {
             InitializeComponent();
             c = new Country();
+
+            int roleid = Properties.Settings.Default.role_id;
+            ControlHelper.SetupControlAccess(this, contextMenuStrip1, roleid);
         }
 
         public void loadData()

@@ -20,6 +20,10 @@ namespace BarangayInformation
         {
             InitializeComponent();
             g = new Garden();
+
+            int roleid = Properties.Settings.Default.role_id;
+            ControlHelper.SetupControlAccess(this, contextMenuStrip1, roleid);
+
         }
 
         public void loadData()

@@ -20,6 +20,9 @@ namespace BarangayInformation
         {
             InitializeComponent();
             C = new Contraceptives();
+
+            int roleid = Properties.Settings.Default.role_id;
+            ControlHelper.SetupControlAccess(this, contextMenuStrip1, roleid);
         }
         public void loadData()
         {
