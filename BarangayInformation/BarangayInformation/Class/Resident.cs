@@ -31,7 +31,7 @@ namespace BarangayInformation.Class
         public string nationality { set; get; }
         public string employment_status { set; get; }
         public string occupation { set; get; }
-        public double annual_income { set; get; }
+        public decimal annual_income { set; get; }
         public string year_residence { set; get; }
         public string bdate { set; get; }
         public string place_of_birth { set; get; }
@@ -210,7 +210,7 @@ namespace BarangayInformation.Class
                         cmd.Parameters.AddWithValue("?pet", Convert.ToString(flxPet[row, "pet"]));
                         cmd.Parameters.AddWithValue("?npet", Convert.ToString(flxPet[row, "no_pet"]));
                         int res_pet_id = Convert.ToInt32(cmd.ExecuteScalar());
-
+                        flxPet[row, "resident_pet_id"] = res_pet_id;
                         cmd.Parameters.Clear();
                     }
                     cmd.Dispose();
@@ -415,6 +415,79 @@ namespace BarangayInformation.Class
 
 
 
+            //PET Save and Edit
+            if (flxPet.Rows.Count > 1)
+            {
+                int res_pet_id = 0;
+                cmd = new MySqlCommand(query, con);
+                for (int row = 1; row <= flxPet.Rows.Count - 2; row++)
+                {
+                    string resN = Convert.ToString(flxPet[row, "resident_pet_id"]);
+                    //Box.InfoBox(resN);
+                    if (String.IsNullOrEmpty(resN))
+                    {
+                        //insert
+                        query = @"INSERT INTO resident_pets SET resident_id = ?resid, pet=?pet, no_pet=?no_pet; SELECT LAST_INSERT_ID();";
+                        cmd = new MySqlCommand(query, con);
+                        cmd.Parameters.AddWithValue("?resid", id);
+                        cmd.Parameters.AddWithValue("?pet", Convert.ToString(flxPet[row, "pet"]));
+                        cmd.Parameters.AddWithValue("?no_pet", Convert.ToString(flxPet[row, "no_pet"]));
+                       
+                        res_pet_id = Convert.ToInt32(cmd.ExecuteScalar());
+                        cmd.Parameters.Clear();
+
+                        //after insert add in array list
+                        flxPet[row, "resident_pet_id"] = res_pet_id;
+                        res_pets_ids.Add(res_pet_id);
+                    }
+                    else
+                    {
+                        //update
+                        //save id in array
+                        res_pet_id = Convert.ToInt32(flxPet[row, "resident_pet_id"]);
+                        res_pets_ids.Add(res_pet_id);
+
+                        query = @"UPDATE resident_pets SET resident_id = ?resid, pet=?pet, no_pet=?no_pet WHERE resident_pet_id = ?id";
+                        cmd = new MySqlCommand(query, con);
+                        cmd.Parameters.AddWithValue("?resid", id);
+                        cmd.Parameters.AddWithValue("?pet", Convert.ToString(flxPet[row, "pet"]));
+                        cmd.Parameters.AddWithValue("?no_pet", Convert.ToString(flxPet[row, "no_pet"]));
+                        cmd.Parameters.AddWithValue("?id", resN);
+                        cmd.ExecuteNonQuery();
+                        cmd.Parameters.Clear();
+                    }
+
+                }
+                cmd.Dispose();
+            }//if row greater than 0
+
+            //delete pet if there is missing
+            //get all ids from databse and compare to dgrid ids
+            query = "SELECT * FROM resident_pets WHERE resident_id = @res_id";
+            cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@res_id", id);
+            //MySqlDataReader dr;
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                res_pets_ids_database.Add(Convert.ToInt32(dr["resident_pet_id"]));
+            }
+            dr.Close();
+            cmd.Dispose();
+
+            foreach (int item in res_pets_ids_database)
+            {
+                if (!res_pets_ids.Contains(item))
+                {
+                    cmd = new MySqlCommand("DELETE FROM resident_pets WHERE resident_pet_id = @res_pet_id", con);
+                    cmd.Parameters.AddWithValue("@res_pet_id", item);
+                    cmd.ExecuteNonQuery();
+                    cmd.Dispose();
+                }
+            }
+
+
+
             return i;
         }
 
@@ -474,6 +547,58 @@ namespace BarangayInformation.Class
             adprtr.Dispose();
             cmd.Dispose();
 
+            if(dt.Rows.Count > 0)
+            {
+                //personal info
+                fname = Convert.ToString(dt.Rows[0]["fname"]);
+                lname = Convert.ToString(dt.Rows[0]["lname"]);
+                mname = Convert.ToString(dt.Rows[0]["mname"]);
+                suffix = Convert.ToString(dt.Rows[0]["suffix"]);
+                civil_status = Convert.ToString(dt.Rows[0]["civil_status"]);
+                religion = Convert.ToString(dt.Rows[0]["religion"]);
+                nationality = Convert.ToString(dt.Rows[0]["nationality"]);
+                employment_status = Convert.ToString(dt.Rows[0]["employment_status"]);
+                occupation = Convert.ToString(dt.Rows[0]["occupation"]);
+                annual_income = Convert.ToDecimal(dt.Rows[0]["annual_income"]);
+                year_residence = Convert.ToString(dt.Rows[0]["year_residence"]);
+
+                //bdate information
+                bdate = Convert.ToString(dt.Rows[0]["bdate"]);
+                place_of_birth = Convert.ToString(dt.Rows[0]["place_of_birth"]);
+
+                //contact info
+                contact_no = Convert.ToString(dt.Rows[0]["contact_no"]);
+                email = Convert.ToString(dt.Rows[0]["email"]);
+                type_valid_id = Convert.ToString(dt.Rows[0]["type_valid_id"]);
+                id_no = Convert.ToString(dt.Rows[0]["id_no"]);
+
+                //addree present
+                present_country = Convert.ToString(dt.Rows[0]["present_country"]);
+                present_province = Convert.ToString(dt.Rows[0]["present_province"]);
+                present_city = Convert.ToString(dt.Rows[0]["present_city"]);
+                present_barangay = Convert.ToString(dt.Rows[0]["present_barangay"]);
+                present_street = Convert.ToString(dt.Rows[0]["present_street"]);
+                //address permanent
+                permanent_country = Convert.ToString(dt.Rows[0]["permanent_country"]);
+                permanent_province = Convert.ToString(dt.Rows[0]["permanent_province"]);
+                permanent_city = Convert.ToString(dt.Rows[0]["permanent_city"]);
+                permanent_barangay = Convert.ToString(dt.Rows[0]["permanent_barangay"]);
+                permanent_street = Convert.ToString(dt.Rows[0]["permanent_street"]);
+
+                //voter status
+                is_voter = Convert.ToSByte(dt.Rows[0]["is_voter"]);
+                voter_type = Convert.ToString(dt.Rows[0]["voter_type"]);
+                is_sk = Convert.ToSByte(dt.Rows[0]["is_sk"]);
+                place_registration = Convert.ToString(dt.Rows[0]["place_registration"]);
+
+                //Other info
+                water_source = Convert.ToString(dt.Rows[0]["water_source"]);
+                toilet = Convert.ToString(dt.Rows[0]["toilet"]);
+                garden = Convert.ToString(dt.Rows[0]["garden"]);
+                contraceptive = Convert.ToString(dt.Rows[0]["contraceptive"]);
+
+            }
+
             query = "SELECT * FROM resident_siblings WHERE resident_id = ?id";
             cmd = new MySqlCommand(query, con);
             cmd.Parameters.AddWithValue("?id", id);
@@ -484,15 +609,16 @@ namespace BarangayInformation.Class
             //'Box.InfoBox(dtSIblings.Rows.Count)
             flxSibling.AutoGenerateColumns = false;
             //flxSibling.DataSource = dtSIblings;
-            for(int row = 1; row <= flxSibling.Rows.Count - 2; row++)
+            
+            for(int row = 0; row < dtSIblings.Rows.Count; row++)
             {
-                flxSibling[row, "resident_sibling_id"] = Convert.ToInt32(dt.Rows[row - 1]["resident_sibling_id"]);
-                flxSibling[row, "lname"] = Convert.ToString(dt.Rows[row - 1]["lname"]);
-                flxSibling[row, "fname"] = Convert.ToString(dt.Rows[row - 1]["fname"]);
-                flxSibling[row, "mname"] = Convert.ToString(dt.Rows[row - 1]["mname"]);
-                flxSibling[row, "suffix"] = Convert.ToString(dt.Rows[row - 1]["suffix"]);
-                flxSibling[row, "sex"] = Convert.ToString(dt.Rows[row - 1]["sex"]);
-
+                flxSibling.Rows.Add();
+                flxSibling[row + 1, "resident_sibling_id"] = Convert.ToInt32(dtSIblings.Rows[row]["resident_sibling_id"]);
+                flxSibling[row + 1, "lname"] = Convert.ToString(dtSIblings.Rows[row]["lname"]);
+                flxSibling[row + 1, "fname"] = Convert.ToString(dtSIblings.Rows[row]["fname"]);
+                flxSibling[row + 1, "mname"] = Convert.ToString(dtSIblings.Rows[row]["mname"]);
+                flxSibling[row + 1, "suffix"] = Convert.ToString(dtSIblings.Rows[row]["suffix"]);
+                flxSibling[row + 1, "sex"] = Convert.ToString(dtSIblings.Rows[row]["sex"]);
             }
 
             adprtr.Dispose();

@@ -54,7 +54,7 @@ namespace BarangayInformation
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ResidentAddEditForm frm = new ResidentAddEditForm();
+            ResidentAddEditForm frm = new ResidentAddEditForm(this);
             frm.resident_id = 0;
             frm.ShowDialog();
         }
@@ -72,13 +72,32 @@ namespace BarangayInformation
             if(this.flx.Rows.Count > 1)
             {
                 int id = Convert.ToInt32(flx[flx.RowSel, "resident_id"]);
-                ResidentAddEditForm frm = new ResidentAddEditForm();
+                ResidentAddEditForm frm = new ResidentAddEditForm(this);
                 frm.resident_id = id;
                 frm.ShowDialog();
             }
             else
             {
                 Box.ErrBox("No data found.");
+            }
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadData();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(flx.Rows.Count > 1)
+            {
+                int id = Convert.ToInt32(flx[flx.RowSel, "resident_id"]);
+                if(Box.QBox("Are you sure you want to delete this data?"))
+                {
+                    resident.delete(id);
+                    Box.InfoBox("Successfully deleted.");
+                    loadData();
+                }
             }
         }
     }

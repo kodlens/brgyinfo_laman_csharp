@@ -119,5 +119,23 @@ namespace BarangayInformation.Class
                 this.religion = Convert.ToString(dt.Rows[0]["religion"]);
             }
         }
+
+        public void fillCmbReligion(MySqlConnection con, ComboBox cmb)
+        {
+            cmb.Items.Clear();
+            string n = "select * from religions order by religion asc";
+            cmd = new MySqlCommand(n, con);
+            MySqlDataReader dr;
+            dr = cmd.ExecuteReader();
+
+            //'subject for refactoring;
+            while (dr.Read())
+            {
+                cmb.Items.Add(Convert.ToString(dr["religion"]));
+            }
+
+            dr.Dispose();
+            cmd.Dispose();
+        }
     }
 }

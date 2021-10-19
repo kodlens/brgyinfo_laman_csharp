@@ -121,5 +121,25 @@ namespace BarangayInformation.Class
                 this.nationality = Convert.ToString(dt.Rows[0]["nationality"]);
             }
         }
+
+        public void fillCmb(MySqlConnection con, ComboBox cmb)
+        {
+            cmb.Items.Clear();
+            string n = "select * from nationalities order by nationality asc";
+            cmd = new MySqlCommand(n, con);
+            MySqlDataReader dr;
+            dr = cmd.ExecuteReader();
+
+            //'subject for refactoring;
+            while (dr.Read())
+            {
+                cmb.Items.Add(Convert.ToString(dr["nationality"]));
+            }
+            dr.Dispose();
+            cmd.Dispose();
+        }
+
+
+
     }
 }

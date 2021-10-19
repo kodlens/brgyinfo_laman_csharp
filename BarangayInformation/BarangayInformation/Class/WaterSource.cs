@@ -119,5 +119,26 @@ namespace BarangayInformation
                 this.water_source = Convert.ToString(dt.Rows[0]["water_source"]);
             }
         }
+
+
+        public void fillCmb(MySqlConnection con, ComboBox cmb)
+        {
+            cmb.Items.Clear();
+            string n = "select * from water_sources order by water_source asc";
+            cmd = new MySqlCommand(n, con);
+            MySqlDataReader dr;
+            dr = cmd.ExecuteReader();
+
+            //'subject for refactoring;
+            while (dr.Read())
+            {
+                cmb.Items.Add(Convert.ToString(dr["water_source"]));
+            }
+
+            dr.Dispose();
+            cmd.Dispose();
+        }
+
+
     }
 }

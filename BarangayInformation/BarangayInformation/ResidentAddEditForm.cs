@@ -21,18 +21,32 @@ namespace BarangayInformation
         MySqlConnection con;
         DAddress address;
 
+        Religion rel;
+        Nationality nat;
+        WaterSource ws;
+        Garden garden;
+        Contraceptives contra;
+
+        ResidentMainForm _frm;
+
         Resident res;
 
         public int resident_id;
-        int returnId = 0;
+        //int returnId = 0;
 
-        public ResidentAddEditForm()
+        public ResidentAddEditForm(ResidentMainForm _frm)
         {
             InitializeComponent();
 
+            this._frm = _frm;
             //instantiate DAddress
             address = new DAddress();
             res = new Resident();
+            rel = new Religion();
+            nat = new Nationality();
+            ws = new WaterSource();
+            garden = new Garden();
+            contra = new Contraceptives();
         }
 
         private void btnDebug_Click(object sender, EventArgs e)
@@ -46,8 +60,9 @@ namespace BarangayInformation
             cmbReligion.Text = "Bible Baptist Church";
             cmbNationality.Text = "FILIPINO";
             cmbEmploymentStatus.Text = "EMPLOYED";
-            txtOccupation.Text = "IT PROGRAMMER";
-            txtAnnualIncome.Text = "11000";
+            txtAnnualIncome.Text = "IT PROGRAMMER";
+            txtOccupation.Text = "FARMER";
+            txtAnnualIncome.Value = 12000;
             txtYearResidency.Text = "1 YEAR";
             txtPlaceBirth.Text = "BAROY, LANAO DEL NORTE";
 
@@ -102,14 +117,23 @@ namespace BarangayInformation
             this.flxSibling[3, 8] = "20/08/1990";
             this.flxSibling[3, 9] = false;
 
+            //add pet
+            this.flxPet.Rows.Add();
+            this.flxPet[1, 1] = null;
+            this.flxPet[1, 2] = "DOG";
+            this.flxPet[1, 3] = 2;
 
-            //this.flxSibling[null, "JAY AR", "B", "DOCOY", "MALE", "MARRIED", "04/08/2020", true);
+            this.flxPet.Rows.Add();
+            this.flxPet[2, 1] = null;
+            this.flxPet[2, 2] = "CAT";
+            this.flxPet[2, 3] = 1;
 
-            //this.gridSibling.Rows.Add( null, "JUNREY", "M", "SANTARITA", "MALE", "MARRIED", "24/05/1995", false);
+            this.flxPet.Rows.Add();
+            this.flxPet[3, 1] = null;
+            this.flxPet[3, 2] = "PIG";
+            this.flxPet[3, 3] = 3;
 
-            //this.gridSibling.Rows.Add( null, "ALBERT", "B", "ALIA", "MALE", "SINGLE", "20/08/1990", true);
 
-            //this.gridSibling.Rows.Add( null, "JADE ANN", "C", "FLORIZA", "FEMALE", "SINGLE", "16/10/1993", false);
         }
 
         private void btnNext1_Click(object sender, EventArgs e)
@@ -123,18 +147,71 @@ namespace BarangayInformation
             //1 open connection for all
 
             rbMember.Checked = true;
+            
 
+            //load data from database to combobox
             con = Connection.con();
             con.Open();
             address.country(con, this.cmbPresentCountry);
             address.country(con, this.cmbPermanentCountry);
+            rel.fillCmbReligion(con, cmbReligion);
+            nat.fillCmb(con, cmbNationality);
+            ws.fillCmb(con, cmbWaterSource);
+            garden.fillCmb(con, cmbGarden);
+            contra.fillCmb(con, cmbContraceptive);
             con.Close();
             con.Dispose();
+            //=================================
 
+
+            //if have resident value, edit mode
             if(resident_id > 0)
             {
-                res.getData(resident_id, flxSibling, flxPet);
+                getData();
             }
+        }
+
+        void getData()
+        {
+            res.getData(resident_id, flxSibling, flxPet);
+            txtLastname.Text = res.lname;
+            txtFirstname.Text = res.fname;
+            txtMiddlename.Text = res.mname;
+            txtSuffix.Text = res.suffix;
+            cmbSex.Text = res.sex;
+            cmbCivilStatus.Text = res.civil_status;
+            cmbReligion.Text = res.religion;
+            cmbNationality.Text = res.nationality;
+            cmbEmploymentStatus.Text = res.employment_status;
+            txtOccupation.Text = Convert.ToString(res.occupation);
+            txtAnnualIncome.Value = Convert.ToDecimal(res.annual_income);
+            txtYearResidency.Text = res.year_residence;
+
+            //primary contact inof
+            dtBdate.Value = Convert.ToDateTime(res.bdate);
+            txtPlaceBirth.Text = res.place_of_birth;
+            txtContactNumber.Text = res.contact_no;
+            txtEmailAddress.Text = res.email;
+            txtValidID.Text = res.type_valid_id;
+            txtIDNumber.Text = res.id_no;
+
+            //addresses present
+            cmbPresentCountry.Text = res.present_country;
+            cmbPresentProvince.Text = res.present_province;
+            cmbPresentCity.Text = res.present_city;
+            cmbPresentBarangay.Text = res.present_barangay;
+            txtPresentStreet.Text = res.present_street;
+            //addresses permament
+            cmbPermanentCountry.Text = res.permanent_country;
+            cmbPermanentProvince.Text = res.permanent_province;
+            cmbPermanentCity.Text = res.permanent_city;
+            cmbPermanentBarangay.Text = res.permanent_barangay;
+            txtPermanentStreet.Text = res.permanent_street;
+            //voter status
+            cmbIsVoter.Text = res.is_voter == 1 ? "YES" : "NO";
+            cmbVoterType.Text = res.voter_type;
+            cmbIsSK.Text = res.is_sk == 1 ? "YES" : "NO";
+            txtPlaceReg.Text = res.place_registration;
         }
 
         private void tbnNext2_Click(object sender, EventArgs e)
@@ -261,7 +338,7 @@ namespace BarangayInformation
             res.nationality = this.cmbNationality.Text;
             res.employment_status = this.cmbEmploymentStatus.Text;
             res.occupation = this.txtOccupation.Text;
-            res.annual_income = Convert.ToDouble(this.txtAnnualIncome.Text);
+            res.annual_income = this.txtAnnualIncome.Value;
             res.year_residence = this.txtYearResidency.Text;
             res.bdate = this.dtBdate.Value.ToString("yyyy-MM-dd");
             res.place_of_birth = this.txtPlaceBirth.Text;
@@ -280,7 +357,7 @@ namespace BarangayInformation
             res.present_street = this.txtPresentStreet.Text;
 
             //'PERMANENT ADDRESS
-            res.present_country = this.cmbPermanentCountry.Text;
+            res.permanent_country = this.cmbPermanentCountry.Text;
             res.permanent_province = this.cmbPermanentProvince.Text;
             res.permanent_city = this.cmbPermanentCity.Text;
             res.permanent_barangay = this.cmbPermanentBarangay.Text;
@@ -307,24 +384,23 @@ namespace BarangayInformation
             res.is_death_aid = this.cmbIsDeathMember.Text == "YES" ? (short)1 : (short)0;
 
                
-            if(returnId > 0)
+            if(resident_id > 0)
             {
-                res.update(returnId, flxSibling, flxPet);
+                res.update(resident_id, flxSibling, flxPet);
                 Box.InfoBox("Successfully update!");
             }
             else
             {
-                returnId = res.save(this.flxSibling, this.flxPet);
-                txtResidentId.Text = "RES-" + returnId.ToString("000000");
+                resident_id = res.save(this.flxSibling, this.flxPet);
+                txtResidentId.Text = "RES-" + resident_id.ToString("000000");
                 Box.InfoBox("Successfully saved!");
-
-               
             }
+            _frm.loadData();
         }
 
         private void clear()
         {
-            returnId = 0;
+            resident_id = 0;
             txtResidentId.Text = "";
             txtLastname.Text = "";
             txtFirstname.Text = "";
@@ -335,8 +411,8 @@ namespace BarangayInformation
             cmbReligion.SelectedIndex = -1;
             cmbNationality.SelectedIndex = -1;
             cmbEmploymentStatus.SelectedIndex = -1;
-            txtOccupation.Text = "";
             txtAnnualIncome.Text = "";
+            txtOccupation.Text = "";
             txtYearResidency.Text = "";
             txtPlaceBirth.Text = "";
 

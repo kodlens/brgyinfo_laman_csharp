@@ -119,5 +119,27 @@ namespace BarangayInformation.Class
                 this.garden = Convert.ToString(dt.Rows[0]["garden"]);
             }
         }
+
+
+        public void fillCmb(MySqlConnection con, ComboBox cmb)
+        {
+            cmb.Items.Clear();
+            string n = "select * from gardens order by garden asc";
+            cmd = new MySqlCommand(n, con);
+            MySqlDataReader dr;
+            dr = cmd.ExecuteReader();
+
+            //'subject for refactoring;
+            while (dr.Read())
+            {
+                cmb.Items.Add(Convert.ToString(dr["garden"]));
+            }
+
+            dr.Dispose();
+            cmd.Dispose();
+        }
+
+
+
     }
 }

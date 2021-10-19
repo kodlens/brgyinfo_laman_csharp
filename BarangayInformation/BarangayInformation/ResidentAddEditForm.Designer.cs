@@ -40,6 +40,7 @@ namespace BarangayInformation
             this.Label34 = new System.Windows.Forms.Label();
             this.Label35 = new System.Windows.Forms.Label();
             this.tabFamilyMembers = new System.Windows.Forms.TabPage();
+            this.flxSibling = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.btnBack3 = new System.Windows.Forms.Button();
             this.btnNext3 = new System.Windows.Forms.Button();
             this.txtIfNotWhy = new System.Windows.Forms.TextBox();
@@ -71,11 +72,12 @@ namespace BarangayInformation
             this.btnSave = new System.Windows.Forms.Button();
             this.cmbPermanentProvince = new System.Windows.Forms.ComboBox();
             this.GroupBox10 = new System.Windows.Forms.GroupBox();
+            this.flxPet = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.tabAdditionalInformation = new System.Windows.Forms.TabPage();
             this.btnNext4 = new System.Windows.Forms.Button();
             this.btnBack4 = new System.Windows.Forms.Button();
             this.Label36 = new System.Windows.Forms.Label();
-            this.txtAnnualIncome = new System.Windows.Forms.TextBox();
+            this.txtOccupation = new System.Windows.Forms.TextBox();
             this.Label50 = new System.Windows.Forms.Label();
             this.cmbReligion = new System.Windows.Forms.ComboBox();
             this.cmbSex = new System.Windows.Forms.ComboBox();
@@ -97,15 +99,12 @@ namespace BarangayInformation
             this.Label49 = new System.Windows.Forms.Label();
             this.TextBox3 = new System.Windows.Forms.TextBox();
             this.GroupBox4 = new System.Windows.Forms.GroupBox();
-            this.Label52 = new System.Windows.Forms.Label();
-            this.txtAge = new System.Windows.Forms.TextBox();
             this.Label48 = new System.Windows.Forms.Label();
             this.txtPlaceBirth = new System.Windows.Forms.TextBox();
             this.dtBdate = new System.Windows.Forms.DateTimePicker();
             this.Label31 = new System.Windows.Forms.Label();
             this.txtLastname = new System.Windows.Forms.TextBox();
             this.Label24 = new System.Windows.Forms.Label();
-            this.txtOccupation = new System.Windows.Forms.TextBox();
             this.GroupBox6 = new System.Windows.Forms.GroupBox();
             this.Label28 = new System.Windows.Forms.Label();
             this.txtSuffix = new System.Windows.Forms.TextBox();
@@ -157,12 +156,13 @@ namespace BarangayInformation
             this.Label16 = new System.Windows.Forms.Label();
             this.Label13 = new System.Windows.Forms.Label();
             this.Label18 = new System.Windows.Forms.Label();
-            this.flxSibling = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.flxPet = new C1.Win.C1FlexGrid.C1FlexGrid();
+            this.txtAnnualIncome = new System.Windows.Forms.NumericUpDown();
             this.tabFamilyMembers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.flxSibling)).BeginInit();
             this.GroupBox9.SuspendLayout();
             this.tabSurvey.SuspendLayout();
             this.GroupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.flxPet)).BeginInit();
             this.tabAdditionalInformation.SuspendLayout();
             this.GroupBox7.SuspendLayout();
             this.GroupBox4.SuspendLayout();
@@ -174,8 +174,7 @@ namespace BarangayInformation
             this.GroupBox3.SuspendLayout();
             this.GroupBox2.SuspendLayout();
             this.GroupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.flxSibling)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flxPet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAnnualIncome)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbPermanentBarangay
@@ -279,6 +278,27 @@ namespace BarangayInformation
             this.tabFamilyMembers.TabIndex = 5;
             this.tabFamilyMembers.Text = "Family Members";
             this.tabFamilyMembers.UseVisualStyleBackColor = true;
+            // 
+            // flxSibling
+            // 
+            this.flxSibling.AllowAddNew = true;
+            this.flxSibling.AllowDelete = true;
+            this.flxSibling.AllowDragging = C1.Win.C1FlexGrid.AllowDraggingEnum.None;
+            this.flxSibling.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.FixedSingle;
+            this.flxSibling.ColumnInfo = resources.GetString("flxSibling.ColumnInfo");
+            this.flxSibling.ExtendLastCol = true;
+            this.flxSibling.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.flxSibling.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
+            this.flxSibling.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
+            this.flxSibling.Location = new System.Drawing.Point(11, 16);
+            this.flxSibling.Name = "flxSibling";
+            this.flxSibling.Rows.Count = 1;
+            this.flxSibling.Rows.DefaultSize = 24;
+            this.flxSibling.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
+            this.flxSibling.Size = new System.Drawing.Size(1103, 526);
+            this.flxSibling.StyleInfo = resources.GetString("flxSibling.StyleInfo");
+            this.flxSibling.TabIndex = 91;
+            this.flxSibling.SetupEditor += new C1.Win.C1FlexGrid.RowColEventHandler(this.flxSibling_SetupEditor);
             // 
             // btnBack3
             // 
@@ -663,7 +683,27 @@ namespace BarangayInformation
             this.GroupBox10.Size = new System.Drawing.Size(1128, 480);
             this.GroupBox10.TabIndex = 55;
             this.GroupBox10.TabStop = false;
-            this.GroupBox10.Text = "Personal Information";
+            this.GroupBox10.Text = "Other Information";
+            // 
+            // flxPet
+            // 
+            this.flxPet.AllowAddNew = true;
+            this.flxPet.AllowDelete = true;
+            this.flxPet.AllowDragging = C1.Win.C1FlexGrid.AllowDraggingEnum.None;
+            this.flxPet.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.FixedSingle;
+            this.flxPet.ColumnInfo = resources.GetString("flxPet.ColumnInfo");
+            this.flxPet.ExtendLastCol = true;
+            this.flxPet.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.flxPet.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
+            this.flxPet.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
+            this.flxPet.Location = new System.Drawing.Point(32, 175);
+            this.flxPet.Name = "flxPet";
+            this.flxPet.Rows.Count = 1;
+            this.flxPet.Rows.DefaultSize = 26;
+            this.flxPet.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
+            this.flxPet.Size = new System.Drawing.Size(423, 188);
+            this.flxPet.StyleInfo = resources.GetString("flxPet.StyleInfo");
+            this.flxPet.TabIndex = 92;
             // 
             // tabAdditionalInformation
             // 
@@ -728,14 +768,14 @@ namespace BarangayInformation
             this.Label36.TabIndex = 82;
             this.Label36.Text = "City/Municipality";
             // 
-            // txtAnnualIncome
+            // txtOccupation
             // 
-            this.txtAnnualIncome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtAnnualIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnnualIncome.Location = new System.Drawing.Point(547, 175);
-            this.txtAnnualIncome.Name = "txtAnnualIncome";
-            this.txtAnnualIncome.Size = new System.Drawing.Size(239, 24);
-            this.txtAnnualIncome.TabIndex = 10;
+            this.txtOccupation.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtOccupation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOccupation.Location = new System.Drawing.Point(547, 141);
+            this.txtOccupation.Name = "txtOccupation";
+            this.txtOccupation.Size = new System.Drawing.Size(239, 24);
+            this.txtOccupation.TabIndex = 10;
             // 
             // Label50
             // 
@@ -952,8 +992,6 @@ namespace BarangayInformation
             // 
             // GroupBox4
             // 
-            this.GroupBox4.Controls.Add(this.Label52);
-            this.GroupBox4.Controls.Add(this.txtAge);
             this.GroupBox4.Controls.Add(this.Label48);
             this.GroupBox4.Controls.Add(this.txtPlaceBirth);
             this.GroupBox4.Controls.Add(this.dtBdate);
@@ -965,26 +1003,6 @@ namespace BarangayInformation
             this.GroupBox4.TabIndex = 7;
             this.GroupBox4.TabStop = false;
             this.GroupBox4.Text = "Birth Information";
-            // 
-            // Label52
-            // 
-            this.Label52.AutoSize = true;
-            this.Label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label52.Location = new System.Drawing.Point(291, 40);
-            this.Label52.Name = "Label52";
-            this.Label52.Size = new System.Drawing.Size(33, 16);
-            this.Label52.TabIndex = 14;
-            this.Label52.Text = "Age";
-            // 
-            // txtAge
-            // 
-            this.txtAge.Enabled = false;
-            this.txtAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAge.Location = new System.Drawing.Point(330, 35);
-            this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(87, 24);
-            this.txtAge.TabIndex = 1;
-            this.txtAge.TabStop = false;
             // 
             // Label48
             // 
@@ -1008,8 +1026,9 @@ namespace BarangayInformation
             // dtBdate
             // 
             this.dtBdate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtBdate.CustomFormat = "yyyy-MM-dd";
             this.dtBdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtBdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtBdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtBdate.Location = new System.Drawing.Point(123, 36);
             this.dtBdate.Name = "dtBdate";
             this.dtBdate.Size = new System.Drawing.Size(140, 24);
@@ -1044,22 +1063,14 @@ namespace BarangayInformation
             this.Label24.TabIndex = 24;
             this.Label24.Text = "Sex";
             // 
-            // txtOccupation
-            // 
-            this.txtOccupation.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtOccupation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOccupation.Location = new System.Drawing.Point(547, 139);
-            this.txtOccupation.Name = "txtOccupation";
-            this.txtOccupation.Size = new System.Drawing.Size(239, 24);
-            this.txtOccupation.TabIndex = 9;
-            // 
             // GroupBox6
             // 
+            this.GroupBox6.Controls.Add(this.txtAnnualIncome);
             this.GroupBox6.Controls.Add(this.Label28);
             this.GroupBox6.Controls.Add(this.txtSuffix);
             this.GroupBox6.Controls.Add(this.txtYearResidency);
             this.GroupBox6.Controls.Add(this.Label53);
-            this.GroupBox6.Controls.Add(this.txtAnnualIncome);
+            this.GroupBox6.Controls.Add(this.txtOccupation);
             this.GroupBox6.Controls.Add(this.Label27);
             this.GroupBox6.Controls.Add(this.Label50);
             this.GroupBox6.Controls.Add(this.cmbReligion);
@@ -1074,7 +1085,6 @@ namespace BarangayInformation
             this.GroupBox6.Controls.Add(this.cmbCivilStatus);
             this.GroupBox6.Controls.Add(this.Label24);
             this.GroupBox6.Controls.Add(this.cmbNationality);
-            this.GroupBox6.Controls.Add(this.txtOccupation);
             this.GroupBox6.Controls.Add(this.Label29);
             this.GroupBox6.Controls.Add(this.Label30);
             this.GroupBox6.Controls.Add(this.cmbEmploymentStatus);
@@ -1684,44 +1694,18 @@ namespace BarangayInformation
             this.Label18.TabIndex = 37;
             this.Label18.Text = "Present Address";
             // 
-            // flxSibling
+            // txtAnnualIncome
             // 
-            this.flxSibling.AllowAddNew = true;
-            this.flxSibling.AllowDelete = true;
-            this.flxSibling.AllowDragging = C1.Win.C1FlexGrid.AllowDraggingEnum.None;
-            this.flxSibling.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.FixedSingle;
-            this.flxSibling.ColumnInfo = resources.GetString("flxSibling.ColumnInfo");
-            this.flxSibling.ExtendLastCol = true;
-            this.flxSibling.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
-            this.flxSibling.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
-            this.flxSibling.Location = new System.Drawing.Point(11, 16);
-            this.flxSibling.Name = "flxSibling";
-            this.flxSibling.Rows.Count = 1;
-            this.flxSibling.Rows.DefaultSize = 24;
-            this.flxSibling.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
-            this.flxSibling.Size = new System.Drawing.Size(1103, 383);
-            this.flxSibling.StyleInfo = resources.GetString("flxSibling.StyleInfo");
-            this.flxSibling.TabIndex = 91;
-            this.flxSibling.SetupEditor += new C1.Win.C1FlexGrid.RowColEventHandler(this.flxSibling_SetupEditor);
-            // 
-            // flxPet
-            // 
-            this.flxPet.AllowAddNew = true;
-            this.flxPet.AllowDelete = true;
-            this.flxPet.AllowDragging = C1.Win.C1FlexGrid.AllowDraggingEnum.None;
-            this.flxPet.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.FixedSingle;
-            this.flxPet.ColumnInfo = resources.GetString("flxPet.ColumnInfo");
-            this.flxPet.ExtendLastCol = true;
-            this.flxPet.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
-            this.flxPet.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
-            this.flxPet.Location = new System.Drawing.Point(32, 175);
-            this.flxPet.Name = "flxPet";
-            this.flxPet.Rows.Count = 1;
-            this.flxPet.Rows.DefaultSize = 26;
-            this.flxPet.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
-            this.flxPet.Size = new System.Drawing.Size(423, 188);
-            this.flxPet.StyleInfo = resources.GetString("flxPet.StyleInfo");
-            this.flxPet.TabIndex = 92;
+            this.txtAnnualIncome.Location = new System.Drawing.Point(547, 175);
+            this.txtAnnualIncome.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.txtAnnualIncome.Name = "txtAnnualIncome";
+            this.txtAnnualIncome.Size = new System.Drawing.Size(239, 27);
+            this.txtAnnualIncome.TabIndex = 43;
+            this.txtAnnualIncome.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // ResidentAddEditForm
             // 
@@ -1740,11 +1724,13 @@ namespace BarangayInformation
             this.Text = "ResidentMainForm";
             this.Load += new System.EventHandler(this.ResidentAddEditForm_Load);
             this.tabFamilyMembers.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.flxSibling)).EndInit();
             this.GroupBox9.ResumeLayout(false);
             this.GroupBox9.PerformLayout();
             this.tabSurvey.ResumeLayout(false);
             this.GroupBox10.ResumeLayout(false);
             this.GroupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.flxPet)).EndInit();
             this.tabAdditionalInformation.ResumeLayout(false);
             this.GroupBox7.ResumeLayout(false);
             this.GroupBox7.PerformLayout();
@@ -1763,8 +1749,7 @@ namespace BarangayInformation
             this.GroupBox2.PerformLayout();
             this.GroupBox8.ResumeLayout(false);
             this.GroupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.flxSibling)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flxPet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAnnualIncome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1815,7 +1800,7 @@ namespace BarangayInformation
         internal System.Windows.Forms.GroupBox GroupBox10;
         internal System.Windows.Forms.TabPage tabAdditionalInformation;
         internal System.Windows.Forms.Label Label36;
-        internal System.Windows.Forms.TextBox txtAnnualIncome;
+        internal System.Windows.Forms.TextBox txtOccupation;
         internal System.Windows.Forms.Label Label50;
         internal System.Windows.Forms.ComboBox cmbReligion;
         internal System.Windows.Forms.ComboBox cmbSex;
@@ -1837,15 +1822,12 @@ namespace BarangayInformation
         internal System.Windows.Forms.Label Label49;
         internal System.Windows.Forms.TextBox TextBox3;
         internal System.Windows.Forms.GroupBox GroupBox4;
-        internal System.Windows.Forms.Label Label52;
-        internal System.Windows.Forms.TextBox txtAge;
         internal System.Windows.Forms.Label Label48;
         internal System.Windows.Forms.TextBox txtPlaceBirth;
         internal System.Windows.Forms.DateTimePicker dtBdate;
         internal System.Windows.Forms.Label Label31;
         internal System.Windows.Forms.TextBox txtLastname;
         internal System.Windows.Forms.Label Label24;
-        internal System.Windows.Forms.TextBox txtOccupation;
         internal System.Windows.Forms.GroupBox GroupBox6;
         internal System.Windows.Forms.Label Label28;
         internal System.Windows.Forms.TextBox txtSuffix;
@@ -1899,5 +1881,6 @@ namespace BarangayInformation
         internal System.Windows.Forms.Button btnNext1;
         private C1.Win.C1FlexGrid.C1FlexGrid flxSibling;
         private C1.Win.C1FlexGrid.C1FlexGrid flxPet;
+        private System.Windows.Forms.NumericUpDown txtAnnualIncome;
     }
 }

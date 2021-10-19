@@ -117,6 +117,24 @@ namespace BarangayInformation.Class
             }
         }
 
+        public void fillCmb(MySqlConnection con, ComboBox cmb)
+        {
+            cmb.Items.Clear();
+            string n = "select * from contraceptives order by contraceptive asc";
+            cmd = new MySqlCommand(n, con);
+            MySqlDataReader dr;
+            dr = cmd.ExecuteReader();
+
+            //'subject for refactoring;
+            while (dr.Read())
+            {
+                cmb.Items.Add(Convert.ToString(dr["contraceptive"]));
+            }
+
+            dr.Dispose();
+            cmd.Dispose();
+        }
+
     }
     
 }
