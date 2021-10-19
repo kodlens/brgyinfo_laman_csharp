@@ -29,7 +29,7 @@ CREATE TABLE `access_levels` (
   KEY `controlsID` (`control_id`),
   CONSTRAINT `access_levels_ibfk_1` FOREIGN KEY (`control_id`) REFERENCES `controls` (`control_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `access_levels_ibfk_2` FOREIGN KEY (`role_id`) REFERENCES `roles` (`role_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=391 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=392 DEFAULT CHARSET=latin1;
 
 /*Data for the table `access_levels` */
 
@@ -52,7 +52,8 @@ insert  into `access_levels`(`access_level_id`,`role_id`,`control_id`) values
 (387,1,192),
 (388,1,193),
 (389,1,194),
-(390,1,195);
+(390,1,195),
+(391,1,196);
 
 /*Table structure for table `barangays` */
 
@@ -43818,7 +43819,7 @@ CREATE TABLE `controls` (
   `description` text DEFAULT NULL,
   `class_name` varchar(255) DEFAULT '',
   PRIMARY KEY (`control_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=196 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=197 DEFAULT CHARSET=latin1;
 
 /*Data for the table `controls` */
 
@@ -43841,7 +43842,8 @@ insert  into `controls`(`control_id`,`control_name`,`control_text`,`description`
 (192,'provinceStripMenuItem','Provinces','Mainform : Address : Provinces','Mainform'),
 (193,'citiesToolStripMenuItem','Cities','Mainform : Address : Cities','Mainform'),
 (194,'barangaysToolStripMenuItem','Barangays','Mainform : Address : Barangays','Mainform'),
-(195,'toolStripButtonLogout','Logout','Mainform : Logout','Mainform');
+(195,'toolStripButtonLogout','Logout','Mainform : Logout','Mainform'),
+(196,'toolStripSetting','SETUP','Mainform : Setiup','Mainform');
 
 /*Table structure for table `countries` */
 
