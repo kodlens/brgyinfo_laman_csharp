@@ -263,7 +263,14 @@ namespace BarangayInformation
 
         private void toiletToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Form frm = new ToiletMainForm();
+            frm.Show();
+        }
 
+        private void petToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new PetMainForm();
+            frm.Show();
         }
     }
 }

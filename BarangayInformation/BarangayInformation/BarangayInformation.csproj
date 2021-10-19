@@ -172,6 +172,19 @@
     <Compile Include="NationalityMainForm.Designer.cs">
       <DependentUpon>NationalityMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\Pet.cs" />
+    <Compile Include="PetAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PetAddEditForm.Designer.cs">
+      <DependentUpon>PetAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PetMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PetMainForm.Designer.cs">
+      <DependentUpon>PetMainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Class\Religion.cs" />
@@ -214,6 +227,19 @@
       <DependentUpon>RoleMainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Role.cs" />
+    <Compile Include="Class\Toilet.cs" />
+    <Compile Include="ToiletAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToiletAddEditForm.Designer.cs">
+      <DependentUpon>ToiletAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToiletMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToiletMainForm.Designer.cs">
+      <DependentUpon>ToiletMainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserAddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +306,12 @@
     <EmbeddedResource Include="NationalityMainForm.resx">
       <DependentUpon>NationalityMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PetAddEditForm.resx">
+      <DependentUpon>PetAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PetMainForm.resx">
+      <DependentUpon>PetMainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -308,6 +340,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Access Control\RoleMainForm.resx">
       <DependentUpon>RoleMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToiletAddEditForm.resx">
+      <DependentUpon>ToiletAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToiletMainForm.resx">
+      <DependentUpon>ToiletMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserAddEditForm.resx">
       <DependentUpon>UserAddEditForm.cs</DependentUpon>
