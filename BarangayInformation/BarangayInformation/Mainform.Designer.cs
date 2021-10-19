@@ -189,6 +189,7 @@ namespace BarangayInformation
             this.petToolStripMenuItem.Name = "petToolStripMenuItem";
             this.petToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.petToolStripMenuItem.Text = "Pets";
+            this.petToolStripMenuItem.Click += new System.EventHandler(this.petToolStripMenuItem_Click);
             // 
             // toolStripSplitButtonAccessControl
             // 
