@@ -21,8 +21,6 @@ namespace BarangayInformation
             u = new User();
 
             ControlHelper.SetupControlAccess(this, contextMenuStrip1, Properties.Settings.Default.role_id);
-
-
         }
         public void loadData()
         {

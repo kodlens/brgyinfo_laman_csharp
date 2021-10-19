@@ -38,6 +38,7 @@ namespace BarangayInformation.Class
             }
 
             //for Menu toolstrip and dropdown
+            //DASHBOARD
             foreach (Control ctrl in frm.Controls)
             {
                 if (ctrl.GetType() == typeof(ToolStrip))
@@ -63,8 +64,6 @@ namespace BarangayInformation.Class
                             item.Visible = false;
                             //item.Visible = false;
                         }
-
-
                     }
                 }
             }
