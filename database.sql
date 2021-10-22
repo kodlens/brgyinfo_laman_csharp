@@ -29,7 +29,7 @@ CREATE TABLE `access_levels` (
   KEY `controlsID` (`control_id`),
   CONSTRAINT `access_levels_ibfk_1` FOREIGN KEY (`control_id`) REFERENCES `controls` (`control_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `access_levels_ibfk_2` FOREIGN KEY (`role_id`) REFERENCES `roles` (`role_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=412 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=440 DEFAULT CHARSET=latin1;
 
 /*Data for the table `access_levels` */
 
@@ -73,7 +73,35 @@ insert  into `access_levels`(`access_level_id`,`role_id`,`control_id`) values
 (408,1,213),
 (409,1,214),
 (410,1,215),
-(411,1,216);
+(411,1,216),
+(412,1,225),
+(413,1,226),
+(414,1,227),
+(415,1,228),
+(416,1,229),
+(417,1,230),
+(418,1,231),
+(419,13,182),
+(420,13,195),
+(421,13,204),
+(422,13,205),
+(423,13,206),
+(424,13,207),
+(425,13,208),
+(426,13,209),
+(427,13,210),
+(428,1,253),
+(429,1,254),
+(430,1,255),
+(431,1,256),
+(432,1,257),
+(433,1,258),
+(434,13,253),
+(435,13,254),
+(436,13,255),
+(437,13,256),
+(438,13,257),
+(439,13,258);
 
 /*Table structure for table `barangays` */
 
@@ -43816,14 +43844,14 @@ insert  into `civil_status`(`civil_status_id`,`civil_status`) values
 DROP TABLE IF EXISTS `contraceptives`;
 
 CREATE TABLE `contraceptives` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `contraceptive_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `contraceptive` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`contraceptive_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `contraceptives` */
 
-insert  into `contraceptives`(`id`,`contraceptive`) values 
+insert  into `contraceptives`(`contraceptive_id`,`contraceptive`) values 
 (1,'CONTRA 1'),
 (2,'CONTRA 2'),
 (3,'CONTRA 3');
@@ -43839,7 +43867,7 @@ CREATE TABLE `controls` (
   `description` text DEFAULT NULL,
   `class_name` varchar(255) DEFAULT '',
   PRIMARY KEY (`control_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=225 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=259 DEFAULT CHARSET=latin1;
 
 /*Data for the table `controls` */
 
@@ -43853,7 +43881,7 @@ insert  into `controls`(`control_id`,`control_name`,`control_text`,`description`
 (183,'toolStripSplitButtonAddress','Address','Mainform : ADDRESS','Mainform'),
 (184,'contraceptiveToolStripMenuItem','Contraceptives','Mainform : Setup : Contraceptives','Mainform'),
 (185,'gardenToolStripMenuItem','Gardens','Mainform : Seupt : Gardens','Mainform'),
-(186,'toiletToolStripMenuItem','Toilets','Mainform : Seupt : Toilets','Mainform'),
+(186,'toiletToolStripMenuItem','Toilets','Mainform : Setup : Toilets','Mainform'),
 (187,'waterSourceToolStripMenuItem','Water Sources','Mainform : Setup : Water Sourecs','Mainform'),
 (188,'nationalitiesToolStripMenuItem','Nationalities','Mainform : Setup : Nationalities','Mainform'),
 (189,'religionsToolStripMenuItem','Religions','Mainform : Setup : Religions','Mainform'),
@@ -43891,7 +43919,41 @@ insert  into `controls`(`control_id`,`control_name`,`control_text`,`description`
 (221,'deleteToolStripMenuItem','Delete','Garden : Right Click (DELETE)','GardenMainForm'),
 (222,'btnAdd','Add','Garden : Button ADD','GardenMainForm'),
 (223,'btnEdit','Edit','Garden : Button EDIT','GardenMainForm'),
-(224,'btnDelete','Delete','Garden : Button DELETE','GardenMainForm');
+(224,'btnDelete','Delete','Garden : Button DELETE','GardenMainForm'),
+(225,'newToolStripMenuItem','New','Water Sources: Right Click (NEW)','WaterSourceMainForm'),
+(226,'editToolStripMenuItem','Edit','Water Sources: Right Click (EDIT)','WaterSourceMainForm'),
+(227,'refreshToolStripMenuItem','Refresh','Water Sources: Right Click (REFRESH)','WaterSourceMainForm'),
+(228,'deleteToolStripMenuItem','Delete','Water Sources: Right Click (DELETE)','WaterSourceMainForm'),
+(229,'btnAdd','Add','Water Sources : Button ADD','WaterSourceMainForm'),
+(230,'btnEdit','Edit','Water Sources : Button EDIT','WaterSourceMainForm'),
+(231,'btnDelete','Delete','Water Sources : Button DELETE','WaterSourceMainForm'),
+(232,'newToolStripMenuItem','New','Nationalities : Right Click (NEW)','NationalityMainForm'),
+(233,'editToolStripMenuItem','Edit','Nationalities : Right Click (EDIT)','NationalityMainForm'),
+(234,'refreshToolStripMenuItem','Refresh','Nationalities : Right Click (REFRESH)','NationalityMainForm'),
+(235,'deleteToolStripMenuItem','Delete','Nationalities : Right Click (DELETE)','NationalityMainForm'),
+(236,'btnAdd','Add','Nationalities  : Button ADD','NationalityMainForm'),
+(237,'btnEdit','Edit','Nationalities  : Button EDIT','NationalityMainForm'),
+(238,'btnDelete','Delete','Nationalities  : Button DELETE','NationalityMainForm'),
+(239,'newToolStripMenuItem','New','Religion : Right Click (NEW)','ReligionMainForm'),
+(240,'editToolStripMenuItem','Edit','Religion : Right Click (EDIT)','ReligionMainForm'),
+(241,'refreshToolStripMenuItem','Refresh','Religion : Right Click (REFRESH)','ReligionMainForm'),
+(242,'deleteToolStripMenuItem','Delete','Religion : Right Click (DELETE)','ReligionMainForm'),
+(243,'btnAdd','Add','Religion : Button ADD','ReligionMainForm'),
+(244,'btnEdit','Edit','Religion : Button EDIT','ReligionMainForm'),
+(245,'btnDelete','Delete','Religion : Button DELETE','ReligionMainForm'),
+(246,'newToolStripMenuItem','New','Setup : Toilet Right Click(NEW)','ToiletMainForm'),
+(247,'editToolStripMenuItem','Edit','Setup : Toilet Right Click(EDIT)','ToiletMainForm'),
+(248,'refreshToolStripMenuItem','Refresh','Setup : Toilet Right Click(REFRESH)','ToiletMainForm'),
+(249,'deleteToolStripMenuItem','Delete','Setup : Toilet Right Click(DELETE)','ToiletMainForm'),
+(250,'btnAdd','Add','Setup : Toilet Button(ADD)','ToiletMainForm'),
+(251,'btnEdit','Edit','Setup : Toilet Button(EDIT)','ToiletMainForm'),
+(252,'btnDelete','Delete','Setup : Toilet Button(DELETE)','ToiletMainForm'),
+(253,'toolStripLabel2','Label User','System Display','MainForm'),
+(254,'toolStripLabelUser','User','System Display','MainForm'),
+(255,'toolStripLabel3','label role','System Display','MainForm'),
+(256,'toolStripLabelRole','Dsiplay Role','System Display','MainForm'),
+(257,'toolStripLabel1','date time label','System Display','MainForm'),
+(258,'toolStripLabelSystemTime','display date time','System Display','MainForm');
 
 /*Table structure for table `countries` */
 
@@ -44138,8 +44200,10 @@ CREATE TABLE `resident_pets` (
   `resident_id` bigint(20) unsigned NOT NULL,
   `pet` varchar(255) DEFAULT NULL,
   `no_pet` int(11) DEFAULT NULL,
-  PRIMARY KEY (`resident_pet_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  PRIMARY KEY (`resident_pet_id`),
+  KEY `resident_id` (`resident_id`),
+  CONSTRAINT `resident_pets_ibfk_1` FOREIGN KEY (`resident_id`) REFERENCES `residents` (`resident_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `resident_pets` */
 
@@ -44161,12 +44225,9 @@ CREATE TABLE `resident_siblings` (
   PRIMARY KEY (`resident_sibling_id`),
   KEY `resident_id` (`resident_id`),
   CONSTRAINT `resident_siblings_ibfk_1` FOREIGN KEY (`resident_id`) REFERENCES `residents` (`resident_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=115 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `resident_siblings` */
-
-insert  into `resident_siblings`(`resident_sibling_id`,`resident_id`,`lname`,`fname`,`mname`,`suffix`,`sex`,`civil_status`,`bdate`,`is_living_with_you`) values 
-(77,80,'SANTARITA','JUNREY S','M','','MALE','MARRIED','24/05/1995',0);
 
 /*Table structure for table `residents` */
 
@@ -44220,12 +44281,9 @@ CREATE TABLE `residents` (
   `if_not_why` text DEFAULT NULL,
   `is_death_aid` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`resident_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `residents` */
-
-insert  into `residents`(`resident_id`,`household_no`,`family_no`,`is_head`,`lname`,`fname`,`mname`,`suffix`,`sex`,`civil_status`,`religion`,`nationality`,`employment_status`,`occupation`,`annual_income`,`year_residence`,`bdate`,`place_of_birth`,`contact_no`,`email`,`type_valid_id`,`id_no`,`present_country`,`present_province`,`present_city`,`present_barangay`,`present_street`,`permanent_country`,`permanent_province`,`permanent_city`,`permanent_barangay`,`permanent_street`,`is_voter`,`voter_type`,`is_sk`,`place_registration`,`water_source`,`toilet`,`garden`,`contraceptive`,`have_complain`,`against_whom`,`is_settled`,`date_settled`,`if_not_why`,`is_death_aid`) values 
-(80,NULL,NULL,0,'AMPARADO','ETIENNE WAYNE','NAMOCATCAT','TEST','MALE','SINGLE','','','EMPLOYED','IT PROGRAMMER','11000','1 YEAR','2021-10-18','BAROY, LANAO DEL NORTE','09167789585','et@yahoo.com','DRIVER LICENSE','K09-1234-214','','MISAMIS OCCIDENTAL','TANGUB CITY','GARANG','P-SAMPLE LANG',NULL,'','','','',1,'OLD',0,'MALORO, TANGUB CITY','','','','',0,'',0,'','',0);
 
 /*Table structure for table `roles` */
 
@@ -44235,7 +44293,7 @@ CREATE TABLE `roles` (
   `role_id` int(11) NOT NULL AUTO_INCREMENT,
   `role` varchar(100) DEFAULT '',
   PRIMARY KEY (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
 
 /*Data for the table `roles` */
 
@@ -44249,14 +44307,14 @@ insert  into `roles`(`role_id`,`role`) values
 DROP TABLE IF EXISTS `toilets`;
 
 CREATE TABLE `toilets` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `toilet_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `toilet` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`toilet_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `toilets` */
 
-insert  into `toilets`(`id`,`toilet`) values 
+insert  into `toilets`(`toilet_id`,`toilet`) values 
 (1,'OWNED'),
 (2,'SHARED IN ONE HOUSE'),
 (3,'PUBLIC');
@@ -44280,12 +44338,13 @@ CREATE TABLE `users` (
   UNIQUE KEY `username` (`username`),
   KEY `role_id` (`role_id`),
   CONSTRAINT `users_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `roles` (`role_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `users` */
 
 insert  into `users`(`user_id`,`username`,`password`,`lname`,`fname`,`mname`,`sex`,`role_id`,`created_at`,`updated_at`) values 
-(2,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','AMPARADO','ETIENNE',NULL,'MALE',1,'2021-09-05 19:00:44','2021-10-17 06:36:59');
+(2,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','AMPARADO','ETIENNE',NULL,'MALE',1,'2021-09-05 19:00:44','2021-10-17 06:36:59'),
+(8,'sec','7110eda4d09e062aa5e4a390b0a572ac0d2c0220','SEC','SEC','SEC','FEMAILE',13,'2021-10-20 07:13:36',NULL);
 
 /*Table structure for table `water_sources` */
 
