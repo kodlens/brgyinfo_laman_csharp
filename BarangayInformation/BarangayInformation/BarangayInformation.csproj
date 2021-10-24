@@ -55,6 +55,15 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>D:\C#\AForge\AForge.NET Framework-2.2.5\Release\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>D:\C#\AForge\AForge.NET Framework-2.2.5\Release\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>D:\C#\AForge\AForge.NET Framework-2.2.5\Release\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
     <Reference Include="C1.Win.C1FlexGrid.4, Version=4.6.20141.822, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=8.0.26.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -89,6 +98,12 @@
     </Compile>
     <Compile Include="Access Control\ControlMainForm.Designer.cs">
       <DependentUpon>ControlMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AForge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AForge.Designer.cs">
+      <DependentUpon>AForge.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\ControlHelper.cs" />
     <Compile Include="Class\DAddress.cs" />
@@ -275,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Access Control\ControlMainForm.resx">
       <DependentUpon>ControlMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AForge.resx">
+      <DependentUpon>AForge.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContraceptiveAddEditForm.resx">
       <DependentUpon>ContraceptiveAddEditForm.cs</DependentUpon>

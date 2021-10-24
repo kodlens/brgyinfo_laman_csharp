@@ -63,6 +63,7 @@ namespace BarangayInformation
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabelSystemTime = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.aForgeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -197,7 +198,8 @@ namespace BarangayInformation
             this.toolStripSplitButtonAccessControl.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rolesToolStripMenuItem,
             this.toolStripMenuSetupControl,
-            this.accessLevelsToolStripMenuItem});
+            this.accessLevelsToolStripMenuItem,
+            this.aForgeToolStripMenuItem});
             this.toolStripSplitButtonAccessControl.Image = global::BarangayInformation.Properties.Resources.Control_Panel_icon64x64;
             this.toolStripSplitButtonAccessControl.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripSplitButtonAccessControl.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -209,21 +211,21 @@ namespace BarangayInformation
             // rolesToolStripMenuItem
             // 
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rolesToolStripMenuItem.Text = "Roles";
             this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click_1);
             // 
             // toolStripMenuSetupControl
             // 
             this.toolStripMenuSetupControl.Name = "toolStripMenuSetupControl";
-            this.toolStripMenuSetupControl.Size = new System.Drawing.Size(145, 22);
+            this.toolStripMenuSetupControl.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuSetupControl.Text = "Controls";
             this.toolStripMenuSetupControl.Click += new System.EventHandler(this.toolStripMenuSetupControl_Click);
             // 
             // accessLevelsToolStripMenuItem
             // 
             this.accessLevelsToolStripMenuItem.Name = "accessLevelsToolStripMenuItem";
-            this.accessLevelsToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.accessLevelsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.accessLevelsToolStripMenuItem.Text = "Access Levels";
             this.accessLevelsToolStripMenuItem.Click += new System.EventHandler(this.accessLevelsToolStripMenuItem_Click);
             // 
@@ -341,6 +343,13 @@ namespace BarangayInformation
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // aForgeToolStripMenuItem
+            // 
+            this.aForgeToolStripMenuItem.Name = "aForgeToolStripMenuItem";
+            this.aForgeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aForgeToolStripMenuItem.Text = "AForge";
+            this.aForgeToolStripMenuItem.Click += new System.EventHandler(this.aForgeToolStripMenuItem_Click);
+            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,6 +405,7 @@ namespace BarangayInformation
         private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contraceptiveToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem aForgeToolStripMenuItem;
     }
 }
 

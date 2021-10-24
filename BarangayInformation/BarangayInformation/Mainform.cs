@@ -307,5 +307,20 @@ namespace BarangayInformation
             //Form frm = new BarangayInformation();
             //frm.Show();
         }
+
+        private void aForgeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(AForge))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            Form frm = new AForge();
+            frm.Show();
+        }
     }
 }

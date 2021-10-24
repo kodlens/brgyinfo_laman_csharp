@@ -79,3 +79,10 @@ C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\Barangay
 C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.PetMainForm.resources
 C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.ToiletAddEditForm.resources
 C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.ToiletMainForm.resources
+C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\AForge.dll
+C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\AForge.Video.dll
+C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\AForge.xml
+C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\AForge.Video.xml
+C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\PC\Desktop\projects\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.AForge.resources
