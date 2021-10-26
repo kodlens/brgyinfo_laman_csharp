@@ -58,6 +58,10 @@
     <Reference Include="AForge">
       <HintPath>D:\C#\AForge\AForge.NET Framework-2.2.5\Release\AForge.dll</HintPath>
     </Reference>
+    <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Controls.dll</HintPath>
+    </Reference>
     <Reference Include="AForge.Video">
       <HintPath>D:\C#\AForge\AForge.NET Framework-2.2.5\Release\AForge.Video.dll</HintPath>
     </Reference>
@@ -98,12 +102,6 @@
     </Compile>
     <Compile Include="Access Control\ControlMainForm.Designer.cs">
       <DependentUpon>ControlMainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AForge.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AForge.Designer.cs">
-      <DependentUpon>AForge.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\ControlHelper.cs" />
     <Compile Include="Class\DAddress.cs" />
@@ -243,6 +241,12 @@
     </Compile>
     <Compile Include="Class\Role.cs" />
     <Compile Include="Class\Toilet.cs" />
+    <Compile Include="TakePicMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakePicMainform.Designer.cs">
+      <DependentUpon>TakePicMainform.cs</DependentUpon>
+    </Compile>
     <Compile Include="ToiletAddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,9 +294,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Access Control\ControlMainForm.resx">
       <DependentUpon>ControlMainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AForge.resx">
-      <DependentUpon>AForge.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContraceptiveAddEditForm.resx">
       <DependentUpon>ContraceptiveAddEditForm.cs</DependentUpon>
@@ -358,6 +359,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Access Control\RoleMainForm.resx">
       <DependentUpon>RoleMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakePicMainform.resx">
+      <DependentUpon>TakePicMainform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ToiletAddEditForm.resx">
       <DependentUpon>ToiletAddEditForm.cs</DependentUpon>

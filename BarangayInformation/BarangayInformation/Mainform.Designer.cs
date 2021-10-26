@@ -63,7 +63,6 @@ namespace BarangayInformation
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabelSystemTime = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.aForgeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -141,54 +140,54 @@ namespace BarangayInformation
             // contraceptiveToolStripMenuItem
             // 
             this.contraceptiveToolStripMenuItem.Name = "contraceptiveToolStripMenuItem";
-            this.contraceptiveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contraceptiveToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.contraceptiveToolStripMenuItem.Text = "Contraceptives";
             this.contraceptiveToolStripMenuItem.Click += new System.EventHandler(this.contraceptiveToolStripMenuItem_Click);
             // 
             // gardenToolStripMenuItem
             // 
             this.gardenToolStripMenuItem.Name = "gardenToolStripMenuItem";
-            this.gardenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gardenToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.gardenToolStripMenuItem.Text = "Gardens";
             this.gardenToolStripMenuItem.Click += new System.EventHandler(this.gardenToolStripMenuItem_Click);
             // 
             // toiletToolStripMenuItem
             // 
             this.toiletToolStripMenuItem.Name = "toiletToolStripMenuItem";
-            this.toiletToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.toiletToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.toiletToolStripMenuItem.Text = "Toilets";
             this.toiletToolStripMenuItem.Click += new System.EventHandler(this.toiletToolStripMenuItem_Click);
             // 
             // waterSourceToolStripMenuItem
             // 
             this.waterSourceToolStripMenuItem.Name = "waterSourceToolStripMenuItem";
-            this.waterSourceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.waterSourceToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.waterSourceToolStripMenuItem.Text = "Water Sources";
             this.waterSourceToolStripMenuItem.Click += new System.EventHandler(this.waterSourceToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(150, 6);
             // 
             // nationalitiesToolStripMenuItem
             // 
             this.nationalitiesToolStripMenuItem.Name = "nationalitiesToolStripMenuItem";
-            this.nationalitiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nationalitiesToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.nationalitiesToolStripMenuItem.Text = "Nationalities";
             this.nationalitiesToolStripMenuItem.Click += new System.EventHandler(this.nationalitiesToolStripMenuItem_Click);
             // 
             // religionsToolStripMenuItem
             // 
             this.religionsToolStripMenuItem.Name = "religionsToolStripMenuItem";
-            this.religionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.religionsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.religionsToolStripMenuItem.Text = "Religions";
             this.religionsToolStripMenuItem.Click += new System.EventHandler(this.religionsToolStripMenuItem_Click);
             // 
             // petToolStripMenuItem
             // 
             this.petToolStripMenuItem.Name = "petToolStripMenuItem";
-            this.petToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.petToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.petToolStripMenuItem.Text = "Pets";
             this.petToolStripMenuItem.Click += new System.EventHandler(this.petToolStripMenuItem_Click);
             // 
@@ -198,8 +197,7 @@ namespace BarangayInformation
             this.toolStripSplitButtonAccessControl.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rolesToolStripMenuItem,
             this.toolStripMenuSetupControl,
-            this.accessLevelsToolStripMenuItem,
-            this.aForgeToolStripMenuItem});
+            this.accessLevelsToolStripMenuItem});
             this.toolStripSplitButtonAccessControl.Image = global::BarangayInformation.Properties.Resources.Control_Panel_icon64x64;
             this.toolStripSplitButtonAccessControl.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripSplitButtonAccessControl.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -343,13 +341,6 @@ namespace BarangayInformation
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // aForgeToolStripMenuItem
-            // 
-            this.aForgeToolStripMenuItem.Name = "aForgeToolStripMenuItem";
-            this.aForgeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aForgeToolStripMenuItem.Text = "AForge";
-            this.aForgeToolStripMenuItem.Click += new System.EventHandler(this.aForgeToolStripMenuItem_Click);
-            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,7 +396,6 @@ namespace BarangayInformation
         private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contraceptiveToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem aForgeToolStripMenuItem;
     }
 }
 

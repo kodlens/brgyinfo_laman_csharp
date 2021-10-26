@@ -570,5 +570,11 @@ namespace BarangayInformation
         {
             clear();
         }
+
+        private void btnTakePic_Click(object sender, EventArgs e)
+        {
+            TakePicMainform frm = new TakePicMainform(this);
+            frm.ShowDialog();
+        }
     }
 }

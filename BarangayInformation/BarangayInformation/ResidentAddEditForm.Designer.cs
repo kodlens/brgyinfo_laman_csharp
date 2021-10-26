@@ -106,6 +106,7 @@ namespace BarangayInformation
             this.txtLastname = new System.Windows.Forms.TextBox();
             this.Label24 = new System.Windows.Forms.Label();
             this.GroupBox6 = new System.Windows.Forms.GroupBox();
+            this.txtAnnualIncome = new System.Windows.Forms.NumericUpDown();
             this.Label28 = new System.Windows.Forms.Label();
             this.txtSuffix = new System.Windows.Forms.TextBox();
             this.txtYearResidency = new System.Windows.Forms.TextBox();
@@ -117,9 +118,9 @@ namespace BarangayInformation
             this.Label32 = new System.Windows.Forms.Label();
             this.tabProfile = new System.Windows.Forms.TabPage();
             this.btnNext1 = new System.Windows.Forms.Button();
-            this.Button2 = new System.Windows.Forms.Button();
-            this.Button1 = new System.Windows.Forms.Button();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.btnTakePic = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TabControl1 = new System.Windows.Forms.TabControl();
             this.tabContactAddress = new System.Windows.Forms.TabPage();
             this.btnBack1 = new System.Windows.Forms.Button();
@@ -156,7 +157,6 @@ namespace BarangayInformation
             this.Label16 = new System.Windows.Forms.Label();
             this.Label13 = new System.Windows.Forms.Label();
             this.Label18 = new System.Windows.Forms.Label();
-            this.txtAnnualIncome = new System.Windows.Forms.NumericUpDown();
             this.tabFamilyMembers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flxSibling)).BeginInit();
             this.GroupBox9.SuspendLayout();
@@ -167,14 +167,14 @@ namespace BarangayInformation
             this.GroupBox7.SuspendLayout();
             this.GroupBox4.SuspendLayout();
             this.GroupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAnnualIncome)).BeginInit();
             this.tabProfile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.TabControl1.SuspendLayout();
             this.tabContactAddress.SuspendLayout();
             this.GroupBox3.SuspendLayout();
             this.GroupBox2.SuspendLayout();
             this.GroupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAnnualIncome)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbPermanentBarangay
@@ -1097,6 +1097,19 @@ namespace BarangayInformation
             this.GroupBox6.TabStop = false;
             this.GroupBox6.Text = "Personal Information";
             // 
+            // txtAnnualIncome
+            // 
+            this.txtAnnualIncome.Location = new System.Drawing.Point(547, 175);
+            this.txtAnnualIncome.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.txtAnnualIncome.Name = "txtAnnualIncome";
+            this.txtAnnualIncome.Size = new System.Drawing.Size(239, 27);
+            this.txtAnnualIncome.TabIndex = 43;
+            this.txtAnnualIncome.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Label28
             // 
             this.Label28.AutoSize = true;
@@ -1200,9 +1213,9 @@ namespace BarangayInformation
             this.tabProfile.Controls.Add(this.txtHSerialNumber);
             this.tabProfile.Controls.Add(this.GroupBox7);
             this.tabProfile.Controls.Add(this.GroupBox6);
-            this.tabProfile.Controls.Add(this.Button2);
-            this.tabProfile.Controls.Add(this.Button1);
-            this.tabProfile.Controls.Add(this.PictureBox1);
+            this.tabProfile.Controls.Add(this.btnBrowse);
+            this.tabProfile.Controls.Add(this.btnTakePic);
+            this.tabProfile.Controls.Add(this.pictureBox1);
             this.tabProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabProfile.Location = new System.Drawing.Point(4, 44);
             this.tabProfile.Name = "tabProfile";
@@ -1233,32 +1246,33 @@ namespace BarangayInformation
             this.btnNext1.UseVisualStyleBackColor = false;
             this.btnNext1.Click += new System.EventHandler(this.btnNext1_Click);
             // 
-            // Button2
+            // btnBrowse
             // 
-            this.Button2.Location = new System.Drawing.Point(36, 441);
-            this.Button2.Name = "Button2";
-            this.Button2.Size = new System.Drawing.Size(98, 32);
-            this.Button2.TabIndex = 3;
-            this.Button2.Text = "Browse";
-            this.Button2.UseVisualStyleBackColor = true;
+            this.btnBrowse.Location = new System.Drawing.Point(36, 441);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(98, 32);
+            this.btnBrowse.TabIndex = 3;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = true;
             // 
-            // Button1
+            // btnTakePic
             // 
-            this.Button1.Location = new System.Drawing.Point(155, 441);
-            this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(98, 32);
-            this.Button1.TabIndex = 4;
-            this.Button1.Text = "Camera";
-            this.Button1.UseVisualStyleBackColor = true;
+            this.btnTakePic.Location = new System.Drawing.Point(155, 441);
+            this.btnTakePic.Name = "btnTakePic";
+            this.btnTakePic.Size = new System.Drawing.Size(98, 32);
+            this.btnTakePic.TabIndex = 4;
+            this.btnTakePic.Text = "Take Pic";
+            this.btnTakePic.UseVisualStyleBackColor = true;
+            this.btnTakePic.Click += new System.EventHandler(this.btnTakePic_Click);
             // 
-            // PictureBox1
+            // pictureBox1
             // 
-            this.PictureBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.PictureBox1.Location = new System.Drawing.Point(36, 217);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(217, 214);
-            this.PictureBox1.TabIndex = 50;
-            this.PictureBox1.TabStop = false;
+            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 217);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(217, 214);
+            this.pictureBox1.TabIndex = 50;
+            this.pictureBox1.TabStop = false;
             // 
             // TabControl1
             // 
@@ -1694,19 +1708,6 @@ namespace BarangayInformation
             this.Label18.TabIndex = 37;
             this.Label18.Text = "Present Address";
             // 
-            // txtAnnualIncome
-            // 
-            this.txtAnnualIncome.Location = new System.Drawing.Point(547, 175);
-            this.txtAnnualIncome.Maximum = new decimal(new int[] {
-            9999999,
-            0,
-            0,
-            0});
-            this.txtAnnualIncome.Name = "txtAnnualIncome";
-            this.txtAnnualIncome.Size = new System.Drawing.Size(239, 27);
-            this.txtAnnualIncome.TabIndex = 43;
-            this.txtAnnualIncome.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // ResidentAddEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1738,9 +1739,10 @@ namespace BarangayInformation
             this.GroupBox4.PerformLayout();
             this.GroupBox6.ResumeLayout(false);
             this.GroupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAnnualIncome)).EndInit();
             this.tabProfile.ResumeLayout(false);
             this.tabProfile.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TabControl1.ResumeLayout(false);
             this.tabContactAddress.ResumeLayout(false);
             this.GroupBox3.ResumeLayout(false);
@@ -1749,7 +1751,6 @@ namespace BarangayInformation
             this.GroupBox2.PerformLayout();
             this.GroupBox8.ResumeLayout(false);
             this.GroupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAnnualIncome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1839,9 +1840,9 @@ namespace BarangayInformation
         internal System.Windows.Forms.ComboBox cmbEmploymentStatus;
         internal System.Windows.Forms.Label Label32;
         internal System.Windows.Forms.TabPage tabProfile;
-        internal System.Windows.Forms.Button Button2;
-        internal System.Windows.Forms.Button Button1;
-        internal System.Windows.Forms.PictureBox PictureBox1;
+        internal System.Windows.Forms.Button btnBrowse;
+        internal System.Windows.Forms.Button btnTakePic;
+        internal System.Windows.Forms.PictureBox pictureBox1;
         internal System.Windows.Forms.TabControl TabControl1;
         internal System.Windows.Forms.TabPage tabContactAddress;
         internal System.Windows.Forms.Button btnBack1;
