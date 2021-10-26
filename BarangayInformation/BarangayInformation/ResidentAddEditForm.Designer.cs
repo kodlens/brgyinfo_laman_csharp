@@ -1271,6 +1271,7 @@ namespace BarangayInformation
             this.pictureBox1.Location = new System.Drawing.Point(36, 217);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(217, 214);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 50;
             this.pictureBox1.TabStop = false;
             // 
