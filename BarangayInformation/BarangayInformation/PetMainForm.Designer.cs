@@ -32,6 +32,8 @@ namespace BarangayInformation
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grid = new System.Windows.Forms.DataGridView();
+            this.pet_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,8 +47,6 @@ namespace BarangayInformation
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.pet_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +76,24 @@ namespace BarangayInformation
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid.Size = new System.Drawing.Size(436, 452);
             this.grid.TabIndex = 16;
+            // 
+            // pet_id
+            // 
+            this.pet_id.DataPropertyName = "pet_id";
+            this.pet_id.HeaderText = "ID";
+            this.pet_id.MinimumWidth = 6;
+            this.pet_id.Name = "pet_id";
+            this.pet_id.ReadOnly = true;
+            this.pet_id.Width = 80;
+            // 
+            // pet
+            // 
+            this.pet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pet.DataPropertyName = "pet";
+            this.pet.HeaderText = "Pets";
+            this.pet.MinimumWidth = 6;
+            this.pet.Name = "pet";
+            this.pet.ReadOnly = true;
             // 
             // contextMenuStrip1
             // 
@@ -216,24 +234,6 @@ namespace BarangayInformation
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
-            // pet_id
-            // 
-            this.pet_id.DataPropertyName = "pet_id";
-            this.pet_id.HeaderText = "ID";
-            this.pet_id.MinimumWidth = 6;
-            this.pet_id.Name = "pet_id";
-            this.pet_id.ReadOnly = true;
-            this.pet_id.Width = 80;
-            // 
-            // pet
-            // 
-            this.pet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.pet.DataPropertyName = "pet";
-            this.pet.HeaderText = "Pets";
-            this.pet.MinimumWidth = 6;
-            this.pet.Name = "pet";
-            this.pet.ReadOnly = true;
-            // 
             // PetMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,6 +248,7 @@ namespace BarangayInformation
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAdd);
             this.Name = "PetMainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PetMainForm";
             this.Load += new System.EventHandler(this.PetMainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();

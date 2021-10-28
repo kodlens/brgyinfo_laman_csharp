@@ -73,6 +73,7 @@ namespace BarangayInformation
             this.Controls.Add(this.textBoxwatersource);
             this.Controls.Add(this.labelwatersource);
             this.Name = "PetAddEditForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PetAddEditForm";
             this.Load += new System.EventHandler(this.PetAddEditForm_Load);
             this.ResumeLayout(false);

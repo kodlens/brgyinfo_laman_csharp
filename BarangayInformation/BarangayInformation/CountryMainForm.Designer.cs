@@ -55,7 +55,8 @@ namespace BarangayInformation
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(0, 2);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -152,10 +153,11 @@ namespace BarangayInformation
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(15, 545);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(436, 23);
+            this.label1.Size = new System.Drawing.Size(436, 32);
             this.label1.TabIndex = 10;
             this.label1.Text = "CONTROLS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -178,7 +180,7 @@ namespace BarangayInformation
             // 
             this.btnDelete.Image = global::BarangayInformation.Properties.Resources.delete16x16;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(206, 571);
+            this.btnDelete.Location = new System.Drawing.Point(206, 580);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnDelete.Size = new System.Drawing.Size(105, 34);
@@ -192,7 +194,7 @@ namespace BarangayInformation
             // 
             this.btnEdit.Image = global::BarangayInformation.Properties.Resources.eidt16x16;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(110, 571);
+            this.btnEdit.Location = new System.Drawing.Point(110, 580);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnEdit.Size = new System.Drawing.Size(90, 34);
@@ -206,7 +208,7 @@ namespace BarangayInformation
             // 
             this.btnAdd.Image = global::BarangayInformation.Properties.Resources.Save_icon16x16;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(18, 571);
+            this.btnAdd.Location = new System.Drawing.Point(18, 580);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnAdd.Size = new System.Drawing.Size(86, 34);
@@ -220,7 +222,7 @@ namespace BarangayInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 610);
+            this.ClientSize = new System.Drawing.Size(467, 620);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.btnSearch);

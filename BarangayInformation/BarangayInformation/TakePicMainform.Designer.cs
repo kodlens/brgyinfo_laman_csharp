@@ -29,6 +29,7 @@ namespace BarangayInformation
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TakePicMainform));
             this.btnClose = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,7 +45,9 @@ namespace BarangayInformation
             // 
             // btnClose
             // 
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.Location = new System.Drawing.Point(539, 350);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(108, 45);
@@ -55,6 +58,7 @@ namespace BarangayInformation
             // 
             // btnStop
             // 
+            this.btnStop.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStop.Location = new System.Drawing.Point(258, 39);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(108, 27);
@@ -66,30 +70,33 @@ namespace BarangayInformation
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(14, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 17);
+            this.label3.Size = new System.Drawing.Size(117, 20);
             this.label3.TabIndex = 25;
             this.label3.Text = "Camera Source:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(27, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.Size = new System.Drawing.Size(70, 20);
             this.label2.TabIndex = 24;
             this.label2.Text = "Webcam";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(340, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 17);
+            this.label1.Size = new System.Drawing.Size(160, 20);
             this.label1.TabIndex = 23;
             this.label1.Text = "Image Capture Result";
             // 
@@ -100,7 +107,7 @@ namespace BarangayInformation
             this.videoSourcePlayer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
             this.videoSourcePlayer1.Location = new System.Drawing.Point(12, 102);
             this.videoSourcePlayer1.Name = "videoSourcePlayer1";
-            this.videoSourcePlayer1.Size = new System.Drawing.Size(322, 242);
+            this.videoSourcePlayer1.Size = new System.Drawing.Size(315, 242);
             this.videoSourcePlayer1.TabIndex = 22;
             this.videoSourcePlayer1.Text = "videoSourcePlayer1";
             this.videoSourcePlayer1.VideoSource = null;
@@ -116,12 +123,15 @@ namespace BarangayInformation
             // 
             // btnCapture
             // 
-            this.btnCapture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapture.Location = new System.Drawing.Point(425, 350);
+            this.btnCapture.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapture.Image = ((System.Drawing.Image)(resources.GetObject("btnCapture.Image")));
+            this.btnCapture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCapture.Location = new System.Drawing.Point(423, 350);
             this.btnCapture.Name = "btnCapture";
-            this.btnCapture.Size = new System.Drawing.Size(108, 45);
+            this.btnCapture.Size = new System.Drawing.Size(110, 45);
             this.btnCapture.TabIndex = 20;
             this.btnCapture.Text = "Snapshoot";
+            this.btnCapture.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCapture.UseVisualStyleBackColor = true;
             this.btnCapture.Click += new System.EventHandler(this.btnCapture_Click);
             // 
@@ -138,6 +148,7 @@ namespace BarangayInformation
             // 
             // btnStart
             // 
+            this.btnStart.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.Location = new System.Drawing.Point(144, 39);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(108, 27);
@@ -150,7 +161,8 @@ namespace BarangayInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 405);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(659, 405);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.label3);
