@@ -55,12 +55,12 @@ namespace BarangayInformation
             // labelwatersource
             // 
             this.labelwatersource.AutoSize = true;
-            this.labelwatersource.BackColor = System.Drawing.Color.White;
-            this.labelwatersource.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelwatersource.ForeColor = System.Drawing.Color.Black;
-            this.labelwatersource.Location = new System.Drawing.Point(28, 46);
+            this.labelwatersource.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.labelwatersource.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelwatersource.ForeColor = System.Drawing.Color.White;
+            this.labelwatersource.Location = new System.Drawing.Point(26, 42);
             this.labelwatersource.Name = "labelwatersource";
-            this.labelwatersource.Size = new System.Drawing.Size(35, 15);
+            this.labelwatersource.Size = new System.Drawing.Size(44, 20);
             this.labelwatersource.TabIndex = 3;
             this.labelwatersource.Text = "Role:";
             // 
@@ -68,7 +68,7 @@ namespace BarangayInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(308, 133);
             this.Controls.Add(this.buttonwatersave);
             this.Controls.Add(this.textBoxrole);

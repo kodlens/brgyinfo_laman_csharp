@@ -245,6 +245,7 @@ namespace BarangayInformation
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAdd);
             this.Name = "GardenMainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GardenMainForm";
             this.Load += new System.EventHandler(this.GardenMainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridgarden)).EndInit();
