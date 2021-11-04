@@ -265,6 +265,16 @@ namespace BarangayInformation
         {
             CloseCurrentVideoSource();
         }
+
+        private void TakePicMainform_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TakePicMainform_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseCurrentVideoSource();
+        }
     }
 }
 

@@ -48,20 +48,22 @@ namespace BarangayInformation
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(539, 350);
+            this.btnClose.Location = new System.Drawing.Point(623, 404);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(108, 45);
+            this.btnClose.Padding = new System.Windows.Forms.Padding(17, 0, 17, 0);
+            this.btnClose.Size = new System.Drawing.Size(132, 52);
             this.btnClose.TabIndex = 27;
             this.btnClose.Text = "Close";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnStop
             // 
             this.btnStop.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStop.Location = new System.Drawing.Point(258, 39);
+            this.btnStop.Location = new System.Drawing.Point(272, 46);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(108, 27);
+            this.btnStop.Size = new System.Drawing.Size(126, 31);
             this.btnStop.TabIndex = 26;
             this.btnStop.Text = "Stop";
             this.btnStop.UseVisualStyleBackColor = true;
@@ -70,9 +72,10 @@ namespace BarangayInformation
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(14, 13);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(16, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 20);
             this.label3.TabIndex = 25;
@@ -82,8 +85,8 @@ namespace BarangayInformation
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(27, 82);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(31, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 20);
             this.label2.TabIndex = 24;
@@ -93,8 +96,8 @@ namespace BarangayInformation
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(340, 82);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(397, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 20);
             this.label1.TabIndex = 23;
@@ -105,9 +108,9 @@ namespace BarangayInformation
             this.videoSourcePlayer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.videoSourcePlayer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.videoSourcePlayer1.Location = new System.Drawing.Point(12, 102);
+            this.videoSourcePlayer1.Location = new System.Drawing.Point(14, 118);
             this.videoSourcePlayer1.Name = "videoSourcePlayer1";
-            this.videoSourcePlayer1.Size = new System.Drawing.Size(315, 242);
+            this.videoSourcePlayer1.Size = new System.Drawing.Size(367, 279);
             this.videoSourcePlayer1.TabIndex = 22;
             this.videoSourcePlayer1.Text = "videoSourcePlayer1";
             this.videoSourcePlayer1.VideoSource = null;
@@ -116,9 +119,9 @@ namespace BarangayInformation
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(144, 12);
+            this.comboBox1.Location = new System.Drawing.Point(139, 15);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(222, 21);
+            this.comboBox1.Size = new System.Drawing.Size(258, 23);
             this.comboBox1.TabIndex = 21;
             // 
             // btnCapture
@@ -126,9 +129,10 @@ namespace BarangayInformation
             this.btnCapture.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapture.Image = ((System.Drawing.Image)(resources.GetObject("btnCapture.Image")));
             this.btnCapture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapture.Location = new System.Drawing.Point(423, 350);
+            this.btnCapture.Location = new System.Drawing.Point(453, 404);
             this.btnCapture.Name = "btnCapture";
-            this.btnCapture.Size = new System.Drawing.Size(110, 45);
+            this.btnCapture.Padding = new System.Windows.Forms.Padding(17, 0, 17, 0);
+            this.btnCapture.Size = new System.Drawing.Size(163, 52);
             this.btnCapture.TabIndex = 20;
             this.btnCapture.Text = "Snapshoot";
             this.btnCapture.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -139,9 +143,9 @@ namespace BarangayInformation
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(340, 102);
+            this.pictureBox2.Location = new System.Drawing.Point(397, 118);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(307, 242);
+            this.pictureBox2.Size = new System.Drawing.Size(358, 279);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
@@ -149,9 +153,9 @@ namespace BarangayInformation
             // btnStart
             // 
             this.btnStart.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(144, 39);
+            this.btnStart.Location = new System.Drawing.Point(139, 46);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(108, 27);
+            this.btnStart.Size = new System.Drawing.Size(126, 31);
             this.btnStart.TabIndex = 18;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -159,10 +163,10 @@ namespace BarangayInformation
             // 
             // TakePicMainform
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(659, 405);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(769, 467);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.label3);
@@ -173,12 +177,15 @@ namespace BarangayInformation
             this.Controls.Add(this.btnCapture);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnStart);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TakePicMainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TakePicMainform";
+            this.Text = "Take A Picture";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TakePicMainform_FormClosing);
+            this.Load += new System.EventHandler(this.TakePicMainform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

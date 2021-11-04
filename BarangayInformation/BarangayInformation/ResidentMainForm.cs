@@ -99,6 +99,25 @@ namespace BarangayInformation
                     loadData();
                 }
             }
+            else
+            {
+                Box.ErrBox("No data found.");
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            newToolStripMenuItem_Click(sender, e);
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            editToolStripMenuItem_Click(sender, e);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            deleteToolStripMenuItem_Click(sender, e);
         }
     }
 }

@@ -118,7 +118,6 @@ namespace BarangayInformation
             this.Label32 = new System.Windows.Forms.Label();
             this.tabProfile = new System.Windows.Forms.TabPage();
             this.btnNext1 = new System.Windows.Forms.Button();
-            this.btnBrowse = new System.Windows.Forms.Button();
             this.btnTakePic = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TabControl1 = new System.Windows.Forms.TabControl();
@@ -1213,7 +1212,6 @@ namespace BarangayInformation
             this.tabProfile.Controls.Add(this.txtHSerialNumber);
             this.tabProfile.Controls.Add(this.GroupBox7);
             this.tabProfile.Controls.Add(this.GroupBox6);
-            this.tabProfile.Controls.Add(this.btnBrowse);
             this.tabProfile.Controls.Add(this.btnTakePic);
             this.tabProfile.Controls.Add(this.pictureBox1);
             this.tabProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1246,20 +1244,11 @@ namespace BarangayInformation
             this.btnNext1.UseVisualStyleBackColor = false;
             this.btnNext1.Click += new System.EventHandler(this.btnNext1_Click);
             // 
-            // btnBrowse
-            // 
-            this.btnBrowse.Location = new System.Drawing.Point(36, 441);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(98, 32);
-            this.btnBrowse.TabIndex = 3;
-            this.btnBrowse.Text = "Browse";
-            this.btnBrowse.UseVisualStyleBackColor = true;
-            // 
             // btnTakePic
             // 
-            this.btnTakePic.Location = new System.Drawing.Point(155, 441);
+            this.btnTakePic.Location = new System.Drawing.Point(36, 441);
             this.btnTakePic.Name = "btnTakePic";
-            this.btnTakePic.Size = new System.Drawing.Size(98, 32);
+            this.btnTakePic.Size = new System.Drawing.Size(217, 32);
             this.btnTakePic.TabIndex = 4;
             this.btnTakePic.Text = "Take Pic";
             this.btnTakePic.UseVisualStyleBackColor = true;
@@ -1841,7 +1830,6 @@ namespace BarangayInformation
         internal System.Windows.Forms.ComboBox cmbEmploymentStatus;
         internal System.Windows.Forms.Label Label32;
         internal System.Windows.Forms.TabPage tabProfile;
-        internal System.Windows.Forms.Button btnBrowse;
         internal System.Windows.Forms.Button btnTakePic;
         internal System.Windows.Forms.PictureBox pictureBox1;
         internal System.Windows.Forms.TabControl TabControl1;
