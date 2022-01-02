@@ -22,6 +22,28 @@ namespace BarangayInformation
             resident = new Resident();
         }
 
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            bool bHandled = false;
+            // switch case is the easy way, a hash or map would be better, 
+            // but more work to get set up.
+            switch (keyData)
+            {
+                case Keys.F1:
+                    // do whatever
+                    bHandled = true;
+                    newToolStripMenuItem_Click(null, null);
+                    break;
+                case Keys.F2:
+                    bHandled = true;
+                    editToolStripMenuItem_Click(null, null);
+                    break;
+                case Keys.Delete:
+                    deleteToolStripMenuItem_Click(null, null);
+                    break;
+            }
+            return bHandled;
+        }
         public void loadData()
         {
             if (rbLastName.Checked)

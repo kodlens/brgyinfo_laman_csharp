@@ -178,6 +178,7 @@ namespace BarangayInformation
             // 
             // flx
             // 
+            this.flx.AllowEditing = false;
             this.flx.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.FixedSingle;
             this.flx.ColumnInfo = resources.GetString("flx.ColumnInfo");
             this.flx.ContextMenuStrip = this.contextMenuStrip1;

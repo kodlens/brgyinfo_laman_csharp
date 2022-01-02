@@ -609,8 +609,9 @@ namespace BarangayInformation.Class
             //'Box.InfoBox(dtSIblings.Rows.Count)
             flxSibling.AutoGenerateColumns = false;
             //flxSibling.DataSource = dtSIblings;
-            
-            for(int row = 0; row < dtSIblings.Rows.Count; row++)
+            int row = 0;
+
+            for(row = 0; row < dtSIblings.Rows.Count; row++)
             {
                 flxSibling.Rows.Add();
                 flxSibling[row + 1, "resident_sibling_id"] = Convert.ToInt32(dtSIblings.Rows[row]["resident_sibling_id"]);
@@ -629,11 +630,20 @@ namespace BarangayInformation.Class
             cmd.Parameters.AddWithValue("?id", id);
             MySqlDataReader dr;
             dr = cmd.ExecuteReader();
+            row = 1;
+
             while (dr.Read())
             {
                 flxPet.Rows.Add();
+                flxPet[row, "resident_pet_id"] = Convert.ToInt64(dr["resident_pet_id"]);
+                flxPet[row, "pet"] = Convert.ToString(dr["pet"]);
+                flxPet[row, "no_pet"] = Convert.ToInt32(dr["no_pet"]);
+                row++;
             }
             dr.Close();
+            cmd.Dispose();
+            con.Close();
+            con.Dispose();
         }
 
 

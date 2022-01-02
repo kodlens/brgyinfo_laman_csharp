@@ -49,7 +49,35 @@ namespace BarangayInformation
             contra = new Contraceptives();
         }
 
-        private void btnDebug_Click(object sender, EventArgs e)
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            bool bHandled = false;
+            // switch case is the easy way, a hash or map would be better, 
+            // but more work to get set up.
+            switch (keyData)
+            {
+                case Keys.F5:
+                    // do whatever
+                    bHandled = true;
+                    btnNew_Click(null, null);
+                    break;
+                case Keys.F10:
+                    bHandled = true;
+                    //editToolStripMenuItem_Click(null, null);
+                    debug();
+                    break;
+                case Keys.F2:
+                    //deleteToolStripMenuItem_Click(null, null);
+                    break;
+            }
+            return bHandled;
+
+
+        }
+
+
+        void debug()
         {
             this.txtFirstname.Text = "ETIENNE WAYNE";
             txtLastname.Text = "AMPARADO";
@@ -133,8 +161,7 @@ namespace BarangayInformation
             this.flxPet[3, 2] = "PIG";
             this.flxPet[3, 3] = 3;
 
-
-        }
+        }//for debugging purpose only
 
         private void btnNext1_Click(object sender, EventArgs e)
         {

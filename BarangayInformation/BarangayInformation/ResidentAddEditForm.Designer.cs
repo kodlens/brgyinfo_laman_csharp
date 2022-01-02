@@ -61,7 +61,6 @@ namespace BarangayInformation
             this.Label56 = new System.Windows.Forms.Label();
             this.Label55 = new System.Windows.Forms.Label();
             this.Label54 = new System.Windows.Forms.Label();
-            this.btnDebug = new System.Windows.Forms.Button();
             this.Label58 = new System.Windows.Forms.Label();
             this.btnNew = new System.Windows.Forms.Button();
             this.Label22 = new System.Windows.Forms.Label();
@@ -408,16 +407,16 @@ namespace BarangayInformation
             this.cmbContraceptive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbContraceptive.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbContraceptive.FormattingEnabled = true;
-            this.cmbContraceptive.Location = new System.Drawing.Point(675, 36);
+            this.cmbContraceptive.Location = new System.Drawing.Point(111, 153);
             this.cmbContraceptive.Name = "cmbContraceptive";
-            this.cmbContraceptive.Size = new System.Drawing.Size(323, 26);
+            this.cmbContraceptive.Size = new System.Drawing.Size(344, 26);
             this.cmbContraceptive.TabIndex = 33;
             // 
             // Label62
             // 
             this.Label62.AutoSize = true;
             this.Label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label62.Location = new System.Drawing.Point(526, 41);
+            this.Label62.Location = new System.Drawing.Point(23, 134);
             this.Label62.Name = "Label62";
             this.Label62.Size = new System.Drawing.Size(143, 16);
             this.Label62.TabIndex = 34;
@@ -437,7 +436,7 @@ namespace BarangayInformation
             // 
             this.Label61.AutoSize = true;
             this.Label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label61.Location = new System.Drawing.Point(29, 137);
+            this.Label61.Location = new System.Drawing.Point(534, 36);
             this.Label61.Name = "Label61";
             this.Label61.Size = new System.Drawing.Size(77, 16);
             this.Label61.TabIndex = 32;
@@ -522,16 +521,6 @@ namespace BarangayInformation
             this.Label54.Size = new System.Drawing.Size(405, 16);
             this.Label54.TabIndex = 35;
             this.Label54.Text = "HAVE YOU EVER FILED A COMPLAINT AT BARANGAY OFFICE?";
-            // 
-            // btnDebug
-            // 
-            this.btnDebug.Location = new System.Drawing.Point(951, 5);
-            this.btnDebug.Name = "btnDebug";
-            this.btnDebug.Size = new System.Drawing.Size(100, 39);
-            this.btnDebug.TabIndex = 63;
-            this.btnDebug.Text = "DEBUG";
-            this.btnDebug.UseVisualStyleBackColor = true;
-            this.btnDebug.Click += new System.EventHandler(this.btnDebug_Click);
             // 
             // Label58
             // 
@@ -679,7 +668,7 @@ namespace BarangayInformation
             this.GroupBox10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox10.Location = new System.Drawing.Point(3, 3);
             this.GroupBox10.Name = "GroupBox10";
-            this.GroupBox10.Size = new System.Drawing.Size(1128, 480);
+            this.GroupBox10.Size = new System.Drawing.Size(1128, 537);
             this.GroupBox10.TabIndex = 55;
             this.GroupBox10.TabStop = false;
             this.GroupBox10.Text = "Other Information";
@@ -695,12 +684,12 @@ namespace BarangayInformation
             this.flxPet.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.flxPet.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
             this.flxPet.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
-            this.flxPet.Location = new System.Drawing.Point(32, 175);
+            this.flxPet.Location = new System.Drawing.Point(537, 68);
             this.flxPet.Name = "flxPet";
             this.flxPet.Rows.Count = 1;
             this.flxPet.Rows.DefaultSize = 26;
             this.flxPet.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
-            this.flxPet.Size = new System.Drawing.Size(423, 188);
+            this.flxPet.Size = new System.Drawing.Size(509, 188);
             this.flxPet.StyleInfo = resources.GetString("flxPet.StyleInfo");
             this.flxPet.TabIndex = 92;
             // 
@@ -1704,7 +1693,6 @@ namespace BarangayInformation
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1161, 705);
-            this.Controls.Add(this.btnDebug);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.TabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1712,7 +1700,7 @@ namespace BarangayInformation
             this.MinimizeBox = false;
             this.Name = "ResidentAddEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ResidentMainForm";
+            this.Text = "Resident Main Form";
             this.Load += new System.EventHandler(this.ResidentAddEditForm_Load);
             this.tabFamilyMembers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.flxSibling)).EndInit();
@@ -1776,7 +1764,6 @@ namespace BarangayInformation
         internal System.Windows.Forms.Label Label56;
         internal System.Windows.Forms.Label Label55;
         internal System.Windows.Forms.Label Label54;
-        internal System.Windows.Forms.Button btnDebug;
         internal System.Windows.Forms.Label Label58;
         internal System.Windows.Forms.Button btnNew;
         internal System.Windows.Forms.Label Label22;
