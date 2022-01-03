@@ -358,8 +358,9 @@ namespace BarangayInformation
             "NO"});
             this.cmbIsSettled.Location = new System.Drawing.Point(158, 121);
             this.cmbIsSettled.Name = "cmbIsSettled";
-            this.cmbIsSettled.Size = new System.Drawing.Size(116, 26);
+            this.cmbIsSettled.Size = new System.Drawing.Size(166, 26);
             this.cmbIsSettled.TabIndex = 43;
+            this.cmbIsSettled.SelectedIndexChanged += new System.EventHandler(this.cmbIsSettled_SelectedIndexChanged);
             // 
             // txtAgainstWhom
             // 

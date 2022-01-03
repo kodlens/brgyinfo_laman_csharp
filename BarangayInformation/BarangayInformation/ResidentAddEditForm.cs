@@ -70,6 +70,9 @@ namespace BarangayInformation
                 case Keys.F2:
                     //deleteToolStripMenuItem_Click(null, null);
                     break;
+                case Keys.F9:
+                    btnSave_Click(null, null);
+                    break;
             }
             return bHandled;
 
@@ -201,6 +204,12 @@ namespace BarangayInformation
         void getData()
         {
             res.getData(resident_id, flxSibling, flxPet);
+
+            if (res.is_head == 1)
+                rbHead.Checked = true;
+            else
+                rbMember.Checked = true;
+
             txtResidentId.Text = "RES-" + res.resident_id.ToString("00000000");
             txtLastname.Text = res.lname;
             txtFirstname.Text = res.fname;
@@ -240,6 +249,40 @@ namespace BarangayInformation
             cmbVoterType.Text = res.voter_type;
             cmbIsSK.Text = res.is_sk == 1 ? "YES" : "NO";
             txtPlaceReg.Text = res.place_registration;
+
+            //other info
+            cmbWaterSource.Text = res.water_source;
+            cmbToilet.Text = res.toilet;
+            cmbGarden.Text = res.garden;
+            cmbContraceptive.Text = res.contraceptive;
+
+
+            //survey
+            cmbHaveComplain.Text = res.have_complain == 1 ? "YES" : "NO";
+            txtAgainstWhom.Text = res.against_whom;
+            cmbIsSettled.Text = res.is_settled == 1 ? "YES" : "NO";
+
+
+            //date settled
+            if(res.date_settled == null)
+            {
+                dtComplainWhen.Value = DateTime.Now;
+                dtComplainWhen.Enabled = false;
+            }
+            else
+            {
+                dtComplainWhen.Value = Convert.ToDateTime(res.date_settled);
+                dtComplainWhen.Enabled = true;
+            }
+            
+            txtIfNotWhy.Text = res.if_not_why;
+            cmbIsDeathMember.Text = res.is_death_aid == 1 ? "YES" : "NO";
+
+
+            string[] lines = System.IO.File.ReadAllLines(Application.StartupPath + "/config.txt");
+            string img_path = lines[0] + resident_id + "_" + res.img_path + ".jpeg";
+            //Box.InfoBox(img_path);
+            pictureBox1.ImageLocation = img_path;
         }
 
         private void tbnNext2_Click(object sender, EventArgs e)
@@ -354,14 +397,24 @@ namespace BarangayInformation
 
         void saveImage(long i)
         {
-            string[] lines = System.IO.File.ReadAllLines(Application.StartupPath + "/config.txt");
-            Image img;
-            img = pictureBox1.Image;
+            try
+            {
+                string[] lines = System.IO.File.ReadAllLines(Application.StartupPath + "/config.txt");
+                Image img;
+                img = pictureBox1.Image;
 
-            string dir = Application.StartupPath;
-            string nFilename = txtLastname.Text + "_" + txtFirstname.Text.Replace(" ", "");
-            img.Save(lines[0] + i.ToString() + "_" + nFilename + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
-            //img.Save(@"F:\test\" + nFilename + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+                string dir = Application.StartupPath;
+                string nFilename = txtLastname.Text + "_" + txtFirstname.Text.Replace(" ", "");
+                img.Save(lines[0] + i.ToString() + "_" + nFilename + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+                //img.Save(@"F:\test\" + nFilename + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+            catch (Exception err)
+            {
+
+                //throw;
+                Box.ErrBox(err.Message);
+            }
+            
         }
 
         void insertResident()
@@ -418,10 +471,20 @@ namespace BarangayInformation
             res.have_complain = this.cmbHaveComplain.Text == "YES" ? (short)1 : (short)0;
             res.against_whom = this.txtAgainstWhom.Text;
             res.is_settled = this.cmbIsSettled.Text == "YES" ? (short)1 : (short)0;
-            res.date_settled = dtComplainWhen.Value.ToString("yyyy-MM-dd");
-            res.if_not_why = txtIfNotWhy.Text;
 
+            if(this.cmbIsSettled.Text == "YES")
+            {
+                res.date_settled = dtComplainWhen.Value.ToString("yyyy-MM-dd");
+            }
+            else
+            {
+                res.date_settled = null;
+            }
+            
+            res.if_not_why = txtIfNotWhy.Text;
             res.is_death_aid = this.cmbIsDeathMember.Text == "YES" ? (short)1 : (short)0;
+
+            res.img_path = txtLastname.Text + "_" + txtFirstname.Text.Replace(" ", "");
 
                
             if(resident_id > 0)
@@ -448,6 +511,7 @@ namespace BarangayInformation
         private void clear()
         {
             resident_id = 0;
+            rbMember.Checked = true;
             txtResidentId.Text = "";
             txtLastname.Text = "";
             txtFirstname.Text = "";
@@ -484,6 +548,8 @@ namespace BarangayInformation
             cmbVoterType.SelectedIndex = -1;
             cmbIsSK.SelectedIndex = -1;
             txtPlaceReg.Text = "";
+
+            pictureBox1.Image = null;
 
             //txtSiblingLname.Text = "";
             //txtSiblingFname.Text = "";
@@ -622,6 +688,19 @@ namespace BarangayInformation
         {
             TakePicMainform frm = new TakePicMainform(this);
             frm.ShowDialog();
+        }
+
+        private void cmbIsSettled_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbIsSettled.Text == "YES")
+            {
+                dtComplainWhen.Enabled = true;
+            }
+            else
+            {
+                dtComplainWhen.Enabled = false;
+
+            }
         }
     }
 }

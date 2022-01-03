@@ -554,6 +554,7 @@ namespace BarangayInformation.Class
             {
                 //personal info
                 resident_id = id;
+                is_head = Convert.ToByte(dt.Rows[0]["is_head"]);
                 fname = Convert.ToString(dt.Rows[0]["fname"]);
                 lname = Convert.ToString(dt.Rows[0]["lname"]);
                 mname = Convert.ToString(dt.Rows[0]["mname"]);
@@ -600,6 +601,8 @@ namespace BarangayInformation.Class
                 toilet = Convert.ToString(dt.Rows[0]["toilet"]);
                 garden = Convert.ToString(dt.Rows[0]["garden"]);
                 contraceptive = Convert.ToString(dt.Rows[0]["contraceptive"]);
+
+                img_path = Convert.ToString(dt.Rows[0]["img_path"]);
 
             }
 
