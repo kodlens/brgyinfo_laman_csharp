@@ -18,6 +18,7 @@ namespace BarangayInformation.Class
         MySqlCommand cmd;
         string query;
 
+        public long resident_id { set; get; }
         public string household_no { set; get; }
         public string family_no { set; get; }
         public short is_head { set; get; }
@@ -79,6 +80,8 @@ namespace BarangayInformation.Class
 
         public short is_death_aid { set; get; }
 
+        public string img_path { set; get; }
+
         public C1FlexGrid flxPet;
 
 
@@ -109,7 +112,7 @@ namespace BarangayInformation.Class
                     permanent_country = ?per_country, permanent_province = ?per_province, permanent_city = ?per_city, permanent_barangay = ?per_brgy, permanent_street = ?per_street,
                     is_voter = ?isvoter, voter_type = ?voter_type, is_sk = ?issk, place_registration = ?placereg,
                     water_source=?wsource, toilet=?toilet, garden=?garden, contraceptive=?contraceptive,
-                    have_complain=?havecomplain, against_whom=?whom, is_settled=?issettled, date_settled=?when, if_not_why=?why, is_death_aid=@isaid; SELECT last_insert_id();";
+                    have_complain=?havecomplain, against_whom=?whom, is_settled=?issettled, date_settled=?when, if_not_why=?why, is_death_aid=@isaid, img_path=?img; SELECT last_insert_id();";
                 cmd = new MySqlCommand(query, con);
                 cmd.Parameters.AddWithValue("?ishead", this.is_head);
                 cmd.Parameters.AddWithValue("?household_no", this.household_no);
@@ -173,6 +176,8 @@ namespace BarangayInformation.Class
                 cmd.Parameters.AddWithValue("?why", this.if_not_why);
                 cmd.Parameters.AddWithValue("?isaid", this.is_death_aid);
 
+                cmd.Parameters.AddWithValue("?img", this.img_path);
+
                 int i = Convert.ToInt32(cmd.ExecuteScalar());
                 cmd.Dispose();
 
@@ -229,15 +234,13 @@ namespace BarangayInformation.Class
 
 
 
-        public int update(int id, C1FlexGrid flxSibling, C1FlexGrid flxPet)
+        public int update(long id, C1FlexGrid flxSibling, C1FlexGrid flxPet)
         {
 
             res_sibling_ids_database.Clear();
             res_sibling_ids.Clear();
             try
             {
-
-                
 
             }
             catch (Exception er)
@@ -533,7 +536,7 @@ namespace BarangayInformation.Class
             }
         }
 
-        public void getData(int id, C1FlexGrid flxSibling, C1FlexGrid flxPet)
+        public void getData(long id, C1FlexGrid flxSibling, C1FlexGrid flxPet)
         {
             con = Connection.con();
             con.Open();
@@ -550,6 +553,7 @@ namespace BarangayInformation.Class
             if(dt.Rows.Count > 0)
             {
                 //personal info
+                resident_id = id;
                 fname = Convert.ToString(dt.Rows[0]["fname"]);
                 lname = Convert.ToString(dt.Rows[0]["lname"]);
                 mname = Convert.ToString(dt.Rows[0]["mname"]);

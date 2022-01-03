@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v12.14 (64 bit)
-MySQL - 10.4.21-MariaDB : Database - brgyinfo_laman
+MySQL - 10.4.13-MariaDB : Database - brgyinfo_laman
 *********************************************************************
 */
 
@@ -44203,9 +44203,14 @@ CREATE TABLE `resident_pets` (
   PRIMARY KEY (`resident_pet_id`),
   KEY `resident_id` (`resident_id`),
   CONSTRAINT `resident_pets_ibfk_1` FOREIGN KEY (`resident_id`) REFERENCES `residents` (`resident_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `resident_pets` */
+
+insert  into `resident_pets`(`resident_pet_id`,`resident_id`,`pet`,`no_pet`) values 
+(58,100,'DOG',2),
+(59,100,'CAT',1),
+(60,100,'PIG',3);
 
 /*Table structure for table `resident_siblings` */
 
@@ -44225,9 +44230,14 @@ CREATE TABLE `resident_siblings` (
   PRIMARY KEY (`resident_sibling_id`),
   KEY `resident_id` (`resident_id`),
   CONSTRAINT `resident_siblings_ibfk_1` FOREIGN KEY (`resident_id`) REFERENCES `residents` (`resident_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=115 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=133 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `resident_siblings` */
+
+insert  into `resident_siblings`(`resident_sibling_id`,`resident_id`,`lname`,`fname`,`mname`,`suffix`,`sex`,`civil_status`,`bdate`,`is_living_with_you`) values 
+(130,100,'DOCOY','JAY AR','B','JR','MALE','','',0),
+(131,100,'SANTARITA','JUNREY','M','','MALE','','',0),
+(132,100,'FLORIZA','JADE','C','','FEMALE','','',0);
 
 /*Table structure for table `residents` */
 
@@ -44280,10 +44290,15 @@ CREATE TABLE `residents` (
   `date_settled` varchar(20) DEFAULT NULL,
   `if_not_why` text DEFAULT NULL,
   `is_death_aid` tinyint(4) DEFAULT NULL,
+  `img_path` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`resident_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `residents` */
+
+insert  into `residents`(`resident_id`,`household_no`,`family_no`,`is_head`,`lname`,`fname`,`mname`,`suffix`,`sex`,`civil_status`,`religion`,`nationality`,`employment_status`,`occupation`,`annual_income`,`year_residence`,`bdate`,`place_of_birth`,`contact_no`,`email`,`type_valid_id`,`id_no`,`present_country`,`present_province`,`present_city`,`present_barangay`,`present_street`,`permanent_country`,`permanent_province`,`permanent_city`,`permanent_barangay`,`permanent_street`,`is_voter`,`voter_type`,`is_sk`,`place_registration`,`water_source`,`toilet`,`garden`,`contraceptive`,`have_complain`,`against_whom`,`is_settled`,`date_settled`,`if_not_why`,`is_death_aid`,`img_path`,`created_at`) values 
+(100,NULL,NULL,0,'AMPARADO','ETIENNE WAYNE','NAMOCATCAT','TEST','','SINGLE','Bible Baptist Church','FILIPINO','EMPLOYED','FARMER','12000','1 YEAR','2022-01-03','BAROY, LANAO DEL NORTE','09167789585','et@yahoo.com','DRIVER LICENSE','K09-1234-214','PHILIPPINES','MISAMIS OCCIDENTAL','TANGUB CITY','GARANG','P-SAMPLE LANG','','','','','',1,'OLD',0,'MALORO, TANGUB CITY','','','','',0,'',0,'','',0,NULL,'2022-01-03 11:44:36');
 
 /*Table structure for table `roles` */
 

@@ -31,7 +31,7 @@ namespace BarangayInformation
 
         Resident res;
 
-        public int resident_id;
+        public long resident_id;
         //int returnId = 0;
 
         public ResidentAddEditForm(ResidentMainForm _frm)
@@ -201,6 +201,7 @@ namespace BarangayInformation
         void getData()
         {
             res.getData(resident_id, flxSibling, flxPet);
+            txtResidentId.Text = "RES-" + res.resident_id.ToString("00000000");
             txtLastname.Text = res.lname;
             txtFirstname.Text = res.fname;
             txtMiddlename.Text = res.mname;
@@ -351,6 +352,18 @@ namespace BarangayInformation
             insertResident();
         }
 
+        void saveImage(long i)
+        {
+            string[] lines = System.IO.File.ReadAllLines(Application.StartupPath + "/config.txt");
+            Image img;
+            img = pictureBox1.Image;
+
+            string dir = Application.StartupPath;
+            string nFilename = txtLastname.Text + "_" + txtFirstname.Text.Replace(" ", "");
+            img.Save(lines[0] + i.ToString() + "_" + nFilename + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            //img.Save(@"F:\test\" + nFilename + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+        }
+
         void insertResident()
         {
 
@@ -414,14 +427,21 @@ namespace BarangayInformation
             if(resident_id > 0)
             {
                 res.update(resident_id, flxSibling, flxPet);
+                if (this.pictureBox1.Image != null)
+                    saveImage(resident_id);
+
                 Box.InfoBox("Successfully update!");
             }
             else
             {
                 resident_id = res.save(this.flxSibling, this.flxPet);
-                txtResidentId.Text = "RES-" + resident_id.ToString("000000");
+                txtResidentId.Text = "RES-" + resident_id.ToString("00000000");
+                if(this.pictureBox1.Image != null)
+                    saveImage(resident_id);
+
                 Box.InfoBox("Successfully saved!");
             }
+
             _frm.loadData();
         }
 
