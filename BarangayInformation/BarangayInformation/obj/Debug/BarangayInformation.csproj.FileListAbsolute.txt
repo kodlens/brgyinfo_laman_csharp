@@ -130,3 +130,7 @@ C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\Barangay
 C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.csproj.CoreCompileInputs.cache
 C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.exe
 C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.pdb
+C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\AxShockwaveFlashObjects.dll
+C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.ResidentReportForm.resources

@@ -41,8 +41,6 @@ namespace BarangayInformation
             this.Label35 = new System.Windows.Forms.Label();
             this.tabFamilyMembers = new System.Windows.Forms.TabPage();
             this.flxSibling = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.btnBack3 = new System.Windows.Forms.Button();
-            this.btnNext3 = new System.Windows.Forms.Button();
             this.txtIfNotWhy = new System.Windows.Forms.TextBox();
             this.cmbIsSettled = new System.Windows.Forms.ComboBox();
             this.txtAgainstWhom = new System.Windows.Forms.TextBox();
@@ -67,14 +65,10 @@ namespace BarangayInformation
             this.GroupBox9 = new System.Windows.Forms.GroupBox();
             this.cmbIsDeathMember = new System.Windows.Forms.ComboBox();
             this.tabSurvey = new System.Windows.Forms.TabPage();
-            this.btnBack5 = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.cmbPermanentProvince = new System.Windows.Forms.ComboBox();
             this.GroupBox10 = new System.Windows.Forms.GroupBox();
             this.flxPet = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.tabAdditionalInformation = new System.Windows.Forms.TabPage();
-            this.btnNext4 = new System.Windows.Forms.Button();
-            this.btnBack4 = new System.Windows.Forms.Button();
             this.Label36 = new System.Windows.Forms.Label();
             this.txtOccupation = new System.Windows.Forms.TextBox();
             this.Label50 = new System.Windows.Forms.Label();
@@ -116,13 +110,9 @@ namespace BarangayInformation
             this.cmbEmploymentStatus = new System.Windows.Forms.ComboBox();
             this.Label32 = new System.Windows.Forms.Label();
             this.tabProfile = new System.Windows.Forms.TabPage();
-            this.btnNext1 = new System.Windows.Forms.Button();
             this.btnTakePic = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TabControl1 = new System.Windows.Forms.TabControl();
             this.tabContactAddress = new System.Windows.Forms.TabPage();
-            this.btnBack1 = new System.Windows.Forms.Button();
-            this.tbnNext2 = new System.Windows.Forms.Button();
             this.GroupBox3 = new System.Windows.Forms.GroupBox();
             this.Label44 = new System.Windows.Forms.Label();
             this.txtIDNumber = new System.Windows.Forms.TextBox();
@@ -155,6 +145,16 @@ namespace BarangayInformation
             this.Label16 = new System.Windows.Forms.Label();
             this.Label13 = new System.Windows.Forms.Label();
             this.Label18 = new System.Windows.Forms.Label();
+            this.btnNext1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnBack1 = new System.Windows.Forms.Button();
+            this.tbnNext2 = new System.Windows.Forms.Button();
+            this.btnBack3 = new System.Windows.Forms.Button();
+            this.btnNext3 = new System.Windows.Forms.Button();
+            this.btnNext4 = new System.Windows.Forms.Button();
+            this.btnBack4 = new System.Windows.Forms.Button();
+            this.btnBack5 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.tabFamilyMembers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flxSibling)).BeginInit();
             this.GroupBox9.SuspendLayout();
@@ -167,12 +167,12 @@ namespace BarangayInformation
             this.GroupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAnnualIncome)).BeginInit();
             this.tabProfile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.TabControl1.SuspendLayout();
             this.tabContactAddress.SuspendLayout();
             this.GroupBox3.SuspendLayout();
             this.GroupBox2.SuspendLayout();
             this.GroupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbPermanentBarangay
@@ -297,47 +297,6 @@ namespace BarangayInformation
             this.flxSibling.StyleInfo = resources.GetString("flxSibling.StyleInfo");
             this.flxSibling.TabIndex = 91;
             this.flxSibling.SetupEditor += new C1.Win.C1FlexGrid.RowColEventHandler(this.flxSibling_SetupEditor);
-            // 
-            // btnBack3
-            // 
-            this.btnBack3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBack3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack3.FlatAppearance.BorderSize = 0;
-            this.btnBack3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnBack3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnBack3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack3.Image = ((System.Drawing.Image)(resources.GetObject("btnBack3.Image")));
-            this.btnBack3.Location = new System.Drawing.Point(14, 548);
-            this.btnBack3.Name = "btnBack3";
-            this.btnBack3.Size = new System.Drawing.Size(111, 42);
-            this.btnBack3.TabIndex = 89;
-            this.btnBack3.Text = "    Back";
-            this.btnBack3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBack3.UseVisualStyleBackColor = false;
-            this.btnBack3.Click += new System.EventHandler(this.btnBack3_Click);
-            // 
-            // btnNext3
-            // 
-            this.btnNext3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnNext3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNext3.FlatAppearance.BorderSize = 0;
-            this.btnNext3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnNext3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnNext3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnNext3.Image = ((System.Drawing.Image)(resources.GetObject("btnNext3.Image")));
-            this.btnNext3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNext3.Location = new System.Drawing.Point(998, 548);
-            this.btnNext3.Name = "btnNext3";
-            this.btnNext3.Size = new System.Drawing.Size(120, 41);
-            this.btnNext3.TabIndex = 75;
-            this.btnNext3.Text = "Next";
-            this.btnNext3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnNext3.UseVisualStyleBackColor = false;
-            this.btnNext3.Click += new System.EventHandler(this.btnNext3_Click);
             // 
             // txtIfNotWhy
             // 
@@ -536,7 +495,7 @@ namespace BarangayInformation
             // btnNew
             // 
             this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.Location = new System.Drawing.Point(1057, 5);
+            this.btnNew.Location = new System.Drawing.Point(1049, 5);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(95, 39);
             this.btnNew.TabIndex = 64;
@@ -568,10 +527,10 @@ namespace BarangayInformation
             this.GroupBox9.Controls.Add(this.Label56);
             this.GroupBox9.Controls.Add(this.Label55);
             this.GroupBox9.Controls.Add(this.Label54);
-            this.GroupBox9.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox9.Location = new System.Drawing.Point(6, 6);
+            this.GroupBox9.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox9.Location = new System.Drawing.Point(13, 6);
             this.GroupBox9.Name = "GroupBox9";
-            this.GroupBox9.Size = new System.Drawing.Size(1122, 274);
+            this.GroupBox9.Size = new System.Drawing.Size(1105, 274);
             this.GroupBox9.TabIndex = 57;
             this.GroupBox9.TabStop = false;
             this.GroupBox9.Text = "Survey";
@@ -601,47 +560,6 @@ namespace BarangayInformation
             this.tabSurvey.TabIndex = 7;
             this.tabSurvey.Text = "Survey";
             this.tabSurvey.UseVisualStyleBackColor = true;
-            // 
-            // btnBack5
-            // 
-            this.btnBack5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBack5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack5.FlatAppearance.BorderSize = 0;
-            this.btnBack5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnBack5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnBack5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack5.Image = ((System.Drawing.Image)(resources.GetObject("btnBack5.Image")));
-            this.btnBack5.Location = new System.Drawing.Point(13, 544);
-            this.btnBack5.Name = "btnBack5";
-            this.btnBack5.Size = new System.Drawing.Size(111, 42);
-            this.btnBack5.TabIndex = 91;
-            this.btnBack5.Text = "    Back";
-            this.btnBack5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBack5.UseVisualStyleBackColor = false;
-            this.btnBack5.Click += new System.EventHandler(this.btnBack5_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(166)))), ((int)(((byte)(83)))));
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Location = new System.Drawing.Point(900, 539);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(218, 47);
-            this.btnSave.TabIndex = 61;
-            this.btnSave.Text = "Save Household";
-            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // cmbPermanentProvince
             // 
@@ -705,47 +623,6 @@ namespace BarangayInformation
             this.tabAdditionalInformation.TabIndex = 6;
             this.tabAdditionalInformation.Text = "Additional Information";
             this.tabAdditionalInformation.UseVisualStyleBackColor = true;
-            // 
-            // btnNext4
-            // 
-            this.btnNext4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnNext4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNext4.FlatAppearance.BorderSize = 0;
-            this.btnNext4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnNext4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnNext4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnNext4.Image = ((System.Drawing.Image)(resources.GetObject("btnNext4.Image")));
-            this.btnNext4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNext4.Location = new System.Drawing.Point(1000, 546);
-            this.btnNext4.Name = "btnNext4";
-            this.btnNext4.Size = new System.Drawing.Size(120, 41);
-            this.btnNext4.TabIndex = 91;
-            this.btnNext4.Text = "Next";
-            this.btnNext4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnNext4.UseVisualStyleBackColor = false;
-            this.btnNext4.Click += new System.EventHandler(this.btnNext4_Click);
-            // 
-            // btnBack4
-            // 
-            this.btnBack4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBack4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack4.FlatAppearance.BorderSize = 0;
-            this.btnBack4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnBack4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnBack4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack4.Image = ((System.Drawing.Image)(resources.GetObject("btnBack4.Image")));
-            this.btnBack4.Location = new System.Drawing.Point(10, 546);
-            this.btnBack4.Name = "btnBack4";
-            this.btnBack4.Size = new System.Drawing.Size(111, 42);
-            this.btnBack4.TabIndex = 90;
-            this.btnBack4.Text = "    Back";
-            this.btnBack4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBack4.UseVisualStyleBackColor = false;
-            this.btnBack4.Click += new System.EventHandler(this.btnBack4_Click);
             // 
             // Label36
             // 
@@ -1213,27 +1090,6 @@ namespace BarangayInformation
             this.tabProfile.Text = "Profile";
             this.tabProfile.UseVisualStyleBackColor = true;
             // 
-            // btnNext1
-            // 
-            this.btnNext1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnNext1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNext1.FlatAppearance.BorderSize = 0;
-            this.btnNext1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnNext1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnNext1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnNext1.Image = ((System.Drawing.Image)(resources.GetObject("btnNext1.Image")));
-            this.btnNext1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNext1.Location = new System.Drawing.Point(1002, 548);
-            this.btnNext1.Name = "btnNext1";
-            this.btnNext1.Size = new System.Drawing.Size(120, 41);
-            this.btnNext1.TabIndex = 59;
-            this.btnNext1.Text = "Next";
-            this.btnNext1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnNext1.UseVisualStyleBackColor = false;
-            this.btnNext1.Click += new System.EventHandler(this.btnNext1_Click);
-            // 
             // btnTakePic
             // 
             this.btnTakePic.Location = new System.Drawing.Point(36, 441);
@@ -1243,16 +1099,6 @@ namespace BarangayInformation
             this.btnTakePic.Text = "Take Pic";
             this.btnTakePic.UseVisualStyleBackColor = true;
             this.btnTakePic.Click += new System.EventHandler(this.btnTakePic_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 217);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(217, 214);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 50;
-            this.pictureBox1.TabStop = false;
             // 
             // TabControl1
             // 
@@ -1284,47 +1130,6 @@ namespace BarangayInformation
             this.tabContactAddress.TabIndex = 1;
             this.tabContactAddress.Text = "Contact & Address";
             this.tabContactAddress.UseVisualStyleBackColor = true;
-            // 
-            // btnBack1
-            // 
-            this.btnBack1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBack1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack1.FlatAppearance.BorderSize = 0;
-            this.btnBack1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.btnBack1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.btnBack1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack1.Image = ((System.Drawing.Image)(resources.GetObject("btnBack1.Image")));
-            this.btnBack1.Location = new System.Drawing.Point(12, 546);
-            this.btnBack1.Name = "btnBack1";
-            this.btnBack1.Size = new System.Drawing.Size(111, 42);
-            this.btnBack1.TabIndex = 88;
-            this.btnBack1.Text = "    Back";
-            this.btnBack1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBack1.UseVisualStyleBackColor = false;
-            this.btnBack1.Click += new System.EventHandler(this.btnBack1_Click);
-            // 
-            // tbnNext2
-            // 
-            this.tbnNext2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.tbnNext2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tbnNext2.FlatAppearance.BorderSize = 0;
-            this.tbnNext2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.tbnNext2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            this.tbnNext2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tbnNext2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbnNext2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tbnNext2.Image = ((System.Drawing.Image)(resources.GetObject("tbnNext2.Image")));
-            this.tbnNext2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbnNext2.Location = new System.Drawing.Point(1002, 546);
-            this.tbnNext2.Name = "tbnNext2";
-            this.tbnNext2.Size = new System.Drawing.Size(120, 42);
-            this.tbnNext2.TabIndex = 87;
-            this.tbnNext2.Text = "Next";
-            this.tbnNext2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.tbnNext2.UseVisualStyleBackColor = false;
-            this.tbnNext2.Click += new System.EventHandler(this.tbnNext2_Click);
             // 
             // GroupBox3
             // 
@@ -1688,6 +1493,201 @@ namespace BarangayInformation
             this.Label18.TabIndex = 37;
             this.Label18.Text = "Present Address";
             // 
+            // btnNext1
+            // 
+            this.btnNext1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNext1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNext1.FlatAppearance.BorderSize = 0;
+            this.btnNext1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnNext1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnNext1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNext1.Image = ((System.Drawing.Image)(resources.GetObject("btnNext1.Image")));
+            this.btnNext1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNext1.Location = new System.Drawing.Point(1002, 548);
+            this.btnNext1.Name = "btnNext1";
+            this.btnNext1.Size = new System.Drawing.Size(120, 41);
+            this.btnNext1.TabIndex = 59;
+            this.btnNext1.Text = "Next";
+            this.btnNext1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnNext1.UseVisualStyleBackColor = false;
+            this.btnNext1.Click += new System.EventHandler(this.btnNext1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 217);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(217, 214);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 50;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnBack1
+            // 
+            this.btnBack1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBack1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack1.FlatAppearance.BorderSize = 0;
+            this.btnBack1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnBack1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnBack1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack1.Image = ((System.Drawing.Image)(resources.GetObject("btnBack1.Image")));
+            this.btnBack1.Location = new System.Drawing.Point(12, 546);
+            this.btnBack1.Name = "btnBack1";
+            this.btnBack1.Size = new System.Drawing.Size(111, 42);
+            this.btnBack1.TabIndex = 88;
+            this.btnBack1.Text = "    Back";
+            this.btnBack1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBack1.UseVisualStyleBackColor = false;
+            this.btnBack1.Click += new System.EventHandler(this.btnBack1_Click);
+            // 
+            // tbnNext2
+            // 
+            this.tbnNext2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.tbnNext2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tbnNext2.FlatAppearance.BorderSize = 0;
+            this.tbnNext2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.tbnNext2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.tbnNext2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tbnNext2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnNext2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tbnNext2.Image = ((System.Drawing.Image)(resources.GetObject("tbnNext2.Image")));
+            this.tbnNext2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbnNext2.Location = new System.Drawing.Point(1002, 546);
+            this.tbnNext2.Name = "tbnNext2";
+            this.tbnNext2.Size = new System.Drawing.Size(120, 42);
+            this.tbnNext2.TabIndex = 87;
+            this.tbnNext2.Text = "Next";
+            this.tbnNext2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tbnNext2.UseVisualStyleBackColor = false;
+            this.tbnNext2.Click += new System.EventHandler(this.tbnNext2_Click);
+            // 
+            // btnBack3
+            // 
+            this.btnBack3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBack3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack3.FlatAppearance.BorderSize = 0;
+            this.btnBack3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnBack3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnBack3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack3.Image = ((System.Drawing.Image)(resources.GetObject("btnBack3.Image")));
+            this.btnBack3.Location = new System.Drawing.Point(14, 548);
+            this.btnBack3.Name = "btnBack3";
+            this.btnBack3.Size = new System.Drawing.Size(111, 42);
+            this.btnBack3.TabIndex = 89;
+            this.btnBack3.Text = "    Back";
+            this.btnBack3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBack3.UseVisualStyleBackColor = false;
+            this.btnBack3.Click += new System.EventHandler(this.btnBack3_Click);
+            // 
+            // btnNext3
+            // 
+            this.btnNext3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNext3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNext3.FlatAppearance.BorderSize = 0;
+            this.btnNext3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnNext3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnNext3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNext3.Image = ((System.Drawing.Image)(resources.GetObject("btnNext3.Image")));
+            this.btnNext3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNext3.Location = new System.Drawing.Point(998, 548);
+            this.btnNext3.Name = "btnNext3";
+            this.btnNext3.Size = new System.Drawing.Size(120, 41);
+            this.btnNext3.TabIndex = 75;
+            this.btnNext3.Text = "Next";
+            this.btnNext3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnNext3.UseVisualStyleBackColor = false;
+            this.btnNext3.Click += new System.EventHandler(this.btnNext3_Click);
+            // 
+            // btnNext4
+            // 
+            this.btnNext4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNext4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNext4.FlatAppearance.BorderSize = 0;
+            this.btnNext4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnNext4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnNext4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNext4.Image = ((System.Drawing.Image)(resources.GetObject("btnNext4.Image")));
+            this.btnNext4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNext4.Location = new System.Drawing.Point(1000, 546);
+            this.btnNext4.Name = "btnNext4";
+            this.btnNext4.Size = new System.Drawing.Size(120, 41);
+            this.btnNext4.TabIndex = 91;
+            this.btnNext4.Text = "Next";
+            this.btnNext4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnNext4.UseVisualStyleBackColor = false;
+            this.btnNext4.Click += new System.EventHandler(this.btnNext4_Click);
+            // 
+            // btnBack4
+            // 
+            this.btnBack4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBack4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack4.FlatAppearance.BorderSize = 0;
+            this.btnBack4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnBack4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnBack4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack4.Image = ((System.Drawing.Image)(resources.GetObject("btnBack4.Image")));
+            this.btnBack4.Location = new System.Drawing.Point(10, 546);
+            this.btnBack4.Name = "btnBack4";
+            this.btnBack4.Size = new System.Drawing.Size(111, 42);
+            this.btnBack4.TabIndex = 90;
+            this.btnBack4.Text = "    Back";
+            this.btnBack4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBack4.UseVisualStyleBackColor = false;
+            this.btnBack4.Click += new System.EventHandler(this.btnBack4_Click);
+            // 
+            // btnBack5
+            // 
+            this.btnBack5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBack5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack5.FlatAppearance.BorderSize = 0;
+            this.btnBack5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnBack5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnBack5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack5.Image = ((System.Drawing.Image)(resources.GetObject("btnBack5.Image")));
+            this.btnBack5.Location = new System.Drawing.Point(13, 544);
+            this.btnBack5.Name = "btnBack5";
+            this.btnBack5.Size = new System.Drawing.Size(111, 42);
+            this.btnBack5.TabIndex = 91;
+            this.btnBack5.Text = "    Back";
+            this.btnBack5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBack5.UseVisualStyleBackColor = false;
+            this.btnBack5.Click += new System.EventHandler(this.btnBack5_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(166)))), ((int)(((byte)(83)))));
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.Location = new System.Drawing.Point(900, 539);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(218, 47);
+            this.btnSave.TabIndex = 61;
+            this.btnSave.Text = "Save Household";
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // ResidentAddEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1721,7 +1721,6 @@ namespace BarangayInformation
             ((System.ComponentModel.ISupportInitialize)(this.txtAnnualIncome)).EndInit();
             this.tabProfile.ResumeLayout(false);
             this.tabProfile.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TabControl1.ResumeLayout(false);
             this.tabContactAddress.ResumeLayout(false);
             this.GroupBox3.ResumeLayout(false);
@@ -1730,6 +1729,7 @@ namespace BarangayInformation
             this.GroupBox2.PerformLayout();
             this.GroupBox8.ResumeLayout(false);
             this.GroupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

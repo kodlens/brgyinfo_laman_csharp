@@ -41,7 +41,7 @@ namespace BarangayInformation {
         
         public override string FullResourceName {
             get {
-                return "BarangayInformation.ResidentReport.rpt";
+                return "BarangayInformation.Reports.ResidentReport.rpt";
             }
             set {
                 // Do nothing

@@ -73,6 +73,19 @@ namespace BarangayInformation
                 case Keys.F9:
                     btnSave_Click(null, null);
                     break;
+                case (Keys.P | Keys.Control):
+                    if(this.resident_id > 0)
+                    {
+                        ResidentReportForm frm = new ResidentReportForm();
+                        frm.id = this.resident_id;
+                        frm.ShowDialog();
+                    }
+                    else
+                    {
+                        Box.WarnBox("No resident selected. Please make sure you select a resident to view.");
+                    }
+                    
+                    break;
             }
             return bHandled;
 
