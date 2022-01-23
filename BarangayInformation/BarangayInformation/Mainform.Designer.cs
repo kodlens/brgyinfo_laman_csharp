@@ -209,21 +209,21 @@ namespace BarangayInformation
             // rolesToolStripMenuItem
             // 
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.rolesToolStripMenuItem.Text = "Roles";
             this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click_1);
             // 
             // toolStripMenuSetupControl
             // 
             this.toolStripMenuSetupControl.Name = "toolStripMenuSetupControl";
-            this.toolStripMenuSetupControl.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuSetupControl.Size = new System.Drawing.Size(145, 22);
             this.toolStripMenuSetupControl.Text = "Controls";
             this.toolStripMenuSetupControl.Click += new System.EventHandler(this.toolStripMenuSetupControl_Click);
             // 
             // accessLevelsToolStripMenuItem
             // 
             this.accessLevelsToolStripMenuItem.Name = "accessLevelsToolStripMenuItem";
-            this.accessLevelsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.accessLevelsToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.accessLevelsToolStripMenuItem.Text = "Access Levels";
             this.accessLevelsToolStripMenuItem.Click += new System.EventHandler(this.accessLevelsToolStripMenuItem_Click);
             // 
@@ -351,6 +351,7 @@ namespace BarangayInformation
             this.Name = "Mainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Mainform_FormClosing);
             this.Load += new System.EventHandler(this.Mainform_Load);
             this.toolStrip1.ResumeLayout(false);

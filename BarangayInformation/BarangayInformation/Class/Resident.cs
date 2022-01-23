@@ -196,8 +196,13 @@ namespace BarangayInformation.Class
                         cmd.Parameters.AddWithValue("?suffix", Convert.ToString(flxSibling[row, "suffix"]));
                         cmd.Parameters.AddWithValue("?sex", Convert.ToString(flxSibling[row, "sex"]));
                         cmd.Parameters.AddWithValue("?cstatus", Convert.ToString(flxSibling[row, "civil_status"]));
-                        cmd.Parameters.AddWithValue("?bdate", Convert.ToString(flxSibling[row, "bdate"]));
-                        cmd.Parameters.AddWithValue("?isliving", Convert.ToString(flxSibling[row, "is_living_with_you"]));
+
+                        string ndate = flxSibling[row, "bdate"] is null ? "" : Convert.ToDateTime(flxSibling[row, "bdate"]).ToString("yyyy-MM-dd");
+                        cmd.Parameters.AddWithValue("?bdate", ndate);
+
+                        short isliving = flxSibling[row, "is_living_with_you"] is null ? (short)0 : (short)1;
+                        cmd.Parameters.AddWithValue("?isliving", isliving);
+
                         int res_sibling_id = Convert.ToInt32(cmd.ExecuteScalar());
                         flxSibling[row, "resident_sibling_id"] = res_sibling_id;
                         cmd.Parameters.Clear();
@@ -265,7 +270,7 @@ namespace BarangayInformation.Class
                     permanent_country = ?per_country, permanent_province = ?per_province, permanent_city = ?per_city, permanent_barangay = ?per_brgy, permanent_street = ?per_street,
                     is_voter = ?isvoter, voter_type = ?voter_type, is_sk = ?issk, place_registration = ?placereg,
                     water_source=?wsource, toilet=?toilet, garden=?garden, contraceptive=?contraceptive,
-                    have_complain=?havecomplain, against_whom=?whom, is_settled=?issettled, date_settled=?when, if_not_why=?why, is_death_aid=@isaid WHERE resident_id = ?id";
+                    have_complain=?havecomplain, against_whom=?whom, is_settled=?issettled, date_settled=?when, if_not_why=?why, is_death_aid=@isaid, img_path=?img WHERE resident_id = ?id";
             cmd = new MySqlCommand(query, con);
             cmd.Parameters.AddWithValue("?ishead", this.is_head);
             cmd.Parameters.AddWithValue("?household_no", this.household_no);
@@ -328,6 +333,9 @@ namespace BarangayInformation.Class
             cmd.Parameters.AddWithValue("?when", dateSettled);
             cmd.Parameters.AddWithValue("?why", this.if_not_why);
             cmd.Parameters.AddWithValue("?isaid", this.is_death_aid);
+
+            cmd.Parameters.AddWithValue("?img", this.img_path);
+
             cmd.Parameters.AddWithValue("?id", id);
             int i = Convert.ToInt32(cmd.ExecuteNonQuery());
             cmd.Dispose();
@@ -335,12 +343,14 @@ namespace BarangayInformation.Class
 
             if (flxSibling.Rows.Count > 1)
             {
+              
                 int res_sibling_id = 0;
                 cmd = new MySqlCommand(query, con);
                 for (int row = 1; row <= flxSibling.Rows.Count - 2; row++)
                 {
+                  
                     string resN = Convert.ToString(flxSibling[row, "resident_sibling_id"]);
-                    //Box.InfoBox(resN);
+        
                     if (String.IsNullOrEmpty(resN))
                     {
                         //insert
@@ -354,8 +364,23 @@ namespace BarangayInformation.Class
                         cmd.Parameters.AddWithValue("?suffix", Convert.ToString(flxSibling[row, "suffix"]));
                         cmd.Parameters.AddWithValue("?sex", Convert.ToString(flxSibling[row, "sex"]));
                         cmd.Parameters.AddWithValue("?cstatus", Convert.ToString(flxSibling[row, "civil_status"]));
-                        cmd.Parameters.AddWithValue("?bdate", Convert.ToString(flxSibling[row, "bdate"]));
-                        cmd.Parameters.AddWithValue("?isliving", Convert.ToString(flxSibling[row, "is_living_with_you"]));
+                       
+                        
+                        string ndate = flxSibling[row, "bdate"] is null ? "" : Convert.ToDateTime(flxSibling[row, "bdate"]).ToString("yyyy-MM-dd");
+                        cmd.Parameters.AddWithValue("?bdate", ndate);
+
+                        string isliving = Convert.ToString(flxSibling[row, "is_living_with_you"]);
+
+                        if (!String.IsNullOrEmpty(isliving) && Convert.ToBoolean(isliving) == true)
+                        {
+                            cmd.Parameters.AddWithValue("?isliving", 1);
+
+                        }
+                        else
+                        {
+                            cmd.Parameters.AddWithValue("?isliving", 0);
+                        }
+
                         res_sibling_id = Convert.ToInt32(cmd.ExecuteScalar());
                         cmd.Parameters.Clear();
 
@@ -380,8 +405,23 @@ namespace BarangayInformation.Class
                         cmd.Parameters.AddWithValue("?suffix", Convert.ToString(flxSibling[row, "suffix"]));
                         cmd.Parameters.AddWithValue("?sex", Convert.ToString(flxSibling[row, "sex"]));
                         cmd.Parameters.AddWithValue("?cstatus", Convert.ToString(flxSibling[row, "civil_status"]));
-                        cmd.Parameters.AddWithValue("?bdate", Convert.ToString(flxSibling[row, "bdate"]));
-                        cmd.Parameters.AddWithValue("?isliving", Convert.ToString(flxSibling[row, "is_living_with_you"]));
+
+                        string ndate = flxSibling[row, "bdate"] is null ? "" : Convert.ToDateTime(flxSibling[row, "bdate"]).ToString("yyyy-MM-dd");
+                        cmd.Parameters.AddWithValue("?bdate", ndate);
+
+                        string isliving = Convert.ToString(flxSibling[row, "is_living_with_you"]);
+                       
+                        if (!String.IsNullOrEmpty(isliving) && Convert.ToBoolean(isliving) == true)
+                        {
+                            cmd.Parameters.AddWithValue("?isliving", 1);
+
+                        }
+                        else
+                        {
+                            cmd.Parameters.AddWithValue("?isliving", 0);
+                        }
+
+
                         cmd.Parameters.AddWithValue("?id", resN);
                         cmd.ExecuteNonQuery();
                         cmd.Parameters.Clear();
@@ -627,6 +667,19 @@ namespace BarangayInformation.Class
                 flxSibling[row + 1, "mname"] = Convert.ToString(dtSIblings.Rows[row]["mname"]);
                 flxSibling[row + 1, "suffix"] = Convert.ToString(dtSIblings.Rows[row]["suffix"]);
                 flxSibling[row + 1, "sex"] = Convert.ToString(dtSIblings.Rows[row]["sex"]);
+                flxSibling[row + 1, "civil_status"] = Convert.ToString(dtSIblings.Rows[row]["civil_status"]);
+                flxSibling[row + 1, "bdate"] = Convert.ToString(dtSIblings.Rows[row]["bdate"]);
+                
+
+
+                if (dtSIblings.Rows[row]["is_living_with_you"] is null || Convert.ToBoolean(dtSIblings.Rows[row]["is_living_with_you"]) == false)
+                {
+                    flxSibling[row + 1, "is_living_with_you"] = false;
+                }
+                else { 
+                    flxSibling[row + 1, "is_living_with_you"] = true;
+                }
+
             }
 
             adprtr.Dispose();

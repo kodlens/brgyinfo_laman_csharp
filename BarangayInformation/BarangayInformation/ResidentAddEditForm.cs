@@ -62,7 +62,7 @@ namespace BarangayInformation
                     bHandled = true;
                     btnNew_Click(null, null);
                     break;
-                case Keys.F10:
+                case Keys.F12:
                     bHandled = true;
                     //editToolStripMenuItem_Click(null, null);
                     debug();
@@ -292,10 +292,15 @@ namespace BarangayInformation
             cmbIsDeathMember.Text = res.is_death_aid == 1 ? "YES" : "NO";
 
 
-            string[] lines = System.IO.File.ReadAllLines(Application.StartupPath + "/config.txt");
-            string img_path = lines[0] + resident_id + "_" + res.img_path + ".jpeg";
-            //Box.InfoBox(img_path);
-            pictureBox1.ImageLocation = img_path;
+            if (!String.IsNullOrEmpty(res.img_path))
+            {
+                string[] lines = System.IO.File.ReadAllLines(Application.StartupPath + "/config.txt");
+                string path = lines[0] + resident_id + "_" + res.img_path + ".jpeg";
+
+                pictureBox1.ImageLocation = path;
+            }
+
+           
         }
 
         private void tbnNext2_Click(object sender, EventArgs e)
@@ -497,14 +502,20 @@ namespace BarangayInformation
             res.if_not_why = txtIfNotWhy.Text;
             res.is_death_aid = this.cmbIsDeathMember.Text == "YES" ? (short)1 : (short)0;
 
-            res.img_path = txtLastname.Text + "_" + txtFirstname.Text.Replace(" ", "");
+            //check if naa image sa pic 
+            res.img_path = this.pictureBox1.Image != null ? txtLastname.Text + "_" + txtFirstname.Text.Replace(" ", "") : null;
+            
 
-               
-            if(resident_id > 0)
+
+            if (resident_id > 0)
             {
                 res.update(resident_id, flxSibling, flxPet);
                 if (this.pictureBox1.Image != null)
+                {
+                    res.img_path = txtLastname.Text + "_" + txtFirstname.Text.Replace(" ", "");
                     saveImage(resident_id);
+                }
+                    
 
                 Box.InfoBox("Successfully update!");
             }
@@ -513,7 +524,11 @@ namespace BarangayInformation
                 resident_id = res.save(this.flxSibling, this.flxPet);
                 txtResidentId.Text = "RES-" + resident_id.ToString("00000000");
                 if(this.pictureBox1.Image != null)
+                {
+                    res.img_path = txtLastname.Text + "_" + txtFirstname.Text.Replace(" ", "");
                     saveImage(resident_id);
+                }
+                  
 
                 Box.InfoBox("Successfully saved!");
             }

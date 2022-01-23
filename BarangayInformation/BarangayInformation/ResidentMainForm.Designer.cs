@@ -171,7 +171,7 @@ namespace BarangayInformation
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(1169, 47);
+            this.label2.Size = new System.Drawing.Size(1169, 37);
             this.label2.TabIndex = 66;
             this.label2.Text = "LIST OF RESIDENTS";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -188,7 +188,7 @@ namespace BarangayInformation
             this.flx.Name = "flx";
             this.flx.Rows.DefaultSize = 22;
             this.flx.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
-            this.flx.Size = new System.Drawing.Size(1142, 523);
+            this.flx.Size = new System.Drawing.Size(1142, 431);
             this.flx.StyleInfo = resources.GetString("flx.StyleInfo");
             this.flx.TabIndex = 67;
             // 
@@ -196,7 +196,7 @@ namespace BarangayInformation
             // 
             this.btnDelete.Image = global::BarangayInformation.Properties.Resources.delete16x16;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(209, 664);
+            this.btnDelete.Location = new System.Drawing.Point(202, 583);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnDelete.Size = new System.Drawing.Size(105, 34);
@@ -210,7 +210,7 @@ namespace BarangayInformation
             // 
             this.btnEdit.Image = global::BarangayInformation.Properties.Resources.eidt16x16;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(113, 664);
+            this.btnEdit.Location = new System.Drawing.Point(106, 583);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnEdit.Size = new System.Drawing.Size(90, 34);
@@ -224,7 +224,7 @@ namespace BarangayInformation
             // 
             this.btnAdd.Image = global::BarangayInformation.Properties.Resources.Save_icon16x16;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(21, 664);
+            this.btnAdd.Location = new System.Drawing.Point(14, 583);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnAdd.Size = new System.Drawing.Size(86, 34);
@@ -239,7 +239,7 @@ namespace BarangayInformation
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1169, 715);
+            this.ClientSize = new System.Drawing.Size(1169, 631);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);

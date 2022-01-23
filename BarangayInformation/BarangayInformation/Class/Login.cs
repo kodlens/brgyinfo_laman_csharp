@@ -18,12 +18,14 @@ namespace BarangayInformation.Class
         public bool auth(string username, string password)
         {
             bool flag = false;
-            try
-            {
+           // try
+           // {
                 con = Connection.con();
                 con.Open();
+                //query = @"SELECT * FROM users a JOIN roles b ON a.role_id = b.role_id
+                //       WHERE a.username=?user AND a.password=sha1(?pass) LIMIT 1";
                 query = @"SELECT * FROM users a JOIN roles b ON a.role_id = b.role_id
-                            WHERE a.username=?user AND a.password=sha1(?pass) LIMIT 1";
+                       WHERE a.username=?user AND a.password=sha1(?pass) LIMIT 1";
                 cmd = new MySqlCommand(query, con);
                 cmd.Parameters.AddWithValue("?user", username);
                 cmd.Parameters.AddWithValue("?pass", password);
@@ -48,12 +50,12 @@ namespace BarangayInformation.Class
                 con.Close();
                 con.Dispose();
                 return flag;
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
+            //}
+            //catch (Exception)
+            //{
+            //    //throw;
+            //    return false;
+            //}
             
         }
     }

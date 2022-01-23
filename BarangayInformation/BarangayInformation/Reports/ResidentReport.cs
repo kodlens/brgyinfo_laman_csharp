@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BarangayInformation {
+namespace BarangayInformation.Reports {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;

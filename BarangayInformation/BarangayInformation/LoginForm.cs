@@ -26,6 +26,27 @@ namespace BarangayInformation
             login = new Login();
         }
 
+
+        //GLOBAL ACCEPT KEY PRESS
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            bool bHandled = false;
+            // switch case is the easy way, a hash or map would be better, 
+            // but more work to get set up.
+            switch (keyData)
+            {
+                case Keys.Enter:
+                    // do whatever
+                    bHandled = true;
+                    btnLogin_Click(null, null);
+                    break;
+        
+            }
+            return bHandled;
+
+
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //filter
