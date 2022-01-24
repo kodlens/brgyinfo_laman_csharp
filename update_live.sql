@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v12.14 (64 bit)
-MySQL - 5.7.37 : Database - brgyinfo_laman
+MySQL - 10.4.13-MariaDB : Database - brgyinfo_laman
 *********************************************************************
 */
 
@@ -12,7 +12,7 @@ MySQL - 5.7.37 : Database - brgyinfo_laman
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`brgyinfo_laman` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`brgyinfo_laman` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
 USE `brgyinfo_laman`;
 
@@ -29,7 +29,7 @@ CREATE TABLE `access_levels` (
   KEY `controlsID` (`control_id`),
   CONSTRAINT `access_levels_ibfk_1` FOREIGN KEY (`control_id`) REFERENCES `controls` (`control_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `access_levels_ibfk_2` FOREIGN KEY (`role_id`) REFERENCES `roles` (`role_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=440 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=478 DEFAULT CHARSET=latin1;
 
 /*Data for the table `access_levels` */
 
@@ -101,7 +101,45 @@ insert  into `access_levels`(`access_level_id`,`role_id`,`control_id`) values
 (436,13,255),
 (437,13,256),
 (438,13,257),
-(439,13,258);
+(439,13,258),
+(440,1,218),
+(441,1,219),
+(442,1,220),
+(443,1,221),
+(444,1,222),
+(445,1,223),
+(446,1,224),
+(447,1,246),
+(448,1,247),
+(449,1,248),
+(450,1,249),
+(451,1,250),
+(452,1,251),
+(453,1,252),
+(454,1,217),
+(455,1,260),
+(456,1,261),
+(457,1,262),
+(458,1,263),
+(459,1,264),
+(460,1,265),
+(461,1,266),
+(462,1,267),
+(463,1,232),
+(464,1,233),
+(465,1,234),
+(466,1,235),
+(467,1,236),
+(468,1,237),
+(469,1,238),
+(470,1,239),
+(471,1,240),
+(472,1,241),
+(473,1,242),
+(474,1,243),
+(475,1,244),
+(476,1,245),
+(477,1,268);
 
 /*Table structure for table `barangays` */
 
@@ -111,11 +149,11 @@ CREATE TABLE `barangays` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `brgyCode` varchar(255) DEFAULT NULL,
   `brgyRef` varchar(3) DEFAULT NULL,
-  `brgyDesc` text,
+  `brgyDesc` text DEFAULT NULL,
   `regCode` varchar(255) DEFAULT NULL,
   `provCode` varchar(255) DEFAULT NULL,
   `citymunCode` varchar(255) DEFAULT NULL,
-  `active` tinyint(1) DEFAULT '1',
+  `active` tinyint(1) DEFAULT 1,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -40264,8 +40302,7 @@ insert  into `barangays`(`id`,`brgyCode`,`brgyRef`,`brgyDesc`,`regCode`,`provCod
 (40138,'156601035',NULL,'Tumantangis','15','1566','156601',1,NULL,NULL),
 (40139,'156601036',NULL,'Sawaki','15','1566','156601',1,NULL,NULL),
 (40140,'156602001',NULL,'Alat','15','1566','156602',1,NULL,NULL),
-(40141,'156602002',NULL,'Asturias','15','1566','156602',1,NULL,NULL);
-insert  into `barangays`(`id`,`brgyCode`,`brgyRef`,`brgyDesc`,`regCode`,`provCode`,`citymunCode`,`active`,`created_at`,`updated_at`) values 
+(40141,'156602002',NULL,'Asturias','15','1566','156602',1,NULL,NULL),
 (40142,'156602003',NULL,'Bus-bus','15','1566','156602',1,NULL,NULL),
 (40143,'156602004',NULL,'Chinese Pier','15','1566','156602',1,NULL,NULL),
 (40144,'156602007',NULL,'San Raymundo','15','1566','156602',1,NULL,NULL),
@@ -42162,12 +42199,12 @@ DROP TABLE IF EXISTS `cities`;
 CREATE TABLE `cities` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
   `psgcCode` varchar(255) DEFAULT NULL,
-  `citymunDesc` text,
+  `citymunDesc` text DEFAULT NULL,
   `regDesc` varchar(255) DEFAULT NULL,
   `provCode` varchar(255) DEFAULT NULL,
   `citymunCode` varchar(255) DEFAULT NULL,
   `zipcode` varchar(10) DEFAULT NULL,
-  `active` tinyint(4) DEFAULT '1',
+  `active` tinyint(4) DEFAULT 1,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1648 DEFAULT CHARSET=utf8;
 
@@ -43865,10 +43902,10 @@ CREATE TABLE `controls` (
   `control_id` int(11) NOT NULL AUTO_INCREMENT,
   `control_name` varchar(255) DEFAULT '',
   `control_text` varchar(255) DEFAULT '',
-  `description` text,
+  `description` text DEFAULT NULL,
   `class_name` varchar(255) DEFAULT '',
   PRIMARY KEY (`control_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=259 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=269 DEFAULT CHARSET=latin1;
 
 /*Data for the table `controls` */
 
@@ -43881,7 +43918,7 @@ insert  into `controls`(`control_id`,`control_name`,`control_text`,`description`
 (182,'toolStripButtonResident','Resident','Mainform : Resident','Mainform'),
 (183,'toolStripSplitButtonAddress','Address','Mainform : ADDRESS','Mainform'),
 (184,'contraceptiveToolStripMenuItem','Contraceptives','Mainform : Setup : Contraceptives','Mainform'),
-(185,'gardenToolStripMenuItem','Gardens','Mainform : Seupt : Gardens','Mainform'),
+(185,'gardenToolStripMenuItem','Gardens','Mainform : Setup : Gardens','Mainform'),
 (186,'toiletToolStripMenuItem','Toilets','Mainform : Setup : Toilets','Mainform'),
 (187,'waterSourceToolStripMenuItem','Water Sources','Mainform : Setup : Water Sourecs','Mainform'),
 (188,'nationalitiesToolStripMenuItem','Nationalities','Mainform : Setup : Nationalities','Mainform'),
@@ -43954,7 +43991,16 @@ insert  into `controls`(`control_id`,`control_name`,`control_text`,`description`
 (255,'toolStripLabel3','label role','System Display','MainForm'),
 (256,'toolStripLabelRole','Dsiplay Role','System Display','MainForm'),
 (257,'toolStripLabel1','date time label','System Display','MainForm'),
-(258,'toolStripLabelSystemTime','display date time','System Display','MainForm');
+(258,'toolStripLabelSystemTime','display date time','System Display','MainForm'),
+(260,'btnAdd','Add','Mainform: Address: Country > Add Button','CountryMainForm'),
+(261,'btnEdit','Edit','Mainfrom: Address: Country > Edit Button','CountryMainForm'),
+(262,'btnDelete','Delete','Mainform: Address: Country > Delete Button','CountryMainForm'),
+(263,'btnSearch','Search','Mainform: Address: Country >Search Button','CountryMainForm'),
+(264,'newToolStripMenuItem','New','Mainform: Address: Country > RightClick > New','CountryMainForm'),
+(265,'editToolStripMenuItem','Edit','Mainform: Address: Country > RightClick > Edit','CountryMainForm'),
+(266,'refreshToolStripMenuItem','Refresh','Mainform: Address: Country > RightClick > Refresh','CountryMainForm'),
+(267,'deleteToolStripMenuItem','Delete','Mainform: Address: Country > RightClick > Refresh','CountryMainForm'),
+(268,'btnSearch','Search','SETUP: Religion: Search','ReligionMainForm');
 
 /*Table structure for table `countries` */
 
@@ -43964,29 +44010,31 @@ CREATE TABLE `countries` (
   `country_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `country` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`country_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `countries` */
 
 insert  into `countries`(`country_id`,`country`) values 
-(1,'PHILIPPINES');
+(1,'PHILIPPINES (PH)'),
+(2,'UNITED STATE OF AMERICA (USA)'),
+(3,'CHINA (CH)'),
+(4,'BRAZIL');
 
 /*Table structure for table `gardens` */
 
 DROP TABLE IF EXISTS `gardens`;
 
 CREATE TABLE `gardens` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `garden_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `garden` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`garden_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `gardens` */
 
-insert  into `gardens`(`id`,`garden`) values 
-(1,'GARDEN 1'),
-(2,'GARDEN 2'),
-(3,'GARDEN 3');
+insert  into `gardens`(`garden_id`,`garden`) values 
+(1,'PRIVATE'),
+(2,'COMMUNAL');
 
 /*Table structure for table `nationalities` */
 
@@ -44031,10 +44079,10 @@ CREATE TABLE `provinces` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `country_id` int(10) unsigned NOT NULL,
   `psgcCode` varchar(255) DEFAULT NULL,
-  `provDesc` text,
+  `provDesc` text DEFAULT NULL,
   `regCode` varchar(255) DEFAULT NULL,
   `provCode` varchar(255) DEFAULT NULL,
-  `active` tinyint(4) DEFAULT '0',
+  `active` tinyint(4) DEFAULT 0,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=89 DEFAULT CHARSET=utf8;
 
@@ -44137,7 +44185,7 @@ DROP TABLE IF EXISTS `regions`;
 CREATE TABLE `regions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `psgcCode` varchar(255) DEFAULT NULL,
-  `regDesc` text,
+  `regDesc` text DEFAULT NULL,
   `regCode` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
@@ -44171,7 +44219,7 @@ CREATE TABLE `religions` (
   `religion_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `religion` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`religion_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `religions` */
 
@@ -44189,8 +44237,7 @@ insert  into `religions`(`religion_id`,`religion`) values
 (11,'Seventh Day Adventist'),
 (12,'United Methodists Church'),
 (13,'United Church of Christ in the Philippines'),
-(14,'Other Religion'),
-(15,'adsa');
+(14,'Other Religion');
 
 /*Table structure for table `resident_pets` */
 
@@ -44204,14 +44251,20 @@ CREATE TABLE `resident_pets` (
   PRIMARY KEY (`resident_pet_id`),
   KEY `resident_id` (`resident_id`),
   CONSTRAINT `resident_pets_ibfk_1` FOREIGN KEY (`resident_id`) REFERENCES `residents` (`resident_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `resident_pets` */
 
 insert  into `resident_pets`(`resident_pet_id`,`resident_id`,`pet`,`no_pet`) values 
 (74,105,'DOG',2),
 (75,105,'CAT',1),
-(76,105,'PIG',3);
+(76,105,'PIG',3),
+(77,106,'DOG',2),
+(78,106,'CAT',1),
+(79,106,'PIG',3),
+(80,107,'DOG',2),
+(81,107,'CAT',1),
+(82,107,'PIG',3);
 
 /*Table structure for table `resident_siblings` */
 
@@ -44231,14 +44284,18 @@ CREATE TABLE `resident_siblings` (
   PRIMARY KEY (`resident_sibling_id`),
   KEY `resident_id` (`resident_id`),
   CONSTRAINT `resident_siblings_ibfk_1` FOREIGN KEY (`resident_id`) REFERENCES `residents` (`resident_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=145 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=152 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `resident_siblings` */
 
 insert  into `resident_siblings`(`resident_sibling_id`,`resident_id`,`lname`,`fname`,`mname`,`suffix`,`sex`,`civil_status`,`bdate`,`is_living_with_you`) values 
 (142,105,'DOCOY','JAY AR','B','JR','MALE','MARRIED','2020-08-04',1),
 (143,105,'SANTARITA','JUNREY','M','','MALE','MARRIED','1995-05-24',1),
-(144,105,'FLORIZA','JADE','C','','FEMALE','SINGLE','1990-08-20',1);
+(144,105,'FLORIZA','JADE','C','','FEMALE','SINGLE','1990-08-20',1),
+(148,106,'DELA CRUZ','JULIA','','','FEMALE','SINGLE','1999-08-28',1),
+(149,107,'DOCOY','JAY AR','B','JR','MALE','MARRIED','2020-08-04',1),
+(150,107,'SANTARITA','JUNREY','M','','MALE','MARRIED','1995-05-24',1),
+(151,107,'FLORIZA','JADE','C','','FEMALE','SINGLE','1990-08-20',1);
 
 /*Table structure for table `residents` */
 
@@ -44248,7 +44305,7 @@ CREATE TABLE `residents` (
   `resident_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `household_no` varchar(50) DEFAULT NULL,
   `family_no` varchar(50) DEFAULT NULL,
-  `is_head` tinyint(4) DEFAULT '0',
+  `is_head` tinyint(4) DEFAULT 0,
   `lname` varchar(70) DEFAULT NULL,
   `fname` varchar(70) DEFAULT NULL,
   `mname` varchar(70) DEFAULT NULL,
@@ -44277,9 +44334,9 @@ CREATE TABLE `residents` (
   `permanent_city` varchar(255) DEFAULT NULL,
   `permanent_barangay` varchar(255) DEFAULT NULL,
   `permanent_street` varchar(255) DEFAULT NULL,
-  `is_voter` tinyint(4) DEFAULT '0',
+  `is_voter` tinyint(4) DEFAULT 0,
   `voter_type` varchar(30) DEFAULT NULL,
-  `is_sk` tinyint(4) DEFAULT '0',
+  `is_sk` tinyint(4) DEFAULT 0,
   `place_registration` varchar(255) DEFAULT NULL,
   `water_source` varchar(100) DEFAULT NULL,
   `toilet` varchar(100) DEFAULT NULL,
@@ -44289,17 +44346,20 @@ CREATE TABLE `residents` (
   `against_whom` varchar(100) DEFAULT NULL,
   `is_settled` tinyint(4) DEFAULT NULL,
   `date_settled` varchar(20) DEFAULT NULL,
-  `if_not_why` text,
+  `if_not_why` text DEFAULT NULL,
   `is_death_aid` tinyint(4) DEFAULT NULL,
   `img_path` varchar(255) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
   PRIMARY KEY (`resident_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=108 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `residents` */
 
-insert  into `residents`(`resident_id`,`household_no`,`family_no`,`is_head`,`lname`,`fname`,`mname`,`suffix`,`sex`,`civil_status`,`religion`,`nationality`,`employment_status`,`occupation`,`annual_income`,`year_residence`,`bdate`,`place_of_birth`,`contact_no`,`email`,`type_valid_id`,`id_no`,`present_country`,`present_province`,`present_city`,`present_barangay`,`present_street`,`permanent_country`,`permanent_province`,`permanent_city`,`permanent_barangay`,`permanent_street`,`is_voter`,`voter_type`,`is_sk`,`place_registration`,`water_source`,`toilet`,`garden`,`contraceptive`,`have_complain`,`against_whom`,`is_settled`,`date_settled`,`if_not_why`,`is_death_aid`,`img_path`,`created_at`) values 
-(105,NULL,NULL,0,'AMPARADO','ETIENNE WAYNE','NAMOCATCAT','TEST','MALE','SINGLE','Bible Baptist Church','FILIPINO','EMPLOYED','FARMER','12000','1 YEAR','2022-01-23','BAROY, LANAO DEL NORTE','09167789585','et@yahoo.com','DRIVER LICENSE','K09-1234-214','PHILIPPINES','MISAMIS OCCIDENTAL','TANGUB CITY','GARANG','P-SAMPLE LANG','','','','','',1,'OLD',0,'MALORO, TANGUB CITY','','','','',0,'',0,'','',0,'AMPARADO_ETIENNEWAYNE','2022-01-23 23:31:26');
+insert  into `residents`(`resident_id`,`household_no`,`family_no`,`is_head`,`lname`,`fname`,`mname`,`suffix`,`sex`,`civil_status`,`religion`,`nationality`,`employment_status`,`occupation`,`annual_income`,`year_residence`,`bdate`,`place_of_birth`,`contact_no`,`email`,`type_valid_id`,`id_no`,`present_country`,`present_province`,`present_city`,`present_barangay`,`present_street`,`permanent_country`,`permanent_province`,`permanent_city`,`permanent_barangay`,`permanent_street`,`is_voter`,`voter_type`,`is_sk`,`place_registration`,`water_source`,`toilet`,`garden`,`contraceptive`,`have_complain`,`against_whom`,`is_settled`,`date_settled`,`if_not_why`,`is_death_aid`,`img_path`,`created_at`,`updated_at`) values 
+(105,NULL,NULL,0,'AMPARADO','ETIENNE WAYNE','NAMOCATCAT','TEST','MALE','SINGLE','Bible Baptist Church','FILIPINO','EMPLOYED','FARMER','12000','1 YEAR','2022-01-23','BAROY, LANAO DEL NORTE','09167789585','et@yahoo.com','DRIVER LICENSE','K09-1234-214','PHILIPPINES','MISAMIS OCCIDENTAL','TANGUB CITY','GARANG','P-SAMPLE LANG','PHILIPPINES','MISAMIS OCCIDENTAL','TANGUB CITY','GARANG','P-SAMPLE LANG',1,'OLD',0,'MALORO, TANGUB CITY','POSIT','','GARDEN 1','CONTRA 2',0,'',0,'','',0,'AMPARADO_ETIENNEWAYNE','2022-01-24 09:36:04','2022-01-24 11:24:56'),
+(106,NULL,NULL,0,'DELA CRUZ','JUAN','','','FEMAILE','SINGLE','Jehovah\'s Witness','FILIPINO','EMPLOYED','FARMER','15000','1 YEAR','2022-01-24','BAROY, LANAO DEL NORTE','09167789585','et@yahoo.com','DRIVER LICENSE','K09-1234-214','PHILIPPINES','MISAMIS OCCIDENTAL','TANGUB CITY','GARANG','P-SAMPLE LANG','','','','','',1,'OLD',0,'MALORO, TANGUB CITY','POSIT','','GARDEN 1','CONTRA 1',0,'',0,'','',0,NULL,'2022-01-24 11:22:41','2022-01-24 11:24:38'),
+(107,NULL,NULL,0,'AMPARADO','ETIENNE WAYNE','NAMOCATCAT','TEST','MALE','SINGLE','Bible Baptist Church','FILIPINO','EMPLOYED','FARMER','12000','1 YEAR','2022-01-24','BAROY, LANAO DEL NORTE','09167789585','et@yahoo.com','DRIVER LICENSE','K09-1234-214','PHILIPPINES','MISAMIS OCCIDENTAL','TANGUB CITY','GARANG','P-SAMPLE LANG','','','','','',1,'OLD',0,'MALORO, TANGUB CITY','','','','',0,'',0,'','',0,NULL,'2022-01-24 11:25:06',NULL);
 
 /*Table structure for table `roles` */
 
@@ -44348,19 +44408,20 @@ CREATE TABLE `users` (
   `mname` varchar(50) DEFAULT NULL,
   `sex` varchar(10) DEFAULT NULL,
   `role_id` int(10) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `username` (`username`),
   KEY `role_id` (`role_id`),
   CONSTRAINT `users_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `roles` (`role_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `users` */
 
 insert  into `users`(`user_id`,`username`,`password`,`lname`,`fname`,`mname`,`sex`,`role_id`,`created_at`,`updated_at`) values 
 (2,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','AMPARADO','ETIENNE',NULL,'MALE',1,'2021-09-05 19:00:44','2021-10-17 06:36:59'),
-(8,'sec','7110eda4d09e062aa5e4a390b0a572ac0d2c0220','SEC','SEC','SEC','FEMAILE',13,'2021-10-20 07:13:36',NULL);
+(8,'sec','7110eda4d09e062aa5e4a390b0a572ac0d2c0220','SEC','SEC','SEC','FEMAILE',13,'2021-10-20 07:13:36',NULL),
+(9,'sample','8151325dcdbae9e0ff95f9f9658432dbedfdb209','SAMPLE','SAMPLE','','MALE',13,'2022-01-24 11:22:07',NULL);
 
 /*Table structure for table `water_sources` */
 
