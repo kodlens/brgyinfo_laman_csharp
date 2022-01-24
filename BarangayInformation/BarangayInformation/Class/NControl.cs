@@ -91,8 +91,8 @@ namespace BarangayInformation.Class
                         WHERE control_name like ?cname and control_text like ?ctext and description like ?desc ORDER BY control_id DESC";
             cmd = new MySqlCommand(query, con);
             cmd.Parameters.AddWithValue("?cname", name + "%");
-            cmd.Parameters.AddWithValue("?ctext", text + "%");
-            cmd.Parameters.AddWithValue("?desc", desc + "%");
+            cmd.Parameters.AddWithValue("?ctext", '%' + text + "%");
+            cmd.Parameters.AddWithValue("?desc", '%' + desc + "%");
             DataTable dt = new DataTable();
             MySqlDataAdapter adptr = new MySqlDataAdapter(cmd);
             adptr.Fill(dt);

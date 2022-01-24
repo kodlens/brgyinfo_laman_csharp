@@ -56,7 +56,7 @@ namespace BarangayInformation
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(12, 54);
+            this.txtSearch.Location = new System.Drawing.Point(12, 38);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(214, 20);
             this.txtSearch.TabIndex = 14;
@@ -71,7 +71,7 @@ namespace BarangayInformation
             this.label2.Location = new System.Drawing.Point(-3, 1);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(463, 41);
+            this.label2.Size = new System.Drawing.Size(463, 29);
             this.label2.TabIndex = 11;
             this.label2.Text = "LIST OF RELIGION";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -114,7 +114,7 @@ namespace BarangayInformation
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridreligion.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gridreligion.Location = new System.Drawing.Point(12, 86);
+            this.gridreligion.Location = new System.Drawing.Point(12, 76);
             this.gridreligion.MultiSelect = false;
             this.gridreligion.Name = "gridreligion";
             this.gridreligion.ReadOnly = true;
@@ -129,7 +129,7 @@ namespace BarangayInformation
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridreligion.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gridreligion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridreligion.Size = new System.Drawing.Size(436, 455);
+            this.gridreligion.Size = new System.Drawing.Size(436, 465);
             this.gridreligion.TabIndex = 8;
             // 
             // religion_id
@@ -197,7 +197,7 @@ namespace BarangayInformation
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Image = global::BarangayInformation.Properties.Resources.search16x16;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(352, 45);
+            this.btnSearch.Location = new System.Drawing.Point(352, 33);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnSearch.Size = new System.Drawing.Size(96, 37);
@@ -265,9 +265,11 @@ namespace BarangayInformation
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.gridreligion);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ReligionMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ReligionMainForm";
+            this.Text = "Religions";
             this.Load += new System.EventHandler(this.ReligionMainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridreligion)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

@@ -29,24 +29,25 @@ namespace BarangayInformation
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonwatersave = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.textreligion = new System.Windows.Forms.TextBox();
             this.labelwatersource = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // buttonwatersave
+            // btnSave
             // 
-            this.buttonwatersave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonwatersave.Location = new System.Drawing.Point(97, 55);
-            this.buttonwatersave.Name = "buttonwatersave";
-            this.buttonwatersave.Size = new System.Drawing.Size(84, 33);
-            this.buttonwatersave.TabIndex = 5;
-            this.buttonwatersave.Text = "Save";
-            this.buttonwatersave.UseVisualStyleBackColor = true;
-            this.buttonwatersave.Click += new System.EventHandler(this.buttonwatersave_Click);
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(97, 55);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(84, 33);
+            this.btnSave.TabIndex = 5;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.buttonwatersave_Click);
             // 
             // textreligion
             // 
+            this.textreligion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textreligion.Location = new System.Drawing.Point(97, 29);
             this.textreligion.Name = "textreligion";
             this.textreligion.Size = new System.Drawing.Size(197, 20);
@@ -70,14 +71,14 @@ namespace BarangayInformation
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(318, 107);
-            this.Controls.Add(this.buttonwatersave);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.textreligion);
             this.Controls.Add(this.labelwatersource);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ReligionAddEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ReligionAddEditForm";
+            this.Text = "Manage Religion";
             this.Load += new System.EventHandler(this.ReligionAddEditForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -86,7 +87,7 @@ namespace BarangayInformation
 
         #endregion
 
-        private System.Windows.Forms.Button buttonwatersave;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox textreligion;
         private System.Windows.Forms.Label labelwatersource;
     }

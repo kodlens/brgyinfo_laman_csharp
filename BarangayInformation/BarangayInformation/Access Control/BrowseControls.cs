@@ -66,8 +66,8 @@ namespace BarangayInformation.Access_Control
                 cmd = new MySqlCommand(query, con);
                 cmd.Parameters.AddWithValue("?role", role);
                 cmd.Parameters.AddWithValue("?cname", txtName.Text + "%");
-                cmd.Parameters.AddWithValue("?ctext", txtText.Text + "%");
-                cmd.Parameters.AddWithValue("?cdesc", txtdesc.Text + "%");
+                cmd.Parameters.AddWithValue("?ctext", '%' + txtText.Text + "%");
+                cmd.Parameters.AddWithValue("?cdesc", '%' + txtdesc.Text + "%");
                 DataTable dt = new DataTable();
                 MySqlDataAdapter adptr = new MySqlDataAdapter(cmd);
                 adptr.Fill(dt);
@@ -123,6 +123,11 @@ namespace BarangayInformation.Access_Control
             {
                 Box.WarnBox("No data found.");
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

@@ -17,9 +17,15 @@ namespace BarangayInformation
         Religion religion;
         internal int id;
 
-        public ReligionAddEditForm()
+
+        ReligionMainForm _frm;
+
+
+        public ReligionAddEditForm(ReligionMainForm _frm)
         {
             InitializeComponent();
+            this._frm = _frm;
+
             religion = new Religion();
         }
 
@@ -51,6 +57,7 @@ namespace BarangayInformation
                 {
                     //if greater than 1, show success message
                     Box.InfoBox("Data successfully saved.");
+                    _frm.loadData();
                     this.Close();
                 }
             }
@@ -61,6 +68,7 @@ namespace BarangayInformation
                 {
                     //if greater than 1, show success message
                     Box.InfoBox("Data successfully updated.");
+                    _frm.loadData();
                     this.Close();
                 }
             }

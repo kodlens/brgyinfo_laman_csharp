@@ -37,7 +37,7 @@ namespace BarangayInformation
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(93, 72);
+            this.btnSave.Location = new System.Drawing.Point(240, 71);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(87, 33);
             this.btnSave.TabIndex = 5;
@@ -52,6 +52,7 @@ namespace BarangayInformation
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(234, 20);
             this.txtCountry.TabIndex = 4;
+            this.txtCountry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCountry_KeyDown);
             // 
             // label1
             // 
@@ -73,6 +74,8 @@ namespace BarangayInformation
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtCountry);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CountryAddEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CountryAddEditForm";

@@ -119,5 +119,23 @@ namespace BarangayInformation
 
         }
 
+        public void fillCmb(MySqlConnection con, ComboBox cmb)
+        {
+            cmb.Items.Clear();
+            string n = "select * from toilets order by toilet asc";
+            cmd = new MySqlCommand(n, con);
+            MySqlDataReader dr;
+            dr = cmd.ExecuteReader();
+
+            //'subject for refactoring;
+            while (dr.Read())
+            {
+                cmb.Items.Add(Convert.ToString(dr["toilet"]));
+            }
+
+            dr.Dispose();
+            cmd.Dispose();
+        }
+
     }
 }

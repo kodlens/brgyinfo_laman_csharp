@@ -17,9 +17,12 @@ namespace BarangayInformation
         Country country;
         public int id;
 
-        public CountryAddEditForm()
+        CountryMainForm _frm;
+
+        public CountryAddEditForm(CountryMainForm _frm)
         {
             InitializeComponent();
+            this._frm = _frm;
 
             country = new Country();
         }
@@ -52,6 +55,8 @@ namespace BarangayInformation
             {
                 //if greater than 1, show success message
                 Box.InfoBox("Data successfully saved.");
+                _frm.loadData();
+
                 this.Close();
             }
         }
@@ -62,6 +67,8 @@ namespace BarangayInformation
             {
                 //if greater than 1, show success message
                 Box.InfoBox("Data successfully updated.");
+                _frm.loadData();
+
                 this.Close();
             }
         }
@@ -80,6 +87,14 @@ namespace BarangayInformation
         {
             country.getData(id);
             this.txtCountry.Text = country.country;
+        }
+
+        private void txtCountry_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnSave_Click(null, null);
+            }
         }
     }
     }

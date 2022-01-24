@@ -17,9 +17,13 @@ namespace BarangayInformation
 
         Garden garden;
         public int id;
-        public GardenAddEditForm()
+
+        GardenMainForm _frm;
+
+        public GardenAddEditForm(GardenMainForm _frm)
         {
             InitializeComponent();
+            this._frm = _frm;
             garden = new Garden();
         }
 
@@ -50,6 +54,7 @@ namespace BarangayInformation
             {
                 //if greater than 1, show success message
                 Box.InfoBox("Data successfully saved.");
+                _frm.loadData();
                 this.Close();
             }
         }
@@ -60,6 +65,7 @@ namespace BarangayInformation
             {
                 //if greater than 1, show success message
                 Box.InfoBox("Data successfully updated.");
+                _frm.loadData();
                 this.Close();
             }
         }

@@ -44,7 +44,7 @@ namespace BarangayInformation
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //call and show AddEdit Form
-            GardenAddEditForm frm = new GardenAddEditForm();
+            GardenAddEditForm frm = new GardenAddEditForm(this);
             frm.id = 0;
             frm.ShowDialog();
         }
@@ -56,7 +56,7 @@ namespace BarangayInformation
                 DialogResult dg = MessageBox.Show("Are you sure you want to delete this row?", "DELETE?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dg == DialogResult.Yes)
                 {
-                    int id = Convert.ToInt32(gridgarden.SelectedRows[0].Cells["nationality_id"].Value);
+                    int id = Convert.ToInt32(gridgarden.SelectedRows[0].Cells["garden_id"].Value);
                     g.delete(id);
                     Box.InfoBox("Successfully deleted.");
                     loadData();
@@ -89,7 +89,7 @@ namespace BarangayInformation
             if (gridgarden.Rows.Count > 0)
             {
                 int id = Convert.ToInt32(gridgarden.SelectedRows[0].Cells["garden_id"].Value);
-                GardenAddEditForm frm = new GardenAddEditForm();
+                GardenAddEditForm frm = new GardenAddEditForm(this);
                 frm.id = id;
                 frm.ShowDialog();
             }

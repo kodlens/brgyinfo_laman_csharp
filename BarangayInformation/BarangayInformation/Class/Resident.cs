@@ -554,7 +554,7 @@ namespace BarangayInformation.Class
             {
                 con = Connection.con();
                 con.Open();
-                query = "SELECT * FROM residents WHERE lname LIKE ?lname AND fname LIKE ?fname AND resident_id LIKE ?res_id ORDER BY lname ASC";
+                query = "SELECT * FROM residents WHERE lname LIKE ?lname AND fname LIKE ?fname AND resident_id LIKE ?res_id ORDER BY resident_id DESC";
                 cmd = new MySqlCommand(query, con);
                 cmd.Parameters.AddWithValue("?lname", slname + "%");
                 cmd.Parameters.AddWithValue("?fname", sfname + "%");
@@ -599,6 +599,7 @@ namespace BarangayInformation.Class
                 lname = Convert.ToString(dt.Rows[0]["lname"]);
                 mname = Convert.ToString(dt.Rows[0]["mname"]);
                 suffix = Convert.ToString(dt.Rows[0]["suffix"]);
+                sex = Convert.ToString(dt.Rows[0]["sex"]);
                 civil_status = Convert.ToString(dt.Rows[0]["civil_status"]);
                 religion = Convert.ToString(dt.Rows[0]["religion"]);
                 nationality = Convert.ToString(dt.Rows[0]["nationality"]);

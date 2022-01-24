@@ -26,6 +26,8 @@ namespace BarangayInformation
         WaterSource ws;
         Garden garden;
         Contraceptives contra;
+        Toilet toilet;
+
 
         ResidentMainForm _frm;
 
@@ -46,6 +48,7 @@ namespace BarangayInformation
             nat = new Nationality();
             ws = new WaterSource();
             garden = new Garden();
+            toilet = new Toilet();
             contra = new Contraceptives();
         }
 
@@ -201,6 +204,7 @@ namespace BarangayInformation
             nat.fillCmb(con, cmbNationality);
             ws.fillCmb(con, cmbWaterSource);
             garden.fillCmb(con, cmbGarden);
+            toilet.fillCmb(con, cmbToilet);
             contra.fillCmb(con, cmbContraceptive);
             con.Close();
             con.Dispose();

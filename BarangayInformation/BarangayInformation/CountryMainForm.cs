@@ -41,7 +41,7 @@ namespace BarangayInformation
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //call and show AddEdit Form
-            CountryAddEditForm frm= new CountryAddEditForm();
+            CountryAddEditForm frm= new CountryAddEditForm(this);
             frm.id = 0;
             frm.ShowDialog();
         }
@@ -91,7 +91,7 @@ namespace BarangayInformation
             if (grid.Rows.Count > 0)
             {
                 int id = Convert.ToInt32(grid.SelectedRows[0].Cells["country_id"].Value);
-                CountryAddEditForm frm = new CountryAddEditForm();
+                CountryAddEditForm frm = new CountryAddEditForm(this);
                 frm.id = id;
                 frm.ShowDialog();
             }

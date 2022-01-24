@@ -795,7 +795,7 @@ namespace BarangayInformation
             this.cmbSex.Items.AddRange(new object[] {
             "MALE",
             "FEMAILE"});
-            this.cmbSex.Location = new System.Drawing.Point(139, 173);
+            this.cmbSex.Location = new System.Drawing.Point(143, 173);
             this.cmbSex.Name = "cmbSex";
             this.cmbSex.Size = new System.Drawing.Size(231, 26);
             this.cmbSex.TabIndex = 4;
@@ -934,7 +934,7 @@ namespace BarangayInformation
             "MARRIED",
             "WIDOW",
             "SEPARATED"});
-            this.cmbCivilStatus.Location = new System.Drawing.Point(139, 209);
+            this.cmbCivilStatus.Location = new System.Drawing.Point(143, 209);
             this.cmbCivilStatus.Name = "cmbCivilStatus";
             this.cmbCivilStatus.Size = new System.Drawing.Size(231, 26);
             this.cmbCivilStatus.TabIndex = 5;
@@ -989,7 +989,7 @@ namespace BarangayInformation
             this.GroupBox4.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox4.Location = new System.Drawing.Point(280, 376);
             this.GroupBox4.Name = "GroupBox4";
-            this.GroupBox4.Size = new System.Drawing.Size(862, 122);
+            this.GroupBox4.Size = new System.Drawing.Size(862, 109);
             this.GroupBox4.TabIndex = 7;
             this.GroupBox4.TabStop = false;
             this.GroupBox4.Text = "Birth Information";
@@ -998,7 +998,7 @@ namespace BarangayInformation
             // 
             this.Label48.AutoSize = true;
             this.Label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label48.Location = new System.Drawing.Point(27, 77);
+            this.Label48.Location = new System.Drawing.Point(31, 58);
             this.Label48.Name = "Label48";
             this.Label48.Size = new System.Drawing.Size(86, 16);
             this.Label48.TabIndex = 3;
@@ -1008,9 +1008,9 @@ namespace BarangayInformation
             // 
             this.txtPlaceBirth.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPlaceBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlaceBirth.Location = new System.Drawing.Point(123, 72);
+            this.txtPlaceBirth.Location = new System.Drawing.Point(123, 56);
             this.txtPlaceBirth.Name = "txtPlaceBirth";
-            this.txtPlaceBirth.Size = new System.Drawing.Size(698, 24);
+            this.txtPlaceBirth.Size = new System.Drawing.Size(663, 24);
             this.txtPlaceBirth.TabIndex = 2;
             // 
             // dtBdate
@@ -1019,7 +1019,7 @@ namespace BarangayInformation
             this.dtBdate.CustomFormat = "yyyy-MM-dd";
             this.dtBdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtBdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtBdate.Location = new System.Drawing.Point(123, 36);
+            this.dtBdate.Location = new System.Drawing.Point(123, 26);
             this.dtBdate.Name = "dtBdate";
             this.dtBdate.Size = new System.Drawing.Size(140, 24);
             this.dtBdate.TabIndex = 0;
@@ -1028,7 +1028,7 @@ namespace BarangayInformation
             // 
             this.Label31.AutoSize = true;
             this.Label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label31.Location = new System.Drawing.Point(33, 43);
+            this.Label31.Location = new System.Drawing.Point(47, 26);
             this.Label31.Name = "Label31";
             this.Label31.Size = new System.Drawing.Size(66, 16);
             this.Label31.TabIndex = 12;
@@ -1263,7 +1263,7 @@ namespace BarangayInformation
             this.TabControl1.Controls.Add(this.tabFamilyMembers);
             this.TabControl1.Controls.Add(this.tabAdditionalInformation);
             this.TabControl1.Controls.Add(this.tabSurvey);
-            this.TabControl1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabControl1.ItemSize = new System.Drawing.Size(160, 40);
             this.TabControl1.Location = new System.Drawing.Point(3, 19);
             this.TabControl1.Name = "TabControl1";

@@ -42,7 +42,7 @@ namespace BarangayInformation
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //call and show AddEdit Form
-            ReligionAddEditForm frm = new ReligionAddEditForm();
+            ReligionAddEditForm frm = new ReligionAddEditForm(this);
             frm.id = 0;
             frm.ShowDialog();
         }
@@ -90,7 +90,7 @@ namespace BarangayInformation
             if (gridreligion.Rows.Count > 0)
             {
                 int id = Convert.ToInt32(gridreligion.SelectedRows[0].Cells["religion_id"].Value);
-                ReligionAddEditForm frm = new ReligionAddEditForm();
+                ReligionAddEditForm frm = new ReligionAddEditForm(this);
                 frm.id = id;
                 frm.ShowDialog();
             }
