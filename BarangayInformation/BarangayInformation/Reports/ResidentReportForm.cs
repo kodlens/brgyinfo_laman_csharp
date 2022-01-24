@@ -32,6 +32,7 @@ namespace BarangayInformation
 
         void loadReport()
         {
+            //get residents by ID
             query = "proc_residents";
             con = Connection.con();
             con.Open();
@@ -43,11 +44,26 @@ namespace BarangayInformation
             adptr.Fill(dt);
             adptr.Dispose();
             cmd.Dispose();
+           
+            //git siblings by resident
+            query = "proc_siblings";
+            con = Connection.con();
+            con.Open();
+            cmd = new MySqlCommand(query, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("?vid", id);
+            adptr = new MySqlDataAdapter(cmd);
+            DataTable dtSiblings = new DataTable();
+            adptr.Fill(dtSiblings);
+            adptr.Dispose();
+            cmd.Dispose();
             con.Close();
             con.Dispose();
 
+
             ResidentReport rpt = new ResidentReport();
             rpt.SetDataSource(dt);
+            rpt.Subreports[0].SetDataSource(dtSiblings);
           
             crystalReportViewer1.ReportSource = rpt;
         }

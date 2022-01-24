@@ -1,4 +1,4 @@
-\\192.168.0.5\barangayinfo\res_img\
+F:\test_img\
 192.168.0.5
 
 
