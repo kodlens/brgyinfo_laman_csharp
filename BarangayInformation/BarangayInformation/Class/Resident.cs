@@ -62,6 +62,17 @@ namespace BarangayInformation.Class
         public Int16 is_sk { set; get; }
         public string place_registration { set; get; }
 
+
+        public string mother_lname { set; get; }
+        public string mother_fname { set; get; }
+        public string mother_mname { set; get; }
+        public string mother_suffix { set; get; }
+
+        public string father_lname { set; get; }
+        public string father_fname { set; get; }
+        public string father_mname { set; get; }
+        public string father_suffix { set; get; }
+
         public string water_source { set; get; }
         public string toilet { set; get; }
         public string garden { set; get; }
@@ -111,6 +122,8 @@ namespace BarangayInformation.Class
                     present_country = ?pre_country, present_province = ?pre_province, present_city = ?pre_city, present_barangay = ?pre_brgy, present_street = ?pre_street,
                     permanent_country = ?per_country, permanent_province = ?per_province, permanent_city = ?per_city, permanent_barangay = ?per_brgy, permanent_street = ?per_street,
                     is_voter = ?isvoter, voter_type = ?voter_type, is_sk = ?issk, place_registration = ?placereg,
+                    mother_lname = ?mlname, mother_fname = ?mfname, mother_mname = ?mmname, mother_suffix = ?msuffix,
+                    father_lname = ?flname, father_fname = ?ffname, father_mname = ?fmname, father_suffix = ?fsuffix,
                     water_source=?wsource, toilet=?toilet, garden=?garden, contraceptive=?contraceptive,
                     have_complain=?havecomplain, against_whom=?whom, is_settled=?issettled, date_settled=?when, if_not_why=?why, is_death_aid=@isaid, img_path=?img; SELECT last_insert_id();";
                 cmd = new MySqlCommand(query, con);
@@ -157,6 +170,16 @@ namespace BarangayInformation.Class
                 cmd.Parameters.AddWithValue("?voter_type", this.voter_type);
                 cmd.Parameters.AddWithValue("?issk", this.is_sk);
                 cmd.Parameters.AddWithValue("?placereg", this.place_registration);
+
+                //father & mother info
+                cmd.Parameters.AddWithValue("?mlname", this.mother_lname);
+                cmd.Parameters.AddWithValue("?mfname", this.mother_fname);
+                cmd.Parameters.AddWithValue("?mmname", this.mother_mname);
+                cmd.Parameters.AddWithValue("?msuffix", this.mother_suffix);
+                cmd.Parameters.AddWithValue("?flname", this.father_lname);
+                cmd.Parameters.AddWithValue("?ffname", this.father_fname);
+                cmd.Parameters.AddWithValue("?fmname", this.father_mname);
+                cmd.Parameters.AddWithValue("?fsuffix", this.father_suffix);
 
                 //additional info
                 cmd.Parameters.AddWithValue("?wsource", this.water_source);
@@ -269,6 +292,8 @@ namespace BarangayInformation.Class
                     present_country = ?pre_country, present_province = ?pre_province, present_city = ?pre_city, present_barangay = ?pre_brgy, present_street = ?pre_street,
                     permanent_country = ?per_country, permanent_province = ?per_province, permanent_city = ?per_city, permanent_barangay = ?per_brgy, permanent_street = ?per_street,
                     is_voter = ?isvoter, voter_type = ?voter_type, is_sk = ?issk, place_registration = ?placereg,
+                    mother_lname = ?mlname, mother_fname = ?mfname, mother_mname = ?mmname, mother_suffix = ?msuffix,
+                    father_lname = ?flname, father_fname = ?ffname, father_mname = ?fmname, father_suffix = ?fsuffix,
                     water_source=?wsource, toilet=?toilet, garden=?garden, contraceptive=?contraceptive,
                     have_complain=?havecomplain, against_whom=?whom, is_settled=?issettled, date_settled=?when, if_not_why=?why, is_death_aid=@isaid, img_path=?img WHERE resident_id = ?id";
             cmd = new MySqlCommand(query, con);
@@ -315,6 +340,16 @@ namespace BarangayInformation.Class
             cmd.Parameters.AddWithValue("?voter_type", this.voter_type);
             cmd.Parameters.AddWithValue("?issk", this.is_sk);
             cmd.Parameters.AddWithValue("?placereg", this.place_registration);
+
+            //father & mother info
+            cmd.Parameters.AddWithValue("?mlname", this.mother_lname);
+            cmd.Parameters.AddWithValue("?mfname", this.mother_fname);
+            cmd.Parameters.AddWithValue("?mmname", this.mother_mname);
+            cmd.Parameters.AddWithValue("?msuffix", this.mother_suffix);
+            cmd.Parameters.AddWithValue("?flname", this.father_lname);
+            cmd.Parameters.AddWithValue("?ffname", this.father_fname);
+            cmd.Parameters.AddWithValue("?fmname", this.father_mname);
+            cmd.Parameters.AddWithValue("?fsuffix", this.father_suffix);
 
             //additional info
             cmd.Parameters.AddWithValue("?wsource", this.water_source);
@@ -595,6 +630,9 @@ namespace BarangayInformation.Class
                 //personal info
                 resident_id = id;
                 is_head = Convert.ToByte(dt.Rows[0]["is_head"]);
+                household_no = Convert.ToString(dt.Rows[0]["household_no"]);
+                family_no = Convert.ToString(dt.Rows[0]["family_no"]);
+
                 fname = Convert.ToString(dt.Rows[0]["fname"]);
                 lname = Convert.ToString(dt.Rows[0]["lname"]);
                 mname = Convert.ToString(dt.Rows[0]["mname"]);
@@ -636,6 +674,17 @@ namespace BarangayInformation.Class
                 voter_type = Convert.ToString(dt.Rows[0]["voter_type"]);
                 is_sk = Convert.ToSByte(dt.Rows[0]["is_sk"]);
                 place_registration = Convert.ToString(dt.Rows[0]["place_registration"]);
+
+                //mother & father information
+                mother_lname = Convert.ToString(dt.Rows[0]["mother_lname"]);
+                mother_fname = Convert.ToString(dt.Rows[0]["mother_fname"]);
+                mother_mname = Convert.ToString(dt.Rows[0]["mother_mname"]);
+                mother_suffix = Convert.ToString(dt.Rows[0]["mother_suffix"]);
+                father_lname = Convert.ToString(dt.Rows[0]["father_lname"]);
+                father_fname = Convert.ToString(dt.Rows[0]["father_fname"]);
+                father_mname = Convert.ToString(dt.Rows[0]["father_mname"]);
+                father_suffix = Convert.ToString(dt.Rows[0]["father_suffix"]);
+
 
                 //Other info
                 water_source = Convert.ToString(dt.Rows[0]["water_source"]);

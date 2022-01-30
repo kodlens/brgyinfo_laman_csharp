@@ -159,3 +159,6 @@ C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\Barangay
 C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.csproj.CopyComplete
 C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.exe
 C:\Users\wayne\Desktop\GitHub\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\obj\Debug\BarangayInformation.pdb
+C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\AForge.xml
+C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\AForge.Video.xml
+C:\Users\eshen\Desktop\Github\brgyinfo_laman_csharp\BarangayInformation\BarangayInformation\bin\Debug\AForge.Video.DirectShow.xml

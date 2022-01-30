@@ -40,6 +40,24 @@ namespace BarangayInformation
             this.Label34 = new System.Windows.Forms.Label();
             this.Label35 = new System.Windows.Forms.Label();
             this.tabFamilyMembers = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtFatherFName = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtFatherSuffix = new System.Windows.Forms.TextBox();
+            this.txtFatherMName = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtFatherLName = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMotherFName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtMotherSuffix = new System.Windows.Forms.TextBox();
+            this.txtMotherMName = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtMotherLName = new System.Windows.Forms.TextBox();
             this.flxSibling = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.btnBack3 = new System.Windows.Forms.Button();
             this.btnNext3 = new System.Windows.Forms.Button();
@@ -83,7 +101,7 @@ namespace BarangayInformation
             this.Label14 = new System.Windows.Forms.Label();
             this.txtFirstname = new System.Windows.Forms.TextBox();
             this.Label11 = new System.Windows.Forms.Label();
-            this.txtHSerialNumber = new System.Windows.Forms.TextBox();
+            this.txthouseholdNo = new System.Windows.Forms.TextBox();
             this.GroupBox7 = new System.Windows.Forms.GroupBox();
             this.rbMember = new System.Windows.Forms.RadioButton();
             this.rbHead = new System.Windows.Forms.RadioButton();
@@ -96,7 +114,7 @@ namespace BarangayInformation
             this.Label51 = new System.Windows.Forms.Label();
             this.txtResidentId = new System.Windows.Forms.TextBox();
             this.Label49 = new System.Windows.Forms.Label();
-            this.TextBox3 = new System.Windows.Forms.TextBox();
+            this.txtFamilyNo = new System.Windows.Forms.TextBox();
             this.GroupBox4 = new System.Windows.Forms.GroupBox();
             this.Label48 = new System.Windows.Forms.Label();
             this.txtPlaceBirth = new System.Windows.Forms.TextBox();
@@ -156,7 +174,18 @@ namespace BarangayInformation
             this.Label13 = new System.Windows.Forms.Label();
             this.Label18 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.cmbIsGovBenificiary = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.is_4ps = new System.Windows.Forms.CheckBox();
+            this.is_pensioner = new System.Windows.Forms.CheckBox();
+            this.is_uct = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.is_women = new System.Windows.Forms.CheckBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.tabFamilyMembers.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flxSibling)).BeginInit();
             this.GroupBox9.SuspendLayout();
             this.tabSurvey.SuspendLayout();
@@ -181,7 +210,7 @@ namespace BarangayInformation
             this.cmbPermanentBarangay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPermanentBarangay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPermanentBarangay.FormattingEnabled = true;
-            this.cmbPermanentBarangay.Location = new System.Drawing.Point(618, 156);
+            this.cmbPermanentBarangay.Location = new System.Drawing.Point(624, 151);
             this.cmbPermanentBarangay.Name = "cmbPermanentBarangay";
             this.cmbPermanentBarangay.Size = new System.Drawing.Size(220, 26);
             this.cmbPermanentBarangay.TabIndex = 9;
@@ -190,7 +219,7 @@ namespace BarangayInformation
             // 
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(535, 156);
+            this.Label2.Location = new System.Drawing.Point(541, 151);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(70, 16);
             this.Label2.TabIndex = 91;
@@ -201,7 +230,7 @@ namespace BarangayInformation
             this.cmbPresentBarangay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPresentBarangay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPresentBarangay.FormattingEnabled = true;
-            this.cmbPresentBarangay.Location = new System.Drawing.Point(124, 156);
+            this.cmbPresentBarangay.Location = new System.Drawing.Point(124, 151);
             this.cmbPresentBarangay.Name = "cmbPresentBarangay";
             this.cmbPresentBarangay.Size = new System.Drawing.Size(220, 26);
             this.cmbPresentBarangay.TabIndex = 3;
@@ -210,7 +239,7 @@ namespace BarangayInformation
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(41, 156);
+            this.Label1.Location = new System.Drawing.Point(41, 151);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(70, 16);
             this.Label1.TabIndex = 89;
@@ -219,7 +248,7 @@ namespace BarangayInformation
             // txtPermanentStreet
             // 
             this.txtPermanentStreet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPermanentStreet.Location = new System.Drawing.Point(618, 188);
+            this.txtPermanentStreet.Location = new System.Drawing.Point(624, 183);
             this.txtPermanentStreet.Name = "txtPermanentStreet";
             this.txtPermanentStreet.Size = new System.Drawing.Size(220, 24);
             this.txtPermanentStreet.TabIndex = 10;
@@ -229,7 +258,7 @@ namespace BarangayInformation
             this.cmbPermanentCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPermanentCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPermanentCity.FormattingEnabled = true;
-            this.cmbPermanentCity.Location = new System.Drawing.Point(618, 124);
+            this.cmbPermanentCity.Location = new System.Drawing.Point(624, 119);
             this.cmbPermanentCity.Name = "cmbPermanentCity";
             this.cmbPermanentCity.Size = new System.Drawing.Size(220, 26);
             this.cmbPermanentCity.TabIndex = 8;
@@ -240,7 +269,7 @@ namespace BarangayInformation
             this.cmbPermanentCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPermanentCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPermanentCountry.FormattingEnabled = true;
-            this.cmbPermanentCountry.Location = new System.Drawing.Point(618, 60);
+            this.cmbPermanentCountry.Location = new System.Drawing.Point(624, 55);
             this.cmbPermanentCountry.Name = "cmbPermanentCountry";
             this.cmbPermanentCountry.Size = new System.Drawing.Size(220, 26);
             this.cmbPermanentCountry.TabIndex = 6;
@@ -250,7 +279,7 @@ namespace BarangayInformation
             // 
             this.Label34.AutoSize = true;
             this.Label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label34.Location = new System.Drawing.Point(551, 60);
+            this.Label34.Location = new System.Drawing.Point(557, 55);
             this.Label34.Name = "Label34";
             this.Label34.Size = new System.Drawing.Size(53, 16);
             this.Label34.TabIndex = 84;
@@ -260,7 +289,7 @@ namespace BarangayInformation
             // 
             this.Label35.AutoSize = true;
             this.Label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label35.Location = new System.Drawing.Point(543, 90);
+            this.Label35.Location = new System.Drawing.Point(549, 85);
             this.Label35.Name = "Label35";
             this.Label35.Size = new System.Drawing.Size(61, 16);
             this.Label35.TabIndex = 83;
@@ -268,6 +297,8 @@ namespace BarangayInformation
             // 
             // tabFamilyMembers
             // 
+            this.tabFamilyMembers.Controls.Add(this.groupBox5);
+            this.tabFamilyMembers.Controls.Add(this.groupBox1);
             this.tabFamilyMembers.Controls.Add(this.flxSibling);
             this.tabFamilyMembers.Controls.Add(this.btnBack3);
             this.tabFamilyMembers.Controls.Add(this.btnNext3);
@@ -275,8 +306,194 @@ namespace BarangayInformation
             this.tabFamilyMembers.Name = "tabFamilyMembers";
             this.tabFamilyMembers.Size = new System.Drawing.Size(1150, 572);
             this.tabFamilyMembers.TabIndex = 5;
-            this.tabFamilyMembers.Text = "Family Members";
+            this.tabFamilyMembers.Text = "Family Information";
             this.tabFamilyMembers.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.txtFatherFName);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Controls.Add(this.label9);
+            this.groupBox5.Controls.Add(this.txtFatherSuffix);
+            this.groupBox5.Controls.Add(this.txtFatherMName);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.txtFatherLName);
+            this.groupBox5.Location = new System.Drawing.Point(11, 130);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(1131, 95);
+            this.groupBox5.TabIndex = 101;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "FATHER INFORMATION";
+            // 
+            // txtFatherFName
+            // 
+            this.txtFatherFName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtFatherFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFatherFName.Location = new System.Drawing.Point(108, 24);
+            this.txtFatherFName.Name = "txtFatherFName";
+            this.txtFatherFName.Size = new System.Drawing.Size(231, 24);
+            this.txtFatherFName.TabIndex = 93;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(63, 56);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(39, 16);
+            this.label8.TabIndex = 99;
+            this.label8.Text = "Suffix";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(29, 28);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(73, 16);
+            this.label9.TabIndex = 92;
+            this.label9.Text = "First Name";
+            // 
+            // txtFatherSuffix
+            // 
+            this.txtFatherSuffix.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtFatherSuffix.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFatherSuffix.Location = new System.Drawing.Point(108, 54);
+            this.txtFatherSuffix.Name = "txtFatherSuffix";
+            this.txtFatherSuffix.Size = new System.Drawing.Size(231, 24);
+            this.txtFatherSuffix.TabIndex = 96;
+            // 
+            // txtFatherMName
+            // 
+            this.txtFatherMName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtFatherMName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFatherMName.Location = new System.Drawing.Point(467, 28);
+            this.txtFatherMName.Name = "txtFatherMName";
+            this.txtFatherMName.Size = new System.Drawing.Size(231, 24);
+            this.txtFatherMName.TabIndex = 94;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(736, 28);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 16);
+            this.label10.TabIndex = 98;
+            this.label10.Text = "Last Name";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(373, 29);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(89, 16);
+            this.label12.TabIndex = 97;
+            this.label12.Text = "Middle Name";
+            // 
+            // txtFatherLName
+            // 
+            this.txtFatherLName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtFatherLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFatherLName.Location = new System.Drawing.Point(815, 24);
+            this.txtFatherLName.Name = "txtFatherLName";
+            this.txtFatherLName.Size = new System.Drawing.Size(231, 24);
+            this.txtFatherLName.TabIndex = 95;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtMotherFName);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtMotherSuffix);
+            this.groupBox1.Controls.Add(this.txtMotherMName);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.txtMotherLName);
+            this.groupBox1.Location = new System.Drawing.Point(11, 15);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1131, 95);
+            this.groupBox1.TabIndex = 100;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "MOTHER MAIDEN INFROMATION";
+            // 
+            // txtMotherFName
+            // 
+            this.txtMotherFName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMotherFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMotherFName.Location = new System.Drawing.Point(108, 24);
+            this.txtMotherFName.Name = "txtMotherFName";
+            this.txtMotherFName.Size = new System.Drawing.Size(231, 24);
+            this.txtMotherFName.TabIndex = 93;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(63, 56);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 16);
+            this.label4.TabIndex = 99;
+            this.label4.Text = "Suffix";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(29, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 16);
+            this.label5.TabIndex = 92;
+            this.label5.Text = "First Name";
+            // 
+            // txtMotherSuffix
+            // 
+            this.txtMotherSuffix.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMotherSuffix.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMotherSuffix.Location = new System.Drawing.Point(108, 54);
+            this.txtMotherSuffix.Name = "txtMotherSuffix";
+            this.txtMotherSuffix.Size = new System.Drawing.Size(231, 24);
+            this.txtMotherSuffix.TabIndex = 96;
+            // 
+            // txtMotherMName
+            // 
+            this.txtMotherMName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMotherMName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMotherMName.Location = new System.Drawing.Point(467, 28);
+            this.txtMotherMName.Name = "txtMotherMName";
+            this.txtMotherMName.Size = new System.Drawing.Size(231, 24);
+            this.txtMotherMName.TabIndex = 94;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(736, 28);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 16);
+            this.label7.TabIndex = 98;
+            this.label7.Text = "Last Name";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(373, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 16);
+            this.label6.TabIndex = 97;
+            this.label6.Text = "Middle Name";
+            // 
+            // txtMotherLName
+            // 
+            this.txtMotherLName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMotherLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMotherLName.Location = new System.Drawing.Point(815, 24);
+            this.txtMotherLName.Name = "txtMotherLName";
+            this.txtMotherLName.Size = new System.Drawing.Size(231, 24);
+            this.txtMotherLName.TabIndex = 95;
             // 
             // flxSibling
             // 
@@ -289,12 +506,12 @@ namespace BarangayInformation
             this.flxSibling.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.flxSibling.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
             this.flxSibling.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
-            this.flxSibling.Location = new System.Drawing.Point(11, 16);
+            this.flxSibling.Location = new System.Drawing.Point(11, 231);
             this.flxSibling.Name = "flxSibling";
             this.flxSibling.Rows.Count = 1;
             this.flxSibling.Rows.DefaultSize = 24;
             this.flxSibling.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
-            this.flxSibling.Size = new System.Drawing.Size(1122, 484);
+            this.flxSibling.Size = new System.Drawing.Size(1122, 269);
             this.flxSibling.StyleInfo = resources.GetString("flxSibling.StyleInfo");
             this.flxSibling.TabIndex = 91;
             this.flxSibling.SetupEditor += new C1.Win.C1FlexGrid.RowColEventHandler(this.flxSibling_SetupEditor);
@@ -409,7 +626,7 @@ namespace BarangayInformation
             this.cmbContraceptive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbContraceptive.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbContraceptive.FormattingEnabled = true;
-            this.cmbContraceptive.Location = new System.Drawing.Point(111, 153);
+            this.cmbContraceptive.Location = new System.Drawing.Point(113, 172);
             this.cmbContraceptive.Name = "cmbContraceptive";
             this.cmbContraceptive.Size = new System.Drawing.Size(344, 26);
             this.cmbContraceptive.TabIndex = 33;
@@ -418,7 +635,7 @@ namespace BarangayInformation
             // 
             this.Label62.AutoSize = true;
             this.Label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label62.Location = new System.Drawing.Point(23, 134);
+            this.Label62.Location = new System.Drawing.Point(25, 153);
             this.Label62.Name = "Label62";
             this.Label62.Size = new System.Drawing.Size(143, 16);
             this.Label62.TabIndex = 34;
@@ -438,7 +655,7 @@ namespace BarangayInformation
             // 
             this.Label61.AutoSize = true;
             this.Label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label61.Location = new System.Drawing.Point(534, 36);
+            this.Label61.Location = new System.Drawing.Point(533, 23);
             this.Label61.Name = "Label61";
             this.Label61.Size = new System.Drawing.Size(77, 16);
             this.Label61.TabIndex = 32;
@@ -449,7 +666,7 @@ namespace BarangayInformation
             this.cmbGarden.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGarden.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGarden.FormattingEnabled = true;
-            this.cmbGarden.Location = new System.Drawing.Point(112, 100);
+            this.cmbGarden.Location = new System.Drawing.Point(114, 119);
             this.cmbGarden.Name = "cmbGarden";
             this.cmbGarden.Size = new System.Drawing.Size(343, 26);
             this.cmbGarden.TabIndex = 29;
@@ -458,7 +675,7 @@ namespace BarangayInformation
             // 
             this.Label60.AutoSize = true;
             this.Label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label60.Location = new System.Drawing.Point(50, 105);
+            this.Label60.Location = new System.Drawing.Point(52, 124);
             this.Label60.Name = "Label60";
             this.Label60.Size = new System.Drawing.Size(56, 16);
             this.Label60.TabIndex = 30;
@@ -469,7 +686,7 @@ namespace BarangayInformation
             this.cmbToilet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbToilet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbToilet.FormattingEnabled = true;
-            this.cmbToilet.Location = new System.Drawing.Point(112, 68);
+            this.cmbToilet.Location = new System.Drawing.Point(114, 87);
             this.cmbToilet.Name = "cmbToilet";
             this.cmbToilet.Size = new System.Drawing.Size(343, 26);
             this.cmbToilet.TabIndex = 27;
@@ -478,7 +695,7 @@ namespace BarangayInformation
             // 
             this.Label59.AutoSize = true;
             this.Label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label59.Location = new System.Drawing.Point(61, 73);
+            this.Label59.Location = new System.Drawing.Point(63, 92);
             this.Label59.Name = "Label59";
             this.Label59.Size = new System.Drawing.Size(45, 16);
             this.Label59.TabIndex = 28;
@@ -489,7 +706,7 @@ namespace BarangayInformation
             this.cmbWaterSource.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbWaterSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbWaterSource.FormattingEnabled = true;
-            this.cmbWaterSource.Location = new System.Drawing.Point(112, 36);
+            this.cmbWaterSource.Location = new System.Drawing.Point(114, 55);
             this.cmbWaterSource.Name = "cmbWaterSource";
             this.cmbWaterSource.Size = new System.Drawing.Size(343, 26);
             this.cmbWaterSource.TabIndex = 25;
@@ -510,9 +727,9 @@ namespace BarangayInformation
             this.Label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label55.Location = new System.Drawing.Point(26, 77);
             this.Label55.Name = "Label55";
-            this.Label55.Size = new System.Drawing.Size(169, 16);
+            this.Label55.Size = new System.Drawing.Size(160, 16);
             this.Label55.TabIndex = 36;
-            this.Label55.Text = "IF SO, AGAINST WHOME?";
+            this.Label55.Text = "IF SO, AGAINST WHOM?";
             // 
             // Label54
             // 
@@ -549,7 +766,7 @@ namespace BarangayInformation
             // 
             this.Label22.AutoSize = true;
             this.Label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label22.Location = new System.Drawing.Point(13, 41);
+            this.Label22.Location = new System.Drawing.Point(15, 60);
             this.Label22.Name = "Label22";
             this.Label22.Size = new System.Drawing.Size(93, 16);
             this.Label22.TabIndex = 26;
@@ -649,7 +866,7 @@ namespace BarangayInformation
             this.cmbPermanentProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPermanentProvince.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPermanentProvince.FormattingEnabled = true;
-            this.cmbPermanentProvince.Location = new System.Drawing.Point(618, 92);
+            this.cmbPermanentProvince.Location = new System.Drawing.Point(624, 87);
             this.cmbPermanentProvince.Name = "cmbPermanentProvince";
             this.cmbPermanentProvince.Size = new System.Drawing.Size(220, 26);
             this.cmbPermanentProvince.TabIndex = 7;
@@ -686,7 +903,7 @@ namespace BarangayInformation
             this.flxPet.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.flxPet.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
             this.flxPet.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
-            this.flxPet.Location = new System.Drawing.Point(537, 68);
+            this.flxPet.Location = new System.Drawing.Point(536, 55);
             this.flxPet.Name = "flxPet";
             this.flxPet.Rows.Count = 1;
             this.flxPet.Rows.DefaultSize = 26;
@@ -752,7 +969,7 @@ namespace BarangayInformation
             // 
             this.Label36.AutoSize = true;
             this.Label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label36.Location = new System.Drawing.Point(500, 125);
+            this.Label36.Location = new System.Drawing.Point(506, 120);
             this.Label36.Name = "Label36";
             this.Label36.Size = new System.Drawing.Size(104, 16);
             this.Label36.TabIndex = 82;
@@ -794,7 +1011,7 @@ namespace BarangayInformation
             this.cmbSex.FormattingEnabled = true;
             this.cmbSex.Items.AddRange(new object[] {
             "MALE",
-            "FEMAILE"});
+            "FEMALE"});
             this.cmbSex.Location = new System.Drawing.Point(143, 173);
             this.cmbSex.Name = "cmbSex";
             this.cmbSex.Size = new System.Drawing.Size(231, 26);
@@ -825,19 +1042,20 @@ namespace BarangayInformation
             this.Label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label11.Location = new System.Drawing.Point(33, 50);
             this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(163, 16);
+            this.Label11.Size = new System.Drawing.Size(125, 16);
             this.Label11.TabIndex = 37;
-            this.Label11.Text = "Household Serial Number";
+            this.Label11.Text = "Household Number";
             // 
-            // txtHSerialNumber
+            // txthouseholdNo
             // 
-            this.txtHSerialNumber.BackColor = System.Drawing.SystemColors.Info;
-            this.txtHSerialNumber.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHSerialNumber.ForeColor = System.Drawing.Color.Red;
-            this.txtHSerialNumber.Location = new System.Drawing.Point(36, 69);
-            this.txtHSerialNumber.Name = "txtHSerialNumber";
-            this.txtHSerialNumber.Size = new System.Drawing.Size(217, 28);
-            this.txtHSerialNumber.TabIndex = 0;
+            this.txthouseholdNo.BackColor = System.Drawing.SystemColors.Info;
+            this.txthouseholdNo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txthouseholdNo.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txthouseholdNo.ForeColor = System.Drawing.Color.Red;
+            this.txthouseholdNo.Location = new System.Drawing.Point(36, 69);
+            this.txthouseholdNo.Name = "txthouseholdNo";
+            this.txthouseholdNo.Size = new System.Drawing.Size(217, 28);
+            this.txthouseholdNo.TabIndex = 0;
             // 
             // GroupBox7
             // 
@@ -970,15 +1188,15 @@ namespace BarangayInformation
             this.Label49.TabIndex = 56;
             this.Label49.Text = "Family Number";
             // 
-            // TextBox3
+            // txtFamilyNo
             // 
-            this.TextBox3.BackColor = System.Drawing.SystemColors.Info;
-            this.TextBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox3.ForeColor = System.Drawing.Color.Red;
-            this.TextBox3.Location = new System.Drawing.Point(36, 118);
-            this.TextBox3.Name = "TextBox3";
-            this.TextBox3.Size = new System.Drawing.Size(217, 28);
-            this.TextBox3.TabIndex = 1;
+            this.txtFamilyNo.BackColor = System.Drawing.SystemColors.Info;
+            this.txtFamilyNo.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFamilyNo.ForeColor = System.Drawing.Color.Red;
+            this.txtFamilyNo.Location = new System.Drawing.Point(36, 118);
+            this.txtFamilyNo.Name = "txtFamilyNo";
+            this.txtFamilyNo.Size = new System.Drawing.Size(217, 28);
+            this.txtFamilyNo.TabIndex = 1;
             // 
             // GroupBox4
             // 
@@ -1198,10 +1416,10 @@ namespace BarangayInformation
             this.tabProfile.Controls.Add(this.Label51);
             this.tabProfile.Controls.Add(this.txtResidentId);
             this.tabProfile.Controls.Add(this.Label49);
-            this.tabProfile.Controls.Add(this.TextBox3);
+            this.tabProfile.Controls.Add(this.txtFamilyNo);
             this.tabProfile.Controls.Add(this.GroupBox4);
             this.tabProfile.Controls.Add(this.Label11);
-            this.tabProfile.Controls.Add(this.txtHSerialNumber);
+            this.tabProfile.Controls.Add(this.txthouseholdNo);
             this.tabProfile.Controls.Add(this.GroupBox7);
             this.tabProfile.Controls.Add(this.GroupBox6);
             this.tabProfile.Controls.Add(this.btnTakePic);
@@ -1420,6 +1638,15 @@ namespace BarangayInformation
             // 
             // GroupBox2
             // 
+            this.GroupBox2.Controls.Add(this.label23);
+            this.GroupBox2.Controls.Add(this.checkBox4);
+            this.GroupBox2.Controls.Add(this.checkBox5);
+            this.GroupBox2.Controls.Add(this.is_women);
+            this.GroupBox2.Controls.Add(this.is_uct);
+            this.GroupBox2.Controls.Add(this.is_pensioner);
+            this.GroupBox2.Controls.Add(this.is_4ps);
+            this.GroupBox2.Controls.Add(this.cmbIsGovBenificiary);
+            this.GroupBox2.Controls.Add(this.label20);
             this.GroupBox2.Controls.Add(this.cmbIsSK);
             this.GroupBox2.Controls.Add(this.Label43);
             this.GroupBox2.Controls.Add(this.Label40);
@@ -1430,9 +1657,9 @@ namespace BarangayInformation
             this.GroupBox2.Controls.Add(this.cmbIsVoter);
             this.GroupBox2.Controls.Add(this.Label42);
             this.GroupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox2.Location = new System.Drawing.Point(3, 339);
+            this.GroupBox2.Location = new System.Drawing.Point(5, 329);
             this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Size = new System.Drawing.Size(1119, 139);
+            this.GroupBox2.Size = new System.Drawing.Size(1119, 184);
             this.GroupBox2.TabIndex = 57;
             this.GroupBox2.TabStop = false;
             this.GroupBox2.Text = "Voter Status";
@@ -1562,7 +1789,7 @@ namespace BarangayInformation
             this.GroupBox8.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox8.Location = new System.Drawing.Point(6, 107);
             this.GroupBox8.Name = "GroupBox8";
-            this.GroupBox8.Size = new System.Drawing.Size(1116, 226);
+            this.GroupBox8.Size = new System.Drawing.Size(1116, 216);
             this.GroupBox8.TabIndex = 4;
             this.GroupBox8.TabStop = false;
             this.GroupBox8.Text = "Secondary Contact Information";
@@ -1571,7 +1798,7 @@ namespace BarangayInformation
             // 
             this.Label37.AutoSize = true;
             this.Label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label37.Location = new System.Drawing.Point(522, 191);
+            this.Label37.Location = new System.Drawing.Point(528, 186);
             this.Label37.Name = "Label37";
             this.Label37.Size = new System.Drawing.Size(82, 16);
             this.Label37.TabIndex = 81;
@@ -1580,7 +1807,7 @@ namespace BarangayInformation
             // txtPresentStreet
             // 
             this.txtPresentStreet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPresentStreet.Location = new System.Drawing.Point(124, 188);
+            this.txtPresentStreet.Location = new System.Drawing.Point(124, 183);
             this.txtPresentStreet.Name = "txtPresentStreet";
             this.txtPresentStreet.Size = new System.Drawing.Size(220, 24);
             this.txtPresentStreet.TabIndex = 4;
@@ -1590,7 +1817,7 @@ namespace BarangayInformation
             this.cmbPresentCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPresentCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPresentCity.FormattingEnabled = true;
-            this.cmbPresentCity.Location = new System.Drawing.Point(124, 124);
+            this.cmbPresentCity.Location = new System.Drawing.Point(124, 119);
             this.cmbPresentCity.Name = "cmbPresentCity";
             this.cmbPresentCity.Size = new System.Drawing.Size(220, 26);
             this.cmbPresentCity.TabIndex = 2;
@@ -1601,7 +1828,7 @@ namespace BarangayInformation
             this.cmbPresentProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPresentProvince.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPresentProvince.FormattingEnabled = true;
-            this.cmbPresentProvince.Location = new System.Drawing.Point(124, 92);
+            this.cmbPresentProvince.Location = new System.Drawing.Point(124, 87);
             this.cmbPresentProvince.Name = "cmbPresentProvince";
             this.cmbPresentProvince.Size = new System.Drawing.Size(220, 26);
             this.cmbPresentProvince.TabIndex = 1;
@@ -1612,7 +1839,7 @@ namespace BarangayInformation
             this.cmbPresentCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPresentCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPresentCountry.FormattingEnabled = true;
-            this.cmbPresentCountry.Location = new System.Drawing.Point(124, 60);
+            this.cmbPresentCountry.Location = new System.Drawing.Point(124, 55);
             this.cmbPresentCountry.Name = "cmbPresentCountry";
             this.cmbPresentCountry.Size = new System.Drawing.Size(220, 26);
             this.cmbPresentCountry.TabIndex = 0;
@@ -1622,7 +1849,7 @@ namespace BarangayInformation
             // 
             this.Label41.AutoSize = true;
             this.Label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label41.Location = new System.Drawing.Point(553, 31);
+            this.Label41.Location = new System.Drawing.Point(559, 26);
             this.Label41.Name = "Label41";
             this.Label41.Size = new System.Drawing.Size(155, 18);
             this.Label41.TabIndex = 69;
@@ -1632,7 +1859,7 @@ namespace BarangayInformation
             // 
             this.checkIsSameWithPresentAddress.AutoSize = true;
             this.checkIsSameWithPresentAddress.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkIsSameWithPresentAddress.Location = new System.Drawing.Point(727, 31);
+            this.checkIsSameWithPresentAddress.Location = new System.Drawing.Point(733, 26);
             this.checkIsSameWithPresentAddress.Name = "checkIsSameWithPresentAddress";
             this.checkIsSameWithPresentAddress.Size = new System.Drawing.Size(192, 23);
             this.checkIsSameWithPresentAddress.TabIndex = 5;
@@ -1644,7 +1871,7 @@ namespace BarangayInformation
             // 
             this.Label33.AutoSize = true;
             this.Label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label33.Location = new System.Drawing.Point(57, 60);
+            this.Label33.Location = new System.Drawing.Point(57, 55);
             this.Label33.Name = "Label33";
             this.Label33.Size = new System.Drawing.Size(53, 16);
             this.Label33.TabIndex = 66;
@@ -1654,7 +1881,7 @@ namespace BarangayInformation
             // 
             this.Label19.AutoSize = true;
             this.Label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label19.Location = new System.Drawing.Point(49, 92);
+            this.Label19.Location = new System.Drawing.Point(49, 87);
             this.Label19.Name = "Label19";
             this.Label19.Size = new System.Drawing.Size(61, 16);
             this.Label19.TabIndex = 64;
@@ -1664,7 +1891,7 @@ namespace BarangayInformation
             // 
             this.Label16.AutoSize = true;
             this.Label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label16.Location = new System.Drawing.Point(7, 126);
+            this.Label16.Location = new System.Drawing.Point(7, 121);
             this.Label16.Name = "Label16";
             this.Label16.Size = new System.Drawing.Size(104, 16);
             this.Label16.TabIndex = 62;
@@ -1674,7 +1901,7 @@ namespace BarangayInformation
             // 
             this.Label13.AutoSize = true;
             this.Label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label13.Location = new System.Drawing.Point(28, 190);
+            this.Label13.Location = new System.Drawing.Point(28, 185);
             this.Label13.Name = "Label13";
             this.Label13.Size = new System.Drawing.Size(82, 16);
             this.Label13.TabIndex = 60;
@@ -1684,7 +1911,7 @@ namespace BarangayInformation
             // 
             this.Label18.AutoSize = true;
             this.Label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label18.Location = new System.Drawing.Point(31, 31);
+            this.Label18.Location = new System.Drawing.Point(31, 26);
             this.Label18.Name = "Label18";
             this.Label18.Size = new System.Drawing.Size(132, 18);
             this.Label18.TabIndex = 37;
@@ -1699,6 +1926,105 @@ namespace BarangayInformation
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(1161, 16);
             this.label3.TabIndex = 62;
+            // 
+            // cmbIsGovBenificiary
+            // 
+            this.cmbIsGovBenificiary.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIsGovBenificiary.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbIsGovBenificiary.FormattingEnabled = true;
+            this.cmbIsGovBenificiary.Items.AddRange(new object[] {
+            "YES",
+            "NO"});
+            this.cmbIsGovBenificiary.Location = new System.Drawing.Point(853, 54);
+            this.cmbIsGovBenificiary.Name = "cmbIsGovBenificiary";
+            this.cmbIsGovBenificiary.Size = new System.Drawing.Size(167, 26);
+            this.cmbIsGovBenificiary.TabIndex = 86;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(733, 59);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(114, 16);
+            this.label20.TabIndex = 87;
+            this.label20.Text = "Gov\'t Benificiary?:";
+            // 
+            // is_4ps
+            // 
+            this.is_4ps.AutoSize = true;
+            this.is_4ps.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.is_4ps.Location = new System.Drawing.Point(746, 94);
+            this.is_4ps.Name = "is_4ps";
+            this.is_4ps.Size = new System.Drawing.Size(52, 23);
+            this.is_4ps.TabIndex = 88;
+            this.is_4ps.Text = "4PS";
+            this.is_4ps.UseVisualStyleBackColor = true;
+            // 
+            // is_pensioner
+            // 
+            this.is_pensioner.AutoSize = true;
+            this.is_pensioner.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.is_pensioner.Location = new System.Drawing.Point(820, 94);
+            this.is_pensioner.Name = "is_pensioner";
+            this.is_pensioner.Size = new System.Drawing.Size(159, 23);
+            this.is_pensioner.TabIndex = 89;
+            this.is_pensioner.Text = "SOCIAL PENSIONER";
+            this.is_pensioner.UseVisualStyleBackColor = true;
+            // 
+            // is_uct
+            // 
+            this.is_uct.AutoSize = true;
+            this.is_uct.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.is_uct.Location = new System.Drawing.Point(999, 94);
+            this.is_uct.Name = "is_uct";
+            this.is_uct.Size = new System.Drawing.Size(55, 23);
+            this.is_uct.TabIndex = 90;
+            this.is_uct.Text = "UCT";
+            this.is_uct.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox4.Location = new System.Drawing.Point(370, 140);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(136, 23);
+            this.checkBox4.TabIndex = 93;
+            this.checkBox4.Text = "SENIOR CITIZEN";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox5.Location = new System.Drawing.Point(298, 142);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(61, 23);
+            this.checkBox5.TabIndex = 92;
+            this.checkBox5.Text = "PWD";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // is_women
+            // 
+            this.is_women.AutoSize = true;
+            this.is_women.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.is_women.Location = new System.Drawing.Point(152, 142);
+            this.is_women.Name = "is_women";
+            this.is_women.Size = new System.Drawing.Size(130, 23);
+            this.is_women.TabIndex = 91;
+            this.is_women.Text = "WOMEN\'S ORG";
+            this.is_women.UseVisualStyleBackColor = true;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(17, 142);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(120, 16);
+            this.label23.TabIndex = 94;
+            this.label23.Text = "Gov\'t Organization:";
             // 
             // ResidentAddEditForm
             // 
@@ -1716,6 +2042,10 @@ namespace BarangayInformation
             this.Text = "Manage Resident";
             this.Load += new System.EventHandler(this.ResidentAddEditForm_Load);
             this.tabFamilyMembers.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flxSibling)).EndInit();
             this.GroupBox9.ResumeLayout(false);
             this.GroupBox9.PerformLayout();
@@ -1798,7 +2128,7 @@ namespace BarangayInformation
         internal System.Windows.Forms.Label Label14;
         internal System.Windows.Forms.TextBox txtFirstname;
         internal System.Windows.Forms.Label Label11;
-        internal System.Windows.Forms.TextBox txtHSerialNumber;
+        internal System.Windows.Forms.TextBox txthouseholdNo;
         internal System.Windows.Forms.GroupBox GroupBox7;
         internal System.Windows.Forms.RadioButton rbMember;
         internal System.Windows.Forms.RadioButton rbHead;
@@ -1811,7 +2141,7 @@ namespace BarangayInformation
         internal System.Windows.Forms.Label Label51;
         internal System.Windows.Forms.TextBox txtResidentId;
         internal System.Windows.Forms.Label Label49;
-        internal System.Windows.Forms.TextBox TextBox3;
+        internal System.Windows.Forms.TextBox txtFamilyNo;
         internal System.Windows.Forms.GroupBox GroupBox4;
         internal System.Windows.Forms.Label Label48;
         internal System.Windows.Forms.TextBox txtPlaceBirth;
@@ -1873,5 +2203,32 @@ namespace BarangayInformation
         private C1.Win.C1FlexGrid.C1FlexGrid flxPet;
         private System.Windows.Forms.NumericUpDown txtAnnualIncome;
         internal System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        internal System.Windows.Forms.TextBox txtMotherFName;
+        internal System.Windows.Forms.Label label4;
+        internal System.Windows.Forms.Label label5;
+        internal System.Windows.Forms.TextBox txtMotherSuffix;
+        internal System.Windows.Forms.TextBox txtMotherMName;
+        internal System.Windows.Forms.Label label7;
+        internal System.Windows.Forms.Label label6;
+        internal System.Windows.Forms.TextBox txtMotherLName;
+        private System.Windows.Forms.GroupBox groupBox5;
+        internal System.Windows.Forms.TextBox txtFatherFName;
+        internal System.Windows.Forms.Label label8;
+        internal System.Windows.Forms.Label label9;
+        internal System.Windows.Forms.TextBox txtFatherSuffix;
+        internal System.Windows.Forms.TextBox txtFatherMName;
+        internal System.Windows.Forms.Label label10;
+        internal System.Windows.Forms.Label label12;
+        internal System.Windows.Forms.TextBox txtFatherLName;
+        internal System.Windows.Forms.ComboBox cmbIsGovBenificiary;
+        internal System.Windows.Forms.Label label20;
+        private System.Windows.Forms.CheckBox is_uct;
+        private System.Windows.Forms.CheckBox is_pensioner;
+        private System.Windows.Forms.CheckBox is_4ps;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox is_women;
+        internal System.Windows.Forms.Label label23;
     }
 }

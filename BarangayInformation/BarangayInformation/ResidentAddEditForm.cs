@@ -123,6 +123,16 @@ namespace BarangayInformation
             cmbIsSK.Text = "NO";
             txtPlaceReg.Text = "MALORO, TANGUB CITY";
 
+            txtMotherLName.Text = "NAMOCATCAT";
+            txtMotherFName.Text = "HELEN";
+            txtMotherMName.Text = "MILA";
+            
+            txtFatherLName.Text = "AMPARADO";
+            txtFatherFName.Text = "SEGUNDO";
+            txtFatherMName.Text = "SIBALDE";
+            txtFatherSuffix.Text = "JR";
+
+
             cmbPresentCountry.Text = "PHILIPPINES";
             cmbPresentProvince.Text = "MISAMIS OCCIDENTAL";
             cmbPresentCity.Text = "TANGUB CITY";
@@ -228,6 +238,8 @@ namespace BarangayInformation
                 rbMember.Checked = true;
 
             txtResidentId.Text = "RES-" + res.resident_id.ToString("00000000");
+            txthouseholdNo.Text = res.household_no;
+            txtFamilyNo.Text = res.family_no;
             txtLastname.Text = res.lname;
             txtFirstname.Text = res.fname;
             txtMiddlename.Text = res.mname;
@@ -266,6 +278,17 @@ namespace BarangayInformation
             cmbVoterType.Text = res.voter_type;
             cmbIsSK.Text = res.is_sk == 1 ? "YES" : "NO";
             txtPlaceReg.Text = res.place_registration;
+
+            //mother & father information
+            txtMotherLName.Text = res.mother_lname;
+            txtMotherFName.Text = res.mother_fname;
+            txtMotherMName.Text = res.mother_mname;
+            txtMotherSuffix.Text = res.mother_suffix;
+            txtFatherLName.Text = res.father_lname;
+            txtFatherFName.Text = res.father_fname;
+            txtFatherMName.Text = res.father_mname;
+            txtFatherSuffix.Text = res.father_suffix;
+
 
             //other info
             cmbWaterSource.Text = res.water_source;
@@ -344,75 +367,75 @@ namespace BarangayInformation
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //if (String.IsNullOrEmpty(txtLastname.Text))
-            //{
-            //    Box.WarnBox("Please input lastname.");
-            //    txtLastname.Focus();
-            //    return;
-            //}
-            //if (String.IsNullOrEmpty(txtFirstname.Text))
-            //{
-            //    Box.WarnBox("Please input lastname.");
-            //    txtFirstname.Focus();
-            //    return;
-            //}
-            //if (String.IsNullOrEmpty(cmbSex.Text))
-            //{
-            //    Box.WarnBox("Please select sex.");
-            //    cmbSex.Focus();
-            //    return;
-            //}
-            ////filter address
-            ////present address
-            //if (String.IsNullOrEmpty(cmbPresentCountry.Text))
-            //{
-            //    Box.WarnBox("Please select present country.");
-            //    cmbPresentCountry.Focus();
-            //    return;
-            //}
-            //if (String.IsNullOrEmpty(cmbPresentProvince.Text))
-            //{
-            //    Box.WarnBox("Please select present province.");
-            //    cmbPresentProvince.Focus();
-            //    return;
-            //}
-            //if (String.IsNullOrEmpty(cmbPresentCity.Text))
-            //{
-            //    Box.WarnBox("Please select present city.");
-            //    cmbPresentCity.Focus();
-            //    return;
-            //}
-            //if (String.IsNullOrEmpty(cmbPresentBarangay.Text))
-            //{
-            //    Box.WarnBox("Please select present barangay.");
-            //    cmbPresentBarangay.Focus();
-            //    return;
-            //}
-            ////permanent address
-            //if (String.IsNullOrEmpty(cmbPermanentCountry.Text))
-            //{
-            //    Box.WarnBox("Please select permanent country.");
-            //    cmbPermanentCountry.Focus();
-            //    return;
-            //}
-            //if (String.IsNullOrEmpty(cmbPermanentProvince.Text))
-            //{
-            //    Box.WarnBox("Please select permanent province.");
-            //    cmbPermanentProvince.Focus();
-            //    return;
-            //}
-            //if (String.IsNullOrEmpty(cmbPermanentCity.Text))
-            //{
-            //    Box.WarnBox("Please select permanent city.");
-            //    cmbPermanentCity.Focus();
-            //    return;
-            //}
-            //if (String.IsNullOrEmpty(cmbPermanentBarangay.Text))
-            //{
-            //    Box.WarnBox("Please select permanent barangay.");
-            //    cmbPermanentBarangay.Focus();
-            //    return;
-            //}
+            if (String.IsNullOrEmpty(txtLastname.Text))
+            {
+                Box.WarnBox("Please input lastname.");
+                txtLastname.Focus();
+                return;
+            }
+            if (String.IsNullOrEmpty(txtFirstname.Text))
+            {
+                Box.WarnBox("Please input lastname.");
+                txtFirstname.Focus();
+                return;
+            }
+            if (String.IsNullOrEmpty(cmbSex.Text))
+            {
+                Box.WarnBox("Please select sex.");
+                cmbSex.Focus();
+                return;
+            }
+            //filter address
+            //present address
+            if (String.IsNullOrEmpty(cmbPresentCountry.Text))
+            {
+                Box.WarnBox("Please select present country.");
+                cmbPresentCountry.Focus();
+                return;
+            }
+            if (String.IsNullOrEmpty(cmbPresentProvince.Text))
+            {
+                Box.WarnBox("Please select present province.");
+                cmbPresentProvince.Focus();
+                return;
+            }
+            if (String.IsNullOrEmpty(cmbPresentCity.Text))
+            {
+                Box.WarnBox("Please select present city.");
+                cmbPresentCity.Focus();
+                return;
+            }
+            if (String.IsNullOrEmpty(cmbPresentBarangay.Text))
+            {
+                Box.WarnBox("Please select present barangay.");
+                cmbPresentBarangay.Focus();
+                return;
+            }
+            //permanent address
+            if (String.IsNullOrEmpty(cmbPermanentCountry.Text))
+            {
+                Box.WarnBox("Please select permanent country.");
+                cmbPermanentCountry.Focus();
+                return;
+            }
+            if (String.IsNullOrEmpty(cmbPermanentProvince.Text))
+            {
+                Box.WarnBox("Please select permanent province.");
+                cmbPermanentProvince.Focus();
+                return;
+            }
+            if (String.IsNullOrEmpty(cmbPermanentCity.Text))
+            {
+                Box.WarnBox("Please select permanent city.");
+                cmbPermanentCity.Focus();
+                return;
+            }
+            if (String.IsNullOrEmpty(cmbPermanentBarangay.Text))
+            {
+                Box.WarnBox("Please select permanent barangay.");
+                cmbPermanentBarangay.Focus();
+                return;
+            }
 
             insertResident();
         }
@@ -441,7 +464,8 @@ namespace BarangayInformation
 
         void insertResident()
         {
-
+            res.household_no = txthouseholdNo.Text;
+            res.family_no = txtFamilyNo.Text;
             res.is_head = rbHead.Checked ? (short)1 : (short)0;
             res.lname = txtLastname.Text;
             res.fname = this.txtFirstname.Text.Trim();
@@ -478,10 +502,22 @@ namespace BarangayInformation
             res.permanent_barangay = this.cmbPermanentBarangay.Text;
             res.permanent_street = this.txtPermanentStreet.Text;
 
+            //voters info
             res.is_voter = cmbIsVoter.Text == "YES" ? (short)1 : (short)0;
             res.voter_type = this.cmbVoterType.Text;
             res.is_sk = cmbIsSK.Text == "YES" ? (short)1 : (short)0;
             res.place_registration = this.txtPlaceReg.Text;
+
+            //mother & father info
+            res.mother_lname = txtMotherLName.Text;
+            res.mother_fname = txtMotherFName.Text;
+            res.mother_mname = txtMotherMName.Text;
+            res.mother_suffix = txtMotherSuffix.Text;
+            res.father_lname = txtFatherLName.Text;
+            res.father_fname = txtFatherFName.Text;
+            res.father_mname = txtFatherMName.Text;
+            res.father_suffix = txtFatherSuffix.Text;
+
 
             //'additional Info
             res.water_source = cmbWaterSource.Text;
@@ -563,6 +599,15 @@ namespace BarangayInformation
             txtEmailAddress.Text = "";
             txtValidID.Text = "";
             txtIDNumber.Text = "";
+
+            txtMotherLName.Text = "";
+            txtMotherFName.Text = "";
+            txtMotherMName.Text = "";
+            txtMotherSuffix.Text = "";
+            txtFatherLName.Text = "";
+            txtFatherFName.Text = "";
+            txtFatherMName.Text = "";
+            txtFatherSuffix.Text = "";
 
             cmbPresentCountry.SelectedIndex = -1;
             cmbPresentProvince.SelectedIndex = -1;
