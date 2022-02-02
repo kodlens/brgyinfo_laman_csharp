@@ -277,7 +277,19 @@ namespace BarangayInformation
             cmbIsVoter.Text = res.is_voter == 1 ? "YES" : "NO";
             cmbVoterType.Text = res.voter_type;
             cmbIsSK.Text = res.is_sk == 1 ? "YES" : "NO";
+            cmbIsGovBenificiary.Text = res.is_gov_benificiary == 1 ? "YES" : "NO";
             txtPlaceReg.Text = res.place_registration;
+            //additional under voters
+            
+            check4ps.Checked = res.is_4ps == 1 ? true : false;
+            checkSocialPensioner.Checked = res.is_social_pensioner == 1 ? true : false;
+            checkUCT.Checked = res.is_uct == 1 ? true : false;
+            checkWomens.Checked = res.is_womens == 1 ? true : false;
+            checkPWD.Checked = res.is_pwd == 1 ? true : false;
+            checkPWD.Checked = res.is_pwd == 1 ? true : false;
+            checkSenior.Checked = res.is_senior == 1 ? true : false;
+
+          
 
             //mother & father information
             txtMotherLName.Text = res.mother_lname;
@@ -506,7 +518,16 @@ namespace BarangayInformation
             res.is_voter = cmbIsVoter.Text == "YES" ? (short)1 : (short)0;
             res.voter_type = this.cmbVoterType.Text;
             res.is_sk = cmbIsSK.Text == "YES" ? (short)1 : (short)0;
+            res.is_gov_benificiary = cmbIsGovBenificiary.Text == "YES" ? (short)1 : (short)0;
             res.place_registration = this.txtPlaceReg.Text;
+            //additional info
+            res.is_4ps = check4ps.Checked == true ? (short)1 : (short)0;
+            res.is_social_pensioner = checkSocialPensioner.Checked == true ? (short)1 : (short)0;
+            res.is_uct = checkUCT.Checked == true ? (short)1 : (short)0;
+            res.is_womens = checkWomens.Checked == true ? (short)1 : (short)0;
+            res.is_pwd = checkPWD.Checked == true ? (short)1 : (short)0;
+            res.is_senior = checkSenior.Checked == true ? (short)1 : (short)0;
+
 
             //mother & father info
             res.mother_lname = txtMotherLName.Text;
@@ -751,10 +772,7 @@ namespace BarangayInformation
             }
         }
 
-        private void btnNext4_Click(object sender, EventArgs e)
-        {
-            TabControl1.SelectedTab = tabSurvey;
-        }
+     
 
         private void btnNew_Click(object sender, EventArgs e)
         {
@@ -777,6 +795,25 @@ namespace BarangayInformation
             {
                 dtComplainWhen.Enabled = false;
 
+            }
+        }
+
+        private void cmbIsGovBenificiary_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbIsGovBenificiary.Text == "NO")
+            {
+                check4ps.Checked = false;
+                checkSocialPensioner.Checked = false;
+                checkUCT.Checked = false;
+
+                check4ps.Enabled = false;
+                checkSocialPensioner.Enabled = false;
+                checkUCT.Enabled = false;
+            }else if(cmbIsGovBenificiary.Text == "YES")
+            {
+                check4ps.Enabled = true;
+                checkSocialPensioner.Enabled = true;
+                checkUCT.Enabled = true;
             }
         }
     }

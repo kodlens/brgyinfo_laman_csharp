@@ -60,7 +60,16 @@ namespace BarangayInformation.Class
         public Int16 is_voter { set; get; }
         public string voter_type { set; get; }
         public Int16 is_sk { set; get; }
+        public Int16 is_gov_benificiary { set; get; }
         public string place_registration { set; get; }
+        public Int16 is_4ps { set; get; }
+        public Int16 is_social_pensioner { set; get; }
+        public Int16 is_uct { set; get; }
+        public Int16 is_womens { set; get; }
+        public Int16 is_pwd { set; get; }
+        public Int16 is_senior { set; get; }
+
+
 
 
         public string mother_lname { set; get; }
@@ -121,7 +130,8 @@ namespace BarangayInformation.Class
                     contact_no = ?contact, email = ?email, type_valid_id = ?typeId, id_no = ?idno,
                     present_country = ?pre_country, present_province = ?pre_province, present_city = ?pre_city, present_barangay = ?pre_brgy, present_street = ?pre_street,
                     permanent_country = ?per_country, permanent_province = ?per_province, permanent_city = ?per_city, permanent_barangay = ?per_brgy, permanent_street = ?per_street,
-                    is_voter = ?isvoter, voter_type = ?voter_type, is_sk = ?issk, place_registration = ?placereg,
+                    is_voter = ?isvoter, voter_type = ?voter_type, is_sk = ?issk, is_gov_benificiary=?isgovbenificiary, place_registration = ?placereg,
+                    is_4ps=?is4ps, is_social_pensioner=?ispensioner, is_uct=?isuct, is_womens=?iswomens, is_pwd=?ispwd, is_senior=?issenior,
                     mother_lname = ?mlname, mother_fname = ?mfname, mother_mname = ?mmname, mother_suffix = ?msuffix,
                     father_lname = ?flname, father_fname = ?ffname, father_mname = ?fmname, father_suffix = ?fsuffix,
                     water_source=?wsource, toilet=?toilet, garden=?garden, contraceptive=?contraceptive,
@@ -169,7 +179,16 @@ namespace BarangayInformation.Class
                 cmd.Parameters.AddWithValue("?isvoter", this.is_voter);
                 cmd.Parameters.AddWithValue("?voter_type", this.voter_type);
                 cmd.Parameters.AddWithValue("?issk", this.is_sk);
+                cmd.Parameters.AddWithValue("?isgovbenificiary", this.is_gov_benificiary);
                 cmd.Parameters.AddWithValue("?placereg", this.place_registration);
+                //additional under voters info
+                cmd.Parameters.AddWithValue("?is4ps", this.is_4ps);
+                cmd.Parameters.AddWithValue("?ispensioner", this.is_social_pensioner);
+                cmd.Parameters.AddWithValue("?isuct", this.is_uct);
+                cmd.Parameters.AddWithValue("?iswomens", this.is_womens);
+                cmd.Parameters.AddWithValue("?ispwd", this.is_pwd);
+                cmd.Parameters.AddWithValue("?issenior", this.is_senior);
+            
 
                 //father & mother info
                 cmd.Parameters.AddWithValue("?mlname", this.mother_lname);
@@ -291,7 +310,8 @@ namespace BarangayInformation.Class
                     contact_no = ?contact, email = ?email, type_valid_id = ?typeId, id_no = ?idno,
                     present_country = ?pre_country, present_province = ?pre_province, present_city = ?pre_city, present_barangay = ?pre_brgy, present_street = ?pre_street,
                     permanent_country = ?per_country, permanent_province = ?per_province, permanent_city = ?per_city, permanent_barangay = ?per_brgy, permanent_street = ?per_street,
-                    is_voter = ?isvoter, voter_type = ?voter_type, is_sk = ?issk, place_registration = ?placereg,
+                    is_voter = ?isvoter, voter_type = ?voter_type, is_sk = ?issk, is_gov_benificiary=?isgovbenificiary, place_registration = ?placereg,
+                    is_4ps=?is4ps, is_social_pensioner=?ispensioner, is_uct=?isuct, is_womens=?iswomens, is_pwd=?ispwd, is_senior=?issenior,
                     mother_lname = ?mlname, mother_fname = ?mfname, mother_mname = ?mmname, mother_suffix = ?msuffix,
                     father_lname = ?flname, father_fname = ?ffname, father_mname = ?fmname, father_suffix = ?fsuffix,
                     water_source=?wsource, toilet=?toilet, garden=?garden, contraceptive=?contraceptive,
@@ -339,7 +359,15 @@ namespace BarangayInformation.Class
             cmd.Parameters.AddWithValue("?isvoter", this.is_voter);
             cmd.Parameters.AddWithValue("?voter_type", this.voter_type);
             cmd.Parameters.AddWithValue("?issk", this.is_sk);
+            cmd.Parameters.AddWithValue("?isgovbenificiary", this.is_gov_benificiary);
             cmd.Parameters.AddWithValue("?placereg", this.place_registration);
+            //additional voters info
+            cmd.Parameters.AddWithValue("?is4ps", this.is_4ps);
+            cmd.Parameters.AddWithValue("?ispensioner", this.is_social_pensioner);
+            cmd.Parameters.AddWithValue("?isuct", this.is_uct);
+            cmd.Parameters.AddWithValue("?iswomens", this.is_womens);
+            cmd.Parameters.AddWithValue("?ispwd", this.is_pwd);
+            cmd.Parameters.AddWithValue("?issenior", this.is_senior);
 
             //father & mother info
             cmd.Parameters.AddWithValue("?mlname", this.mother_lname);
@@ -673,7 +701,16 @@ namespace BarangayInformation.Class
                 is_voter = Convert.ToSByte(dt.Rows[0]["is_voter"]);
                 voter_type = Convert.ToString(dt.Rows[0]["voter_type"]);
                 is_sk = Convert.ToSByte(dt.Rows[0]["is_sk"]);
+                is_gov_benificiary = Convert.ToSByte(dt.Rows[0]["is_gov_benificiary"]);
                 place_registration = Convert.ToString(dt.Rows[0]["place_registration"]);
+                //additional under voters
+                is_4ps = Convert.ToSByte(dt.Rows[0]["is_4ps"]);
+                is_social_pensioner = Convert.ToSByte(dt.Rows[0]["is_social_pensioner"]);
+                is_uct = Convert.ToSByte(dt.Rows[0]["is_uct"]);
+                is_womens = Convert.ToSByte(dt.Rows[0]["is_womens"]);
+                is_pwd = Convert.ToSByte(dt.Rows[0]["is_pwd"]);
+                is_senior = Convert.ToSByte(dt.Rows[0]["is_senior"]);
+
 
                 //mother & father information
                 mother_lname = Convert.ToString(dt.Rows[0]["mother_lname"]);

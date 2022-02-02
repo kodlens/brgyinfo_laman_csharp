@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v12.14 (64 bit)
-MySQL - 10.4.21-MariaDB : Database - brgyinfo_laman
+MySQL - 10.4.13-MariaDB : Database - brgyinfo_laman
 *********************************************************************
 */
 
@@ -44218,14 +44218,14 @@ CREATE TABLE `resident_pets` (
   PRIMARY KEY (`resident_pet_id`),
   KEY `resident_id` (`resident_id`),
   CONSTRAINT `resident_pets_ibfk_1` FOREIGN KEY (`resident_id`) REFERENCES `residents` (`resident_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `resident_pets` */
 
 insert  into `resident_pets`(`resident_pet_id`,`resident_id`,`pet`,`no_pet`) values 
-(77,105,'DOG',2),
-(78,105,'CAT',1),
-(79,105,'PIG',3);
+(92,110,'DOG',2),
+(93,110,'CAT',1),
+(94,110,'PIG',3);
 
 /*Table structure for table `resident_siblings` */
 
@@ -44245,14 +44245,14 @@ CREATE TABLE `resident_siblings` (
   PRIMARY KEY (`resident_sibling_id`),
   KEY `resident_id` (`resident_id`),
   CONSTRAINT `resident_siblings_ibfk_1` FOREIGN KEY (`resident_id`) REFERENCES `residents` (`resident_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=148 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=163 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `resident_siblings` */
 
 insert  into `resident_siblings`(`resident_sibling_id`,`resident_id`,`lname`,`fname`,`mname`,`suffix`,`sex`,`civil_status`,`bdate`,`is_living_with_you`) values 
-(145,105,'DOCOY','JAY AR','B','JR','MALE','MARRIED','2020-08-04',1),
-(146,105,'SANTARITA','JUNREY','M','','MALE','MARRIED','1995-05-24',0),
-(147,105,'FLORIZA','JADE','C','','FEMALE','SINGLE','1990-08-20',0);
+(160,110,'DOCOY','JAY AR','B','JR','MALE','MARRIED','2020-08-04',1),
+(161,110,'SANTARITA','JUNREY','M','','MALE','MARRIED','1995-05-24',1),
+(162,110,'FLORIZA','JADE','C','','FEMALE','SINGLE','1990-08-20',1);
 
 /*Table structure for table `residents` */
 
@@ -44294,7 +44294,14 @@ CREATE TABLE `residents` (
   `is_voter` tinyint(4) DEFAULT 0,
   `voter_type` varchar(30) DEFAULT NULL,
   `is_sk` tinyint(4) DEFAULT 0,
+  `is_gov_benificiary` tinyint(4) DEFAULT 0,
   `place_registration` varchar(255) DEFAULT NULL,
+  `is_4ps` tinyint(4) DEFAULT 0,
+  `is_social_pensioner` tinyint(4) DEFAULT 0,
+  `is_uct` tinyint(4) DEFAULT 0,
+  `is_womens` tinyint(4) DEFAULT 0,
+  `is_pwd` tinyint(4) DEFAULT 0,
+  `is_senior` tinyint(4) DEFAULT 0,
   `mother_lname` varchar(100) DEFAULT NULL,
   `mother_fname` varchar(100) DEFAULT NULL,
   `mother_mname` varchar(100) DEFAULT NULL,
@@ -44316,12 +44323,12 @@ CREATE TABLE `residents` (
   `img_path` varchar(255) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`resident_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `residents` */
 
-insert  into `residents`(`resident_id`,`household_no`,`family_no`,`is_head`,`lname`,`fname`,`mname`,`suffix`,`sex`,`civil_status`,`religion`,`nationality`,`employment_status`,`occupation`,`annual_income`,`year_residence`,`bdate`,`place_of_birth`,`contact_no`,`email`,`type_valid_id`,`id_no`,`present_country`,`present_province`,`present_city`,`present_barangay`,`present_street`,`permanent_country`,`permanent_province`,`permanent_city`,`permanent_barangay`,`permanent_street`,`is_voter`,`voter_type`,`is_sk`,`place_registration`,`mother_lname`,`mother_fname`,`mother_mname`,`mother_suffix`,`father_lname`,`father_fname`,`father_mname`,`father_suffix`,`water_source`,`toilet`,`garden`,`contraceptive`,`have_complain`,`against_whom`,`is_settled`,`date_settled`,`if_not_why`,`is_death_aid`,`img_path`,`created_at`) values 
-(105,'P3-02-S2A','1',0,'AMPARADO','ETIENNE WAYNE','NAMOCATCAT','TEST','MALE','SINGLE','Bible Baptist Church','FILIPINO','EMPLOYED','FARMER','12000','1 YEAR','2022-01-31','BAROY, LANAO DEL NORTE','09167789585','et@yahoo.com','DRIVER LICENSE','K09-1234-214','PHILIPPINES','MISAMIS OCCIDENTAL','TANGUB CITY','GARANG','P-SAMPLE LANG','PHILIPPINES','MISAMIS OCCIDENTAL','TANGUB CITY','GARANG','P-SAMPLE LANG',1,'OLD',0,'MALORO, TANGUB CITY','NAMOCATCATS','HELEN','MILA','','AMPARADO','SEGUNDO','SIBALDE','JR','','','','',0,'',0,'','',0,'AMPARADO_ETIENNEWAYNE','2022-01-31 05:32:40');
+insert  into `residents`(`resident_id`,`household_no`,`family_no`,`is_head`,`lname`,`fname`,`mname`,`suffix`,`sex`,`civil_status`,`religion`,`nationality`,`employment_status`,`occupation`,`annual_income`,`year_residence`,`bdate`,`place_of_birth`,`contact_no`,`email`,`type_valid_id`,`id_no`,`present_country`,`present_province`,`present_city`,`present_barangay`,`present_street`,`permanent_country`,`permanent_province`,`permanent_city`,`permanent_barangay`,`permanent_street`,`is_voter`,`voter_type`,`is_sk`,`is_gov_benificiary`,`place_registration`,`is_4ps`,`is_social_pensioner`,`is_uct`,`is_womens`,`is_pwd`,`is_senior`,`mother_lname`,`mother_fname`,`mother_mname`,`mother_suffix`,`father_lname`,`father_fname`,`father_mname`,`father_suffix`,`water_source`,`toilet`,`garden`,`contraceptive`,`have_complain`,`against_whom`,`is_settled`,`date_settled`,`if_not_why`,`is_death_aid`,`img_path`,`created_at`) values 
+(110,'','',0,'AMPARADO','ETIENNE WAYNE','NAMOCATCAT','TEST','MALE','SINGLE','Bible Baptist Church','FILIPINO','EMPLOYED','FARMER','12000','1 YEAR','2022-02-02','BAROY, LANAO DEL NORTE','09167789585','et@yahoo.com','DRIVER LICENSE','K09-1234-214','PHILIPPINES','MISAMIS OCCIDENTAL','TANGUB CITY','GARANG','P-SAMPLE LANG','PHILIPPINES','MISAMIS OCCIDENTAL','TANGUB CITY','GARANG','P-SAMPLE LANG',1,'OLD',1,1,'MALORO, TANGUB CITY',1,0,0,1,0,1,'NAMOCATCAT','HELEN','MILA','','AMPARADO','SEGUNDO','SIBALDE','JR','','','','',0,'',0,'','',0,NULL,'2022-02-02 13:51:09');
 
 /*Table structure for table `roles` */
 
@@ -44409,6 +44416,18 @@ DELIMITER $$
 /*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_residents`(vid bigint)
 BEGIN
 	select * from residents where resident_id = vid;
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `proc_siblings` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `proc_siblings` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`%` PROCEDURE `proc_siblings`(vid bigint)
+BEGIN
+	select * from resident_siblings where resident_id = vid;
     END */$$
 DELIMITER ;
 
